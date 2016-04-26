@@ -1,0 +1,90 @@
+<p>I have same Problem, and in the Logfile</p>
+
+<p>DKMS make.log for virtualbox-4.1.12 for kernel 3.8.0-31-generic (x86_64)
+Mo 7. Okt 14:43:01 CEST 2013
+make: Gehe in Verzeichnis '/usr/src/linux-headers-3.8.0-31-generic'
+  LD      /var/lib/dkms/virtualbox/4.1.12/build/built-in.o
+  LD      /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/built-in.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/linux/SUPDrv-linux.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/SUPDrv.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/SUPDrvSem.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/alloc-r0drv.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/initterm-r0drv.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/memobj-r0drv.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/mpnotification-r0drv.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/powernotification-r0drv.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/assert-r0drv-linux.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/alloc-r0drv-linux.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/initterm-r0drv-linux.o
+  CC [M]  /var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/memobj-r0drv-linux.o
+/var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/memobj-r0drv-linux.c: In Funktion »rtR0MemObjNativeMapUser«:
+/var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/memobj-r0drv-linux.c:1451:38: Fehler: »VM_RESERVED« nicht deklariert (erste Benutzung in dieser Funktion)
+/var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/memobj-r0drv-linux.c:1451:38: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+make[2]: <strong>* [/var/lib/dkms/virtualbox/4.1.12/build/vboxdrv/r0drv/linux/memobj-r0drv-linux.o] Fehler 1
+make[1]: <em></strong> [/var/lib/dkms/virtualbox/4.1.12/build/vboxdrv] Fehler 2
+make: *</em>* [<em>module</em>/var/lib/dkms/virtualbox/4.1.12/build] Fehler 2
+make: Verlasse Verzeichnis '/usr/src/linux-headers-3.8.0-31-generic'</p>
+
+<p>what can i do?</p>
+
+<p>3.8.0-31-generic</p>
+
+<p>micha@Aspire-V3-771:~$ sudo dpkg-reconfigure virtualbox-dkms[sudo] password for micha: </p>
+
+<p>-------- Uninstall Beginning --------
+Module:  virtualbox
+Version: 4.1.12</p>
+
+<h2>Kernel:  3.5.0-18-generic (x86_64)</h2>
+
+<p>Status: Before uninstall, this module version was ACTIVE on this kernel.</p>
+
+<p>vboxdrv.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.5.0-18-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.</p>
+
+<p>vboxnetadp.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.5.0-18-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.</p>
+
+<p>vboxnetflt.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.5.0-18-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.</p>
+
+<p>vboxpci.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.5.0-18-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.</p>
+
+<p>depmod....</p>
+
+<p>DKMS: uninstall completed.</p>
+
+<hr>
+
+<p>Deleting module version: 4.1.12</p>
+
+<h2>completely from the DKMS tree.</h2>
+
+<p>Done.
+Loading new virtualbox-4.1.12 DKMS files...
+Building only for 3.8.0-31-generic
+Building initial module for 3.8.0-31-generic
+Error! Bad return status for module build on kernel: 3.8.0-31-generic (x86_64)
+Consult /var/lib/dkms/virtualbox/4.1.12/build/make.log for more information.
+ * Stopping VirtualBox kernel modules                                    [ OK ] 
+ * Starting VirtualBox kernel modules                                            * No suitable module for running kernel found
+                                                                         [fail]
+invoke-rc.d: initscript virtualbox, action "restart" failed.
+micha@Aspire-V3-771:~$ </p>

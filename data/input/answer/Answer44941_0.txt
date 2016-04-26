@@ -1,0 +1,8 @@
+<p>Here is what works for me for customizing a 12.04.1 liveCD:</p>
+
+<pre><code>echo "[com.canonical.Unity.Launcher]
+favorites=['nautilus-home.desktop', 'firefox.desktop', 'ubuntu-software-center.desktop', 'otherapp1.desktop', 'otherapp2.desktop']" &gt; /usr/share/glib-2.0/schemas/10_local-unity-launcher.gschema.override
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+</code></pre>
+
+<p>(all in chroot)</p>

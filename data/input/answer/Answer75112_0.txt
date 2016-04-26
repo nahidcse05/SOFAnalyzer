@@ -1,0 +1,11 @@
+<p>open terminal by ctrl+alt+t. then type</p>
+
+<pre><code> wget  https://www.dropbox.com/install?os=lnx
+</code></pre>
+
+<p>then </p>
+
+<pre><code>dpkg -i Dropbox .deb
+</code></pre>
+
+<p>i think thats ok to you wrahool.</p>

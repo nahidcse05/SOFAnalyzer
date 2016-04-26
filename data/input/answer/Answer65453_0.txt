@@ -1,0 +1,11 @@
+<p>I submitted a support request to the developer, and I received the following clarification by email:</p>
+
+<blockquote>
+  <p>Hi,</p>
+  
+  <p>It's expected behaviour. We're currently working on mobile apps and
+  the todo.txt was just a thing so you can view it on your phone. Sorry
+  about that.</p>
+  
+  <p>Thanks, Jono</p>
+</blockquote>

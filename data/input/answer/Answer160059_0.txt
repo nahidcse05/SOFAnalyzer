@@ -1,0 +1,15 @@
+<p>I found the solution to the problem. </p>
+
+<p>I removed all of the individual sudo commands in my vpnon.sh script, and passed in sudo from outside of the script. </p>
+
+<p>In my  /etc/init.d/vpnstartup file, I changed the <code>su username -c</code> to <code>sudo $VPN_DIR/vpnon.sh</code>
+which looks like this now:</p>
+
+<pre><code>case "$1" in
+    start)
+        sudo $VPN_DIR/vpnon.sh
+        ;;
+</code></pre>
+
+<p>then called <code>sudo update-rc.d vpnstartup defaults</code>
+and now the VPN connects on startup! <code>:)</code></p>

@@ -1,0 +1,1 @@
+<p>Launchpad is basicaly the same as Unity. Mac App Store = Ubuntu Software Center. Full screen apps (as they'll work on Lion) depend on the apps developers. Mission Control is nearly the same as scale compiz plugin, but you can only manage windows.</p>

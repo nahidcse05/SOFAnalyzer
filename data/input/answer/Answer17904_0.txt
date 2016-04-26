@@ -1,0 +1,5 @@
+<p>If you install MongoDB with <code>apt-get</code> as described <a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/" rel="nofollow">in the MongoDB Ubuntu installation guide</a>, it will come with a basic startup script and config file. (use of a config file is highly recommended)</p>
+
+<p>You can also take a look <a href="http://groups.google.com/group/mongodb-user/browse_thread/thread/ba9bd84cdd4c7377" rel="nofollow">here</a> for an old post that links to an <code>init.d</code> script.</p>
+
+<p>In either case, the basic premise is that you're setting up a service and then configuring to start-stop with the computer. This is pretty common technique for servers, there are lots of tutorials around for doing exactly this.</p>

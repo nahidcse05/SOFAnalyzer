@@ -1,0 +1,11 @@
+<p>Try removing the installation package with the following command:</p>
+
+<pre><code>sudo rm /var/cache/apt/archives/libjack-jackd2-0_1.9.8~dfsg.2-1precise1_amd64.deb
+</code></pre>
+
+<p>Then reload the sources list with</p>
+
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</code></pre>
+
+<p>...and then reinstall <code>libjack-jackd2-0</code>.</p>

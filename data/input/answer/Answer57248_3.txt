@@ -1,0 +1,9 @@
+<p>I run teamviewer 7 on ubuntu 12.04 64 bit without any problems. </p>
+
+<p>All that I did to install it was to download the file direct from the Teamviewer website selecting the correct version (i.e. Ubuntu 64 bit) and just opened the file and the software centre installed it for me without any issues.</p>
+
+<p>But looking at your error output I would just install all the missing dependencies. Go into the Software Centre and search for each of the missing items and install them before trying to install teamviewer again. Remember in software centre to click on "show technical item" at the bottom left of the screen.</p>
+
+<p>Hopefully this will work for you.</p>
+
+<p>Best of luck.</p>

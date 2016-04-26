@@ -1,0 +1,30 @@
+<p>This seems to have been <a href="http://android.stackexchange.com/a/32783/13889">answered on our Android sister-site</a> by <a href="http://android.stackexchange.com/users/23126/chauncellor">Chauncellor</a>:</p>
+
+<blockquote>
+  <p>Well, this took a long time. For future searchers, here's what you can do:</p>
+  
+  <p>Find your contacts2.db file hidden somewhere in Android. Most of the time it's located in /data/data/com.android.providers.contacts/databases. I was lucky and found it in a search through Titanium Backups' tarballs. Nab that file. It has everything in it in a sql database.</p>
+  
+  <p>I then found this excellent script to extract and convert all contacts into a .vcf format for easy importing into the next device. It's located <a href="https://github.com/stachre/dump-contacts2db" rel="nofollow">here</a> on Github and requires two dependencies (on an Ubuntu 12.04 machine in which it was written for): sqllite3 and libsqllite3-dev:</p>
+
+<pre><code>sudo apt-get install sqlite3 libsqlite3-dev
+</code></pre>
+  
+  <p>After dependencies are satisfied, save the script on Github as dbconverter.sh. Mark it as executable:</p>
+
+<pre><code>chmod +x dbconverter.sh
+</code></pre>
+  
+  <p>use the script like this:</p>
+
+<pre><code>./dbconverter.sh contacts2.db &gt; contacts2.vcf
+</code></pre>
+  
+  <p>You will then have a lovely .vcf file for easy importing into your phone.</p>
+</blockquote>
+
+<p>There are also other programmatic approaches on SO:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/18955512/converting-db-to-vcf">http://stackoverflow.com/questions/18955512/converting-db-to-vcf</a></li>
+</ul>

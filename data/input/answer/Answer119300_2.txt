@@ -1,0 +1,1 @@
+<p><code>uuencode</code> is the command. <code>host-file</code> is its argument. <code>&lt; host-file</code> redirects the file to the standard input of the command. <code>&gt;encodedfile</code> redirects output of the command to the file.</p>

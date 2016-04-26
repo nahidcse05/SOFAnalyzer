@@ -1,0 +1,30 @@
+<p>I use ubuntu 11.10 in a tablet and I had the same problem with the scrollbar. I don't have a perfect solution, because it depends on the theme (If you're not sure what theme are you usnig install ubuntu tweak to serch it; mine is Ambiance) and the programs that you're using, but I follow those steps and it's OK for me now:</p>
+
+<p>1- Remove overlay-scrollbars (for unity)</p>
+
+<p>2- Edit /usr/share/themes/Ambiance/gtk-2.0/gtkrc and increase those values</p>
+
+<pre><code>GtkScrollbar::slider-width
+GtkScrollbar::min-slider-length
+</code></pre>
+
+<p>3- Edit /usr/share/themes/Ambiance/gtk-3.0/gtk-widgets and increase </p>
+
+<pre><code>GtkScrollbar-min-slider-length 
+GtkRange-slider-width (there are several items, look for the one inside .scrollbar)
+</code></pre>
+
+<p>I've increase length to 51 and width to 23 and I'm happy with those values in my tablet (11.6" - 1366x768 pixels). You need to modify both files because gtk2.0 controls for example firefox and thunderbird, and gtk-3.0 controls for example nautilus and gedit. There are lots of tweaks that you can make in both files, I've added</p>
+
+<p>GtkScrollbar::has-backward-stepper = 0
+GtkScrollbar::has-forward-stepper = 0</p>
+
+<p>to /usr/share/themes/Ambiance/gtk-2.0/gtkrc to remove the ugly arrows in firefox and thunderbird.</p>
+
+<p>You can see some pictures, all of them with my minimum scrollbar width and length:</p>
+
+<p><img src="http://i.stack.imgur.com/KBV7Z.png" alt="gtk-2.0"></p>
+
+<p><img src="http://i.stack.imgur.com/qm2uu.png" alt="gtk-3.0"></p>
+
+<p>Good luck!</p>

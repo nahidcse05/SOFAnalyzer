@@ -1,0 +1,5 @@
+<p>Embarrassingly, this seems to be an issue regarding my means of connecting to my college Wi-Fi. As my laptop's wireless card is broken, I'm using my Android phone as a Wi-Fi tether, which seems to play havoc with the campus firewall. Browsing, etc. using the usual ports (80, 443, etc.) works, but adding keyservers and SSH'ing, etc. doesn't.</p>
+
+<p>I confirmed this by connecting through 3G instead of Wi-Fi and the keys got automatically retrieved as usual.</p>
+
+<p>Many thanks to those who have commented trying to help.</p>

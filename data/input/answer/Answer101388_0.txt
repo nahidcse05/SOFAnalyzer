@@ -1,0 +1,7 @@
+<p>Well, I've found the solution!</p>
+
+<p>I must copy kernel+initrd from squashfs chroot to /casper folder instead of leaving kernel+initrd which are already present there. </p>
+
+<p>This step appears in the guide, but it's presented as something "advanced" - and I guessed that it was "optional" too- under "Live CD kernel" section (belonging to "Advanced customizations" chapter).</p>
+
+<p>Thanks to everyone</p>

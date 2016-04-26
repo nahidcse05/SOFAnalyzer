@@ -1,0 +1,7 @@
+<p>I think this may be one of the solutions for you...</p>
+
+<p><a href="http://xbmc.org/" rel="nofollow">XBMC</a></p>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/2652/how-do-i-install-xbmc">How do I install XBMC?</a></li>
+</ul>

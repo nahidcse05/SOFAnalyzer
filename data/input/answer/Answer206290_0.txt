@@ -1,0 +1,23 @@
+<p>Okay, first of all try to boot your system using a live-cd or USB of Ubuntu. If you already created the one of Wily (15.10) boot with that one.</p>
+
+<p>Instead of starting the installation, try to access the harddisk. You should be able to open it from the Desktop or File-Manager.</p>
+
+<p>Look for the <code>home</code> directory and try to backup it. You can insert another USB-Drive or hard disk or anything big enough for your data.</p>
+
+<p>After completing the copy of the whole <code>home</code> directory, install Ubuntu and let the drive to get formatted so you will have a fresh system. </p>
+
+<p>Try to use the same username as you used in previous system so you will be able to access the stuff more easily.</p>
+
+<p>After the installation do not reboot yet. Copy the contents back to the newly created home directory and let it overwrite existing data. </p>
+
+<p>If you cannot login after that. Try to change to the terminal (With Alt+Ctrl+F1) and become Super-User.</p>
+
+<p>You might need to ensure that you have the right permissions and they might differ compared to the old system.</p>
+
+<p>For that from the terminal do the following:</p>
+
+<pre><code>sudo -i 
+chown -R &lt;username&gt; /home/&lt;username&gt;
+</code></pre>
+
+<p>Now reboot your system with <code>reboot</code>. You should be able to login, unless the contents of your home directory are odd. You might be missing your favorite software which you can install and it might use your previous configuration, for example with pidgin that works very good. You should find your Desktop as you left it in the old system but with upgraded Wily.</p>

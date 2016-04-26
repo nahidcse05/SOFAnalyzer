@@ -1,0 +1,3 @@
+<p>Use a terminal and enter <code>sh /path/to/script.sh</code>.</p>
+
+<p>For example, <code>sh ~/Downloads/script.sh</code> if your script is in your downloads folder.</p>

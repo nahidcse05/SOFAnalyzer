@@ -1,0 +1,7 @@
+<p>My video card is AMD Radeon HD6470M and I had a problems with proprietary driver on Natty 11.04.</p>
+
+<p>Look attentively through this source and follow an instructions <a href="http://wiki.cchtml.com/index.php/Ubuntu_Natty_Installation_Guide" rel="nofollow">How to install proprietary driver Catalyst/fglrx</a>. </p>
+
+<p>It's an important for the first to remove previously installed driver before you install Catalyst.</p>
+
+<p>It was very helpful for me, solved my issues with video card and brought 3D</p>

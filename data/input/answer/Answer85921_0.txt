@@ -1,0 +1,20 @@
+<p>The HDMI output is managed by the graphics driver, which in your case is the closed-source driver from Nvidia.
+Apparently, that driver enables the HDMI audio encoder only when X is running.</p>
+
+<p>Complain to Nvidia.</p>
+
+<p>Alternatively, use your motherboard's S/PDIF output.</p>
+
+<hr>
+
+<p><em>Addendum by asker, Magnus Hoff:</em></p>
+
+<p>Pursuing this angle further, I ended up running X but disabling dpms, so the HDMI output is maintained at its powered, fully functional state. I realized I had to do this from reading <a href="ftp://download.nvidia.com/XFree86/gpu-hdmi-audio-document/gpu-hdmi-audio.html#_driver_architecture" rel="nofollow">documentation by nvidia</a>.</p>
+
+<p>To make this happen, I added the following to my <code>.xinitrc</code>:</p>
+
+<pre><code>xset s off
+xset -dpms
+</code></pre>
+
+<p>Source: <a href="http://crunchbang.org/forums/viewtopic.php?pid=121360#p121360" rel="nofollow">http://crunchbang.org/forums/viewtopic.php?pid=121360#p121360</a></p>

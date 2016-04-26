@@ -1,0 +1,3 @@
+<p>As you noticed, Ubuntu 12.04 LTS ships with python3 3.2.3. If you need Python 3, then I suggest to upgrade to Ubuntu 14.04 LTS which includes python3 3.4.1.</p>
+
+<p>If you cannot do that, consider something like <a href="http://virtualenv.readthedocs.org/en/latest/virtualenv.html" rel="nofollow">virtualenv</a>.</p>

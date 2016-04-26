@@ -1,0 +1,16 @@
+<p>I have a 4830t and the screen looked awful.  I had to manual adjust the <code>rgb</code> gamma and the contrast.  Now it looks a lot better.</p>
+
+<p>I create a simple script to adjust it at boot</p>
+
+<pre><code>#!/bin/bash
+xgamma -rgamma .8  
+xgamma -bgamma .6  
+xgamma -ggamma .7  
+xcalib -contrast .88  
+
+exit 0
+</code></pre>
+
+<p>You can adjust the color and contrast to fit your taste.</p>
+
+<p>I hope this helps</p>

@@ -1,0 +1,1 @@
+<p>I experienced a similar problem after upgrade. Here is a somewhat inelegant solution: removing the files in /etc/xdg/lxsession/Lubuntu and rebooting. This seemed to work for me.</p>

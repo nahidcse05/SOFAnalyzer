@@ -1,0 +1,3 @@
+<p>open your terminal with CTRL+ALT+T then type as  <code>sudo updatedb</code> . that will do the job .</p>
+
+<p>see <a href="http://askubuntu.com/questions/250996/how-to-completely-remove-thunderbird">How to completely remove Thunderbird?</a> fore more Information.</p>

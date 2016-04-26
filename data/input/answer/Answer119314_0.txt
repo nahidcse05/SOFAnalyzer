@@ -1,0 +1,11 @@
+<p>I'm using Ubuntu 13.10 64bit and I'm also playing Dota 2 using Steam for Linux.</p>
+
+<p>Could you please add some information to your question? It's unclear if Dota 2 or Steam take 5 minutes close and what exactly happens.</p>
+
+<p>My best guess is that Steam says something like "Synchronizing Updates" what basically means that files are getting uploaded to SteamCloud.</p>
+
+<p>If that's the case, you can simply right-click Dota 2 on the list, go to Properties > Updates > SteamCloud and uncheck Enable Steam Cloud.</p>
+
+<p>Disabling SteamCloud means that if you're going to play Dota 2 from your account on another computer you won't have the files saved on your current computer, though Dota progress will be conserved.</p>
+
+<p>Hope this helps.</p>

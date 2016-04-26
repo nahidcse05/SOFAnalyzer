@@ -1,0 +1,9 @@
+<p>Rstudio can't start because it needs the <code>libgstreamer</code> library.  You have to install it :</p>
+
+<pre><code>sudo apt-get install libgstreamer0.10-0
+</code></pre>
+
+<p>and <a href="https://support.rstudio.com/hc/en-us/community/posts/207544237-Rstudio-99-won-t-launch-on-Ubuntu-15-10" rel="nofollow">related plug-ins</a>:</p>
+
+<pre><code>sudo apt-get install libgstreamer-plugins-base0.10-dev
+</code></pre>

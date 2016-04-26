@@ -1,0 +1,3 @@
+<p>The <code>~/.local/share/rhythmbox</code> playlists are on a <code>playlists.xml</code> file. I think Banshee can't import <code>.xml</code> files, but <code>.pls</code> files, wich are the default Rhythbox playlists format when you SAVE them. </p>
+
+<p>So I believe you have to install Rhythmbox, save every playlist and then, import them from Banshee. I might be wrong, but I think it's the only option.</p>

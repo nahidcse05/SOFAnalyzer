@@ -1,0 +1,5 @@
+<p>Powertop is wrong about power usage of single components. Just ignore the shown values. </p>
+
+<p>Only the total power value is correct.</p>
+
+<p>ps. for power saving use <a href="http://linrunner.de/tlp" rel="nofollow">TLP</a>.</p>

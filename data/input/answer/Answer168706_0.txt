@@ -1,0 +1,11 @@
+<p>The distribution appears to use the <code>cmake</code> build system. A suitable minimal out-of-tree build procedure would be something like</p>
+
+<pre><code>mkdir Build &amp;&amp; cd Build
+cmake ..
+</code></pre>
+
+<p>Then</p>
+
+<pre><code>make
+sudo make install
+</code></pre>

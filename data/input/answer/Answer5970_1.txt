@@ -1,0 +1,9 @@
+<p>Thanks luri for the help but I figured it out </p>
+
+<p>What I did is this: </p>
+
+<p>Downloaded the nvidia driver from their website </p>
+
+<p>reboot -> recovery mode -> root command line level -> uninstall all nvidia drivers -> get down to level 3 "telinit 3" -> stop gdm "service gdm stop" -> delete xorg.conf file -> install nvidia that I downloaded </p>
+
+<p>Everything is now perfect </p>

@@ -1,0 +1,17 @@
+<h2>Summary</h2>
+
+<p>Wubi is <a href="https://wiki.ubuntu.com/WubiGuide#What_is_the_license.3F" rel="nofollow">definitely free</a>, although it hasn't yet (as of 2014-04-20) been updated for <a href="http://www.ubuntu.com/download/desktop" rel="nofollow">Ubuntu 14.04 LTS</a>.</p>
+
+<p>The best place to download Wubi for the old Ubuntu 12.04 LTS is from <a href="http://releases.ubuntu.com/12.04/" rel="nofollow">releases.ubuntu.com/12.04</a> (<a href="http://releases.ubuntu.com/12.04/wubi.exe" rel="nofollow">wubi.exe direct link</a>).</p>
+
+<hr>
+
+<h2>Detail</h2>
+
+<p>A bug was introduced on April 10th when we released changes to the <a href="http://www.ubuntu.com/download" rel="nofollow">Ubuntu.com download section</a>, which both hid the "skip" link on the Wubi contributions page, forcing you through Paypal, and broke the Wubi thank-you page so even if you did pay the download wouldn't start - pretty catastrophic. This is what led to the confusion.</p>
+
+<p>I've now redirected the <a href="http://www.ubuntu.com/download/desktop/contribute/?distro=wubi&amp;bits=&amp;release=lts" rel="nofollow">Wubi contribute URL</a> directly to <a href="http://releases.ubuntu.com/12.04/wubi.exe" rel="nofollow">the download</a>. <strike>Now if you click "Get the installer" on the <a href="http://www.ubuntu.com/download/desktop/windows-installer" rel="nofollow">Windows Installer page</a>, your Wubi download will start immediately, so you never see the contributions page and don't even have the option to pay.</strike></p>
+
+<p><strong>Edit</strong>: Now that Ubuntu 14.04 is out, the <a href="http://www.ubuntu.com/download/desktop/windows-installer" rel="nofollow">old Windows Installer URL</a> on ubuntu.com now redirects you to the <a href="http://www.ubuntu.com/download/desktop" rel="nofollow">main desktop download page</a>, as Wubi has not been updated for the new Ubuntu 14.04 yet.</p>
+
+<p>I've answered and closed <a href="https://bugs.launchpad.net/ubuntu-website-content/+bug/1305971/" rel="nofollow">@JorgeCastro's bug</a>.</p>

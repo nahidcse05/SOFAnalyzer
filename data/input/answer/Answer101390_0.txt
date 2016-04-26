@@ -1,0 +1,36 @@
+<p>Maybe another solution does the trick:</p>
+
+<p>You might create a panel launcher that runs a shell script to disable mouse input and a keyboard shortcut to enable mouse input.</p>
+
+<p>You can manage your X-Server's input devices with xinput.
+With the following command, you can list all input devices:</p>
+
+<pre><code>xinput --list
+</code></pre>
+
+<p>Find the right mouse pointer device and disable it:
+(replace [ID] with the right id number)</p>
+
+<pre><code>xinput --set-prop [ID] 'Device Enabled' 0
+</code></pre>
+
+<p>Enable it again:</p>
+
+<pre><code>xinput --set-prop [ID] 'Device Enabled' 1
+</code></pre>
+
+<p>To simulate the behavior of the tool you wish,
+you can create a shell script to disable/enable all mouse pointer devices at once.</p>
+
+<p>setmouse:</p>
+
+<pre><code>#!/bin/sh
+# setmouse 0    to disable mouse
+# setmouse 1    to enable mouse
+for id in $(xinput --list | grep -E "slave.*pointer" | cut -f2 | cut -d"=" -f2)
+do
+    xinput set-prop $id 'Device Enabled' $1
+done
+</code></pre>
+
+<p>Then you can create a (Xfce-)Panel launcher that runs "setmouse 0" in order to disable mouse input and a keyboard shortcut that runs "setmouse 1" to enable it again.</p>

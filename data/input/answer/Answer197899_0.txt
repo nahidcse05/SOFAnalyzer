@@ -1,0 +1,34 @@
+<p>Compilation from source should work properly on Ubuntu 15.04.  </p>
+
+<ol>
+<li><p>Install build tools :</p>
+
+<pre><code>sudo apt-get install build-essential cmake git libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev libopencv-dev
+</code></pre></li>
+<li><p>Install the <code>ffmpeg</code> library :</p>
+
+<pre><code>sudo apt-get install ffmpeg
+</code></pre></li>
+<li><p>Compile <code>slowmoVideo</code> from source :</p>
+
+<pre><code>git clone git://github.com/slowmoVideo/slowmoVideo.git
+cd slowmoVideo/
+mkdir build
+cd build/
+cmake -DENABLE_TESTS=FALSE ../src
+make
+</code></pre></li>
+<li><p>Install it using <code>checkinstall</code> :</p>
+
+<pre><code>sudo apt-get install checkinstall
+sudo checkinstall
+</code></pre>
+
+<p>Why <code>checkinstall</code> ? </p>
+
+<blockquote>
+  <p>CheckInstall keeps track of all files installed by "make install" or
+  equivalent.   It creates a .deb package and adds it to the installed
+  packages database.   This allows easy package removal later. —  <a href="https://help.ubuntu.com/community/CheckInstall" rel="nofollow">Ubuntu Wiki</a></p>
+</blockquote></li>
+</ol>

@@ -1,0 +1,1 @@
+<p>So long as the installer does not go wrong or encounter an issue, you should not lose any data, everything in /home should be untouched.  However, you should as a good practice backup your data on a regular basis, and always before a major system change.</p>

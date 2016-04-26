@@ -1,0 +1,7 @@
+<p>You can also use <code>torsocks</code></p>
+
+<p>Usage:</p>
+
+<p><code>torsocks &lt;application&gt;</code></p>
+
+<p>For using this by default, you must already have tor running &amp; listening on localhost, port 9050.</p>

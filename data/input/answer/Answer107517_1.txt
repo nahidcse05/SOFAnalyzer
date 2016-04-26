@@ -1,0 +1,3 @@
+<p>Thanks Julian!
+I closed Audacious before shutdown now, which helped it to save the appearance settings. It still messes up the skin graphics slightly when I start Audacious again, but it's tolerable.
+How do I make Ubuntu start up with the desktop as I left it?</p>

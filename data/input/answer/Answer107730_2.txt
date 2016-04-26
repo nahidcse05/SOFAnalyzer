@@ -1,0 +1,5 @@
+<p>You must have a windows installation disc to install windows. It cannot be an upgrade disc, or a restore disc, or a recovery disc, or anything but a full installation disc.</p>
+
+<p>You don't need to do anything to ubuntu. All you do is boot from the windows installation disc, and when it asks if you want to overwrite everything, say yes. <strong>You will lose all your data.</strong> If you don't want to <strong>lose all your data</strong>, make a backup first (to say, a usb drive).</p>
+
+<p>Please note, this will not work with anything but an actual full installation disc.</p>

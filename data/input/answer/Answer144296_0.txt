@@ -1,0 +1,3 @@
+<p>This should not require that much time. Normally 30-40 secs is required. In this time, Ubuntu decide which partition should be used for it, make room for Ubuntu by shrinking (if needed) an existing partition and then start installation. It seems, your Notebook has a configuration which is problematic for Ubuntu.</p>
+
+<p>I suggest you to restart the process by again. You should choose "Something else" option instead of "Alongside... " option. Then shrink a partition, make two partition on the new free space (one for <code>/</code> and one for swap) and then go.</p>

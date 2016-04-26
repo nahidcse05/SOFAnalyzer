@@ -1,0 +1,8 @@
+<p>If you are looking for an application which has a GUI, check Clonezilla:<br>
+<a href="http://clonezilla.org/" rel="nofollow">http://clonezilla.org/</a><br>
+<a href="http://www.howtoforge.com/back-up-restore-hard-drives-and-partitions-with-clonezilla-live" rel="nofollow">http://www.howtoforge.com/back-up-restore-hard-drives-and-partitions-with-clonezilla-live</a> 
+<a href="http://www.backuphowto.info/how-to-backup-your-data-in-linux-using-clonezilla" rel="nofollow">http://www.backuphowto.info/how-to-backup-your-data-in-linux-using-clonezilla</a></p>
+
+<p>Without a GUI:<br>
+<a href="http://www.backuphowto.info/linux-backup-hard-disk-clone-dd" rel="nofollow">http://www.backuphowto.info/linux-backup-hard-disk-clone-dd</a><br>
+<a href="http://mark.koli.ch/2009/05/howto-whole-disk-backups-with-dd-gzip-and-p7zip.html" rel="nofollow">http://mark.koli.ch/2009/05/howto-whole-disk-backups-with-dd-gzip-and-p7zip.html</a></p>

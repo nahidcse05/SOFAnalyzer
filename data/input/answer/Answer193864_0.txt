@@ -1,0 +1,10 @@
+<p>It appears that you are likely looking for a misplaced word, <code>my</code>, in some bash startup file.  Try:</p>
+
+<pre><code>grep -w my ~/.bash* ~/.prof*
+</code></pre>
+
+<p>The option <code>-w</code> specifies that we are looking for a word, not just two characters.  This means that <code>grep -w my</code> will match <code>my</code> but not <code>myself</code> or <code>enemy</code>.</p>
+
+<p>This searches the common bash config files for the word <code>my</code>.  These files include <code>~/.bashrc</code>, <code>~/.bash_profile</code>, <code>~/.bash_login</code>, and <code>~/.profile</code>.  If you don't find the problem there, you may need to expand the search to the system-wide config files such as <code>/etc/profile</code> and <code>/etc/bash.bashrc</code>.</p>
+
+<p>The above approach is simple but not comprehensive.  In part, this is because it is possible that the problem is not in one of the standard files mentioned above but in some some that those files source.   For a more comprehensive search, see <a href="http://askubuntu.com/a/537946/221266">this answer</a>.</p>

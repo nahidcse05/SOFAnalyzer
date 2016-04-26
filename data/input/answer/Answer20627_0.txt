@@ -1,0 +1,33 @@
+<p>Suggestion would be to add to <code>bash</code> a function that will swap two files:</p>
+
+<pre><code>nano .bashrc
+</code></pre>
+
+<p>paste in at the bottom of the file:</p>
+
+<pre><code>function swap()         
+{
+  if [ $# -ne 2 ]; then
+    echo "Usage: swap file1 file2"
+  else
+    local TMPFILE=$(mktemp)
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
+  fi
+}
+</code></pre>
+
+<p>either logout/login or run:</p>
+
+<pre><code>source .bashrc
+</code></pre>
+
+<p>To swap two files run:</p>
+
+<pre><code>swap x y
+</code></pre>
+
+<p>where x and y are your file-names</p>
+
+<p><a href="http://stackoverflow.com/questions/1115904/shortest-way-to-swap-two-files-in-bash">source</a></p>

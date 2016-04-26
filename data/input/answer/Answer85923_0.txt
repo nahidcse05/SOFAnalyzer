@@ -1,0 +1,5 @@
+<p>No. You can also use Java, Python, C, Javascript, QML, Vala, and C#, and probably other launguages too.</p>
+
+<p><img src="http://developer.ubuntu.com/wp-content/uploads/2011/09/final-platform-diag.jpg" alt="enter link description here"></p>
+
+<p><a href="http://developer.ubuntu.com/resources/platform/documentation/platform-diagram/" rel="nofollow"><em>Source of image</em></a></p>

@@ -1,0 +1,6 @@
+<p>You can install it via repos:</p>
+
+<pre><code>sudo apt-get install redis-server
+</code></pre>
+
+<p><a href="http://packages.ubuntu.com/search?suite=lucid&amp;searchon=names&amp;keywords=redis" rel="nofollow">http://packages.ubuntu.com/search?suite=lucid&amp;searchon=names&amp;keywords=redis</a></p>

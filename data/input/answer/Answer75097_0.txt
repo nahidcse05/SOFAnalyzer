@@ -1,0 +1,36 @@
+<p>yEd uses Java's metallic theme by default. What you want is Java's GTKLookandFeel theme. Normally you would be able to do this by starting yEd with:</p>
+
+<pre><code>java -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -jar yed.jar
+</code></pre>
+
+<p>Due to a bug in yEd/Java this does not work currently. For now you will have to apply the 
+following workaround:</p>
+
+<p>1.) Navigate to yEd's installation folder</p>
+
+<pre><code>cd $HOME/.yed
+</code></pre>
+
+<p>2.) Edit yed.jar and delete the class causing the theme issues</p>
+
+<pre><code>mv yed.jar yed.zip
+zip -d yed com/jgoodies/looks/plastic/Plastic3DLookAndFeel.class
+mv yed.zip yed.jar
+</code></pre>
+
+<p>You can now start yEd in GTK mode.</p>
+
+<p>With some Java versions you might run into a scenario where all fonts in the GTK theme are formatted in bold. You can troubleshoot this by uninstalling a korean font package:</p>
+
+<pre><code>sudo apt-get remove --purge  fonts-unfonts-core 
+</code></pre>
+
+<p>If you don't feel like removing packages just to troubleshoot Oracle's bugs you can try out the <a href="https://bugs.launchpad.net/ubuntu/+source/openjdk-7/+bug/937200/comments/44" rel="nofollow">workaround outlined in this comment</a>.</p>
+
+<hr>
+
+<p>References:</p>
+
+<p><a href="http://forum.ubuntuusers.de/topic/java-programm-yed-aussehen-anpassen/#post-5244382" rel="nofollow">http://forum.ubuntuusers.de/topic/java-programm-yed-aussehen-anpassen/#post-5244382</a></p>
+
+<p><a href="https://bugs.launchpad.net/ubuntu/+source/openjdk-7/+bug/937200" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/openjdk-7/+bug/937200</a></p>

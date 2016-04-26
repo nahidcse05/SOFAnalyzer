@@ -1,0 +1,20 @@
+<p>Keybind <code>sh -c 'firefox "https://www.google.com/search?q=$(xclip -o)"'</code> in <strong>System Settings</strong> -> <strong>Keyboard</strong> -> <strong>Custom</strong></p>
+
+<p>Or use the following script which let you edit the mouse selection before googling it.</p>
+
+<pre><code>#!/bin/bash
+
+# get mouse selection
+QUERY=$(xclip -o)
+
+# edit selection
+QUERY=$(zenity --entry --entry-text="$QUERY" --text='Google')
+[ "$?" != 0 ] &amp;&amp; exit 0
+
+# search google in firefox (you can use google-chrome, chromium, opera ..)
+firefox "https://www.google.com/search?q=${QUERY}"
+
+exit 0
+</code></pre>
+
+<p>To use this script, copy/paste it in a new text file (gedit ..), and name it whatever you like, eg <strong>google_clip.sh</strong>. Set execute permission, <code>chmod +x /filepath/google_clip.sh</code> or right-click in Nautilus then <strong>Properties</strong> -> <strong>Permissions</strong> -> check <strong>Execute</strong>. Then keybind it.</p>

@@ -1,0 +1,52 @@
+<p>If you just want to compile it and run other than making a makefile </p>
+
+<p>save this file in the link beside your <strong>foobar.c</strong>  file as <strong>example-1.glade</strong> </p>
+
+<p><a href="https://github.com/interval1066/XFC/blob/master/examples/glade/example-1/example-1.glade" rel="nofollow">https://github.com/interval1066/XFC/blob/master/examples/glade/example-1/example-1.glade</a></p>
+
+<p>and open terminal and switch to directory containing <strong>foobar.c</strong> and <strong>example-1.glade</strong> 
+and issue this line</p>
+
+<pre><code> gcc -o foobar foobar.c `pkg-config --cflags --libs libglade-2.0`
+</code></pre>
+
+<p>and run the binary </p>
+
+<pre><code> ./foobar
+</code></pre>
+
+<p>Or if you insist on compiling it with makefile, replace your makefile  with this one</p>
+
+<pre><code> ## Created by Anjuta
+
+ CC = gcc
+ CFLAGS = -g -Wall
+ OBJECTS = foobar.o
+ INCFLAGS = 
+ LDFLAGS = -Wl,-rpath,/usr/local/lib
+ LIBS =$(shell pkg-config gtk+-2.0 libglade-2.0 --libs)
+
+ GTKFLAGS=-export-dynamic `pkg-config --cflags --libs libglade-2.0 `
+ all: foobar
+
+ foobar: $(OBJECTS)
+$(CC) -o foobar $(OBJECTS) $(LDFLAGS) $(LIBS)
+
+ .SUFFIXES:
+ .SUFFIXES: .c .cc .C .cpp .o
+
+ .c.o :
+    $(CC) -o $@ -c $(CFLAGS) $&lt; $(INCFLAGS) $(GTKFLAGS)
+
+ count:
+    wc *.c *.cc *.C *.cpp *.h *.hpp
+
+ clean:
+    rm -f *.o
+
+ .PHONY: all
+ .PHONY: count
+ .PHONY: clean
+</code></pre>
+
+<p>I tested above instructions in my system, it works.</p>

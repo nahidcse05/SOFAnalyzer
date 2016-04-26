@@ -1,0 +1,12 @@
+<p>That's a QT file/folder dialog which doesn't show (un)mounted drives in the left column. This happens because the developer(s) of those applications didn't add places and URLs to the dialog sidebar using <a href="http://doc.qt.io/qt-5/qfiledialog.html#setSidebarUrls" rel="nofollow">QFileDialog::setSidebarUrls()</a>.</p>
+
+<p>Yet, you can still access mounted drives:</p>
+
+<ol>
+<li>Plug in the HDD and click on it in the file manager to get it mounted.</li>
+<li>In that file dialog, navigate to <code>/media/&lt;username&gt;</code> or <code>/mnt</code> folders and you should see the hard drive partitions as folders there. You can browse in them the contents of the drives.</li>
+</ol>
+
+<p>You must navigate to the mount point of the partition. There you'll find its contents. You can see mount points in Disks utility (<code>gnome-disks</code>).</p>
+
+<p><a href="http://i.stack.imgur.com/c2knz.png" rel="nofollow"><img src="http://i.stack.imgur.com/c2knz.png" alt="enter image description here"></a></p>

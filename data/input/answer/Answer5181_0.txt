@@ -1,0 +1,6 @@
+<p>You can <em>temporarily suspend</em> PulseAudio access while a program is running.  To do this, run the program in question from the terminal, and prepend "pasuspender" to the command name. </p>
+
+<p>Example:</p>
+
+<pre><code>pasuspender /usr/local/games/etqw/etqw-rthread
+</code></pre>

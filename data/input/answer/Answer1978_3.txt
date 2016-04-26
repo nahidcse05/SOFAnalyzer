@@ -1,0 +1,1 @@
+<p>it may also be worthwhile to check your BIOS options for this feature. On my Dell Inspiron, this can be set through the BIOS. Hopefully it'll work for your hardware too.</p>

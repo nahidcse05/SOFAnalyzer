@@ -1,0 +1,8 @@
+<p>You can still upgrade to 11.10 or whatever one u want and install an old kernel image.
+Old images can be found <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" rel="nofollow">here</a>. Just look for the version you are using then install it.</p>
+
+<p>Note, you should download a total of 3 packages in each case.
+Then from terminal run: </p>
+
+<pre><code>sudo dpkg -i *.deb
+</code></pre>

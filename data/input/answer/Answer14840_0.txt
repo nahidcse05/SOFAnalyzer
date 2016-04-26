@@ -1,0 +1,33 @@
+<p><strong>Update</strong> (thanks to enzotib):</p>
+
+<p>The files I listed in the original answer should <strong>not</strong> be edited, as a package update can overwrite your changes.</p>
+
+<p>PolicyKit should instead be configured using configuration files placed in <code>/var/lib/polkit-1/localauthority/</code>, as detailed in the <code>pklocalauthority</code> manual page.</p>
+
+<p><strong>Original answer:</strong></p>
+
+<p>With the deprecation of HAL, this is now controlled in <code>/usr/share/polkit-1/actions/org.freedesktop.consolekit.policy</code></p>
+
+<p>Set <code>allow_active</code> in the two action sections shown below to <code>no</code> (they are set to <code>auth_admin_keep</code> by default):</p>
+
+<pre><code>  &lt;action id="org.freedesktop.consolekit.system.stop-multiple-users"&gt;
+    &lt;description&gt;Stop the system when multiple users are logged in&lt;/description&gt;
+    &lt;message&gt;System policy prevents stopping the system when other users are logged in&lt;/message&gt;
+    &lt;defaults&gt;
+      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;
+      &lt;allow_active&gt;no&lt;/allow_active&gt;
+    &lt;/defaults&gt;
+  &lt;/action&gt;
+</code></pre>
+
+<p>...</p>
+
+<pre><code>  &lt;action id="org.freedesktop.consolekit.system.restart-multiple-users"&gt;
+    &lt;description&gt;Restart the system when multiple users are logged in&lt;/description&gt;
+    &lt;message&gt;System policy prevents restarting the system when other users are logged in&lt;/message&gt;
+    &lt;defaults&gt;
+      &lt;allow_inactive&gt;no&lt;/allow_inactive&gt;
+      &lt;allow_active&gt;no&lt;/allow_active&gt;
+    &lt;/defaults&gt;
+  &lt;/action&gt;
+</code></pre>

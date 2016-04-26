@@ -1,0 +1,19 @@
+<p>Try setting it using Compiz, after disabling it from System Settings &rarr; Keyboard &rarr; Shortcuts tab:</p>
+
+<ol>
+<li><p>Install <code>ccsm</code></p>
+
+<pre><code>sudo apt-get install compizconfig-settings-manager
+</code></pre></li>
+<li><p>Run it and enable <em>Commands</em> plugin</p></li>
+<li><p>Set it the command in <em>Commands</em> tab &amp; shortcut in <em>Key Bindings</em> tab</p>
+
+<p><img src="http://i.stack.imgur.com/0aDUh.png" alt="compiz set command shortcut - 1"></p>
+
+<p><img src="http://i.stack.imgur.com/fPBzt.png" alt="compiz set command shortcut - 2"></p></li>
+</ol>
+
+<p>Actually, setting custom shortcut from System Setting works too for me. Custom shortcuts are handled by <code>media-keys</code> plugin from <code>unity-settings-daemon</code> try reinstall it:</p>
+
+<pre><code>sudo apt-get install --reinstall unity-settings-daemon
+</code></pre>

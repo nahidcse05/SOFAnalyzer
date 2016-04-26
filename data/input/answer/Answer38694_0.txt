@@ -1,0 +1,1 @@
+<p>There is not normally a delete in the Nautilus menu.  You have to activate delete by going into nautilus edit->preferences->behaviour.</p>

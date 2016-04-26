@@ -1,0 +1,12 @@
+<p>In your ~/.ssh/config file (create it if it doesn't already exist), you can specify which key to use with the IdentityFile directive:</p>
+
+<pre><code>IdentityFile ~/path/to/your/key
+</code></pre>
+
+<p>You can use this directive inside a "Host" section if you only want to use that key for a particular host.  For example:</p>
+
+<pre><code>Host *.example.com
+    IdentityFile ~/.ssh/identity-example.com
+</code></pre>
+
+<p>If you run "ssh -v hostname", the debug information should confirm that it is using the key you specified.</p>

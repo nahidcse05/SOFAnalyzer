@@ -1,0 +1,9 @@
+<p>Graphically, you can run the program <code>Software Updater</code> from the dash inside Ubuntu.  </p>
+
+<p>If you are comfortable running commands in the terminal, open a terminal and enter</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+
+<p>This will accomplish the same thing:  Update the lists of software with the current versions, and upgrade those which can be upgraded without changes to the OS.  There are more forms of apt-get which are covered very well in <a href="http://askubuntu.com/questions/502981/understanding-various-update-and-upgrade-commands">this answer.</a></p>

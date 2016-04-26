@@ -1,0 +1,10 @@
+<p>Currently WinUSB is not in the Ubuntu Software Center for Ubuntu 14.04, so you have to install WinUSB from the Congelli501 PPA. In Ubuntu 14.04 and 15.04 open the terminal and type:</p>
+
+<pre><code>sudo add-apt-repository ppa:colingille/freshlight  
+sudo apt-get update  
+sudo apt-get install winusb
+</code></pre>
+
+<p>This will install the WinUSB graphical interface and the WinUSB command line tool. The WinUSB GUI is much easier to use than the WinUSB command line tool. </p>
+
+<p>WinUSB is a tool for creating a bootable USB flash drive used for installing Windows. For creating a bootable USB flash drive for installing Ubuntu use the built-in Startup Disk Creator application. For creating a bootable USB flash drive for installing other Linux distros use UNetbootin from the Ubuntu Software Center.</p>

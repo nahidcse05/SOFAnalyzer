@@ -1,0 +1,11 @@
+<p>Wrap it up in a subshell:</p>
+
+<pre><code>sudo sh -c "/path/to/script; shutdown -h now"
+</code></pre>
+
+<p>The problem there is the script will run as root too. This might not be an issue (consider it in your case) but you can work around this by using <code>sudo</code> again to break back down to your <code>$USER</code> (which will be replaced because we're using double-quotes):</p>
+
+<pre><code>sudo sh -c "sudo -u $USER /path/to/script; shutdown"
+</code></pre>
+
+<p>It's a bit hacky but it should work.</p>

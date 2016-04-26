@@ -1,0 +1,25 @@
+<p>The most simple solution would be to upgrade to a newer version:</p>
+
+<pre><code>sudo apt-get dist-upgrade
+</code></pre>
+
+<p>BUT, for some of us that isn’t an option right now, or maybe you don’t want to upgrade.  With a simple sed command you can update the  <code>/etc/apt/sources.list</code> file to use the new location for the old package repository.</p>
+
+<p>You can fix it without upgrading:</p>
+
+<p>Run this command below on your server and it will replace all of the  <code>archive.ubuntu.com</code>  and  <code>security.ubuntu.com</code> package repository URLs with  <code>old-releases.ubuntu.com</code></p>
+
+<pre><code>sudo sed -i -e 's/archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+</code></pre>
+
+<p>You may also want to see if there are other files in  <code>/etc/apt/sources.list.d/</code> that need to be updated, which can be done with a simple grep command:</p>
+
+<pre><code>grep -E 'archive.ubuntu.com|security.ubuntu.com' /etc/apt/sources.list.d/*
+</code></pre>
+
+<p>And :</p>
+
+<pre><code>sudo apt-get update
+</code></pre>
+
+<p>(The <a href="https://smyl.es/how-to-fix-ubuntudebian-apt-get-404-not-found-package-repository-errors-saucy-raring-quantal-oneiric-natty/" rel="nofollow">Source</a>)</p>

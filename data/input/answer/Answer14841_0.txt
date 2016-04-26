@@ -1,0 +1,21 @@
+<p>For hiding things in Nautilus (and maybe other graphical browsers) when you can't rename, you can create a file called <code>.hidden</code> in the current directory and list the paths you don't want shown.</p>
+
+<p>For example if I have a direcory with subdirectories <code>{a..f}</code> and a <code>.hidden</code> containing:</p>
+
+<pre><code>b
+c
+</code></pre>
+
+<p><code>ls -l</code> shows everything still:</p>
+
+<pre><code>drwxr-xr-x 2 oli oli 4096 2011-06-29 23:02 a
+drwxr-xr-x 2 oli oli 4096 2011-06-29 23:02 b
+drwxr-xr-x 2 oli oli 4096 2011-06-29 23:02 c
+drwxr-xr-x 2 oli oli 4096 2011-06-29 23:02 d
+drwxr-xr-x 2 oli oli 4096 2011-06-29 23:02 e
+drwxr-xr-x 2 oli oli 4096 2011-06-29 23:02 f
+</code></pre>
+
+<p>But Nautilus only shows:</p>
+
+<p><img src="http://i.stack.imgur.com/VcA6h.png" alt="enter image description here"></p>

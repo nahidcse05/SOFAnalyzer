@@ -1,0 +1,33 @@
+<p>Of course you can use it without this options just you'll need to scan manually every time </p>
+
+<p>But there is simple soution: </p>
+
+<p>1) You can get this driver "redirfs,avflt,dazuko -- kernel 3.18 or lower" needed from here:</p>
+
+<p><a href="http://www.bondoffamily-net.com/~kinta-chan/techknow/DownLoad/DownLoad.html" rel="nofollow">http://www.bondoffamily-net.com/~kinta-chan/techknow/DownLoad/DownLoad.html</a></p>
+
+<p>2) Go to folder where you downloaded the driver:</p>
+
+<p><code>sudo mv driver.tar /opt/COMODO/driver.tar</code></p>
+
+<p>3) Then change directory</p>
+
+<p><code>cd /opt/COMODO</code></p>
+
+<p>4) Install it 
+<code>sudo ./post_setup.sh</code>
+(<strong>Please be carefull</strong> at end of licence you NEED to accept with <code>Y</code> and then you can add email address, and choose Language <code>8</code>)</p>
+
+<p>5) Restart cmdavd
+<code>/etc/init.d/cmdavd restart</code></p>
+
+<p>6) Reboot if must</p>
+
+<p>7) RIGHT CLICK on System Tray icon and click</p>
+
+<ol>
+<li>Antivirus Security Level</li>
+<li>On Access</li>
+</ol>
+
+<p>DONE!!!</p>

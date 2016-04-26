@@ -1,0 +1,10 @@
+<p>I'm a Kubuntu user too and since I connect to my TV using HDMI to watch movies I had to deal with transporting the sound from my PC to my TV only, so what I've done is this (and has worked out so I can hear sound coming from my TV only).</p>
+
+<ul>
+<li>Right click on the volume icon in the <strong>System Tray</strong>.</li>
+<li>Opened "<strong>Audio Setup</strong>" from Kmix menu.</li>
+<li>Clicked on the "<strong>Audio Hardware Setup</strong>" tab.</li>
+<li>Selected the best option from the <strong>Profile</strong> drop-down list.</li>
+</ul>
+
+<p>In my case I selected the <strong>Digital Stereo (HDMI) output</strong> or the <strong>Digital Stereo (HDMI) output + Analog Stereo Input</strong>, clicked on <strong>Apply</strong> and the problem was solved.</p>

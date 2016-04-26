@@ -1,0 +1,7 @@
+<p>This have been reported as bug in Ubuntu 13.10 :</p>
+
+<p><a href="https://bugs.launchpad.net/ubuntu/+source/libgtop2/+bug/1210280" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/libgtop2/+bug/1210280</a></p>
+
+<p>It affected only 2 people, therefore the fix never maked it into production version. I am suspicious that it was never fixed afterwards, so it is still in 14.04.2.</p>
+
+<p>I think, you can dowload the fix for yourself and compile your own version of libgtop2 if you mind.</p>

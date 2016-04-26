@@ -1,0 +1,12 @@
+<p>thanks for saving me a long search of documents I would not be reading to find the path</p>
+
+<pre><code># 
+$ cd /usr/share/glib-2.0/schemas/
+#    
+</code></pre>
+
+<p>For customizing a system look, feel, and more this is a good start for overrides but you can do it another way as well I did not test your format but wanted to get to the actual settings and change them myself not override them, so I found another discussion on the subject...
+<a href="http://ubuntu.5.n6.nabble.com/configuring-unity-launcher-for-200-users-tp4977659p4977772.html" rel="nofollow">http://ubuntu.5.n6.nabble.com/configuring-unity-launcher-for-200-users-tp4977659p4977772.html</a></p>
+
+<p>which leads you to this answer:
+<a href="http://askubuntu.com/a/65901/112263">http://askubuntu.com/a/65901/112263</a></p>

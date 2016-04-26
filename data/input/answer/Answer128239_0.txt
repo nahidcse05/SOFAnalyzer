@@ -1,0 +1,37 @@
+<h1>Question 1</h1>
+
+<p>Scripts are simple and fun to write in ubuntu/linux . Here are some good links that really helped me.</p>
+
+<p>Mind the syntax though.</p>
+
+<p><a href="http://www.freeos.com/guides/lsst/" rel="nofollow">http://www.freeos.com/guides/lsst/</a>
+<a href="http://bash.cyberciti.biz/guide/Main_Page" rel="nofollow">http://bash.cyberciti.biz/guide/Main_Page</a>
+<a href="http://www.yourownlinux.com/2013/08/getting-started-linux-shell-scripting.html" rel="nofollow">http://www.yourownlinux.com/2013/08/getting-started-linux-shell-scripting.html</a></p>
+
+<h1>Question 2</h1>
+
+<p>Yes it is really normal that you are unable to run that installer as that might not be your system specific installer.Ubuntu can easily understand .deb , .rpm , .sh also .exe but using a special software called WINE.</p>
+
+<p><a href="https://help.ubuntu.com/community/Wine" rel="nofollow">here's an article for installing wine if you need it.</a></p>
+
+<h1>Question 3</h1>
+
+<p>Linux is secure so it might have made your installer dysfunctional.In other words might have made it non-executable.So you make it executable by following this.</p>
+
+<pre><code>1. right click on that installer.
+2. open permissions tab
+3. check the option that says "allow executing file as a program"
+4. press close button.
+
+Now double click that file and you should see a box saying display , run in terminal and some others.
+
+Press run in terminal.
+</code></pre>
+
+<p>Now you may get some other errors or it will run perfectly if it is right for your OS.</p>
+
+<h1>Question 4</h1>
+
+<p>This simply means this is not an ready to execute file.So make it executable using the answer to question 3.</p>
+
+<p>I have tried to talk in non-ubuntu terminology as much as possible.I hope it helps you.</p>

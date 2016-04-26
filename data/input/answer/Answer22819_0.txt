@@ -1,0 +1,14 @@
+<p>To run a shell script you first give it permissions:</p>
+
+<pre><code>chmod u+x nameofthescript
+</code></pre>
+
+<p>Then you run it. Assuming you're in the directory where the script is:</p>
+
+<pre><code>./nameofthescript
+</code></pre>
+
+<p>If it needs to run with root privileges:</p>
+
+<pre><code>sudo ./nameofthescript
+</code></pre>

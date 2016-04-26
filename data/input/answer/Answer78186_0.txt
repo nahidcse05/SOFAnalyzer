@@ -1,0 +1,21 @@
+<p>I have the same problem with this nice piece of hardware. Pairing fails after entering the PIN. The keyboard reacts on the ENTER key. The message: pairing fails - with the following entries in the sys log:</p>
+
+<p>Apr 30 13:19:16 wetab bluetoothd[889]: Discovery session 0xb9639b68 with :1.48 activated
+Apr 30 13:19:32 wetab bluetoothd[889]: Stopping discovery
+Apr 30 13:19:33 wetab bluetoothd[889]: Unknown Management opcode 23 (index 0)
+Apr 30 13:19:43 bluetoothd[889]: last message repeated 6 times
+Apr 30 13:19:43 wetab bluetoothd[889]: hci0: Cancel Pair Device (0x001a) failed: Invalid Parameters (0x0d)</p>
+
+<p>I managed to use the keyboard anyway - with some drawbacks.</p>
+
+<p>Just: hidd --search</p>
+
+<p>one need to install 
+sudo apt-get install bluez-compat</p>
+
+<p>OK, every restart I have to press the pairing button and start the command again. I do not trust the encryption either. But at least I can work. 
+I use a fresh Raring Ringtail installation which works just fine with my very cheap rubber bluetooth keyboard... </p>
+
+<p>Hope it gets better later as it seems to be an implementation flaw in Linux as the K810 works fine with my Android. </p>
+
+<p>Conrad</p>

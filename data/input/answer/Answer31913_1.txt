@@ -1,0 +1,6 @@
+<p>Shane,</p>
+
+<p>Look into a program called "rEFIt"
+it changes the boot loader. It's not the best IMO, but it should help you get the job done</p>
+
+<p>Regards</p>

@@ -1,0 +1,3 @@
+<p>SSLlabs tests for Heartbleed:</p>
+
+<p><a href="https://www.ssllabs.com/ssltest/" rel="nofollow">https://www.ssllabs.com/ssltest/</a></p>

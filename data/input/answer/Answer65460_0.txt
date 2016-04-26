@@ -1,0 +1,24 @@
+<p>g95 binary are located in <a href="http://www.g95.org/downloads.shtml#V0.93" rel="nofollow">this page</a>.</p>
+
+<p>Download the Linux specific binary from <a href="http://ftp.g95.org/v0.93/g95-x86-linux.tgz" rel="nofollow">here</a></p>
+
+<ol>
+<li><p>Copy the downloaded file to your home directory
+<code>cp ~/Downloads/g95-x86-linux.tgz ~/</code></p></li>
+<li><p>untar the file</p>
+
+<pre><code>cd ~
+tar -zxvf g95-x86-linux.tgz
+</code></pre></li>
+<li><p>Create a sym link</p>
+
+<pre><code>sudo ln -s ~/g95-install/bin/i686-pc-linux-gnu-g95  /bin/g95
+</code></pre></li>
+<li><p>Make sure that <code>echo $PATH</code> list <code>/bin</code></p></li>
+<li><p>Now to check the installation you can run the command.</p>
+
+<pre><code>g95 --version
+</code></pre></li>
+</ol>
+
+<p>Hope this helps.</p>

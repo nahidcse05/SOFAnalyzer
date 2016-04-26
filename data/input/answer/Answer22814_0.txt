@@ -1,0 +1,1 @@
+<p>I also had this problems short after a new Thunderbird version came out. The solution is, to wait with installing the newest version of thunderbird only, when all the extensions are also available in a compatible version.</p>

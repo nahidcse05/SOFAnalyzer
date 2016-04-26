@@ -1,0 +1,6 @@
+<p>I would recommend that you research how the installation process of an Operating System works. You cant just click the image and expect it to install like a program. You must put it on a USB(via Rufus) or DVD(via Infarecorder) then boot to it, after presume with the installation process.</p>
+
+<p>Infarecorder: <a href="http://infrarecorder.org/" rel="nofollow">http://infrarecorder.org/</a></p>
+
+<p>Installation process (Works for USB as well, just remember the name of the device, what OS is being used in this wiki is irrelevant):
+<a href="http://www.wikihow.com/Install-Windows-Using-a-CD" rel="nofollow">http://www.wikihow.com/Install-Windows-Using-a-CD</a></p>

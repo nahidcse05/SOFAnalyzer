@@ -1,0 +1,3 @@
+<p>If you only "sometimes" use an application, which uses GTK or QT libraries, but usually don't use them, then it is worth it as the libraries are only loaded if one application uses it. Furthermore, most applications only use "some" of the libraries, not as many as the window manager itself might require to be loaded. And in addition to the libraries there are more things which a window manager loads, which are not loaded when using another window manager even with the libraries of this manager.</p>
+
+<p>Finally you will for sure notice a faster bootup of your system when using a lightweight window manager.</p>

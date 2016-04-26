@@ -1,0 +1,1 @@
+<p>I installed using the normal desktop install instead of alternate and it's working. Don't know what was wrong.</p>

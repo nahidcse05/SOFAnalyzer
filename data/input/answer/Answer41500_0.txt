@@ -1,0 +1,1 @@
+<p>Just press up: <kbd>↑</kbd>. This shows you the last commands you run.</p>

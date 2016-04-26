@@ -1,0 +1,1 @@
+<p>Edit you bootloader kernel command-line and remove <code>quiet</code> argument. You may also want to remove <code>splash</code> argument to disable graphical animation during boot to be able to see the console with messages.</p>

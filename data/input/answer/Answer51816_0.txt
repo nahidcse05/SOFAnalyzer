@@ -1,0 +1,6 @@
+<p>Unless you are willing to write a Gnome-Shell extension, this is not possible.</p>
+
+<p>It also depends on whether Clutter is able to support this feature.
+You can read about writing Gnome-Shell extensions here:</p>
+
+<p><a href="https://live.gnome.org/GnomeShell/Extensions" rel="nofollow">https://live.gnome.org/GnomeShell/Extensions</a></p>

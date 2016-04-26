@@ -1,0 +1,7 @@
+<p>You can set <strong>Menu-bar</strong> Showing setting from <strong>System-settings>Appearance</strong> in <strong>Behavior</strong> as follows:</p>
+
+<p><img src="http://i.stack.imgur.com/aRpnR.png" alt="screen"></p>
+
+<hr>
+
+<p>If <strong>Title-bar overlapping</strong> than you can move via <strong><kbd>Alt</kbd>+ Drag Mouse with left-click</strong> In appropriate direction.</p>

@@ -1,0 +1,22 @@
+<p>Since no one else has mentioned it: If you want something as predictable as LaTeX, but don't need all of the power (and the complexity that comes with that power), <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is a great language. It's what's this website uses for markup. </p>
+
+<p>You write plain text and it gets converted to formatted text:</p>
+
+<p>Input:</p>
+
+<pre><code># Title
+
+This is a paragraph with *italics* and **bold**.
+</code></pre>
+
+<p>Output:</p>
+
+<hr>
+
+<h1>Title</h1>
+
+<p>This is a paragraph with <em>italics</em> and <strong>bold</strong>.</p>
+
+<hr>
+
+<p>Ubuntu has a program called <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, which can convert Markdown to basically any format you could want (including LaTeX, if you decide you want fancier formatting than Markdown can do).</p>

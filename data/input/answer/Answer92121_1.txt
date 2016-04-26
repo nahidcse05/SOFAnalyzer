@@ -1,0 +1,22 @@
+<p>I had exactly the same problem as described by nhadfield on 8/21/13.   First I looked into
+the answer about Ghostscript, but it was already installed.</p>
+
+<p>I had followed the instructions at <a href="http://askubuntu.com/questions/170880/how-do-i-install-the-tar-gz-for-my-printer-drivers">How do I install the drivers for my Samsung printer?</a>, which
+led me to install
+B1160_B1160w_UnifiedLinuxDriver_1.01.tar.gz</p>
+
+<p>However, today I discovered also B1160w_Linux_v1.04_Driver.tar.gz
+at
+<a href="http://www.dell.com/support/drivers/us/en/555/driverdetails?driverid=M4HVD" rel="nofollow">http://www.dell.com/support/drivers/us/en/555/driverdetails?driverid=M4HVD</a></p>
+
+<p>I downloaded this 1.04 version and then installed it as follows using the
+Terminal.   It seems to be working.</p>
+
+<pre><code>cd
+cd Downloads
+gunzip B1160w_Linux_v1.04_Driver.tar.gz 
+tar -xvf B1160w_Linux_v1.04_Driver.tar 
+cd cdroot
+cd Linux/
+sudo ./install.sh
+</code></pre>

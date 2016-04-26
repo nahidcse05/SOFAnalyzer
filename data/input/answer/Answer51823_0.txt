@@ -1,0 +1,4 @@
+<p>I may be misunderstanding your question, but: I've installed <code>fvwm</code> on Ubuntu 12.04 desktop system with the command:</p>
+
+<pre><code>sudo apt-get install fvwm
+</code></pre>

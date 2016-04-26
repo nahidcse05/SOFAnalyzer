@@ -1,0 +1,1 @@
+<p>I use <code>cron</code> and<code>hpodder</code> (available from Software Center) to update my subscriptions and download my podcasts at night. You could do that, and open your application and point it at the downloaded files.</p>

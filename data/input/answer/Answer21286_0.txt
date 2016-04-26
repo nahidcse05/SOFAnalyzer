@@ -1,0 +1,9 @@
+<p>You might want to try a file recovery software like photorec.  As it seems that you are working with a damaged drive.</p>
+
+<p>Another idea, did you try opening the vdi file directly from the old hdd?  I am not sure how that would help to be honest, but if that drive mounts and delivers data, you could check if the vdi file is corrupted, or whether this is a balky broken hdd that is just unwilling to give up the data.</p>
+
+<p>Indeed, even if the file is quite corrupt, I would think you should be able to copy it anyway, even if you couldn't actually use it.</p>
+
+<p>I am not expert, just trying to help :-)  </p>
+
+<p>Good luck.</p>

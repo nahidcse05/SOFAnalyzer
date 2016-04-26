@@ -1,0 +1,1 @@
+<p>GIMP won't open CMYK PSD files, it simply doesn't have CMYK mode for images. It will convert and open CMYK TIFF files, however, via separate+ plug-in.</p>

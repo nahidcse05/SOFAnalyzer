@@ -1,0 +1,13 @@
+<p>You can create/mount an encrypted directory with <code>encfs</code> like this:</p>
+
+<pre><code>mkdir -p ./content
+encfs -i 5 $PWD/raw $PWD/content
+</code></pre>
+
+<p>The first time you do this it will ask some questions, you can accept the defaults, and it will ask for a password which you will have to enter later every time to unlock.</p>
+
+<p>The encrypted content will be created under $PWD/raw, which will be mounted on $PWD/content. You can create files in $PWD/content or just copy there, and you will see that $PWD/raw gets populated with unreadable data. $PWD/content is visible only by your user, not even root can see it. When you are done editing, unmount with <code>fusermount -u ./content</code>, this will wipe out the content of $PWD/content. To mount again, repeat the <code>encfs</code> command above.</p>
+
+<p>The path parameters for <code>encfs</code> must be absolute paths, that's why I used <code>$PWD</code> above, to use directories in the current working directory.</p>
+
+<p>The <code>-i 5</code> means unmount automatically after idle for 5 minutes. </p>

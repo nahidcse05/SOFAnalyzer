@@ -1,0 +1,14 @@
+<p><img src="http://i.stack.imgur.com/P4WTj.png" alt="enter image description here"></p>
+
+<p>Where <code>secret.h</code> is:</p>
+
+<pre><code>#!/bin/bash
+cryptkeeper&amp;
+gnome-terminal -e "gnome-panel"&amp;
+xte 'sleep 5'
+xte 'keydown Control_L' 'key c' 'keyup Control_L'
+xte 'sleep 5'
+gnome-terminal -e "gnome-panel"&amp;
+</code></pre>
+
+<p>I am posting this because it may be useful to some others by editing the code. 'xdotool' can be used instead of xte.</p>

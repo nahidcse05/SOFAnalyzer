@@ -1,0 +1,8 @@
+<p>Postgres 9.2 is not packaged for Ubuntu 13.10, but 9.1 is. Try to do it like this:</p>
+
+<pre><code>sudo apt-get purge postgresql*
+
+sudo apt-get autoremove
+
+sudo apt-get install postgresql-9.1
+</code></pre>

@@ -1,0 +1,34 @@
+<p>As you can see in <a href="http://askubuntu.com/a/446056/16395">other answers</a>, the title of the tab is changed by the shell every time it outputs a prompt. And after executing <code>top</code> your tab exits because the command you told it to run finishes...</p>
+
+<p>I'll do the following:</p>
+
+<p>Step 1: call the terminal with shells, adding environment variables like that: </p>
+
+<pre><code>gnome-terminal --tab -t X -e "env MYTAB=X bash" --tab -t Y -e "env MYTAB=Y bash" 
+</code></pre>
+
+<p>Step 2: add at the end of your <code>.bashrc</code> the following code:</p>
+
+<pre><code>#if MYTAB is not set, return
+[ -z "$MYTAB" ] &amp;&amp; return
+# reset the cursor and title 
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+PS1="\[\e]0;$MYTAB \w\a\]$PS1"   #title: $MYTAB and current dir
+# execute the commands for every tab
+case "$MYTAB" in
+        X)
+                echo this is X
+        ;;
+
+        Y)
+                echo this is Y 
+                top
+        ;;
+esac
+</code></pre>
+
+<p>...which I think is easy to understand and you can modify with the command/tweaks you need. Tested and works ok; after you exit <code>top</code> from the tab you'll still have the prompt and the tab for you to peruse. </p>
+
+<p>Screenshot (after pressing "q" in <code>top</code>): </p>
+
+<p><img src="http://i.stack.imgur.com/qxcvB.png" alt="screenshot"></p>

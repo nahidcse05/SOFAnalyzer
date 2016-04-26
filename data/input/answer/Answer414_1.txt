@@ -1,0 +1,7 @@
+<p>The <a href="http://live.gnome.org/GnomeKeyring">Gnome Keyring</a> is used by Gnome-ish apps to store secrets on your behalf. The secrets are stuff like SSH keys, keys to wifi networks, et cetera. </p>
+
+<p>If you want to poke at your keyring, go to the Accessories menu and run the app called "Passwords and Encryption Keys." It will show your a number of folders on the <strong>Password</strong> tab - each one of those is called a keyring. Each entry under a folder is a password. Double click on them to see their contents. </p>
+
+<p>The reason a keyring is provided is that applications have to store secrets somewhere. It's easy for programmers to make a mistake and leave secrets around for anyone to read. In theory, the Gnome Keyring should store passwords for <em>everything</em> and do it right. </p>
+
+<p>(You should always exercise a minimum of security - add a password to keyrings that you care about, keep your computer physically safe, etc)</p>

@@ -1,0 +1,13 @@
+<p><strong>RESOLVED</strong></p>
+
+<p>Guess whatever happened had somehow corrupted the files and even though the Live CD and USB worked on other computers, this laptop refused to even acknowledge the disc and USB were inserted, which resulted in me coming up against the infernal Grub Recover. </p>
+
+<p>As no combination of F keys, DEL or ESC would get me back to BIOS, I was unable to access the boot details in order to check the UEFI status. However, I stupidly forgot that I was using a Sony Vaio which has this awesome ASSIST button. To use this, turn the laptop off completely, then instead of pressing the power button, simply press the ASSIST button. This forces open the Sony Recovery Console.</p>
+
+<p>From here, it's possible to recover OS, Check and repair HDD and also access the BIOS.... so I did.</p>
+
+<p>On a previous visit to the BIOS, I have to change the boot options to LEGACY in order to install another OS with Windows 8. I therefore changed this from Legacy back to UEFI and double checked the boot order (which was correct - and it's still strange that the disc and USB did not appear on ls list). I then saved, restarted and I now have the option to select OS.</p>
+
+<p>Just want to say thank you very much to all who helped. I will definitely be tinkering with UBUNTU now to get to grips with it - in my mind it's got a number of significant differences I need to get my head around. </p>
+
+<p>Not sure how I would have got around this though without the magical ASSIST button... but  if anyone else is having the same issues on their Sony Vaio, then the ASSIST feature is a major win!</p>

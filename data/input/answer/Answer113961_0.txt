@@ -1,0 +1,1 @@
+<p>Use <code>apt-get clean</code> command.According to man page it cleans downloaded packages which are not longer needed. Also in Synaptic on the low left click Status button and then on up left you will see not installed.Select it and you will do what you want.  </p>

@@ -1,0 +1,6 @@
+<p>I also had this issue. I tried user1689961's answer but got a connection refused. When I added the <code>-allow &lt;ip address of client&gt;</code> option, it worked.</p>
+
+<p>The full command:</p>
+
+<pre><code>sudo x11vnc -safer -localhost -once -nopw -auth /var/run/lightdm/root/:0 -display :0 -allow &lt;ip address&gt;
+</code></pre>

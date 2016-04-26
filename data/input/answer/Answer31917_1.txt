@@ -1,0 +1,11 @@
+<p>I had exact same problem on my Inspiron N5110 running Ubuntu 12.04 but was able to fix it using patch and instructions provided in these two links.</p>
+
+<p><a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/606238/comments/144" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/linux/+bug/606238/comments/144</a></p>
+
+<p><a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/606238/comments/147" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/linux/+bug/606238/comments/147</a></p>
+
+<p>Touchpad is now recognised as a AlpsPS/2 ALPS DualPoint TouchPad and Touchpad tab is enabled in System Settings. Unfortunately, scrolling is still not an option... :-(</p>
+
+<p>At least touchpad is disabled while typing, which was the biggest problem for me resulting in cryptic writings! :-)</p>
+
+<p>[EDIT]: Also Fn+F3 is working now (aka, touchpad toggle).</p>

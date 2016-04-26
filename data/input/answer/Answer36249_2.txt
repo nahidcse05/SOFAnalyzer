@@ -1,0 +1,1 @@
+<p>Currently it is not possible to change the icon size in Unity 2D - also not even with third-party software. Sorry. There exists a script to modify the icon size, buts not recommended for further updates.</p>

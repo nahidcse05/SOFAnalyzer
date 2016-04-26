@@ -1,0 +1,27 @@
+<p>Here is a <code>python</code> script to do the job :</p>
+
+<pre class="lang-py prettyprint-override"><code>#!/usr/bin/env python2
+nums = set('7,152,13,11,42,5,7'.split(','))
+with open('/path/to/file.txt') as f:
+    f = enumerate(f, start=1)
+    for i, line in f:
+        if len(set.intersection(nums, set(line.split(',')))) &gt;= 3:
+            print str(i) + ': ' + line.rstrip()
+</code></pre>
+
+<ul>
+<li><p>The <code>set</code>, <code>nums</code> will contain the numbers we want to match</p></li>
+<li><p>We have created an <code>enumerate</code> object to get the line number and iterate over the lines</p></li>
+<li><p><code>set.intersection(nums, set(line.split(',')))</code> gets us the common numbers among from the <code>nums</code> and <code>line</code></p></li>
+<li><p>If there are 3 or more numbers from that sequence occur in the line <code>if len(....) &gt;= 3</code>, then the line number and the line will be printed.</p></li>
+</ul>
+
+<p>The output will be like :</p>
+
+<pre><code>1: 7,152,13,11,42,5,45
+2: 7,152,1,5,7,34,44
+3: 7,152,13,11,42,5,7
+5: 11,42,5,7,7,152,13
+</code></pre>
+
+<p>Also considering the numbers do not have to come in the exact order mentioned, they can come in any order.</p>

@@ -1,0 +1,16 @@
+<p>Source: <a href="https://bugs.launchpad.net/ubuntu/+source/unity-place-files/+bug/751374" rel="nofollow">Bug #751374 “Dash won't open files anymore” : Bugs : “unity-place-files” package : Ubuntu</a></p>
+
+<p>See <a href="https://bugs.launchpad.net/ubuntu/+source/unity-place-files/+bug/751374/comments/22" rel="nofollow">comment #27</a> in the source thread. I modified the original commands to use <code>sed</code>.</p>
+
+<ol>
+<li><p>Remove mime entries containing exo as a normal user.</p>
+
+<p><code>sed -i '/exo/d' ~/.local/share/applications/mimeapps.list</code></p></li>
+<li><p>Update mime desktop database.</p>
+
+<p><code>update-desktop-database ~/.local/share/applications</code></p></li>
+</ol>
+
+<p>This helped me fix my own Ubuntu/XFCE install without removing XFCE.  You may have to modify more (see source thread), but these commands fixed it in my install.</p>
+
+<p>From what I gather in the source thread, the bug may have been fixed for clean installs.</p>

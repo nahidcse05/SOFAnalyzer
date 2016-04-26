@@ -1,0 +1,1 @@
+<p>If you need to just access Windows and don't have time for any of the above, try using <a href="http://www.hirensbootcd.org/download/" rel="nofollow">Hiren's Boot CD</a>. It allows to boot a partition directly by just booting from the disk. It's an invaluable toolkit too!</p>

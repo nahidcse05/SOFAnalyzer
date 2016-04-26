@@ -1,0 +1,15 @@
+<p>You very well may want that bootloader one day! ;)</p>
+
+<p>But try this and see if you like it:</p>
+
+<p><code>sudo -i gedit /etc/default/grub</code></p>
+
+<p>Look for:</p>
+
+<p>'GRUB_TIMEOUT=10'</p>
+
+<p>Change that to 0. This will make the countdown on the grub screen 0, and it will boot the default OS. <strong>MAKE SURE Ubuntu is your default selection, or it will just boot back to windows!</strong></p>
+
+<p>Then:</p>
+
+<p><code>sudo update-grub</code></p>

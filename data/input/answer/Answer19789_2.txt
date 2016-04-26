@@ -1,0 +1,21 @@
+<p><strong>Calendar Extension for Thunderbird</strong></p>
+
+<p>Install this pug-ins <a href="http://packages.ubuntu.com/xul-ext-lightning" rel="nofollow">xul-ext-lightning</a> <a href="http://apt.ubuntu.com/p/xul-ext-lightning" rel="nofollow"><img src="http://bit.ly/software-small" alt="Install xul-ext-lightning"></a></p>
+
+<hr>
+
+<p><strong>Google calendar and evolution....</strong></p>
+
+<p>Currently there is a bug in evolution a workaround do the following :</p>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/73828/option-to-sync-to-google-calendar-doesnt-show-up-in-evolution/73856#73856">Option to sync to Google Calendar doesn&#39;t show up in Evolution</a></li>
+</ul>
+
+<hr>
+
+<p><strong>How to migrate from evolution to thunderbird...</strong></p>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/27410/migrating-from-evolution-to-thunderbird/27413#27413">Migrating from Evolution to Thunderbird</a></li>
+</ul>

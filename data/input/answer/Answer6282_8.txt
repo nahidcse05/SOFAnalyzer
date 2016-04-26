@@ -1,0 +1,6 @@
+<p>For the sake of completeness, I would add that you can also set the <code>gnome-terminal</code> title using this command: </p>
+
+<pre><code>wmctrl -r :ACTIVE: -N "MyWindowTitle"
+</code></pre>
+
+<p>You'll need to install the package <a href="http://apt.ubuntu.com/p/wmctrl">wmctrl <img src="http://bit.ly/software-small" alt="Install wmctrl"></a> first.</p>

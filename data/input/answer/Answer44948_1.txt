@@ -1,0 +1,1 @@
+<p>Alpha-2 version of Quantal will be releases TODAY (28 June 2012). It's not downloadable yet, but it should be in the next hours at the specified addresses. Probably the wiki has been updated before the ISOs are really added to ftp.</p>

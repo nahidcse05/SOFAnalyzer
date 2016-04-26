@@ -1,0 +1,3 @@
+<p>Is there a particular Ubuntu One service you are referring to?  The Ubuntu One Music (stream music from your cloud storage) and Ubuntu One Contacts apps should already be available on the market.</p>
+
+<p>There is an Ubuntu One Files app that should be in public beta soon, and there will be an improved contacts synchronisation system available at some point (one that doesn't require any additional software on Android phones).</p>

@@ -1,0 +1,23 @@
+<p>VCE extensions can be open with the Visual CertExam Manager. It is a great application to use when preparing for any type of exams.</p>
+
+<ol>
+<li><p>First you have to install <a href="http://www.winehq.org/" rel="nofollow">wine</a> .</p></li>
+<li><p>Then install <a href="http://www.visualcertexam.com/dwnl/visual-certexam-manager.html" rel="nofollow">Visual CertExam Manager</a></p>
+
+<p>-download it first (using above link)</p>
+
+<p>-go to the downloaded folder and right click to the </p>
+
+<blockquote>
+  <p>visual_certexam_suite_setup.exe</p>
+</blockquote>
+
+<p>and select </p>
+
+<blockquote>
+  <p>open with wine windows program loader</p>
+</blockquote>
+
+<p>-do the steps they ask.(simply now <code>VCE</code> installed)</p></li>
+<li><p>Now go to the place that <code>.vce</code> file is in and open it through wine(right click /open with wine).</p></li>
+</ol>

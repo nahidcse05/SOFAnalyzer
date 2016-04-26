@@ -1,0 +1,3 @@
+<p>I had the same issues as well, when I did this, but eventually found this page: <a href="https://help.ubuntu.com/community/WindowsDualBoot" rel="nofollow">WindowsDualBoot: Ubuntu.com</a> I hope it helps you, as it helped me greatly.</p>
+
+<p>I also used a USB and when I tried installing it via restart it wouldn't work, however, I went into it the USB's files in windows, found the installer, and used it that way, and installed it on my pre-prepared linux partition.</p>

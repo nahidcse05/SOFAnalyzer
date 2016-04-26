@@ -1,0 +1,9 @@
+<p>The recommended steps to check the webcam quality are (This same problem happened to me for a Logitech webcam):</p>
+
+<ol>
+<li><p>Test the webcam with another app (Cheese, Kamerka, Kamoso &amp; guvcview). Guvcview and Kamoso are great since they offer many features for webcam that Skype does not. You can even test the webcam with Google Hangouts or <a href="http://www.testwebcam.com/" rel="nofollow">http://www.testwebcam.com/</a></p></li>
+<li><p>If the webcam works great in other apps or webapps, then you know the webcam is not the problem, but the software. We then go to test capturing methods with tools like <code>qv4l2</code>. You can check several webcam features with this. There are some capturing options that are limited to 5 fps. Others can go up to 30 fps and even other can get to 60 fps.</p></li>
+<li><p>Last option is to update Skype with the latest version (or a version that works correctly). Is no secret that Skype has had a huge amount of video problems on Linux. From slow webcam, to black one, to crashing if you opened the webcam and more. For some users, using the Skype that comes with Ubuntu works great. For others you need to <a href="http://www.skype.com/en/download-skype/skype-for-linux/" rel="nofollow">download a newer version</a>. In my case in one PC it works perfect with the one that Ubuntu had. In another case, the upgraded version worked great. Currently I have the 4.2.0.13 Version.</p></li>
+</ol>
+
+<p>NOTE: I also followed the steps you are doing and got no solution. A tip I would say is that Skype might crash and leave a zombie in memory, so you need to search for the Skype process and kill it before starting another Skype session. Just mentioning this in case it happens to you.</p>

@@ -1,0 +1,7 @@
+<p>Sorry to have bothered you all.</p>
+
+<p>I just noticed that the DNS had changed. So in order to solve the problem I clicked on the "Connection Information" and Under the auto Ethernet tab I took the primary DNS IP shown under IPv4 and placed the same DNS on my iPhone WiFi connection details and it started working perfectly.</p>
+
+<p>Thanks once again</p>
+
+<p>Jacob</p>

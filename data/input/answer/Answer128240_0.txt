@@ -1,0 +1,3 @@
+<p>From the desktop distro, ubuntu supports multiple CPU without any further config.</p>
+
+<p>Since you're new to Ubuntu and Ubuntu server, you might take a few minutes to <a href="https://help.ubuntu.com/14.04/serverguide/serverguide.pdf" rel="nofollow">read this document</a></p>

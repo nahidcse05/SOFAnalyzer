@@ -1,0 +1,4 @@
+<p>Just use Xclear add-on.</p>
+
+<p>Clear url and search field easily
+<a href="https://addons.mozilla.org/en-US/firefox/addon/xclear/" rel="nofollow">https://addons.mozilla.org/en-US/firefox/addon/xclear/</a></p>

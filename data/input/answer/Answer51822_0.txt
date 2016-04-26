@@ -1,0 +1,23 @@
+<ul>
+<li><p>The canonical method is to check your running kernel config, but this can be hard to parse because it will include both modules and other options and the names may not correspond:</p>
+
+<pre>grep "=y" /boot/config-`uname -r`</pre></li>
+<li><p>Practically, it's much easier to simply do a:</p>
+
+<pre>locate name-of-module | grep `uname -r`.*ko`</pre>
+
+<p>(make sure the database has been recently updated, with <code>sudo updatedb</code> if necessary)</p>
+
+<p>If you see a <code>.ko</code> file entry like:</p>
+
+<pre>/lib/modules/3.2.0-29-generic/kernel/drivers/hwmon/<b>coretemp.ko</b></pre>
+
+<p>then this module is <em>NOT</em> built-in and can properly be added to <code>/etc/modules</code></p>
+
+<ul>
+<li>But if you get no results in <code>/lib/modules</code>, then the module <em>IS</em> built-in and there may be no need to explicitly load it.</li>
+</ul></li>
+<li><p>A variation to find all non-built-in modules in <code>/lib/modules</code> is:</p>
+
+<pre>locate /lib/modules/`uname -r` | grep -Po "(?&lt;=/)\w+(?=\.ko)"</pre></li>
+</ul>

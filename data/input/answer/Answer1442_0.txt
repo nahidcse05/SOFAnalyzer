@@ -1,0 +1,12 @@
+<p>Since you need boot files and home to be in their own partitions, you need a total of 3 partitions. As you state in your question, resize existing partitions and create 3 new ones. The boot partition need only be 50 MB.</p>
+
+<p>When the installer ask you for partitioning, simple select these empty partitions and set the mount point as follows</p>
+
+<ul>
+<li>1 for boot and select mount point as <strong>/boot</strong> | size: 50mb <br/></li>
+<li>1 for home and select mount point as <strong>/home</strong><br/>
+and</li>
+<li>1 for root with mount point as <strong>/</strong><br/></li>
+</ul>
+
+<p>You could always transfer the contents of your /home directory to the newly created partition and then install ubuntu mounting the partition as /home. See <a href="http://askubuntu.com/q/5484/270">this</a> for details.</p>

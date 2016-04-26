@@ -1,0 +1,11 @@
+<p>Type in terminal</p>
+
+<blockquote>
+  <p>sudo add-apt-repository ppa:team-xbmc</p>
+  
+  <p>sudo apt-get update</p>
+  
+  <p>sudo apt-get install xbmc</p>
+</blockquote>
+
+<p>You can even have XBMC to start on Login by selecting XBMC session while logging into LightDM</p>

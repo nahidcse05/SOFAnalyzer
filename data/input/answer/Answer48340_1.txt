@@ -1,0 +1,4 @@
+<p>I guess the problem is in unreachable www.earthtools.org - or rather unexpected answer from there. I usually get very slow (10+ seconds) 404 from there.</p>
+
+<p>In indicator logs (~/.cache/indicator-weather.log) you can see a lot of entries like:
+ERROR - Weather: error reaching url 'http://www.earthtools.org/timezone-1.1/[your position]</p>

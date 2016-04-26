@@ -1,0 +1,7 @@
+<p>Here is what I did for it:</p>
+
+<p>It seems not there's a smooth way to go. I just downloaded <code>virtualbox-fuse</code> deb package file from launchpad. (<a href="https://launchpad.net/ubuntu/raring/amd64/virtualbox-fuse" rel="nofollow">here</a>)</p>
+
+<p>I picked 4.1.18 because my vbox is a little bit older but I guess it would works with recent version.</p>
+
+<p>Install the package with <code>dpkg -i</code>. You may need to specify <code>--force-depends</code> option for installing.</p>

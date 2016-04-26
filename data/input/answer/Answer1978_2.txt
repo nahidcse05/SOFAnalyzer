@@ -1,0 +1,10 @@
+<p>This is described on the Ubuntu Community Wiki:</p>
+
+<p><a href="https://help.ubuntu.com/community/AppleKeyboard#Change%20Function%20Key%20behavior">https://help.ubuntu.com/community/AppleKeyboard#Change%20Function%20Key%20behavior</a></p>
+
+<p>You can try:</p>
+
+<pre><code>sudo echo 2 &gt; /sys/module/hid_apple/parameters/fnmode
+</code></pre>
+
+<p>If it works you can change this permanently (more info see the wiki page)</p>

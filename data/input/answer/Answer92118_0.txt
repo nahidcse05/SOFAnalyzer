@@ -1,0 +1,26 @@
+<p>I just updated my Ubuntu 13.04 system to kernel 3.8.0-29 and I had no problem with this. My suspicion is that you're experiencing filesystem damage. This is common on systems that dual-boot with Windows 8 because of a Windows 8 feature called "fast startup." This feature essentially turns the shutdown operation into a suspend-to-disk operation. This works fine on a single-boot computer, but when the computer dual-boots with another OS, the result is dangerous filesystem problems, at least on any filesystem that's shared between OSes (including the EFI System Partition [ESP]). To fix this, boot to Windows and <a href="http://www.eightforums.com/tutorials/6320-fast-startup-turn-off-windows-8-a.html" rel="nofollow">disable fast startup.</a> Note that this feature is <em>not</em> the same as the fast boot option in your firmware; disabling this feature in the firmware does <em>not</em> disable it in Windows 8.</p>
+
+<p>If you disable fast startup and the problem persists, then you could try doing a filesystem check on your ESP, as in <code>dosfsck /dev/sda1</code>. (The device file in Linux might be different, though. Use <code>parted</code> or GParted to find the FAT partition with a "boot flag" set, or use <code>gdisk</code> to find the partition with a type code of EF00.)</p>
+
+<p>If the problem persists even after you disable fast boot and fix the filesystem, please try the following diagnostics:</p>
+
+<pre><code>grep efi /etc/fstab
+sudo blkid
+</code></pre>
+
+<p>Compare the results -- the <code>/etc/fstab</code> file defines where partitions are mounted, and so searching it for <code>efi</code> should produce details on how your system is mounting the ESP. For instance, on my system, it shows the following:</p>
+
+<pre><code>$ grep efi /etc/fstab
+# /boot/efi was on /dev/sda1 during installation
+UUID=FFB3-46B6  /boot/efi   vfat    defaults    0   1
+</code></pre>
+
+<p>The <code>blkid</code> command produces information on all your computer's filesystems. You want to compare what it shows for your ESP (usually <code>/dev/sda1</code>, <code>/dev/sda2</code>, or <code>/dev/sda3</code>) to what's in <code>/etc/fstab</code>. For instance:</p>
+
+<pre><code>$ sudo blkid
+/dev/sda1: SEC_TYPE="msdos" LABEL="ESP" UUID="FFB3-46B6" TYPE="vfat" 
+/dev/sda2: LABEL="Fred" UUID="421258c1-e9b1-4b1b-9dd7-60b82e75f8c3" TYPE="ext4" 
+/dev/sda3: UUID="9108d33b-855d-49ba-8b9e-90f981a597ea" TYPE="swap"
+</code></pre>
+
+<p>In this case, <code>/dev/sda1</code> is the ESP -- it's a FAT (<code>TYPE="vfat"</code>) filesystem, and its serial number matches what's in <code>/etc/fstab</code> (<code>UUID="FFB3-46B6"</code>), so all is in order. A mismatch of the serial numbers or some other detail might cause the problem you're encountering. If you need more help, please edit your post with this information and the <em>exact</em> error message you're seeing.</p>

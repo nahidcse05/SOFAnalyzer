@@ -1,0 +1,3 @@
+<p>The console mode is useful for debugging/fixing things, when the graphical mode crashes or fails to load due to driver issues. Most people will never use/discover them.</p>
+
+<p>As for the version number discrepancy, most likely the image for lightdm has not been updated to show the new version number yet, and still shows 12.04. If you've installed 12.10 then you are on 12.10.</p>

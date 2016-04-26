@@ -1,0 +1,5 @@
+<p>There is a link to the appropriate bugs page right there on the wiki page. Just click on the link, and then on the resulting Ubuntu-docs bugs page click on the "Report a bug" link in the upper right corner of the page. You should end up <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-docs/+filebug" rel="nofollow">here</a>. You will need to have a launchpad account.<BR></p>
+
+<p>Note that there is controversy over that particular wiki page because it falls under the purview the Ubuntu-docs group, but that group is not the master of the checksums.</p>
+
+<p>EDIT: By the way, there is already <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-docs/+bug/1288593" rel="nofollow">a bug report</a>. You can just add your comment to it.</p>

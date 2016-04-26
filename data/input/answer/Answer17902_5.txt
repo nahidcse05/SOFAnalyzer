@@ -1,0 +1,1 @@
+<p>I have a Lenovo Thinkpad and had the same problem resuming from suspend in natty. reinstalled oneiric and the problem seems to be solved</p>

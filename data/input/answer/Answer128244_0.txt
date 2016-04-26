@@ -1,0 +1,1 @@
+<p>Some routers have a problem traversing NAT when trying to connect to a server, using its external IP, but on the same LAN. It should work just fine from an outside network.</p>

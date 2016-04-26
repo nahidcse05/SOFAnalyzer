@@ -1,0 +1,1 @@
+<p>Had to move extras to secondary usb card slot. Drive is faster when it is not sharing connections with kbd mouse bluetooth etc.</p>

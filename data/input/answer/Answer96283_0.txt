@@ -1,0 +1,5 @@
+<p>Sure you can. Just boot a live system (e.g. your installation medium), delete the windows partition and resize the Ubuntu partition. You can do this with GParted.</p>
+
+<p>After that you might need to edit the /etc/fstab on your Ubuntu partition to set the new UUID of the resized partition - if it changes. You get all the UUIDs with <code>sudo blkid</code></p>
+
+<p>Then you can reboot and your Ubuntu should boot.</p>

@@ -1,0 +1,3 @@
+<p>Short answer is no, there is no way to prioritize the order in which files are synchronized. There is however, a workaround for situations like yours.</p>
+
+<p>Instead of having all files under the <code>~/Ubuntu One</code> folder, you can have different files under different folders within your home directory, which are each individually synchronized with Ubuntu One. You can then choose to only have certain folders synchronized to certain machines, and you can disable and enable the folders being synchronized on any one machine, in the Ubuntu One control panel application. Thus you could disable <code>~/Photos</code> from being synchronized, until after <code>~/Documents</code> has finished synchronizing, for example.</p>

@@ -1,0 +1,13 @@
+<p>Because you probably have different client and server version packages installed.  First, I'd check what packages you have installed:</p>
+
+<pre><code>dpkg -l | grep postgresql
+</code></pre>
+
+<p>Then install the 9.3 server package if you don't already have it.</p>
+
+<p>If you already have it, check what clusters you have running:</p>
+
+<pre><code>pg_lsclusters
+</code></pre>
+
+<p>If you don't already have a 9.3 cluster, make one (<code>pg_createcluster</code>).  If you do, note the port number and make sure you connect to that one.</p>

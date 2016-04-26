@@ -1,0 +1,3 @@
+<p>All Ubuntu packages will run in any desktop environment. But at the times you need animations you will face the difference. Because The official Unity, KDE are for performance + Animations like graphics and etc but XFCE , LXDE are mainly designed for performance. </p>
+
+<p>so bottom line is applications are nothing to do with Desktop Environments in the matter of performance. </p>

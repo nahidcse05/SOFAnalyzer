@@ -1,0 +1,24 @@
+<p>The problem is not anti-aliasing - all of your examples show the text is anti-aliased fine.</p>
+
+<p>The difference is in an aspect of font rendering called "hinting" - the top Ubuntu Mono example shows a strong hinting, whereas the bottom Ubuntu Mono example shows a smoother hinting.  Hinting deforms the letter shapes to better align to the pixel grid and give a more crisp appearance.</p>
+
+<p>Whether you like one or the other is a matter of personal preference.  The top one is certainly very clear to read but at the expense of deforming the letter shapes.</p>
+
+<p>The Java environment will be using its own font renderer rather than your global settings, hence the difference.</p>
+
+<p>There are various fixes for this described in this link at stackoverflow.com:</p>
+
+<p><a href="http://stackoverflow.com/questions/17510099/ugly-fonts-in-java-applications-on-ubuntu">http://stackoverflow.com/questions/17510099/ugly-fonts-in-java-applications-on-ubuntu</a></p>
+
+<p>This one looks pretty simple (I have not tested this):</p>
+
+<blockquote>
+  <p>Try adding</p>
+
+<pre><code>export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+</code></pre>
+  
+  <p>to your ~/.bashrc</p>
+</blockquote>
+
+<p>But the chosen solution is more complex.</p>

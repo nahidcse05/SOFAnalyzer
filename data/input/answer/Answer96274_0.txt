@@ -1,0 +1,6 @@
+<p>Files can be stuck in <code>~/.local/share/Trash/expunged</code> when you delete from Nautilus a folder that belongs to you, but contains files which are belong to another user, and it is tricky for Nautilus to handle this situation correctly. To delete them try to use:</p>
+
+<pre><code>sudo -i
+rm -rv /home/&lt;your_username&gt;/.local/share/Trash/expunged/*
+exit
+</code></pre>

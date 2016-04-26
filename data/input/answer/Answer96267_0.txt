@@ -1,0 +1,6 @@
+<p>To install apache2-dev on Ubuntu, use:</p>
+
+<pre><code>sudo apt-get install apache2-threaded-dev
+</code></pre>
+
+<p><strong>Source:</strong> <a href="http://stackoverflow.com/questions/2939670/phusion-passenger-on-ubuntu-10-04-why-apache2-prefork-dev-when-we-want-apache2">Related question on SO</a></p>

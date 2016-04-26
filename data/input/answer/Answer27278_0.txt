@@ -1,0 +1,3 @@
+<p>Chrome is developed by Google and it is unlikely they will integrate kget directly into it. </p>
+
+<p>If you look through the Chrome Web store and search for 'download manager' you will get quite a few extensions available - I cannot vouch for how well any of them work as I use the built in Chrome download manager.</p>

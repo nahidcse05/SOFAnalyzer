@@ -1,0 +1,12 @@
+<ul>
+<li><p>Looking at the parts of the video, the person is using a slightly older version of Ubuntu with GNOME 3 desktop. The Window theme appears to be the default Ambiance theme - the window buttons you see on the Chromium windows is a thing Chrome can do to its own windows:</p>
+
+<p><img src="http://i.stack.imgur.com/XsFPf.png" alt="enter image description here">
+<img src="http://i.stack.imgur.com/aypje.png" alt="enter image description here">
+The theme for the editor as well is probably individual to that program.</p>
+
+<p>Ambiance should be available by default on Ubuntu (if not installed, you can install the <a href="http://packages.ubuntu.com/trusty/light-themes" rel="nofollow"><code>light-themes</code> package</a> with <code>sudo apt-get install light-themes</code>). If you want to use it with GNOME Shell 3.12+ or the newer GTK apps that come with it, <a href="http://www.webupd8.org/2014/10/install-ambiance-and-radiance-themes.html" rel="nofollow">this</a> may help</p></li>
+<li><p>The Desktop looks like the GNOME 3 Shell, probably before 3.10 (when they merged the menus). It has the default annoying dark theme.</p></li>
+<li><p>The icon theme looks like the default <a href="https://launchpad.net/humanity" rel="nofollow">Humanity</a> theme or similar.</p></li>
+<li><p>There many similar wallpapers available (e.g. <a href="http://i.stack.imgur.com/1M7eq.jpg" rel="nofollow">this one</a>, a low quality version of the one from the video can be found <a href="http://i.stack.imgur.com/Q7Xga.png" rel="nofollow">here</a>.</p></li>
+</ul>

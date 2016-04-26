@@ -1,0 +1,20 @@
+<p>boot your computer on a Ubuntu live-CD or live-USB.</p>
+
+<ul>
+<li><p>choose "Try Ubuntu"</p></li>
+<li><p>connect internet</p></li>
+<li><p>open a new Terminal, then type:</p></li>
+</ul>
+
+<p>sudo add-apt-repository ppa:yannubuntu/boot-repair &amp;&amp; sudo apt-get update</p>
+
+<ul>
+<li><p>Press Enter.</p></li>
+<li><p>Then type:</p></li>
+</ul>
+
+<p>sudo apt-get install -y boot-repair &amp;&amp; (sudo boot-repair &amp;)</p>
+
+<ul>
+<li>Press Enter </li>
+</ul>

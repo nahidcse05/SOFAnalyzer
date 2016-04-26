@@ -1,0 +1,6 @@
+<p>I got all 9GB to show up. Here is what I did:</p>
+
+<ol>
+<li>Place 2GB modules into banks 0, 1, 2</li>
+<li>Place 1GB modules in banks 3, 4, 5</li>
+</ol>

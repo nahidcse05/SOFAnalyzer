@@ -1,0 +1,9 @@
+<p>to get the subwoofer
+I added on the file <code>/etc/modprobe.d/alsa-base.conf</code> this line: </p>
+
+<pre><code>options snd-hda-intel model=asus-mode4
+</code></pre>
+
+<p>then rebooted and selected 2.1 output in audio pref. It should work right away :) got this information from <a href="http://askubuntu.com/questions/166261/keyboard-backlight-not-working-on-an-asus-n56v">Keyboard backlight not working on an Asus N56V</a></p>
+
+<p>hope it helped!</p>

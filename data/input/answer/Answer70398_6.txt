@@ -1,0 +1,21 @@
+<p>I have a Samsung NP300E5a with Optimus. Same problem after upgrading to Kernel 3.5.0-31-generic.
+I found a solution that works for me here "<a href="http://askubuntu.com/questions/167832/ubuntu-12-04-brightness-problem">Brightness problem on a Samsung 530U3B</a>". Details below</p>
+
+<p>Add the "Linux On My Samsung" repository to the sources list:
+Code:</p>
+
+<pre><code>sudo add-apt-repository ppa:voria/ppa
+Update the programs list:
+</code></pre>
+
+<p>Code:</p>
+
+<pre><code>sudo apt-get update
+Install samsung-backlight:
+</code></pre>
+
+<p>Code:</p>
+
+<pre><code>sudo apt-get install samsung-backlight
+Restart the system and check if backlight control works
+</code></pre>

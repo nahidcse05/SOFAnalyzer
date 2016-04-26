@@ -1,0 +1,5 @@
+<p>There is another option - not the best but it will get you working in Teamviewer.</p>
+
+<p>If you have created a Teamviewer account via their website you can use the web login to remotely access other computers - it is only an outward connection so you can't use it to allow someone else to remotely access your computer but it will at least allow you to access others.</p>
+
+<p>Sorry you are having so much trouble - all your new errors are above my knowledge base sorry.</p>

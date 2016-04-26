@@ -1,0 +1,4 @@
+<p>I was able to solve this by installing the package libtomcat7-Java.  This appears to be the missing dependency.</p>
+
+<pre><code>sudo apt-get install libtomcat7-java 
+</code></pre>

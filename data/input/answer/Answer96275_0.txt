@@ -1,0 +1,3 @@
+<p>No that is not possible. The architectures are different, so your CPU can not execute the binary. You can try to cross compile the package or look for a build for your CPU for that package.</p>
+
+<p>Take a look at <a href="https://wiki.linaro.org/Platform/DevPlatform/CrossCompile/CrossbuildingQuickStart" rel="nofollow">here</a>, that might help you.</p>

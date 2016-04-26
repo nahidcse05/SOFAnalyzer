@@ -1,0 +1,6 @@
+<p>Two suggestions.</p>
+
+<ol>
+<li><p>Boot into the live cd and setup the wireless then start the install by clicking the icon on the desktop.</p></li>
+<li><p>While installing Ubuntu uncheck ‘Download updates while installing’.</p></li>
+</ol>

@@ -1,0 +1,5 @@
+<p>If you don't want to use <kbd>SHIFT</kbd>+<kbd>CTRL</kbd>+<kbd>V</kbd>, then why not just change that paste hotkey to <kbd>SHIFT</kbd>+<kbd>INSERT</kbd> under Edit > Keyboard shortcuts?</p>
+
+<p>I installed gnome-terminal on lubuntu 13.10 and I have that option (see screenshot I already changed it there). If you don't have it you might try to change that setting in <code>gconf-editor</code>, see the screenshot.</p>
+
+<p><img src="http://i.stack.imgur.com/IGTKI.png" alt="enter image description here"></p>

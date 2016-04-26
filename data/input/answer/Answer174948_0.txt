@@ -1,0 +1,15 @@
+<p>From the error message, it seems to stem from "Cannot allocate memory." When creating the VM, did you leave the amount of RAM dedicated to the VM set at 512MB? 512 is listed as the <a href="http://askubuntu.com/questions/333795/what-are-the-system-requirements-for-each-flavour-of-ubuntu-desktop">minimum for Kubuntu</a>, but 1024 would work <em>much</em> better. </p>
+
+<p>There should be no issues running Kubuntu in VBox. I suspect your .iso is damaged. Re-download and try again (<a href="http://www.kubuntu.org/news/kubuntu-15.04" rel="nofollow">version 15</a> is out now also.) In VBox, make sure you pick Linux, then <em>Ubuntu</em> as the type of VM.</p>
+
+<p><em>Edit:</em> I just tried with <a href="https://help.ubuntu.com/community/Lubuntu/GetLubuntu" rel="nofollow">lubuntu-15.04-desktop-i386.iso</a> and <a href="https://www.virtualbox.org/wiki/Downloads" rel="nofollow">VirtualBox 4.3.28</a>, and received this lovely output. This was after the GUI installation finished and it went to reboot:</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/49416397/Lubuntu%20x32%20Master.png" alt="Lubuntu x32"></p>
+
+<p>Reset the VM and it appears to be working. This is strange because lubuntu 14.04 was tested just last month and there was not a single issue. Note, I enabled "PAE/NX" in the VM settings before starting it, gave it two CPU cores, and 2048 megabytes of RAM.</p>
+
+<p>Just tested with <a href="http://www.kubuntu.org/getkubuntu" rel="nofollow">Kubuntu 15.04 x32</a>, with PAE/NX turned on, two CPU cores, 2048MB. Booted right up, installed everything including updates and extra features, worked fine. However, it too, "hung" during reboot (no output), and a reset got it working again. Ran the Muon update manager, installed a slew of new updates. So I do think either your downloaded .iso is corrupt, or in a rare case, virtualbox is misbehaving.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/49416397/Kubuntu%2015.png" alt="Working"></p>
+
+<p>Note that unless you're giving a VM more than 4GB of RAM (or using it to code 64-bit apps), there isn't much point to using a 64-bit guest OS. Try the 32-bit version instead.</p>

@@ -1,0 +1,18 @@
+<p>If you see entries in your firmware's boot manager called <code>ubuntu</code> and <code>Windows Boot Manager</code>, then both Ubuntu and Windows are installed in EFI mode, not in BIOS mode. In EFI mode, boot loaders reside on the <a href="http://en.wikipedia.org/wiki/EFI_System_partition" rel="nofollow">EFI System Partition (ESP),</a> not on the MBR of the hard disk. To be sure of this, look for a directory called <code>/sys/firmware/efi</code> in Ubuntu. If it's present, Ubuntu is installed in EFI mode; if it's absent, then Ubuntu is installed in BIOS mode. Windows ties its boot mode to the partition table type, so if the internal disk uses GPT, Windows is installed in EFI mode.</p>
+
+<p>If I'm right about this, then moving GRUB to your external disk will require creating an ESP on that disk and copying the boot files over. You'll probably need to use GParted from a live CD to shrink one of your external-disk partitions enough to create an ESP. Make it FAT32 and give it a "boot flag" in GParted.</p>
+
+<p>Chances are the ESP on your internal disk is currently mounted at <code>/boot/efi</code>, so if you create an ESP on the external disk and mount it at <code>/mnt</code>, you'd do something like:</p>
+
+<pre><code>sudo mkdir -p /mnt/EFI
+sudo cp -r /boot/efi/EFI/ubuntu /mnt/EFI/BOOT
+sudo mv /mnt/EFI/BOOT/shimx64.efi /mnt/EFI/BOOT/bootx64.efi
+</code></pre>
+
+<p>This <em>should</em> render the external disk bootable on any EFI-based computer. You should test this on another computer or by using the built-in boot manager to launch from the external disk before continuing. If you have problems at this point, post back with details.</p>
+
+<p>Once GRUB is copied, you can adjust the boot order by using <code>efibootmgr</code> in Ubuntu. First, type <code>sudo efibootmgr</code> alone to see the entries. You can then adjust the boot order with the <code>-o</code> option, as in <code>sudo efibootmgr -o 2,3</code> to make <code>Boot0002</code> the first (default) item and <code>Boot0003</code> the second (non-default entry). The correct boot order for you depends on the entries you see on your system.</p>
+
+<p>You can also delete the GRUB files from the ESP -- in <code>/boot/efi/EFI/ubuntu</code>, assuming the internal disk's ESP is still mounted at <code>/boot/efi</code>. Do this only if you're 100% sure that you can boot from the boot loader on the external disk. Speaking of which, you should edit your <code>/etc/fstab</code> file to have it mount the ESP on the external disk rather than the internal one.</p>
+
+<p>Note that GRUB updates will tend to reset GRUB as the default boot loader, so you may need to fix this again. Alternatively, you could uninstall GRUB, but that can be a pain, since Ubuntu will try to re-install it. There are ways around this, but I don't recall the details. (I use a dummy GRUB package, but that's rather inelegant.)</p>

@@ -1,0 +1,5 @@
+<p>This worked for me:</p>
+
+<pre><code>sudo apt-get install gdebi
+sudo gdebi TEAMVIEWER_PACKAGE.deb
+</code></pre>

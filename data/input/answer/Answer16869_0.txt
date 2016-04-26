@@ -1,0 +1,20 @@
+<p>Unity Panel (<a href="http://unity.ubuntu.com/">Unity</a> is new interface for Ubuntu 11.04 with new top panel) doesn't support applets for GNOME Panel.</p>
+
+<p>You can use Hamster Indicator (package <code>hamster-indicator</code>) from Alberto Milone's PPA repository</p>
+
+<p><code>ppa:albertomilone/hamster-indicator</code></p>
+
+<p>More information here:</p>
+
+<ul>
+<li><p><a href="http://www.webupd8.org/2011/07/install-hamster-indicator-time-tracking.html">http://www.webupd8.org/2011/07/install-hamster-indicator-time-tracking.html</a></p></li>
+<li><p><a href="http://albertomilone.com/wordpress/?p=502">http://albertomilone.com/wordpress/?p=502</a></p>
+
+<p><img src="http://i.stack.imgur.com/D4IXR.png" alt="Hamster Indicator"></p></li>
+</ul>
+
+<p>There is a lot of indicators, many of them have same funtionality as applets for GNOME Panel in ubuntu 10.10 and older.</p>
+
+<p>List of indicators -- <a href="http://askubuntu.com/questions/30334/list-of-application-indicators">List of Application indicators</a></p>
+
+<p>If you want to add a indicator to the Unity Panel, you have to install it and then run as a normal applications (from menu or via terminal), you can't add it using right click on panel.</p>

@@ -1,0 +1,1 @@
+<p>You can either select the Ubuntu GUI on login or uninstall Unity 8 as described <a href="http://linuxpitstop.com/install-unity-8-desktop-on-ubuntu/" rel="nofollow">here</a></p>

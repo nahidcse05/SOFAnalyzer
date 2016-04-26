@@ -1,0 +1,14 @@
+<p>Sounds like a similar issue to me.
+I did a clean install of ubuntu 14.04 on my hp nx6325 with a turion 64x2 cpu.
+at the moment mine works but doesnt shutdown probably because the Modem was unrecognised and therefore causes issues.
+i was advised on here to do the Ctrl-Alt-F6 to switch screens to see the login/text screen. This allows you to see the error messages displayed.
+most likely a faulty driver is preventing it from continuing (finishing its login)</p>
+
+<p>so the differences between our pcs might be</p>
+
+<p>1) the modem(if any)
+2) blutooth(if any)
+3) the wireless card make/model
+4) the Lan make/model.</p>
+
+<p>you could try disabling the wireless card/blutooth in the bios then do a complete re-install, then maybe you will be in the same state as me.</p>

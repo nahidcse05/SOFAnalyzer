@@ -1,0 +1,24 @@
+<p>Ram does not come in 10ths.of gigabytes / proportions,  8.8 is not a possible calculation. Allow her to have you open the case and look at the memory modules. </p>
+
+<p>Chances are 4 sticks of 2Gb = 8Gb total.  </p>
+
+<p>If running Linux then:</p>
+
+<pre><code>sudo lshw -c memory
+</code></pre>
+
+<p>Output should be something like this</p>
+
+<pre><code>*-memory                
+  description: System memory
+  physical id: 0
+  size: 2013MiB &lt;&lt;&lt;&lt;&lt;NOTE THE SIZE HERE = 2Gb
+*-cache:0
+  description: L1 cache
+  physical id: 0
+  size: 128KiB
+*-cache:1
+  description: L2 cache
+  physical id: 1
+  size: 256KiB
+</code></pre>

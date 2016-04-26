@@ -1,0 +1,28 @@
+<p>Interesting. I'd use awk</p>
+
+<pre><code>awk -F, -v seq="7,152,13,11,42,5,7" '
+    BEGIN {
+        n = split(seq, a)
+        for (i=1; i&lt;=n; i++) num[a[i]]=1
+    }
+    { 
+        n=0
+        for (i=1; i&lt;=NF; i++) { 
+            if ($i in num) n++
+            if (n == 3) {
+                print
+                break
+            }
+        }
+    }
+' bigfile
+</code></pre>
+
+<p>Predictably, perl is much more terse</p>
+
+<pre><code>export seq="7,152,13,11,42,5,7"
+perl -F, -lane '
+    BEGIN {%nums = map {$_ =&gt; 1} split /,/, $ENV{seq}} 
+    print if scalar(grep {exists $nums{$_}} @F) &gt;= 3
+' file
+</code></pre>

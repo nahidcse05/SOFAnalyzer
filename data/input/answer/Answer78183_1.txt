@@ -1,0 +1,9 @@
+<ul>
+<li>Open a terminal (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>).</li>
+<li><p>Run the following commands:</p>
+
+<pre>
+sudo apt-get purge adobereader-enu
+sudo apt-get autoremove
+</pre></li>
+</ul>

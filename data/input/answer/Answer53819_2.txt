@@ -1,0 +1,20 @@
+<p><a href="http://www.iasptk.com/save-screen-brightness-settings-in-ubuntu-1204-laptop" rel="nofollow">http://www.iasptk.com/save-screen-brightness-settings-in-ubuntu-1204-laptop</a></p>
+
+<p>Some Ubuntu laptops screen brightness reset to the lowest or highest on every boot and you have to configure the screen birghtness on every login.</p>
+
+<p>To save the screen brightness settings in Ubuntu laptop.</p>
+
+<p>Open a terminal window, and execute this command to edit /etc/rc.local:</p>
+
+<pre><code>sudo nano /etc/rc.local
+</code></pre>
+
+<p><strong>Add this before the last line “exit 0″:</strong></p>
+
+<pre><code>echo 5 &gt; /sys/class/backlight/acpi_video0/brightness
+</code></pre>
+
+<p>number 5 is the value of your screen brightness. With this command check the maximum:</p>
+
+<pre><code>cat /sys/class/backlight/acpi_video0/max_brightness
+</code></pre>

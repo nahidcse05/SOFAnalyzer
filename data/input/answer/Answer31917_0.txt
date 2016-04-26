@@ -1,0 +1,15 @@
+<p>Referring to my own <a href="http://forums.linuxmint.com/viewtopic.php?f=49&amp;t=121946" rel="nofollow">post</a>, this is the solution that I found after reading many forums. I use a Dell Inspiron 14R, and now the touchpad is detected &amp; gestures are working.
+Save the following in a .sh file, make it executable, and just run.</p>
+
+<pre><code>#!/bin/sh
+cd /usr/src/
+sudo wget http://www.dahetral.com/public-download/psmouse-alps-dst-1.2.tbz
+sudo tar jxvf ./psmouse-alps-dst-1.2.tbz -C /
+cd /usr/src/psmouse-alps-dst-1.2
+sudo dkms add .
+sudo dkms build -m psmouse -v alps-dst-1.2
+sudo dkms install -m psmouse -v alps-dst-1.2
+sudo modprobe psmouse
+echo -n "Installation complete"
+read text
+</code></pre>

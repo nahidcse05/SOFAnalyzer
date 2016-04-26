@@ -1,0 +1,1 @@
+<p>In case anyone has the same problem, <a href="http://linux.die.net/man/8/vgimportclone" rel="nofollow"><code>vgimportclone</code></a> is your savior.</p>

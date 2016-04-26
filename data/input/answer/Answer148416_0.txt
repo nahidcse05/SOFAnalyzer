@@ -1,0 +1,3 @@
+<p>Go to <code>System Settings &gt; Device Colour Profiles</code> and select your display, then click the Add profile button and change the display profile to <code>D65</code>. See screen capture below for reference.</p>
+
+<p><img src="http://i.stack.imgur.com/7nOEL.png" alt="Device Colour Profiles"></p>

@@ -1,0 +1,3 @@
+<p>If you have already executed command then press CTRL + Z to pause the process and then type bg to send it to background</p>
+
+<p>you can bring process to foreground by entering fg</p>

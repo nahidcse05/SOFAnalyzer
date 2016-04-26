@@ -1,0 +1,25 @@
+<p>Found the solution! So I'm posting it here myself...</p>
+
+<p>To revert back to a graphical login and session (X session), <code>GRUB_CMDLINE_LINUX_DEFAULT="text"</code> in the /etc/default/grub file should be replaced by <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash reboot=bios"</code> (or <code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash reboot=api"</code> for some Dell laptops). After having done this editing, save the file and run the <code>update-grub</code> command, and then <code>reboot</code> to see if the graphical login greeter appears. If it does, that's it... you can then log-in... </p>
+
+<p>But if you still remain stuck with the problem <em>(like I was..)</em>, you can try using <strong><em>gdm</em></strong> as your <em>display-manager (DM)</em> or you could also try <em>reinstalling</em> <strong><em>lightgdm</em></strong>. I uninstalled lightgdm and set gdm as the new manager with the command that follows:</p>
+
+<pre><code>sudo stop lightdm
+sudo start gdm
+sudo dpkg-reconfigure lightdm 
+</code></pre>
+
+<p>and choose the DM you want so that it is set as the default option.</p>
+
+<p>If your choice of DM was <strong><em>gdm</em></strong>, now you may uninstall lightdm, <code>sudo apt-get remove lightdm</code>, and <code>sudo reboot</code>. And there you are with our old <strong><em>gdm</em></strong> graphical display-manager.</p>
+
+<p>But if you choose <strong><em>lightdm</em></strong> which if which crashed earlier like mine did, you'd like to do a reinstall of lightdm instead like described below:</p>
+
+<p>Log-in to a new tty (press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F1</kbd>) and enter the commands;</p>
+
+<pre><code>sudo stop lightdm
+sudo apt-get purge lightdm
+sudo apt-get install lightdm 
+</code></pre>
+
+<p>and then set lightdm as the default manager and reboot to see it in effect.</p>

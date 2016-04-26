@@ -1,0 +1,10 @@
+<p>Use <code>torify</code>.</p>
+
+<pre><code>$ man torify
+torify is a simple wrapper that attempts to find the best underlying Tor wrapper available on a system. It calls torsocks or tsocks with a tor specific configuration file.
+</code></pre>
+
+<p>E.g. to update and upgrade your packages:</p>
+
+<pre><code>sudo torify apt-get update &amp;&amp; sudo torify apt-get upgrade
+</code></pre>

@@ -1,0 +1,6 @@
+<p>Sometimes you will also find useful additional informations in <code>/usr/share/doc</code>.</p>
+
+<p>Documentation in the info files can be searched for a string in case you don't know the file description needed to invoke the <code>info</code> command:</p>
+
+<pre><code>info -k 'searchstring'
+</code></pre>

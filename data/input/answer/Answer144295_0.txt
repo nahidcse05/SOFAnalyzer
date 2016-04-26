@@ -1,0 +1,29 @@
+<p>Short answer: <strong>set_network 0 key_mgmt NONE</strong></p>
+
+<p>Here is an example to connect to a network with security turned off:</p>
+
+<pre>
+> scan
+OK
+CTRL-EVENT-SCAN-RESULTS 
+> scan_results 
+bssid / frequency / signal level / flags / ssid
+f8:d1:11:23:c2:2f       2412    76      [ESS]   BAYINET
+f8:d1:11:23:c1:e9       2412    47      [ESS]   BAYINET
+> add_network
+0
+> set_network 0 ssid "BAYINET"
+OK
+> set_network 0 key_mgmt NONE
+OK
+> enable_network 0
+OK
+CTRL-EVENT-SCAN-RESULTS
+Trying to associate with f8:d1:11:23:c2:2f (SSID='BAYINET' freq=2412 MHz)
+Association request to the driver failed
+Associated with f8:d1:11:23:c2:2f
+CTRL-EVENT-CONNECTED - Connection to f8:d1:11:23:c2:2f completed (auth) [id=1 id_str=]
+> quit
+</pre>
+
+<p>you need the <strong>set_network 0 key_mgmt NONE</strong> part after you added your network SSID/BSSID then just enable the network with "enable network " and the interface is connecting...</p>

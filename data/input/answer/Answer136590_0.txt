@@ -1,0 +1,1 @@
+<p><code>umask</code> is working precisely as expected - a mask of 0000 means permissions are 666 (<code>rw-rw-rw-</code>) for files and 777 (<code>rwxrwxrwx</code>) for directories. The execute bit is set for directories and not files. Case in point: the default umask is 0022, but files you create don't have the execute bit set by default, do they?</p>

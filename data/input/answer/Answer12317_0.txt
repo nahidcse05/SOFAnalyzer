@@ -1,0 +1,40 @@
+<p>Assuming this happens always when you are either on AC power or on battery:</p>
+
+<p>Hit the  key and start typing <code>power management</code> (<code>po</code> is probably enough) and when you see it comming up in the results hit enter.</p>
+
+<p>You will see 3 tabs. 2 of them are important for your question:</p>
+
+<ol>
+<li>One for when on AC power:</li>
+</ol>
+
+<p><img src="http://i.stack.imgur.com/pSkFF.png" alt="powermanagementAC"></p>
+
+<ol>
+<li>and one for when on battery power:</li>
+</ol>
+
+<p><img src="http://i.stack.imgur.com/NrqLD.png" alt="powermanagementBATTERY"></p>
+
+<p>Both have an action set here for "When laptop lid is closed" (hence ændrük's comment).</p>
+
+<p>If both are not set to 'suspend' you have your answer: change it to 'suspend'.</p>
+
+<p>If this is not the issue you probably found a bug. I have seen some bugs related to suspend and several netbooks (including yours) but these are old. Have a look in your log files and see if it shows any errors when suspend does not work.</p>
+
+<p>Same way as looking at <code>power management</code>: hit the  key and start typing <code>log file viewer</code>. When it shows up scroll down to <code>pm-suspend.log</code> and check this file for errors.</p>
+
+<p><img src="http://i.stack.imgur.com/P3hmK.png" alt="pmsuspendlog"></p>
+
+<p>You are looking for lines like these but then with errors:</p>
+
+<pre>/usr/lib/pm-utils/sleep.d/00powersave resume suspend: success.
+Running hook /usr/lib/pm-utils/sleep.d/00logging resume suspend:
+
+/usr/lib/pm-utils/sleep.d/00logging resume suspend: success.
+Running hook /usr/lib/pm-utils/sleep.d/000kernel-change resume suspend:
+
+/usr/lib/pm-utils/sleep.d/000kernel-change resume suspend: success.
+Fri May 13 18:27:31 CEST 2011: Finished.</pre>
+
+<p>If there are any please add these to your question.</p>

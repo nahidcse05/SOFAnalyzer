@@ -1,0 +1,5 @@
+<p>I upgraded my kernel up to 3.2.0-26 and now everything works correctly all the time, even after hibernation.</p>
+
+<p>I do have the line <code>options snd-hda-intel model=auto</code> in my <code>/etc/modprobe.d/alsa-base.conf</code> file.</p>
+
+<p>Hope this helps</p>

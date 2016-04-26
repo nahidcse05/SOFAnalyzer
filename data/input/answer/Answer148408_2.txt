@@ -1,0 +1,3 @@
+<p>If you've already installed Ubuntu with UEFI enabled and it works fine, then just use any method you prefer to update Ubuntu, <code>apt</code> or Synaptic or Software Center or an update manager (Software Updater?).</p>
+
+<p>I think once Ubuntu's installed it shouldn't change from just updating software packages, UEFI or not. Changing the kernel, that may be a little different, but I think kernel updates are more like a whole new Ubuntu version update, that would come with a new iso to use just in case there are any troubles updating. </p>

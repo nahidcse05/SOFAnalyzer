@@ -1,0 +1,29 @@
+<p>Have you tried WiiCan </p>
+
+<p>Download .deb <a href="http://www.getdeb.net/software/wiican" rel="nofollow">http://www.getdeb.net/software/wiican</a> I know it was released for Natty</p>
+
+<p>Here is the launchpad info <a href="https://launchpad.net/wiican" rel="nofollow">https://launchpad.net/wiican</a></p>
+
+<pre><code>sudo add-apt-repository ppa:fontanon/wiican
+</code></pre>
+
+<p>Evidentially it does a good job     </p>
+
+<pre><code>Discover if it’s an available bluetooth device for connect wiimote
+Display a list of available keyboard-mouse-wiimote mappings
+User-defined mappings creation assistant
+Mappings manager:
+
+    New/Edit/Delete
+    Up/Down order
+    Visible/Invisible
+
+
+Notify the state of wiimote usaging:
+
+    Bluetooth available/unavailable
+    Discovering wiimote
+    Wiimote disconnected
+</code></pre>
+
+<p><img src="http://i.stack.imgur.com/dBB7T.jpg" alt="enter image description here"></p>

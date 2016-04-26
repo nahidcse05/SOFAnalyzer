@@ -1,0 +1,1 @@
+<p>the solution is very simple, just select the software you want to install, obviously the "install" button will not work, so instead click on File on the top menu, and click "Install", and see it will work.</p>

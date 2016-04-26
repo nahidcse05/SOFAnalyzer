@@ -1,0 +1,8 @@
+<p>To get a multi-threaded downloader which integrates with FlashGot, you can install <code>uget</code> and <code>aria2</code></p>
+
+<pre><code>sudo apt-get install uget aria2
+</code></pre>
+
+<p>Then, go to uGet's settings and enable the aria2 plugin.</p>
+
+<p>uGet will also show up on FlashGot's list, where it can be selected for browser integration.</p>

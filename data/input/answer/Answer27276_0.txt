@@ -1,0 +1,27 @@
+<p>First, why are you trying to compile a kernel ? If for learning, that is fine, but with anything resembling modern hardware you are not going to get a performance boost or significant hard drive space savings.</p>
+
+<p>Second, the kernel seeds are extremely minimal. You then need to know your hardware.</p>
+
+<p>Two tools to make it easier:</p>
+
+<pre><code>lspci -v
+</code></pre>
+
+<p>Will identify your hardware and the kernel modules in use.</p>
+
+<p>You can also use <code>localmodconfig</code></p>
+
+<pre><code>make localmodconfig
+</code></pre>
+
+<p>See <a href="http://kernelnewbies.org/Linux_2_6_32#head-11f54cdac41ad6150ef817fd68597554d9d05a5f" rel="nofollow">http://kernelnewbies.org/Linux_2_6_32#head-11f54cdac41ad6150ef817fd68597554d9d05a5f</a></p>
+
+<p>IMO localmodconfig is a superior tool to starting with a (minimal) kernel seed and build up.</p>
+
+<p>I started a web page for compiling kernels</p>
+
+<p><a href="http://bodhizazen.net/Tutorials/kernel" rel="nofollow">http://bodhizazen.net/Tutorials/kernel</a></p>
+
+<p>The other issue is the Ubuntu patches, most important Apparmor (see <a href="http://askubuntu.com/questions/32798/where-do-i-get-the-apparmor-2-4-compatibility-patch">Where do I get the AppArmor 2.4 compatibility patch?</a>) and ureadahead (see <a href="https://bugs.launchpad.net/ubuntu/+source/ureadahead/+bug/704665" rel="nofollow">this bug report</a>).</p>
+
+<p>See the <a href="https://help.ubuntu.com/community/Kernel/Compile" rel="nofollow">Ubuntu wiki kernel compilation</a> for ubuntu specific information.</p>

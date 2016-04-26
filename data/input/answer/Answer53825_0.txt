@@ -1,0 +1,38 @@
+<p>Which sound card are you using? </p>
+
+<pre><code>$ lspci | grep Audio
+00:1b.0 Audio device: Intel Corporation 6 Series/C200 Series Chipset Family High Definition Audio Controller (rev 05)
+</code></pre>
+
+<p>If so, I think you have a common problem with many new laptops: you are lacking the 2.1 surround mode enabled in your audio driver. Here a solution that worked for me: <a href="https://wiki.archlinux.org/index.php/ASUS_N55SF" rel="nofollow">intel audio fix</a> </p>
+
+<p>here are three things to do:</p>
+
+<ol>
+<li><code>echo 'options snd-hda-intel model=asus-mode4' | sudo tee -a /etc/modprobe.d/alsa-base.conf</code></li>
+<li><p><code>sudo -H gedit /usr/share/pulseaudio/alsa-mixer/profile-sets/extra-hdmi.conf</code></p>
+
+<pre><code>[Mapping analog-surround-21]
+device-strings = surround40:%f 
+channel-map = front-left,front-right,lfe,lfe 
+paths-output = analog-output analog-output-speaker
+priority = 7
+direction = out
+</code></pre>
+
+<p><strong>Note</strong>: On Asus N76VB running on the newer kernel <code>3.8.0-30</code>, change the last line to be this instead:</p>
+
+<pre><code>direction = output
+</code></pre></li>
+<li><p><code>sudo gedit /etc/pulse/daemon.conf</code></p>
+
+<pre><code>enable-lfe-remixing = yes
+</code></pre></li>
+<li><p>Reboot.</p></li>
+</ol>
+
+<p>You should now be able to see your "analog surround 2.1" among your possible Hardware settings in the sound menu.</p>
+
+<p>"Analog Surround 4.0" is also working but changes the loudness from Front to Rear.</p>
+
+<p>Additionally you can install the GNOME alsa mixer to boot your basses.</p>

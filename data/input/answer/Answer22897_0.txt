@@ -1,0 +1,9 @@
+<p>I suggest something else. You can create your custom ISO with some tools. Remastersys is one of them: <a href="http://www.geekconnection.org/remastersys/" rel="nofollow">http://www.geekconnection.org/remastersys/</a> </p>
+
+<p>There is a simple howto:<br>
+<a href="http://www.ubuntugeek.com/creating-custom-ubuntu-live-cd-with-remastersys.html" rel="nofollow">http://www.ubuntugeek.com/creating-custom-ubuntu-live-cd-with-remastersys.html</a></p>
+
+<p>Also, Relinux is another project:<br>
+<a href="http://lkubuntu.wordpress.com/2011/10/10/relinux-a-way-to-create-a-bootable-iso-out-of-your-system/" rel="nofollow">http://lkubuntu.wordpress.com/2011/10/10/relinux-a-way-to-create-a-bootable-iso-out-of-your-system/</a></p>
+
+<p>With these tools, you can create your own custom Ubuntu ISO and easily install anywhere.</p>

@@ -1,0 +1,12 @@
+<p>You can setup a keybinding in byobu to be able to send the text selected in byobu's buffer into the X clipboard.</p>
+
+<p>Add the following to <code>~/.byobu/keybindings</code></p>
+
+<pre><code># Add cool line to make copying to x clipboard possible.
+# This binds C-a b to copy screen's copy buffer to the system clipboard.
+bind b eval writebuf 'exec /bin/sh -c "xsel -i &lt; $BYOBU_RUN_DIR/printscreen"'
+</code></pre>
+
+<p>Then after using the usual F7, move, space to start select, move, enter to save to buffrer, then you can use <code>C-a b</code> (Ctrl-a, then b) to save it to the clipboard</p>
+
+<p>(Based on <a href="https://dodoincfedora.wordpress.com/2012/06/23/integrating-byobuscreens-copy-buffer-with-xgnome-clipboard/" rel="nofollow">https://dodoincfedora.wordpress.com/2012/06/23/integrating-byobuscreens-copy-buffer-with-xgnome-clipboard/</a>)</p>

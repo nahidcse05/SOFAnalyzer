@@ -1,0 +1,12 @@
+<ol>
+<li><p>Click the torrent link to open which should start the <em>Launch Application</em> window where you should check mark the <em>Remember my choice for magnetic links</em>, and click the <kbd>Choose...</kbd> button;
+<img src="http://i.stack.imgur.com/heW3b.png" alt="snap1"></p></li>
+<li><p>Now in the next window that appears you can browse to and select the file <code>/usr/bin/qbittorrent</code>. For this click <em>File System</em> on the side pane and browse through the directories <em>usr -> bin</em> where you'll have to select the executable file <code>qbittorrent</code> to open.</p>
+
+<p><strong>Or</strong>, just click the <em>File System</em> and click the <em>"edit path"</em> icon to <em>type a file name</em> manually (or use the shortcut <kbd>Ctrl</kbd> + <kbd>L</kbd>);
+<img src="http://i.stack.imgur.com/kuoeK.png" alt="snap2"></p></li>
+<li><p>Then in the path input box labelled <em>Location:</em> type the path of the executable of the application - <code>/usr/bin/qbittorrent</code> and click <kbd>Open</kbd>;
+<img src="http://i.stack.imgur.com/Ynpk5.png" alt="snap3"></p></li>
+<li><p>Having the desired launch application selected, now click the <kbd>OK</kbd> button. This will start the application qBittorrent and you can continue managing your download from there.
+<img src="http://i.stack.imgur.com/QVwF8.jpg" alt="snap4"></p></li>
+</ol>

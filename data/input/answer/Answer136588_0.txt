@@ -1,0 +1,11 @@
+<p>When accidentally disabling the only attached display, trying to reenable it from another virtual console will yield in the following error message:  </p>
+
+<blockquote>
+  <p>xrandr: Configure crtc 0 failed</p>
+</blockquote>
+
+<p>Please make sure the actual virtual console where X Windows is running is active, when xrandr is actuating the configuration. Typing the following in the first virtual console rescued me:</p>
+
+<blockquote>
+  <p>sudo chvt 7; sleep 3; xrandr --display :0.0 --auto</p>
+</blockquote>

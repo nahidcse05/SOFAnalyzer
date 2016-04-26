@@ -1,0 +1,21 @@
+<p><strong>Partial solution</strong></p>
+
+<p>Perhaps, you can use a high / inverse contrast that sort of negates the windows. While this does not work for a browser's web pages (you could use browser specific solutions for that), it generally works for desktop applications. </p>
+
+<p>Go to <em>Universal Access</em> and choose <em>High / Inverse</em> for Contrast. You could know have a white text in black background. While I admit this isn't the best solution, it should help you somewhat if you are desperate.  </p>
+
+<p><img src="http://i.stack.imgur.com/H5B3u.png" alt="High Inverse"></p>
+
+<hr>
+
+<p>Making the windows or the screen negative is, unfortunately, a <a href="http://wiki.compiz.org/Plugins/Neg" rel="nofollow">Compiz feature</a>. If I am not wrong, <a href="https://live.gnome.org/GnomeShell" rel="nofollow">gnome-shell</a> uses <a href="http://git.gnome.org/browse/mutter/" rel="nofollow">Mutter</a> as its window manager and Mutter currently doesn't have any feature that allows the users to negative the windows.</p>
+
+<p>The reason why you were able to make your windows negative in 11.04 or earlier versions were because you were using GNOME classic, which apparently used either Metacity or Compiz as its window manager.</p>
+
+<p>If you really want to make your windows negative, I strongly urge you to use Unity, as it uses Compiz and can easily be configured to make your current window negative. </p>
+
+<p>Or, you can also use gnome-classic in 11.10 and enable Compiz in gnome-classic.</p>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/68711/how-do-i-enable-compiz-in-gnome-classic">How do I enable compiz in Gnome Classic?</a></li>
+</ul>

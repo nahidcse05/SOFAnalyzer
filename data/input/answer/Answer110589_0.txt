@@ -1,0 +1,7 @@
+<p>Finally I found it. This is indicated as a <strong>licence problem</strong>.</p>
+
+<p>The reason is that I installed Licensed <code>mpd</code> (not free <code>mpd</code>) in my virtual machine.
+Then I copy the virtual machine to another computer.
+That´s why the <code>mpd</code> can not be used in the new machine. I should update the licence.</p>
+
+<p>Thank you for the concern.</p>

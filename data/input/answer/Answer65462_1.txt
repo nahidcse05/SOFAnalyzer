@@ -1,0 +1,51 @@
+<p>There is also now an officially recommended way to manage which thumbnails are generated in <code>Thunar</code> by <code>tumbler</code>, the Xfce thumbnailing service. Using the method described below means nothing will need to be uninstalled from the <code>gstreamer</code> set of packages, and all other thumbnails (apart from video) will be generated.</p>
+
+<p><strong>However</strong>, it is important to note that this is only possible if you have <code>tumbler</code> 0.1.27, although this will be at least <a href="http://packages.ubuntu.com/raring/tumbler">the version in Raring (13.04)</a>. If you are on Xubuntu 12.10, you only need to enable the <a href="https://launchpad.net/~xubuntu-dev/+archive/xfce-4.12">Xfce 4.12 ppa</a> to get the latest version of <code>tumbler</code>.  </p>
+
+<p>On the Xfce <a href="http://mail.xfce.org/pipermail/xfce-announce/2013-January/000244.html">announce mailing lists</a> for January 2013, it was noted that, regarding <code>tumbler</code> 0.1.27,  </p>
+
+<blockquote>
+  <p>This release ships a config file installed in the xdg directory to
+  control the various plugins (especially the priority). There is also a
+  cover download plugin (dependency is libcurl), but this has been
+  disabled by default. </p>
+</blockquote>
+
+<p>How to enable and disable various plugins is explained <a href="http://docs.xfce.org/xfce/thunar/tumbler">on the Xfce official page</a>, but briefly here's how it works. As noted in the explanation, if you want to customise the tumbler rc file, you can make a <code>tumbler</code> folder in <code>~/.config</code> and then copy <code>tumbler.rc</code> from <code>/etc/xdg/tumbler</code> to that folder. The easiest way to do it is to use these commands from <a href="http://docs.xfce.org/xfce/thunar/tumbler">the xfce documentation</a>:</p>
+
+<pre><code>mkdir -p $XDG_CONFIG_HOME/tumbler
+cp /etc/xdg/tumbler/tumbler.rc $XDG_CONFIG_HOME/tumbler/
+</code></pre>
+
+<p>Now, edit the file with</p>
+
+<pre><code>gedit ~/.config/tumbler/tumbler.rc
+</code></pre>
+
+<p>and you will see something like <a href="http://git.xfce.org/xfce/tumbler/plain/tumblerd/tumbler.rc">this sample rc file</a>, which has sections for video, image and other thumbnailer plugins.</p>
+
+<p>As an example, you could find the section <code>Video Thumbnailers</code> in the file above and set <code>Disabled=true</code> in the sections for the <code>ffmpegthumbnailer</code> and the <code>gstreamer</code> plugins. Using this method you do not have to remove <code>gstreamer0.10-plugins</code> to stop video thumbnails being shown. </p>
+
+<p>Excerpt from the <code>Video Thumbnailers</code> section of <code>tumbler.rc</code>:</p>
+
+<pre><code># ffmpegthumbnailer plugin
+[FfmegThumbnailer]
+Disabled=true
+Priority=2
+Locations=
+MaxFileSize=0
+
+# GStreamer plugin
+[GstThumbnailer]
+Disabled=true
+Priority=1
+Locations=
+MaxFileSize=0
+</code></pre>
+
+<p>If at some later point you find that you do not want to entirely disable the video plugins, you could instead use <code>Disabled=false</code> to re-enable them and set a value for the <code>MaxFileSize</code>, so that only files up to a certain size were shown. This would solve problems with high memory usage when thumbnails for very large files are being generated. </p>
+
+<ul>
+<li><p><strong>Note</strong>: after making any changes to <code>tumbler.rc</code> , it is crucial that you <strong>log out</strong> and log in again. Video thumbnailing for those two plugins, for example, would not be disabled until you logged in again.</p></li>
+<li><p><strong>Remember</strong>, this will only work if you have <code>tumbler 0.1.27</code> or a later version installed.</p></li>
+</ul>

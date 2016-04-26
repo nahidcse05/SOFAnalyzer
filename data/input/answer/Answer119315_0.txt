@@ -1,0 +1,1 @@
+<p>The <code>ubuntu-desktop</code> package should pull in all necessary packages for the GUI, including any Xserver packages that may have gone missing.</p>

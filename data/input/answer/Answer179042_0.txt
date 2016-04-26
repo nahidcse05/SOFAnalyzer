@@ -1,0 +1,19 @@
+<p>In Ubuntu 15.04, in order to change hostname permanently you have to run this command:</p>
+
+<pre><code>sudo hostnamectl set-hostname new-name
+</code></pre>
+
+<p>You can check directly your new configuration:</p>
+
+<pre><code>hostnamectl 
+
+   Static hostname: new-name
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 458ad80036fa4cd4a3063116670ce33d
+           Boot ID: 95a2349fc93f4d498bf189f0fc6fb858
+    Virtualization: oracle
+  Operating System: Ubuntu 15.04
+            Kernel: Linux 3.19.0-21-generic
+      Architecture: x86
+</code></pre>

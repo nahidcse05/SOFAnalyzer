@@ -1,0 +1,13 @@
+<p>Boot with a Live CD, and check your Ubuntu partition with Gparted. </p>
+
+<p>To do this: </p>
+
+<ul>
+<li>Right-click your Ubuntu partiton, and click Unmount, if the partition is mounted</li>
+<li>Right-click your Ubuntu partiton, and click Check</li>
+<li>Click on the green checkmark button ("Apply All Operations")</li>
+</ul>
+
+<p>This will check for and fix any filesystem errors on your Ubuntu partition.</p>
+
+<p>If the previous steps didn't work, then refer to <a href="http://askubuntu.com/a/97184/40421">this post</a> for easy instructions on how to reinstall Grub.</p>

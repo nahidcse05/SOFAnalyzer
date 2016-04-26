@@ -1,0 +1,13 @@
+<p>Make a backup of <code>/etc/lightdm/lightdm.conf</code>. From Terminal it would be <code>sudo cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.bak</code></p>
+
+<p>Then open <code>/etc/lightdm/lightdm.conf</code> with your favorit texteditor and change the line </p>
+
+<pre><code>greeter-session=unity-greeter
+</code></pre>
+
+<p>to </p>
+
+<pre><code>greeter-session=lightdm-kde-greeter
+</code></pre>
+
+<p>If something breaks with that log into a tty and change the files back.</p>

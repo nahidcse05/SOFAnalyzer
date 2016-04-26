@@ -1,0 +1,15 @@
+<p>Startup scripts are a bit of a maze, aren't they?</p>
+
+<p>I believe that it basically works out that <code>.profile</code> is executed for login shells -- i.e., what you'd get if you login remotely -- and <code>.bashrc</code> is used for non-login shells, assuming you're using bash. <code>.profile</code> sources <code>.bashrc</code>, so in general you'd put stuff you always use in <code>.bashrc</code>, like additions to the default path and other environment settings. I believe the general convention in *nix systems and bash is to do most of the customization in <code>.bashrc</code>; I haven't seen <code>.bash_aliases</code> on Red Hat-family Linux distributions or the Unix systems I've used. I don't remember ever seeing a <code>.bash_local</code>.</p>
+
+<p>The way <code>.bash_aliases</code> is sourced seems like a good model, so it might be tidier to do your customizations in another file, adding this to the end of <code>.bashrc</code>:</p>
+
+<pre><code># Local customized path and environment settings, etc.
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
+</code></pre>
+
+<p>It can be helpful to look at <code>/etc/skel</code>, where the default user scripts are that are copied to new users' home directories, and at <code>/etc/profile</code> and <code>/etc/bash.bashrc</code>, which are system-wide defaults.</p>
+
+<p>I think the underlying assumption to all of this is that the user can do as the user pleases with personal copies of <code>.profile</code>, <code>.bashrc</code>, etc., so no presumptions are made about what is or is not in them.</p>

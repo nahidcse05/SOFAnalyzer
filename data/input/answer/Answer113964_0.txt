@@ -1,0 +1,17 @@
+<p>You can install and use <code>wmctrl</code> to do something like what you want.</p>
+
+<p>Say you want to start <code>&lt;program&gt;</code> only if another instance of it isn't running. If another instance of <code>&lt;program&gt;</code> <em>is running,</em> switch to it instead. </p>
+
+<p>Run</p>
+
+<pre><code>wmctrl -a &lt;something&gt; || &lt;program&gt;
+</code></pre>
+
+<p>or</p>
+
+<pre><code>wmctrl -ax &lt;something&gt; || &lt;program&gt;
+</code></pre>
+
+<p>depending on which works for you. <code>&lt;something&gt;</code> will be derived from the output of <code>wmctrl -l</code> or <code>wmctrl -lx</code> which you will run when the program you wish to control is open.</p>
+
+<p>You can then assign a shortcut key to that or use it in a script and make a desktop launcher for that script.</p>

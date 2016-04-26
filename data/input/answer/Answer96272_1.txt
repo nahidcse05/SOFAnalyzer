@@ -1,0 +1,14 @@
+<p>The graphical options for keyboard layout seem to have changed. You can do it via terminal though. Open a terminal using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>t</kbd> and then do then:</p>
+
+<pre><code>setxkbmap -option caps:none
+</code></pre>
+
+<p>To re-enable them:</p>
+
+<pre><code>setxkbmap -option
+</code></pre>
+
+<p>To make this happen at every reboot, write the command to a file and store it in a convinient location(the filesystem should be ext4 where you would store the file) and then on a terminal, type <code>crontab -e</code> and then add this line to the end of the file that opens up(it may ask you to set the editor by which it should open, I prefer <code>nano</code> or <code>vim.full</code>:</p>
+
+<pre><code>@reboot /path/to/the/script
+</code></pre>

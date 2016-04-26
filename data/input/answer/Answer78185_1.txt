@@ -1,0 +1,4 @@
+<p>I installed it through synaptics.  </p>
+
+<p>nvidia-experimental-310-dev<br>
+nvidia-settings-experimental-310</p>

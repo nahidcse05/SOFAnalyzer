@@ -1,0 +1,12 @@
+<p>Since <code>g77</code> is no longer supported, you'd need to download it from older Ubuntu repositories.</p>
+
+<p>You can download it from the <a href="http://packages.ubuntu.com/hardy-updates/g77-3.4" rel="nofollow">Ubuntu Hardy Packages page</a>. Below is the screenshot of the page.</p>
+
+<p><img src="http://i.stack.imgur.com/eaDYh.png" alt="enter image description here"></p>
+
+<ul>
+<li>Download the <code>amd64</code> or <code>i386</code> version depending on your architecture.</li>
+<li>As you can see from the screenshot, the package depends on <code>gcc-3.4</code>, <code>gcc-3.4-base</code>, <code>libc6</code>, and <code>libg2c0-dev</code>, you'd have to install them first, and probably remove your newer version of these packages.</li>
+</ul>
+
+<p>I recommend downloading <strong>Ubuntu 8.04 (Hardy Heron)</strong>, and installing it on a virtual machine. You can then download the <code>g77</code> package and install it directly.</p>

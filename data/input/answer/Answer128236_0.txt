@@ -1,0 +1,5 @@
+<p>Did you try the alsamixer on terminal?
+Your alsamixer has too few settings.</p>
+
+<p><a href="http://imgur.com/YSl4TUb" rel="nofollow">Screenshot of alsamixer in terminal</a>
+Also, disable automute feature.</p>

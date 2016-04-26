@@ -1,0 +1,3 @@
+<p>I just had the same problem. My solution:
+Formatting the USB-Drive with a different allocation file size!
+I used Windows' formatting tool and chose "Standard" size (which appears to be 512 bytes?) instead of 4096 bytes and it is working now.</p>

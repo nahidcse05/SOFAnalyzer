@@ -1,0 +1,33 @@
+<p>Well,</p>
+
+<p>After looking at <a href="http://ubuntuforums.org/showthread.php?t=1923375" rel="nofollow">http://ubuntuforums.org/showthread.php?t=1923375</a> and <a href="http://ubuntuforums.org/showthread.php?t=1923375" rel="nofollow">http://ubuntuforums.org/showthread.php?t=1923375</a>, I found the solution to my problem:</p>
+
+<h2>1: changed the parameter below in bold (it was 'false')</h2>
+
+<pre><code>vi /etc/NetworkManager/NetworkManager.conf
+
+[main]
+plugins=ifupdown,keyfile,ofono
+dns=dnsmasq
+
+[ifupdown]
+managed=**true**
+</code></pre>
+
+<h2>2: removed the parts in bold below:</h2>
+
+<pre><code>vi /etc/network/interfaces
+auto lo
+iface lo inet loopback 
+**iface br0 inet dhcp
+   bridge_ports eth0 wlan0
+   bridge_stp on
+   bridge_fd 0**
+</code></pre>
+
+<p>In the end, I don't know what caused this parameters to be like that.
+But last week I was playing with KVM network parameters (trying to create a bridge connection), so perhaps it messed it all up...</p>
+
+<p>Anyway, hope this post helps someone else to avoid spending one day on it like me.</p>
+
+<p>Luis</p>

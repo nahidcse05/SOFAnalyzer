@@ -1,0 +1,1 @@
+<p>I'm using Thunderbird with the addon Lightning to integrate my GCal with Ubuntu and I'm happy with that.</p>

@@ -1,0 +1,12 @@
+<p>You can test the following already packaged sources:</p>
+
+<p><strong>Google Code</strong> - <a href="https://code.google.com/p/r5u870/" rel="nofollow">https://code.google.com/p/r5u870/</a> (Webcams like HP/Ricoh Webcam 1000, etc)</p>
+
+<p><strong>Launchpad</strong> - <a href="https://launchpad.net/~nbdarvin/+archive/ricoh-webcam-r5u870" rel="nofollow">https://launchpad.net/~nbdarvin/+archive/ricoh-webcam-r5u870</a></p>
+
+<p>Or as mentioned in the <a href="http://ubuntuforums.org/showthread.php?t=1744189" rel="nofollow">Ubuntu Forum</a> try the:</p>
+
+<ul>
+<li><p><a href="http://download.tuxfamily.org/arakhne/pool/universe/r/ricoh-webcam-r5u870/ricoh-webcam-r5u870-firmware_0.11.6-0arakhne0_i386.deb" rel="nofollow">http://download.tuxfamily.org/arakhne/pool/universe/r/ricoh-webcam-r5u870/ricoh-webcam-r5u870-firmware_0.11.6-0arakhne0_i386.deb</a></p></li>
+<li><p><a href="http://ricoh-webcam-r5u870_0.11.6-0arakhne0_i386.deb/" rel="nofollow">http://ricoh-webcam-r5u870_0.11.6-0arakhne0_i386.deb/</a></p></li>
+</ul>

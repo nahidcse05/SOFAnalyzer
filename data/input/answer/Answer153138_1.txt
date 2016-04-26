@@ -1,0 +1,6 @@
+<p>I don't know exactly what you did, but I'd guess that you're correct that your <em>"the disabled update sources"</em> broke everything. (And your software sources should have nothing to do with suspend/sleep... even updating has to be manually initiated, so again once it's finished it shouldn't affect suspend/sleep).<br>
+<code>apt</code> relies upon the software sources to know where &amp; what to update/download/install, without proper reliable software sources it's crippled. You could try a <code>sudo apt-get check</code> for some info, but regardless you may need to restore them:</p>
+
+<p>If you destroyed your software sources somehow, you can go to this site <a href="http://repogen.simplylinux.ch/" rel="nofollow">http://repogen.simplylinux.ch/</a> to create a new sources.list file. And/or follow the <a href="http://askubuntu.com/questions/569149/cant-install-anytime-in-ubuntu/569647#569647">directions here</a> for more info on backing up the current sources &amp; having them automatically re-created or getting one from the above site.</p>
+
+<p>If you don't want newer versions of packages, then you can just run the currently installed ones, though there could be security holes waiting to be patched, or improved updates waiting too.</p>

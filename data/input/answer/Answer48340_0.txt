@@ -1,0 +1,3 @@
+<p>Remove indicator-weather and install better and more functional and updated my-weatherindicator with geolocation support.</p>
+
+<p>ppa at <a href="https://launchpad.net/~atareao/+archive/indicators" rel="nofollow">https://launchpad.net/~atareao/+archive/indicators</a></p>

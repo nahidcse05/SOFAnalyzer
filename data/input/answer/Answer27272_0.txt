@@ -1,0 +1,33 @@
+<p>My Asus Laptop has an 2200BG build in. I had nothing to do to make it work. </p>
+
+<p>Try loading the module </p>
+
+<pre><code>sudo modprobe ipw2200
+</code></pre>
+
+<p>but before, look whether this has already happened:</p>
+
+<pre><code>lsmod | grep ipw2200 
+</code></pre>
+
+<p>dmesg is another diagnostic: </p>
+
+<pre><code>dmesg | grep 2200
+[   17.054310] ipw2200: Intel(R) PRO/Wireless 2200/2915 Network Driver, 1.2.2kmprq
+[   17.054314] ipw2200: Copyright(c) 2003-2006 Intel Corporation
+[   17.054403] ipw2200 0000:02:04.0: PCI INT A -&gt; Link[LNKC] -&gt; GSI 4 (level, low) -&gt; IRQ 4
+[   17.054480] ipw2200: Detected Intel PRO/Wireless 2200BG Network Connection
+[   17.054521] ipw2200 0000:02:04.0: firmware: requesting ipw2200-bss.fw
+[   17.662676] ipw2200: Detected geography ZZM (11 802.11bg channels, 0 802.11a channels)
+</code></pre>
+
+<p>and lspci, get the slot info:</p>
+
+<pre><code>lspci | grep -i wireless
+02:04.0 Network controller: Intel Corporation PRO/Wireless 2200BG [Calexico2] Network Connection (rev 05)
+</code></pre>
+
+<p>and then, for example:</p>
+
+<pre><code>lspci -vv -s 02:04.0
+</code></pre>

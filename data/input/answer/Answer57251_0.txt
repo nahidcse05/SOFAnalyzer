@@ -1,0 +1,2 @@
+<p>Sir I do not know much about Ubuntu and I want to suggest that try to install different graphic managers like lightgm or gdm. Ff it works then it will be fine.
+My ubuntu was stuck on the login screen, so I install them and by opening the virtual terminal <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F1</kbd> I have got the Ubuntu in the working position.</p>

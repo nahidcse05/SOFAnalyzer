@@ -1,0 +1,5 @@
+<p>There is a couple of ways to do this.</p>
+
+<p>1) using crypt command.  This command can encrypt and decrypt a file for you.  (you might need to install it by 'sudo apt-get install mcrypt').</p>
+
+<p>2) change read permission for the directory.  </p>

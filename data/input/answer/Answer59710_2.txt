@@ -1,0 +1,7 @@
+<p>Totem plays MP4s encoded with h264. For example:
+<a href="http://downloads.dvdloc8.com/trailers/divxdigest/simpsons_movie_trailer.zip" rel="nofollow">http://downloads.dvdloc8.com/trailers/divxdigest/simpsons_movie_trailer.zip</a></p>
+
+<p>but performance is a bit patchy. see:
+<a href="https://bugs.launchpad.net/ubuntu-nexus7/+bug/1072661" rel="nofollow">https://bugs.launchpad.net/ubuntu-nexus7/+bug/1072661</a></p>
+
+<p>I do not recommend that you use vlc at the moment.</p>

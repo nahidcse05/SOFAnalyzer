@@ -1,0 +1,10 @@
+<p>You have a few different options.</p>
+
+<ol>
+<li>As fabricator4 mentions, you can <a href="https://support.dell.com/support/topics/global.aspx/support/dellcare/contact_sales_support?s=dhs" rel="nofollow">contact Dell</a> and ask if they have any available for purchase.</li>
+<li>You can build your own, following the instructions on <a href="http://en.community.dell.com/support-forums/software-os/w/linux/building-base-ubuntu-factory-iso.aspx" rel="nofollow">Dell's support page</a> explaining the process. Ubuntu 11.10 images are available <a href="http://releases.ubuntu.com/11.10/" rel="nofollow">here</a>.</li>
+<li>You can just install any current version of Ubuntu normally. You don't need to do anything special, it's just a laptop. 12.10 is the most recent version, but 12.04 is also current and has long-term support. Both are available on the Ubuntu.com <a href="http://www.ubuntu.com/download/desktop" rel="nofollow">download page</a>.</li>
+<li>If your goal is to preinstall Ubuntu in preparation for selling or giving away the computer, you can do what is called an OEM install, <a href="http://askubuntu.com/q/36671/12864">explained here</a>.</li>
+</ol>
+
+<p>Your best solution is going to be either #3 or #4, as they are free and use current versions of Ubuntu.</p>

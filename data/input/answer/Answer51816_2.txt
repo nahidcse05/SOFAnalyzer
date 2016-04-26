@@ -1,0 +1,29 @@
+<p>To invert the entire screen you can use the program <code>xcalib</code>:</p>
+
+<pre><code>xcalib -invert -alter
+</code></pre>
+
+<p>From the <a href="http://manpages.ubuntu.com/manpages/precise/man1/xcalib.1.html">xcalib man page</a></p>
+
+<blockquote>
+  <p>xcalib  loads  'vcgt'-tag  of  ICC  profiles  to the X-server using the
+         XVidMode Extension in order to calibrate your display.</p>
+</blockquote>
+
+<p>That means it does not depend on compiz being used.</p>
+
+<p>You can install it using <code>sudo apt-get install xcalib</code>. To make it more convenient assign a keyboard shortcut opening the <code>Keyboard</code> settings.</p>
+
+<p><img src="http://i.stack.imgur.com/quYka.png" alt="Keyboard Settings for adding manual shortcut"></p>
+
+<p>There, navigate to shortcuts. Add a custom shortcut by pressing the plus button, add the name and the command. It will be disabled by default, so assign a shortcut by clicking on <code>Disabled</code> and perform the wanted shortcut, e.g. <kbd>meta</kbd> + <kbd>i</kbd></p>
+
+<p>Before:</p>
+
+<p><img src="http://i.stack.imgur.com/ENYb9.png" alt="before"></p>
+
+<p>After <code>xcalib -invert -alter</code> was launched (mapped to <code>&lt;meta-i&gt;</code>:</p>
+
+<p><img src="http://i.stack.imgur.com/FxppP.png" alt="after"></p>
+
+<p>Pressing it again restores to the normal not inverted screen.</p>

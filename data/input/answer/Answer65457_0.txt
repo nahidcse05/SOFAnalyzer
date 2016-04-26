@@ -1,0 +1,25 @@
+<p>Yes, but not the version of Qt Creator in the archives. Qt 5.0 is compatible <strong>only</strong> with Qt Creator 2.6.1+. Thankfully, installing Qt Creator 2.6.1 is relatively easy:</p>
+
+<ol>
+<li><p>Remove the existing version of Qt Creator you have installed:</p>
+
+<pre><code>sudo apt-get autoremove qtcreator
+</code></pre></li>
+<li><p>Download the appropriate installer from <a href="http://qt-project.org/downloads#qt-creator" rel="nofollow">this page</a>:</p>
+
+<ul>
+<li><p><a href="http://releases.qt-project.org/qtcreator/2.6.1/qt-creator-linux-x86-opensource-2.6.1.bin" rel="nofollow">32-bit Linux Installer</a></p></li>
+<li><p><a href="http://releases.qt-project.org/qtcreator/2.6.1/qt-creator-linux-x86_64-opensource-2.6.1.bin" rel="nofollow">64-bit Linux Installer</a></p></li>
+</ul></li>
+<li><p><code>cd</code> into the directory that contains the installer you downloaded and run:</p>
+
+<pre><code>chmod 755 qt-creator-linux-*-opensource-2.6.1.bin
+</code></pre></li>
+<li><p>Launch the installer:</p>
+
+<pre><code>sudo ./qt-creator-linux-*-opensource-2.6.1.bin
+</code></pre></li>
+<li><p>Complete the installer, leaving all settings at their defaults.</p></li>
+</ol>
+
+<p>If all goes well, you should end up with an icon in your desktop environment's dash or equivalent. You should then be able to use Qt 5.0 with Qt Creator.</p>

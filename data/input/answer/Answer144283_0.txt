@@ -1,0 +1,38 @@
+<p>Open a terminal and execute the following command:</p>
+
+<pre><code>sudo apt-get install compiz-config-settings-manager
+</code></pre>
+
+<p>First, login to a Unity session. If you have no way to execute commands because of no interface, press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F2</kbd> after you login to Unity and login to a text session with your username and password.</p>
+
+<p>Now, execute the following command:</p>
+
+<pre><code>DISPLAY=:0 ccsm
+</code></pre>
+
+<p>and press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F7</kbd> to return to unity.</p>
+
+<p>On the compizconfig-settings-manager, scroll down to and select the Unity plugin. Make sure this is enabled with a check in the box to the lower left hand side. This should startup the unity desktop.</p>
+
+<hr>
+
+<p>If you still need to reset unity and or compiz, continue with these instructions. The old <code>unity --replace</code> command is depreciated but you can download the newer <code>unity-replace</code> script that aims to provide the same function.</p>
+
+<p>To install unity-replace, open a terminal and execute the following commands:</p>
+
+<pre><code>sudo apt-get install gdebi dconf-tools
+wget https://launchpad.net/~amith/+archive/ubuntutools/+build/3910667/+files/unity-reset_0.1-8_all.deb
+sudo gdebi unity-reset_0.1-8_all.deb
+unity-reset
+</code></pre>
+
+<p>To reset compiz, execute the following command:</p>
+
+<pre><code>dconf reset -f /org/compiz/
+</code></pre>
+
+<p>Log out and log back in for the changes to take effect.</p>
+
+<p><a href="http://www.webupd8.org/2012/10/how-to-reset-compiz-and-unity-in-ubuntu.html" rel="nofollow">more info from webupd8</a></p>
+
+<p><a href="https://github.com/phanimahesh/unity-revamp.git" rel="nofollow">download the script from github</a> </p>

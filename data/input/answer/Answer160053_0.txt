@@ -1,0 +1,3 @@
+<p>I figured this out. I had to turn the colors in the VNC client down to 64 and now it stays connected to the server. This was for the default network settings (no inbound connections to guests).</p>
+
+<p>I changed my KVM install to connect guests to a bridged network and now VNC works fine with more colors.</p>

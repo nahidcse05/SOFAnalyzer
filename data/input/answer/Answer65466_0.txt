@@ -1,0 +1,12 @@
+<p><strong>DISCLAIMER:</strong> I'm not sure if this will work, and I am can't test it now, but try it.</p>
+
+<p>Install <code>xte</code>: <code>sudo apt-get install xautomation</code></p>
+
+<p>In easy-stroke make sure "Type" is set to "Command", then in the "Details" field put:  </p>
+
+<pre><code>cryptkeeper &amp;&amp; gnome-terminal &amp;&amp; xte 'keydown Control_L' 'keydown C' 'keyup Control_L' 'keyup C' 'key Up' 'key Return'
+</code></pre>
+
+<p>In the end, it should look something like this  </p>
+
+<p><img src="http://i.stack.imgur.com/atcNF.png" alt="enter image description here"></p>

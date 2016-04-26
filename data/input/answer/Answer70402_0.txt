@@ -1,0 +1,28 @@
+<p>As you can see at <a href="https://bitbucket.org/mathematicalcoffee/workspace-grid-gnome-shell-extension" rel="nofollow">mathematicalcoffee BitBucket page</a>, you can change this configuration through the <em>extension.js</em> file. </p>
+
+<p>First, find your Workspace Grid folder inside the extensions folder. Mine is:</p>
+
+<pre><code>$ cd ~/.local/share/gnome-shell/extensions/workspace-grid@mathematical.coffee.gmail.com
+</code></pre>
+
+<p>Open <em>extension.js</em> file:</p>
+
+<pre><code>$ vim extension.js
+</code></pre>
+
+<p>Locate the following lines:</p>
+
+<pre><code>//// CONFIGURE HERE (note: you can have at most 36 workspaces)
+const WORKSPACE_CONFIGURATION = {
+    rows: 2,
+    columns: 3
+};
+</code></pre>
+
+<p>And change <code>rows</code> and <code>columns</code> for your desired number of workspaces:</p>
+
+<pre><code>rows: 2,
+columns: 2
+</code></pre>
+
+<p>Restart your computer.</p>

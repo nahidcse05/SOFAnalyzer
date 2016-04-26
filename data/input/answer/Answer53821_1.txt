@@ -1,0 +1,12 @@
+<p>You can use this script to check the disk usage</p>
+
+<pre><code>#!/bin/bash
+
+limit=85
+email=you@domain.com
+host=`hostname`
+out=`df -k | grep "^/dev" | awk '{ if($5 &gt; $limit) print "\nDisk space is critial on " $1,$5,$6 "\n"}'`
+usr/bin/mail -s "Disk Space Alert on $host: $out" $email
+</code></pre>
+
+<p>Use <code>cron</code> to make the script run automatically. Check this online <a href="http://cron.nmonitoring.com/cron-generator.html" rel="nofollow">cron generator</a> for helping you in setting it up.</p>

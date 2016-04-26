@@ -1,0 +1,47 @@
+<p>This works in Unity &amp; Gnome, similar things are there for other desktop environments <em>(for KDE's dolphin file manager, I think you can set what you want it to do by right-clicking on the executable file and selecting <strong>'Open With...'</strong> > <strong>'Other'</strong>)</em></p>
+
+<p>Right click on the file, and go to <kbd>Properties</kbd>, and permissions. Make sure this is ticked :</p>
+
+<p><img src="http://i.stack.imgur.com/l9OJa.png" alt="Execute - TICK Allow executing file as program"> <br><sup><em>(You need this ticked anyway for the file to run in terminal, or be 'executed', it is the same as running <code>chmod +x /PATH/TO/FILE</code>)</em></sup></p>
+
+<p>And make sure this,  under the <kbd>Behaviour</kbd> tab, in Nautilus file manager's preferences, is set to this:
+<img src="http://i.stack.imgur.com/H81xy.png" alt="Executable Text Files - Ask Each Time"></p>
+
+<p>Now every time you click on it, you should get this, which will work much the same as the right-click menu:</p>
+
+<p><img src="http://i.stack.imgur.com/fKSjv.png" alt="Do you want to run EXAMPLE.py, or show its contents - buttons"></p>
+
+<p><kbd>Run in Terminal</kbd>, you can guess.<br> <kbd>Display</kbd> opens it in the default text editor defined in 'Open With...'. in the files preferences.<br> <kbd>Run</kbd> runs it in the background, with no terminal. This is also what happens if you select 'Run executable text files when they are opened' above.</p>
+
+<p>Also, here is a fix to stop <code>gnome-terminal</code> closing instantly once the script has completed - go to <kbd>Profile Preferences</kbd>,  and under <kbd>Title and Command</kbd>, set:</p>
+
+<p><img src="http://i.stack.imgur.com/f4fjv.png" alt="'When the command exits' to 'Hold the terminal open'">, Now when you run a script like this (works the same for shell scripts):</p>
+
+<pre><code>#!/usr/bin/python
+import time
+print "Hello"
+time.sleep(5)
+print "Goodbye"
+</code></pre>
+
+<p><sup><em>(Remember the shebang <code>#!/usr/bin/python</code> line, otherwise it won't be interpreted correctly. You can also use <code>#!/usr/bin/env python</code> - for shell scripts <code>#!/bin/bash</code> or <code>#!/bin/sh</code>)</em></sup></p>
+
+<p>It stay open a while, then you should get something like:
+<img src="http://i.stack.imgur.com/KbDQE.png" alt="enter image description here"></p>
+
+<hr>
+
+<p><strong>To (attempt) to get Terminal to appear in the right-click menu:</strong>
+I have tried the following adding this to <code>~/.local/share/applications/mimeapps.list</code> under <code>[Added Associations]</code>:</p>
+
+<pre><code>text/x-shellscript=gnome-terminal.desktop
+application/x-shellscript=gnome-terminal.desktop
+</code></pre>
+
+<p>Also I have tried adding this to <code>gnome-terminal</code>'s launcher file (<code>/usr/share/applications</code>)</p>
+
+<pre><code>NoDisplay=false
+MimeType=text/plain;text/x-chdr;text/x-csrc;text/x-c++hdr;text/x-c++src;text/x-java;text/x-dsrc;text/x-pascal;text/x-perl;text/x-python;application/x-php;application/x-httpd-php3;application/x-httpd-php4;application/x-httpd-php5;application/xml;text/html;text/css;text/x-sql;text/x-diff;
+</code></pre>
+
+<p>Neither of which seemed to work - but setting it so you can click on the File and select 'Open in Terminal' is an ideal substitute. </p>

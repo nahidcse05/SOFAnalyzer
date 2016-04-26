@@ -1,0 +1,5 @@
+<p>Have you tried to install the WINE Launchpad PPA yet? This is different from the Software Center. Updates to WINE are delivered via their PPA.</p>
+
+<p>After doing that, try installing again.</p>
+
+<p>And be sure to NOT be installing or removing any other packages during the install. Applications have to get a "lock" to prevent other packages from installing/uninstalling when it is trying to install/uninstall.</p>

@@ -1,0 +1,3 @@
+<p>Very frequently there's a substantial lag issue if you have an nVidia graphics card. If you don't know what card you have use lspci in terminal.</p>
+
+<p>If you do have it then get into classic and update the driver to the most recent version. The difference is immediately apparent after a quick restart.</p>

@@ -1,0 +1,25 @@
+<p>At the moment there is not solution for this issue, its not a theme related setting that can be changed easily.</p>
+
+<p>If you feel this is greatly affecting you, you may report a bug and suggest the change or the lack of that kind of settings <a href="https://bugzilla.gnome.org/" rel="nofollow">directly to the gnome developers</a>.</p>
+
+<p>Has an option you can try to use another file manager that has the navigation buttons on the left side, I recommend you <code>marlin</code> the ElementaryOS file manager.</p>
+
+<p><img src="http://i.stack.imgur.com/i7rm1.png" alt="enter image description here"></p>
+
+<p>Bar can be customized</p>
+
+<p><img src="http://i.stack.imgur.com/xvX3P.png" alt="enter image description here"></p>
+
+<p>You can install it by adding the <code>marlin</code> official PPA</p>
+
+<pre><code>sudo add-apt-repository ppa:marlin-devs/marlin-daily/daily &amp;&amp; sudo apt-get update
+</code></pre>
+
+<p>Install <code>marlin</code> using this command</p>
+
+<pre><code>sudo apt-get install marlin
+</code></pre>
+
+<p>After that launch in your dash or by pressing AltF2 and typing <code>marlin</code>.</p>
+
+<p>Be aware that <code>marlin</code> is still under development and should be used with some caution.</p>

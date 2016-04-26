@@ -1,0 +1,9 @@
+<blockquote>
+  <p>Note: Take this with a grain of salt, because it's based on "if-I-remember-correctly"</p>
+</blockquote>
+
+<p>Unlike the regular "apps" in the Software Center (i.e. the official repositories), the commercial apps come from a special PPA (personal package archive); you can access the PPAs only if you've bought the software (and thus have the correct authorization).</p>
+
+<p>While the regular apps are "feature frozen" for an LTS and may not be regularly updated, software in <em>all PPAs</em> is unsupported by Canonical (no review), and can be updated as often as the maintainer/developer wants to.</p>
+
+<p>This should also be the case for commercial software. If you notice that an update has otherwise been released, but isn't showing as available in Software Center, you may want to drop the developer/publisher's support team an email, requesting them to also add the updated version to the PPA.</p>

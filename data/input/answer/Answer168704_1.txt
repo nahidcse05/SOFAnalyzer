@@ -1,0 +1,21 @@
+<p>For anyone experiencing this or similar problem, here is what I got that helped solve my situation.  Here is what I got from the XSane developer(s) ... </p>
+
+<blockquote>
+  <p>On Wednesday, 13 May, 2015 03:13 AM, Rolf Bensch wrote:
+  Hi xxxxxxxx,</p>
+  
+  <p>For your scanner you need to install libsane >= 1.0.24 <em>or</em> MP230 series
+  scangearmp from Canon.</p>
+  
+  <p>To upgrade libsane, you can add my ppa (in a terminal):
+  $ sudo add-apt-repository ppa:rolfbensch/sane-git</p>
+  
+  <p>Hope this helps.</p>
+  
+  <p>Cheers,
+  Rolf</p>
+</blockquote>
+
+<p>I added to PPA for future updates/upgrades.  This cleared up my problem with both XSane and SimpleScan.</p>
+
+<p>Good Luck.</p>

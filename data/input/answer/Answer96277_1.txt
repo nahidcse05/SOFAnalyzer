@@ -1,0 +1,17 @@
+<p>You can try downloading driver from xorg edgers ppa(<a href="https://launchpad.net/~xorg-edgers/+archive/ppa" rel="nofollow">https://launchpad.net/~xorg-edgers/+archive/ppa</a>).</p>
+
+<p>Add the ppa </p>
+
+<p><code>sudo add-apt-repository ppa:xorg-edgers/ppa</code></p>
+
+<p>upgrade your system</p>
+
+<p><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade</code></p>
+
+<p>Reinstall bumblebee.</p>
+
+<p>If that doesn't solve your problem,</p>
+
+<p>what is the error when you run <code>optirun</code>? include in your question.</p>
+
+<p>A note : did you created this question yesterday? <a href="http://askubuntu.com/q/350922/35775">Nvidia GTX 765m Optimus tech on ubuntu 12.04</a> Don't create duplicate each day with different id that doesn't help here to get good answers. </p>

@@ -1,0 +1,19 @@
+<p>I was running Wine 1.5.7 perfectly well on 12.04 but after an upgrade this morning I started getting the errors you describe. It was the 1.5.7-0ubuntu3-pulse18 versions that were the problem.</p>
+
+<p>(EDIT: Thanks to swift work on the part of the Wine packaging team, you can now upgrade away from the troublesome version. Try that first before attempting the downgrade method below.)</p>
+
+<p>Fortunately I still had the 0ubuntu2 versions in my cache so I could downgrade like so (I'm on 64-bit, so if you're on 32-bit the dpkg line will be different).</p>
+
+<pre><code>cd /var/cache/apt/archives/
+sudo dpkg -i wine1.5_1.5.7-0ubuntu2~pulse18_amd64.deb wine1.5-amd64_1.5.7-0ubuntu2~pulse18_amd64.deb wine1.5-i386_1.5.7-0ubuntu2~pulse18_i386.deb
+sudo apt-get -f install
+</code></pre>
+
+<p>Having done so Wine is working again. If you don't have these packages you can get them here:</p>
+
+<ul>
+<li><a href="https://launchpad.net/~ubuntu-wine/+archive/ppa/+build/3602432" rel="nofollow">https://launchpad.net/~ubuntu-wine/+archive/ppa/+build/3602432</a></li>
+<li><a href="https://launchpad.net/~ubuntu-wine/+archive/ppa/+build/3602433" rel="nofollow">https://launchpad.net/~ubuntu-wine/+archive/ppa/+build/3602433</a></li>
+</ul>
+
+<p>In which case, run the dpkg command from where you downloaded them, rather than your apt cache.</p>

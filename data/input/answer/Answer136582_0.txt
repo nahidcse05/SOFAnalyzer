@@ -1,0 +1,84 @@
+<p><em>Hurried readers can skip down to <strong>Putting Everything Together</strong> and read just that section--but for users new to the topic I suggest starting from the beginning.</em></p>
+
+<h2>Basic Principles</h2>
+
+<p>Running <code>djvubind</code> so it only uses files named <code>page<strong><em>NNN</em></strong>.tif</code> (where each <strong><code>N</code></strong> is some digit) is in one way significantly more complicated than you might be thinking, while in another way is a bit less complicated.</p>
+
+<ul>
+<li><p><strong>Passing the names of just the desired <code>.tif</code> files to the <code>djvubind</code> command will not work</strong>, because <a href="http://manpages.ubuntu.com/manpages/utopic/en/man1/djvubind.1.html" rel="nofollow"><code>djvubind</code> takes a <em>directory</em> as its argument</a>, and insists on trying to use all the files directly contained in that directory.</p>
+
+<p>One way to get around this is to build another directory of <a href="https://en.wikipedia.org/wiki/Hard_link" rel="nofollow">hard links</a> pointing to files in the directory you started with, running <code>djvubind</code> on <em>that</em> directory, then (optionally) removing it. I will present that method in this answer.</p>
+
+<p><sup>Normally, for this sort of thing, <a href="https://en.wikipedia.org/wiki/Symbolic_link" rel="nofollow">symbolic links</a> would be preferred to hard links. However, <code>djvubind</code> apparently skips over symbolic links automatically, refusing to process the files they point to. (There doesn't seem to be any option to change this behavior, but if someone knows of a way, I--or they--can edit this answer.)</sup></p></li>
+<li><p>But it is less complicated in that you do not need to invoke <a href="http://manpages.ubuntu.com/manpages/utopic/en/man1/ls.1.html" rel="nofollow"><code>ls</code></a> or even <a href="http://manpages.ubuntu.com/manpages/utopic/en/man1/grep.1.html" rel="nofollow"><code>grep</code></a>.</p>
+
+<p><sup>Except for some rare situations where the only goal is to show a directory listing to the user, <a href="http://mywiki.wooledge.org/ParsingLs" rel="nofollow">it is generally best to avoid parsing the output of <code>ls</code></a>. And while <code>grep</code> certainly may be used for this purpose, your approach has the disadvantage of selecting some files with quite different names, like <code>rampage999.tiffany's.revenge.mp3</code>. (You could fix that by <a href="https://www.gnu.org/software/grep/manual/grep.html#Matching-Control" rel="nofollow">passing <code>grep</code> the <code>-x</code> flag</a>, but really you don't need <code>grep</code> at all for this.)</sup></p></li>
+</ul>
+
+<h2>Selecting the Desired Files</h2>
+
+<p>There are two especially popular methods for selecting files that match a particular pattern:</p>
+
+<ol>
+<li><a href="http://mywiki.wooledge.org/glob" rel="nofollow">shell globbing</a> and <a href="https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs" rel="nofollow">a for loop</a></li>
+<li><a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html" rel="nofollow">the <code>find</code> command</a> (which <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Shell-Pattern-Matching" rel="nofollow">accepts similar globbing syntax</a>)</li>
+</ol>
+
+<p>I'll use the first way in this guide, and show the commands for the second way at the end.</p>
+
+<p>First, I suggest composing and trying out a command just to show the names of the files we want to operate on. This is to help avoid mistakes--you'll see if you're selecting the files correctly or not. To do this, you can run <code>printf '%s\n' <em>filename</em></code> for each one. (For the real thing, you'll replace <code>printf '%s\n'</code> with a different command.)</p>
+
+<pre class="lang-bsh prettyprint-override"><code>for x in page[0-9][0-9][0-9].tif; do printf '%s\n' "$x"; done
+</code></pre>
+
+<p>Note that the glob (<code>page[0-9][0-9][0-9].tif</code>) is <em>un</em>quoted, as the shell must expand it, then loop through the expanded list. (Testing will look <a href="http://paste.ubuntu.com/10726053/" rel="nofollow">something like this</a>, though your output will be longer if you have many files. You should be able to see how only the correct files are selected.)</p>
+
+<h2>Putting Everything Together</h2>
+
+<p>Now for the real thing. Make a directory to store the hard links:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>mkdir page-links
+</code></pre>
+
+<p>Populate the new directory with hard links to the desired files:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>for x in page[0-9][0-9][0-9].tif; do ln "$x" "page-links/$x"; done
+</code></pre>
+
+<p>Run <code>djvubind</code> on the newly populated <code>page-links</code> directory:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>djvubind page-links
+</code></pre>
+
+<p>Optionally, remove the directory of hard links:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>rm -r page-links
+</code></pre>
+
+<p>It will look <a href="http://paste.ubuntu.com/10726326/" rel="nofollow">something like this</a>.</p>
+
+<h2>If you prefer <code>find</code>...</h2>
+
+<p>To use <code>find</code> instead of shell globbing and a for loop:</p>
+
+<ul>
+<li>use <code>-mindepth 1</code> to prevent the containing directory from being considered as a possible match,</li>
+<li>use <code>-maxdepth 1</code> so that only files directly contained in the current directory (not those in its subdirectories) are matched, and</li>
+<li><em>do</em> quote the pattern, as it must be passed unexpanded by the shell to the <code>find</code> command (which then performs the matching).</li>
+</ul>
+
+<p>List the files:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>find . -mindepth 1 -maxdepth 1 -name 'page[0-9][0-9][0-9].tif'
+</code></pre>
+
+<p>Without specifying any action, the default <code>-print</code> action is used, listing the files you have selected. Results will be preceded by <code>./</code>, but that won't cause any problems here.</p>
+
+<p>After creating the target directory (<code>mkdir page-links</code>), populate it:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>find . -mindepth 1 -maxdepth 1 -name 'page[0-9][0-9][0-9].tif' -exec ln {} page-links/{} \;
+</code></pre>
+
+<p><sup>You don't have to quote <code>{}</code>, though some people like to do so because it clarifies (to humans) that it is not a <a href="https://www.gnu.org/software/bash/manual/bash.html#Brace-Expansion" rel="nofollow">brace expansion</a>, and perhaps it is necessary to do so when invoking <code>find</code> from some non-Bourne-style shells, if they use different brace expansion syntax. Note that, whether or not you quote it, <code>find</code> will behave the same--<a href="http://paste.ubuntu.com/8524066/" rel="nofollow"><em>including</em> for files with spaces in their names</a>. (<code>find</code> never sees the quotes, as they are <a href="https://www.gnu.org/software/bash/manual/bash.html#Quote-Removal" rel="nofollow">removed by the shell</a> before <code>find</code> runs. The misconception that quoting <code>{}</code> has something to do with the way <code>find</code>'s <code>-exec</code> action passes filenames to commands is why I don't quote it.)</sup></p>
+
+<p>After that, running <code>djvubind</code> (and optionally removing the <code>page-links</code> directory afterwards) will of course work exactly the same way.</p>

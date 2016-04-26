@@ -1,0 +1,5 @@
+<p>sudo mount /dev/sXX &amp;&amp; rsync whatever</p>
+
+<p>I have tested and i receive email errors if mount fails. Therefore this uses crontab/rsync and notifies me of failed mounts via email.</p>
+
+<p>Not really a script, but hey, why do extra work, K.I.S.S. !</p>

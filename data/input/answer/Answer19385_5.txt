@@ -1,0 +1,1 @@
+<p>Make sure the MBR is pointing to the upgraded kernel, initrd, etc.  I use EasyBCD to triple boot, so when the upgrade to 11.10 cam last night and X wouldn't start this morning, it took a while before I realized I had to update the NeoGRUB file to point it from 2.6.35-22 to 3.0.0-12.  After doing that, everything is perfect.</p>

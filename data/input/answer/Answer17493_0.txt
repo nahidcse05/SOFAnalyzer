@@ -1,0 +1,9 @@
+<p>Use "--build" and "--host".</p>
+
+<pre><code>./configure --help
+System types:
+  --build=BUILD     configure for building on BUILD [guessed]
+  --host=HOST       cross-compile to build programs to run on HOST [BUILD]
+</code></pre>
+
+<p>You need to use <code>./configure --build=x86_64-pc-linux-gnu --host=i686-pc-linux-gnu</code> to compile for 32-bit Linux in a 64-bit Linux system. You still need to add the other <code>./configure</code> options.</p>

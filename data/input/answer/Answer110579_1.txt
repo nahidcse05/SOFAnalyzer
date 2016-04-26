@@ -1,0 +1,45 @@
+<p>I was running into a similar error:</p>
+
+<pre><code>Reading package lists... Error!
+E: Encountered a section with no Package: header
+E: Problem with MergeList /var/lib/dpkg/status
+E: The package lists or status file could not be parsed or opened.
+</code></pre>
+
+<p>I followed similar suggestions to copy <code>status-old</code>.</p>
+
+<pre><code>$ head /var/lib/dpkg/status
+$ head /var/lib/dpkg/status-old
+</code></pre>
+
+<p>All of my status files were blank for some reason. Luckily, I found out there are backups of these files:</p>
+
+<pre><code>$ ls -l /var/backups/dpkg.status.*
+-rw-r--r-- 1 root root 444620 Nov 15 06:33 /var/backups/dpkg.status.0
+-rw-r--r-- 1 root root 444620 Nov 15 06:33 /var/backups/dpkg.status.1.gz
+-rw-r--r-- 1 root root 128168 Sep 20  2013 /var/backups/dpkg.status.2.gz
+-rw-r--r-- 1 root root 112545 Sep 16  2013 /var/backups/dpkg.status.3.gz
+-rw-r--r-- 1 root root 107767 Sep 14  2013 /var/backups/dpkg.status.4.gz
+-rw-r--r-- 1 root root 107766 Sep 11  2013 /var/backups/dpkg.status.5.gz
+-rw-r--r-- 1 root root  94583 Sep 11  2013 /var/backups/dpkg.status.6.gz
+</code></pre>
+
+<p>I checked the latest backup...</p>
+
+<pre><code>$ head /var/backups/dpkg.status.0
+</code></pre>
+
+<p>...but it was still blank. So I unzipped an older one...</p>
+
+<pre><code>$ gunzip /var/backups/dpkg.status.1.gz
+$ head /var/backups/dpkg.status.1
+</code></pre>
+
+<p>This time there was content. So I copied it...</p>
+
+<pre><code>$ cp /var/backups/dpkg.status.1 /var/lib/dpkg/status
+</code></pre>
+
+<p>Then <code>apt-get update</code> ran without problems.</p>
+
+<p><a href="https://answers.launchpad.net/ubuntu/+source/apt/+question/246884" rel="nofollow">Credit goes to this post.</a></p>

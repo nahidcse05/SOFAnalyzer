@@ -1,0 +1,13 @@
+<p>Another way of changing the title of <code>gnome-terminal</code> is by using <code>gconftool-2</code>; this changes the initial terminal title for the <em>profile</em> selected, so you could have different profiles associated with titles such as 'Apache', 'Editing', etc. You would then launch <code>gnome-terminal</code> with the appropriate profile to get the terminal title you had specified. This is in contrast to <code>gnome-terminal --title "name"</code> which changes the title per terminal, but doesn't affect the initial title specified in the profile.</p>
+
+<p>You could use the following command in a script to set the name of the terminal for a profile, and you could have the name of the terminal change at certain times in the day to remind you of things:</p>
+
+<pre><code>gconftool-2 --set /apps/gnome-terminal/profiles/Default/title --type=string "Apache"
+</code></pre>
+
+<p>This is for the default profile, but you could set the title for other profiles as well by changing, for example, <code>Default</code> to another profile like <code>Profile0</code>:</p>
+
+<pre><code>gconftool-2 --set /apps/gnome-terminal/profiles/Profile0/title --type=string "Editing"
+</code></pre>
+
+<p>I thought this way of changing the title is of use because of the way it could be used in scripting, or just as a quick command-line way to set the title for the profile. Note that sometimes you have to relaunch the terminal with the specified profile for the <code>gconftool-2</code> setting to take affect. The complete settings available for <code>gnome-terminal</code> can be listed with <code>gconftool-2 -R /apps/gnome-terminal</code>.</p>

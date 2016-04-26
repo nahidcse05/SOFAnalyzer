@@ -1,0 +1,11 @@
+<p>Try moving <code>~/.local/share/zeitgeist</code> to <code>~/.local/share/zeitgeist.bak</code>.</p>
+
+<p>Open the terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>) and run the following command:</p>
+
+<pre><code>mv ~/.local/share/zeitgeist ~/.local/share/zeitgeist.bak
+</code></pre>
+
+<p>Then run:</p>
+
+<pre><code>kill -s TERM `pidof /usr/lib/unity-lens-applications/unity-applications-daemon`
+</code></pre>

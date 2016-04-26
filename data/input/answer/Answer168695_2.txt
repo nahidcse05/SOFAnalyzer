@@ -1,0 +1,5 @@
+<p>To my experience, the best way to use Office in Ubuntu is by just installing VirtualBox and make a new Windows virtual machine and install Office on it. From there, you have several options to integrate the Office apps more tightly in Ubuntu.</p>
+
+<p>My favorite way is configure it using this solution: <a href="https://www.youtube.com/watch?v=cRoS2iJNGj8" rel="nofollow">https://www.youtube.com/watch?v=cRoS2iJNGj8</a></p>
+
+<p>Basically what you do is start Windows "headless" (that is, without a visible window) and then using an RDP client you can start all the Office apps. You can even create nice launchers for them in Ubuntu.</p>

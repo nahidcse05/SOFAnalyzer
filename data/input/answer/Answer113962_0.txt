@@ -1,0 +1,1 @@
+<p>sudo apt-get check does the trick. You might want to use also apt-get autoclean &amp;&amp; apt-get autoremove</p>

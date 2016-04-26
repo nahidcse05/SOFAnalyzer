@@ -1,0 +1,1 @@
+<p>I've installed a utility called <code>dconf-editor</code> and fixed this problem. Install it in the Software Center (the package is called <code>dconf-tools</code>). Run it, and there is the option on the left: 'desktop'----'Unity'----'Panel'. Click 'set to default' under that. Log out and back in. The problem should be fixed!</p>

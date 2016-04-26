@@ -1,0 +1,19 @@
+<p>From your Ubuntu client machine:</p>
+
+<ul>
+<li><p>go to the dash:</p>
+
+<p><a href="http://i.stack.imgur.com/5XRu6.png" rel="nofollow"><img src="http://i.stack.imgur.com/5XRu6.png" alt="enter image description here"></a></p></li>
+<li><p>type <code>remmina</code></p></li>
+<li>open the application, </li>
+<li>click the little green <kbd>+</kbd></li>
+<li>change the name "Quick Connect" to <code>WhatEverYouWant</code>.</li>
+<li>click on protocol and choose <code>VNC - Virtual Network Computing</code></li>
+<li>click on <kbd>Server</kbd> and add the IP address</li>
+<li>optional: add the username and password there</li>
+<li>click <kbd>Save</kbd></li>
+</ul>
+
+<p>Double-click <code>WhatEverYouWant</code></p>
+
+<h3>Done!  ;-)</h3>

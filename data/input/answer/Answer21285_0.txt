@@ -1,0 +1,5 @@
+<p>It looks like it uses upstart, instead of System V init.  Take a look at /etc/init/ssh.conf.  </p>
+
+<p>Take a look at Anarci's post explaining Upstart from your other question:  <a href="http://askubuntu.com/questions/72123/how-to-write-an-init-script-that-will-execute-an-existing-start-script/72179#72179">How to write an init script that will execute an existing start script?</a></p>
+
+<p>I don't know much about Upstart, but I do know that it is intended to replace System V init, and is used for many of the startup processes in Ubuntu now.</p>

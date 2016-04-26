@@ -1,0 +1,29 @@
+<p>As others have mentioned in the comments,you've most likely uninstantiated the <code>gnome-terminal</code> , the default terminal app for Ubuntu and Unity. </p>
+
+<p>In that case the solution is <code>sudo apt-get install gnome-terminal</code></p>
+
+<p>On the other hand, the possibility could also be that it was replaced with <code>xterm</code> as default terminal app. Ubuntu by default ships with two terminal apps, <code>gnome-terminal</code> and <code>xterm</code> (the last one being the classic terminal app, and is installed pretty much across the linux distros with Xorg graphical server).</p>
+
+<p>To fix the defaults issue, run <code>sudo update-alternatives --config x-terminal-emulator</code> and select <code>gnome-terminal.wrapper</code> from the list of choices.</p>
+
+<p>For instance, here's my output. Don't be surprised - I've installed a lot of terminal apps</p>
+
+<pre><code>$ sudo update-alternatives  --config x-terminal-emulator               
+[sudo] password for xieerqi: 
+There are 9 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
+
+  Selection    Path                             Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/terminator               50        auto mode
+* 1            /usr/bin/gnome-terminal.wrapper   40        manual mode
+  2            /usr/bin/koi8rxterm               20        manual mode
+  3            /usr/bin/konsole                  40        manual mode
+  4            /usr/bin/lxterm                   30        manual mode
+  5            /usr/bin/mlterm                   20        manual mode
+  6            /usr/bin/sakura                   40        manual mode
+  7            /usr/bin/terminator               50        manual mode
+  8            /usr/bin/uxterm                   20        manual mode
+  9            /usr/bin/xterm                    20        manual mode
+
+Press enter to keep the current choice[*], or type selection number: 
+</code></pre>

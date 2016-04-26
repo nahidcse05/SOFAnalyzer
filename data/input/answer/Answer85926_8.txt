@@ -1,0 +1,9 @@
+<p>If you're writing a Fiction novel, this is an answer nobody thought about: <strong>Plume Creator</strong>. </p>
+
+<p>Find it here: <a href="http://sourceforge.net/projects/plume-creator/">http://sourceforge.net/projects/plume-creator/</a></p>
+
+<p>It's currently the BEST free alternative Scrivener. I've been using it for many short stories, and currently for writing a novel, and it hasn't failed me yet. Plus, the developer of this software is always open to suggestions to make the tool better. :) </p>
+
+<p>That said, Plume Creator only focuses on only <em>writing</em>, so you aren't bothered by formatting and organizing. It also has an Outliner to plan your plot, as well as Notes for note-taking and Attendance for keeping character / items / settings data. This structure helps you finish your book in no time. </p>
+
+<p>Of course, after finishing your draft, you'll need to "format" the manuscript in LibreOffice or LaTeX. So that said, Plume Creator (like Scrivener) is recommended for writing first drafts, while LibreOffice for the actual formatting, editing and processing. </p>

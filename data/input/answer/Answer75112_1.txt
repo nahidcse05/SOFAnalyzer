@@ -1,0 +1,6 @@
+<p>Use gdebi to install your .deb files</p>
+
+<pre><code>sudo apt-get install gdebi
+</code></pre>
+
+<p>and right click on your .deb file and open with gdebi</p>

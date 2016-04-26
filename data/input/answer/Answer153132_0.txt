@@ -1,0 +1,7 @@
+<p>You can use <code>pip3</code> (which is just normal <code>pip</code> but in system's Python3 packages). Normally I would suggest avoiding using pip for installing stuff globally but given there are no packages for this that could overwrite the files, there's nothing to lose.</p>
+
+<p>It's quick and simple:</p>
+
+<pre><code>sudo apt-get install python3-pip
+sudo pip3 install sympy
+</code></pre>

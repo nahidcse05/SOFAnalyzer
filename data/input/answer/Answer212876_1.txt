@@ -1,0 +1,18 @@
+<p>You can not enable verbosity natively in <code>find</code>.</p>
+
+<p>You need to use <code>rm -v</code> with <code>find</code>'s <code>-exec</code> action, instead of <code>find</code>'s native action <code>-delete</code>:</p>
+
+<pre><code>find . -type f -iname \*.vi -exec rm -v {} +
+</code></pre>
+
+<p>In the second case, use <code>mv -v</code>:</p>
+
+<pre><code>find . -name "*.doc" -exec mv -v {} /path \;
+</code></pre>
+
+<p>Or better:</p>
+
+<pre><code>find . -name "*.doc" -exec mv -vt /path {} +
+</code></pre>
+
+<p>In both cases, <code>-v</code> tells <code>rm</code>/<code>mv</code> to become verbose to say whats being done. </p>

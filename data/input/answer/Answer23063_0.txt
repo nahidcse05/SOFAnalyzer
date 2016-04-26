@@ -1,0 +1,5 @@
+<p>This could be because part of your wrist/hand is over (but not touching) the touchpad.  This happens on my laptop all the time.  I usually disable it and use a mouse.</p>
+
+<p>Check your laptop / netbook manual if there is a <strong>key combination</strong> to disable the touchpad.</p>
+
+<p>Worked for me both in Windows XP and Xubuntu.</p>

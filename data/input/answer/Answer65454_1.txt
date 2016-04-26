@@ -1,0 +1,7 @@
+<p>Ubuntu requires the Samba server to be able to share files using network protocol called Server Message Block (SMB) that's where the name "Samba" came from. Thus, any Ubuntu apps that runs on top of Ubuntu including Nautilus requires the Samba server daemon installed to serve files over the network.</p>
+
+<p>Additional info at <a href="https://help.ubuntu.com/community/Samba" rel="nofollow">https://help.ubuntu.com/community/Samba</a></p>
+
+<p>Hope this helps.</p>
+
+<p>Eduardo B.</p>

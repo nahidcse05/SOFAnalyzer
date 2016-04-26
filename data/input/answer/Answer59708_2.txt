@@ -1,0 +1,5 @@
+<p>Hold esc when you see the screen and in kernel options add nomodeset and then boot.</p>
+
+<ul>
+<li>Follow this advice here: <a href="http://askubuntu.com/questions/38780/how-to-set-nomodeset-for-installation">How to set nomodeset for installation?</a></li>
+</ul>

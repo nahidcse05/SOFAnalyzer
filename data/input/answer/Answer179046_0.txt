@@ -1,0 +1,33 @@
+<p><strong><a href="http://www.foosel.org/linux/devilspie" rel="nofollow">Devil's Pie</a></strong> is supposedly the easiest way to get this done, but it doesn't work as expected in Xubuntu 12.04 and 14.04 (devilspie 0.22-2 and 0.23-2).</p>
+
+<p><strong>Example: Hiding from taskbar</strong></p>
+
+<p>I have tried this myself in Xubuntu 14.04, for example, to hide Xfce4 Dictionary application window from the taskbar.</p>
+
+<ol>
+<li><p>Create a new folder <code>.devilspie</code> at Home directory</p></li>
+<li><p>Open a text editor and type the following</p>
+
+<pre><code>(if (is (window_name) "Dictionary") (skip_tasklist))
+</code></pre></li>
+<li><p>Save as <code>hide.ds</code> file in the created folder, which is <code>$HOME/.devilspie/hide.ds</code> (the filename can be anything, but must have <code>.ds</code> file extension)</p></li>
+<li><p>Run <code>devilspie</code> in Terminal (use <code>-d</code> option for verbose output)</p>
+
+<pre><code>$ devilspie -d
+Devil's Pie 0.23 starting...
+Loading /etc/devilspie
+/etc/devilspie doesn't exist
+Loading /home/#####/.devilspie
+Loading /home/#####/.devilspie/hide.ds
+1 s-expressions loaded.
+Skipping pager
+Skipping pager
+</code></pre></li>
+<li><p>Finally, run Xfce4 Dictionary from menu, or <code>xfce4-dict</code> from Terminal</p></li>
+</ol>
+
+<p>This should give what you need, hide from the taskbar <em>only</em>. But what I had experienced was the Dictionary application window was entirely hidden from taskbar, window menu and Alt-Tab popup all together (false result).</p>
+
+<p><strong>Development status</strong></p>
+
+<p>GNOME Wiki <a href="https://wiki.gnome.org/action/show/Projects/DevilsPie" rel="nofollow">has noted</a> that Devil's Pie isn't really maintained. According to <a href="http://www.burtonini.com/blog/computers/devilspie" rel="nofollow">the developer site</a>, version 0.22 was the last version updated in late 2007. <a href="https://launchpad.net/ubuntu/+source/devilspie/0.22-2" rel="nofollow">This changelog</a> on Launchpad noted that new maintainer is handling Devil's Pie from version 0.22-2.</p>

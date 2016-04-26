@@ -1,0 +1,8 @@
+<p>The system will recognize the partition, and will not try to use it as a swap partition.</p>
+
+<p>Use can create a swap file in a partition. There's a good guide here:
+<a href="https://help.ubuntu.com/community/SwapFaq" rel="nofollow">https://help.ubuntu.com/community/SwapFaq</a></p>
+
+<p>(I'm wondering btw - why do you need an extra primary partition? Why can't you use an extended partition?)</p>
+
+<p>If you need more than 4 partitions, the best method is to make your 4th partition <strong>Extended Partition</strong> (as large as you may need) and then create many more <strong>Logical Partitions</strong> under it.</p>

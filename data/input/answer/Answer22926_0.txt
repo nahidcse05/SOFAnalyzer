@@ -1,0 +1,12 @@
+<p>Unfortunately, this is by design.</p>
+
+<p>As per <a href="http://jeff.ecchi.ca/blog/2010/07/25/desktop-in-the-shell/" rel="nofollow">this blog post</a> on the design of gnome shell:</p>
+
+<blockquote>
+  <p>TL;DR/summary: the desktop metaphor sucks. We are stuck with a limited
+  surface, limited file management tools, and a background that actively
+  impairs legibility of the files sitting on it (unless you’re using a
+  solid black background).</p>
+</blockquote>
+
+<p>As such, it was removed from gnome shell as far as I can tell.</p>

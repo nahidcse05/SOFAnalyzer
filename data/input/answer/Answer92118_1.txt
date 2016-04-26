@@ -1,0 +1,10 @@
+<p>I've just had a similar problem when using boot-repair to move to UEFI. Sounds silly, but I just put double quotes around the UUID value, did <code>sudo mount -a</code> (or reboot)  and the error went away.
+So I would change your /etc/fstab entry from </p>
+
+<pre><code>UUID=F433-DF4C  /boot/efi       vfat    defaults        0       1
+</code></pre>
+
+<p>to</p>
+
+<pre><code>UUID="F433-DF4C"  /boot/efi       vfat    defaults        0       1
+</code></pre>

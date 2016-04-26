@@ -1,0 +1,5 @@
+<p>Check out <a href="http://www.logodesignworks.com/blog/vector-graphics-and-raster-graphics-difference">this wonderful explanation</a> for the differences between vector graphics and raster graphics.</p>
+
+<p>If you want to work with photographs (raster images), GIMP is your best bet. There are lots of brush and plugin collections floating around the net, too (e.g. see <a href="http://www.webupd8.org/2011/02/gimp-painter-and-gimp-paint-studio.html">here</a>).</p>
+
+<p>If you want to create logos, diagrams and illustrations (vector images), use Inkscape.</p>

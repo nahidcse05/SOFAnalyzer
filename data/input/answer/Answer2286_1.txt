@@ -1,0 +1,5 @@
+<p>I think the easiest way to achieve this is to check your local /etc/fstab and change the options for the NTFS partition to be mounted read-only.</p>
+
+<p>In a running system you can do this by "mount -o remount,ro /path/to/ntfs".</p>
+
+<p>If you do not know exactly what to do please post the contents of your /etc/fstab.</p>

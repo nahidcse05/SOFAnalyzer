@@ -1,0 +1,9 @@
+<blockquote>
+  <p>How can i prevent reset byte count in /proc/net/dev</p>
+</blockquote>
+
+<p>You can not: the size of the variables for the counter only allow a value up to 4GB. </p>
+
+<p>It is the program you use that should already be aware of this and should take care of this: it should poll twice and if the 2nd value is less than the 1st value add 4Gb to the 1st value. Subtracting the two will then show the correct result. </p>
+
+<p>If it does not you should file a bug report against that software. </p>

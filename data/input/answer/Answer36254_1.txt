@@ -1,0 +1,12 @@
+<p>I had the same problem with Nvidia GITX 580 on 12.04 64bit. Here is the solution:</p>
+
+<ol>
+<li>At the lightdm login page, press Ctrl+Alt+F1 to switch to the console (text mode).</li>
+<li>Login using your credentials.</li>
+<li>Run
+sudo apt-get update; sudo apt-get upgrade;</li>
+<li>Install nvidia driver using this command:
+sudo apt-get install nvidia-current</li>
+<li>Reboot.</li>
+<li>Now you should be able to use your keyboard and login in lightdm.</li>
+</ol>

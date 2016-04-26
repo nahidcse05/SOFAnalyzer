@@ -1,0 +1,3 @@
+<p>Can you be more specific. I cant tell if your having trouble with files syncing to Ubuntu One or from Ubuntu One to your computer</p>
+
+<p>Either way I would say you should check your settings in Ubuntu and change which folders you want to automatically sync. If the file you dont want to sync isnt in your Ubuntu One Sync folder you can disable it at  <a href="https://one.ubuntu.com" rel="nofollow">https://one.ubuntu.com</a> </p>

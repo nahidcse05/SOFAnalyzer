@@ -1,0 +1,3 @@
+<p>Nautilus just provides a simple front-end to creating a share with Samba. It is Samba that actually does the job. Therefore is you require a more fine-grained control over sharing use manual configuration instead. You may find the below and related docs useful: <a href="http://www.samba.org/samba/docs/man/Samba-Guide/index.html" rel="nofollow">http://www.samba.org/samba/docs/man/Samba-Guide/index.html</a> </p>
+
+<p>There are also other protocols available, that allow to share files from Linux machine, like NFS (Network File System). However to mount this kind of shares under Windows you'll have to install 'Client For NFS' on those boxes.</p>

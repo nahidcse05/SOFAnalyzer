@@ -1,0 +1,16 @@
+<p>I had never heard of EPM before. After ten minutes scrobbling around the internet, I'm fairly confident you're talking about a disk/volume encryption format from Check Point Software:</p>
+
+<ul>
+<li><a href="http://www.checkpoint.com/products/media-encryption/index.html" rel="nofollow">http://www.checkpoint.com/products/media-encryption/index.html</a></li>
+</ul>
+
+<p>On the specifications tab it doesn't include Linux as a supported operating system and because this is a proprietary media encryption format, I feel it's unlikely that there are any open source tools to decrypt the volume.</p>
+
+<p>That leaves you with a few options, none ideal:</p>
+
+<ol>
+<li><p>Ask the agency to send you the data you need in another format. Some agencies encrypt <em>everything</em> regardless of need. If this is non-sensitive data argue that it doesn't need encrypting. If they can use alternative software (like a Truecrypted USB drive) that would also work for you. You never know, they might even listen.</p></li>
+<li><p>Ask Check Point Software for a Linux version. Unless they're already working on it, don't hold your breath. This is serious software that will require serious (long and expensive) testing.</p></li>
+<li><p>Install Windows in VirtualBox, install Check Point and try to copy the data out. From what I can see, Check Point is going to try to stop this. And it's probably going to win.</p></li>
+<li><p>Give up. Use Windows-proper.</p></li>
+</ol>

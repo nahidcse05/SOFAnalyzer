@@ -1,0 +1,5 @@
+<p>You should reinstall with the 32-bit one.</p>
+
+<p>32-bit Ubuntu: Works on both 32-bit and 64-bit Systems.  Some features (like more RAM) on a 64-bit system will be restricted if you use 32-bit Ubuntu.</p>
+
+<p>64-bit Ubuntu: Only works on 64-bit Systems and will not work with 32-bit Systems.   Use this only if you are sure that you are using a 64-bit system.</p>

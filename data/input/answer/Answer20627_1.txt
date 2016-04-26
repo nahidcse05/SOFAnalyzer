@@ -1,0 +1,58 @@
+<p>I agree with Bruno, the shell script is more the norm for adding command type functionality.  I offer additional suggestions:</p>
+
+<p>1- for the Usage, do not include the period at the end of the message.  You are trying to show syntax and the message
+"Usage: swap file1 file2."
+is possibly misleading, it is not a sentence and should just say:
+"Usage: swap file1 file2"</p>
+
+<p>2- Placing the file in /use/bin makes it a system command.  While your personal Ubuntu install may tolerate this, when you decided to re-install from scratch you capture your home directory, not /usr/bin.  I suggest you create $HOME/bin, add that to your search path, and place all your scripts in that directory.  Your bin directory is your personal trove of additional commands.</p>
+
+<p>3- If you place the function in bashrc then it is only available in a bash shell, if you want swap available regardless of shell, then a shell script in a bin directory is more universal and standard.</p>
+
+<p>4- In the script I suggest that the exit after the Usage output be changed to "exit 1" and after the last line (third mv command) add "exit 0".  The exit code indicates success or failure.  If you ever write other scripts that use swap, they can check the exit code to see if there was success or failure.</p>
+
+<p>5- Instead of cop_$1 which assumes the file cop_ does not exist, I suggest the mktemp function, using the --tmpdir option it creates the temp file in the current directory.  This guarantees no conflicting file names.</p>
+
+<p>Putting this all together I offer the following:</p>
+
+<pre><code>#!/bin/sh 
+if [ ! $# = 2 ] ; then
+    echo "Usage: `basename $0` file1 file2"
+    echo "Two file names are required."
+    exit 1
+fi
+if [ ! -f $1 -o ! -f $2 ] ; then
+    echo "Usage: `basename $0` file1 file2"
+    echo "Only file names are allowed."
+    exit 1
+fi
+
+TEMP=`mktemp --tmpdir=.`
+
+mv $1 ${TEMP}
+mv $2 $1
+mv ${TEMP} $2
+exit 0
+</code></pre>
+
+<p>Now put this in the bin directory under your home directory.  Make sure your PATH variable picks up this home directory <code>echo $PATH</code>.  If it does not, the PATH is set in your shell initialization resources (.bashrc or .cshrc or ???).</p>
+
+<pre><code>cd
+mkdir bin
+nano swap
+&lt; now paste the above script into the file, save, and exit&gt;
+chmod 755 swap
+nano $HOME/.bashrc
+&lt; now add the following 2 lines at the end of the file, save, and exit&gt;
+# user specific pathing
+PATH="$HOME/bin:$PATH"
+</code></pre>
+
+<p>Now you either start a new bash shell, or reprocess the .bashrc file:</p>
+
+<pre><code>source .bashrc
+</code></pre>
+
+<p>New login or shells should be automatic.</p>
+
+<p>Thats it.  Test with just a swap command and you should see the usage text.</p>

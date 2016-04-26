@@ -1,0 +1,3 @@
+<p>If I understand yours problem, you have now no administrator account with password and just common user account (without admin privileges == not listed in suders (not in admin group).</p>
+
+<p>Well - I thing yours only option is boot from live CD and (as root) set/change password for yours admin account (in chroot) or add his user account in admin group. </p>

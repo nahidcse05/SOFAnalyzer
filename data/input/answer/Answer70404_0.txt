@@ -1,0 +1,8 @@
+<p>Run:</p>
+
+<pre><code>unset DB_ROOT
+</code></pre>
+
+<p>Sourcing a file is equivalent to typing out every line in it. So it serves to only set variables, and not unset them.</p>
+
+<p>Normally you don't need to unset variables in <code>~/.bashrc</code> since they aren't set in the first place. In your case, you can run <code>unset</code> until your environment gets reset (usually a new terminal window will start off afresh).</p>

@@ -1,0 +1,17 @@
+<p>It could be that your <code>start</code> command makes your script happen too early. I don't know exactly what the fireimager does, but maybe you want to start it after networking is up?</p>
+
+<pre><code>start on net-device-up
+</code></pre>
+
+<p>I do not know whether the INTERFACE could be specified or not. But the net-device-added means that the interface is present, but not necessarily started which may be a problem.</p>
+
+<p>You could also try your script at a command line once the system is up to make sure it works then. If so, then the <code>start</code> is certainly the only thing you need to tweak.</p>
+
+<hr>
+
+<p>Also in the following:</p>
+
+<pre><code>exec /home/programmer/bin/init/inittest
+</code></pre>
+
+<p>we see that the script is placed under <code>/home/programmer/...</code> which is not considered secure. I don't think the boot scripts will detect that, but I would move that script somewhere else where the system could expect such a script (maybe under <code>/usr/local/bin</code>).</p>

@@ -1,0 +1,5 @@
+<p>I hate directing you to another site, but there was a really useful thread about installing Wacom Bamboo tablets (both pen and pen&amp;touch models) on the ubuntuforums.org site, you should check that out.  I've gotten the Wacom Bamboo Pen version to work flawlessly on Lucid with the instructions in that thread.</p>
+
+<p><a href="http://ubuntuforums.org/showthread.php?t=1515562" rel="nofollow" title="Ubuntu Forums .org - HOW TO Set Up the Bamboo Pen &amp; Touch in Lucid">Ubuntu Forums .org - HOW TO Set Up the Bamboo Pen &amp; Touch in Lucid</a></p>
+
+<p>** EDIT **  I think you should only follow the first post or so in that thread, rather than follow the rest of the community's posts.  Favux knows more about this than anyone else.  If you have an issue with his setup procedures, send him a PM, he's very open to providing one-on-one assitance over privmsgs.</p>

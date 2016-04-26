@@ -1,0 +1,1 @@
+<p>Did you try using the Ubuntu <a href="https://help.ubuntu.com/community/Boot-Repair" rel="nofollow">boot-repair</a> tool and guide? </p>

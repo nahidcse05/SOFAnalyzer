@@ -1,0 +1,5 @@
+<p>A snapshot initially takes a very negligible amount of space.</p>
+
+<p>Its size grows later when existing data in the snapshotted dataset is updated or deleted.</p>
+
+<p>The maximum size of a snapshot is the size of the original dataset unless compression and/or deduplication is enabled in which case you might have a snapshot smaller or larger than its parent dataset.  </p>

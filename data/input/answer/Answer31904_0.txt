@@ -1,0 +1,12 @@
+<p>If you are using ubuntu-restricted-extras, which installs the flashplugin-installer package, then it is using 32bit libs and isn't true 64bit.  Try removing it<br>
+<code>sudo apt-get autoremove --purge flashplugin-installer</code>  </p>
+
+<p>Enable the partner repository in your sources.list<br>
+<code>gksu gedit /etc/apt/sources.list</code>  and look for</p>
+
+<pre><code># deb http://archive.canonical.com/ubuntu oneiric partner
+# deb-src http://archive.canonical.com/ubuntu oneiric partner
+</code></pre>
+
+<p>remove the # and save/exit<br>
+<code>sudo apt-get update &amp;&amp; sudo apt-get install adobe-flashplugin</code></p>

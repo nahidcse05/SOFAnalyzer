@@ -1,0 +1,13 @@
+<p>Some methods (click the links for more information):</p>
+
+<ol>
+<li><a href="https://help.ubuntu.com/community/SSH" rel="nofollow">ssh</a></li>
+<li><a href="https://help.ubuntu.com/community/ProFTPD?action=show&amp;redirect=ProFTP" rel="nofollow">ftp</a></li>
+<li><a href="http://www.transmissionbt.com/" rel="nofollow">transmission</a> a torrent (with a <a href="http://bootstrike.com/Articles/CreateTorrent/" rel="nofollow">private tracker</a>)</li>
+<li><a href="https://help.ubuntu.com/8.04/serverguide/C/network-file-system.html" rel="nofollow">NFS</a> (mounting a directory).</li>
+<li><a href="http://rsync.samba.org/" rel="nofollow">rsync</a></li>
+<li><a href="https://help.ubuntu.com/11.04/serverguide/C/samba-fileserver.html" rel="nofollow">Samba</a> </li>
+<li>On-line services (U1, mediafire etc). </li>
+</ol>
+
+<p>If you have acces to both machines NFS might be the best option.</p>

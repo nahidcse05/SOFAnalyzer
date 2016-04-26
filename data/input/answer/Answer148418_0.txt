@@ -1,0 +1,5 @@
+<p>The latest version of uGet has cURL multi-connections built in without the need of a plugin.</p>
+
+<p><a href="http://uGetdm.com/" rel="nofollow">http://uGetdm.com/</a></p>
+
+<p>I know you are already aware of uGet as you stated in your question but not sure if you're aware of the latest version new cURL features.</p>

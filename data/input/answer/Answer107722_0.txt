@@ -1,0 +1,13 @@
+<p>You can install <a href="https://apps.ubuntu.com/cat/applications/testdisk" rel="nofollow">testdisk <img src="http://hostmar.co/software-small" alt="Install testdisk"></a> with apt-get</p>
+
+<p>First, you have to enable the universe repository </p>
+
+<p><img src="http://i.stack.imgur.com/humve.png" alt="repos"></p>
+
+<p>Then update and install:</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install testdisk
+</code></pre>
+
+<p>See <a href="https://help.ubuntu.com/community/Repositories/Ubuntu#Ubuntu_Software_Tab" rel="nofollow">https://help.ubuntu.com/community/Repositories/Ubuntu#Ubuntu_Software_Tab</a> for additional information on repositories.</p>

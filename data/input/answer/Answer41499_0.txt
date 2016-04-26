@@ -1,0 +1,9 @@
+<p>You can add an environment variable to an application by editing its .desktop file. For example, to run "digiKam" with the environment variable APPMENU_DISPLAY_BOTH=1, find the corresponding digikam.desktop file and add the setting of the variable, via the env command, to the entry "Exec": </p>
+
+<pre><code>Exec=env APPMENU_DISPLAY_BOTH=1 digikam -caption "%c" %i
+</code></pre>
+
+<p>In your case:</p>
+
+<pre><code>Exec=env GTK2_RC_FILES=gtkrc.custom /path/to/eclipse
+</code></pre>

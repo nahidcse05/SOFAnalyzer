@@ -1,0 +1,15 @@
+<p>Create a group for users allowed to use terminals, let's say <code>terminalusers</code>. Find the terminal program (use <code>which</code>), for example, <code>xterm</code>. Change its ownership accordingly :</p>
+
+<pre><code>chown root:terminalusers /usr/bin/xterm
+</code></pre>
+
+<p>Allow execution for the owner, and the group. Deny for others :</p>
+
+<pre><code>chmod 750 /usr/bin/xterm
+</code></pre>
+
+<p>At this point, using <code>xterm</code> wont be possible unless you're root, or a member of the <code>terminalusers</code> group (add yourself to it, and you'll be able to use <code>xterm</code>). Apply similar settings for other terminal emulators (<code>gnome-terminal</code> is your main one I suppose). Now, this is just another <em>trick</em> : it blocks terminal emulators, not terminals (subtle difference indeed).</p>
+
+<p>In a UNIX environment, terminals are the primary interfaces to the system. Blocking them is very likely to disturb many applications, not only command-line ones. Blocking terminal emulators instead is nothing but a workaround. With good permissions, remember that nothing bad can happen to your machine from a user terminal : it takes root privileges to mess things up.</p>
+
+<p><em>Note</em> : with <code>xterm</code>, this is said to cause problems with <code>utmp</code>.</p>

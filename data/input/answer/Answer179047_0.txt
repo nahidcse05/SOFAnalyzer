@@ -1,0 +1,8 @@
+<p>I was having the a similar problem just now, updating from 14.04 to 15.04. The answer here helped me:
+<a href="http://askubuntu.com/a/79682/427786">http://askubuntu.com/a/79682/427786</a></p>
+
+<p>Specifically these commands:</p>
+
+<pre><code>sudo systemctl enable multi-user.target --force
+sudo systemctl set-default multi-user.target
+</code></pre>

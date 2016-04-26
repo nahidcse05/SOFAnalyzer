@@ -1,0 +1,8 @@
+<p>All those will be listed and worked as selected in Ubuntu through <code>gnome-power-manager</code>package. If you remove that package then It will erase those configurations too .</p>
+
+<p>open your terminal and type as </p>
+
+<pre><code>sudo apt-get remove gnome-power-manager
+</code></pre>
+
+<p>hope that helps.</p>

@@ -1,0 +1,6 @@
+<ol>
+<li>Have you checked your spam folder?</li>
+<li>Have you tried to do a <a href="http://brainstorm.ubuntu.com/user/password" rel="nofollow">password reset?</a></li>
+<li>If the above failed: have you tried to create a new user?</li>
+<li>If all of the above fails, you can try to <a href="https://launchpad.net/~brainstorm-moderators" rel="nofollow">contact the moderators</a>  of brainstorm.ubuntu.com.</li>
+</ol>

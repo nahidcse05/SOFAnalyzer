@@ -1,0 +1,7 @@
+<pre><code>sudo apt-key adv --recv-key --keyserver keyserver.ubuntu.com 83FBA1751378B444
+sudo apt-key adv --recv-key --keyserver keyserver.ubuntu.com 1015216E75198A89
+</code></pre>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/13065/how-do-i-fix-the-gpg-error-no-pubkey">How do I fix the GPG error &quot;NO_PUBKEY&quot;?</a></li>
+</ul>

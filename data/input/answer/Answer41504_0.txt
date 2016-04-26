@@ -1,0 +1,29 @@
+<h2>It's a bug in the XFCE4 notification daemon</h2>
+
+<ul>
+<li><p>This is the kind of problem we're talking about -- clicking on the buttons <strong>will</strong> perform the appropriate action, but <strong>will not</strong> dismiss the notification. You must "X" it out or click anywhere in the body to make it go away:</p>
+
+<p><img src="http://i.stack.imgur.com/s3iOj.png" alt="enter image description here">  </p></li>
+<li><p>This has been a <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=672646">known bug</a> in the XFCE4 notification daemon <code>xfce4-notifyd</code></p></li>
+<li><p>It was fixed late last year with the following note:</p>
+
+<pre>
+emit closed signal on correct object:
+'widget' is actually the GtkButton when an action is clicked.
+this is why notifications were never dismissed when an action got clicked.
+long-standing bug finally fixed! </pre></li>
+<li><p>And was backported into the <em>xfce4-notifyd</em> <strong>0.2.2-2</strong> package in Debian; Ubuntu Precise still uses the buggy <strong>0.2.2-1</strong> package, and who knows if the fix will be backported to it.</p>
+
+<pre>- 01_fix-dismiss-notifications added, backported from upstream. Correctly
+  dismiss notifications when clicked.                       closes: #672646
+</pre></li>
+</ul>
+
+<h2>Solution: install the fixed <em>Debian</em> version of <code>xfce4-notifyd</code></h2>
+
+<ul>
+<li><p>The fix has also trickled down into <em>xfce4-notifyd</em> for Quantal (the next Ubuntu release), but trying to install that will require upgrading your entire XFCE. If you feel like doing that, just upgrade to the latest XFCE from the <a href="https://launchpad.net/~xubuntu-dev/+archive/xfce-4.10">Xubuntu Developers' PPA</a></p></li>
+<li><p>Otherwise, just get the Debian package which has the same dependencies as the existing <em>xfce4-notifyd</em> and solve the problem! That worked perfectly for me.</p></li>
+<li><p>Download <em>xfce4-notifyd</em> 0.2.2-2: <a href="http://packages.debian.org/sid/i386/xfce4-notifyd/download">32-bit mirrors</a> or <a href="http://packages.debian.org/sid/amd64/xfce4-notifyd/download">64-bit mirrors</a></p></li>
+<li><p>Install with <code>sudo dpkg -i</code> or Software Center. Logout, and while not required, reboot for good measure!</p></li>
+</ul>

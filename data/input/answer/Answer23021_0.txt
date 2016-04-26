@@ -1,0 +1,3 @@
+<p>The best idea would be to remove <code>lightdm</code> and the <code>plymouth*</code> packages, do a <code>sudo update-initramfs -u</code> and reboot. Other solutions may exist; see other posts tagged <a href="/questions/tagged/headless" class="post-tag" title="show questions tagged 'headless'" rel="tag">headless</a>.</p>
+
+<p>This way, your login window won't come and you can still start the GUI from CLI with <code>startxfce4</code> when the need arises.</p>

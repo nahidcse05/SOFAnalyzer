@@ -1,0 +1,2 @@
+<p>Have you tried to re-install drivers (which I assume proprietary ones, as you talked about nvidia-settings)?
+Are you getting the right resolution or low-res mode?</p>

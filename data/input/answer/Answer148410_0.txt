@@ -1,0 +1,8 @@
+<p>[Ubuntu]
+Path = /home
+Available = yes
+Valid users = ubuntu
+Read only = no
+Browsable = yes
+Public = yes
+Writable = yes</p>

@@ -1,0 +1,44 @@
+<p>Manpages are created by developers. If they add a new feature, it's possible that they forget to update the manpages. The nice thing about open source applications is that you can take a look in the source itself. In the case of <code>chkconfig</code>, you can get the source from <a href="http://packages.ubuntu.com/source/maverick/chkconfig" rel="nofollow">http://packages.ubuntu.com/source/maverick/chkconfig</a>. You do not have to understand the language fully, but it can give you an idea. The following part looked interesting to me, and is retrieved from <a href="http://archive.ubuntu.com/ubuntu/pool/universe/c/chkconfig/chkconfig_11.0-79.1-2.tar.gz" rel="nofollow">chkconfig_11.0-79.1-2.tar.gz</a>; chkconfig:</p>
+
+<pre><code>sub usage {
+  print &lt;&lt;EOF;
+usage:
+        chkconfig -A|--allservices              (together with -l: show all services)
+        chkconfig -t|--terse [names]            (shows the links)
+        chkconfig -e|--edit  [names]            (configure services)
+        chkconfig -s|--set   [name state]...    (configure services)
+        chkconfig -l|--list [--deps] [names]    (shows the links)
+        chkconfig -c|--check name [state]       (check state)
+        chkconfig -a|--add   [names]            (runs insserv)
+        chkconfig -d|--del   [names]            (runs insserv -r)
+        chkconfig -h|--help                     (print usage)
+        chkconfig -f|--force ...                (call insserv with -f)
+
+        chkconfig [name]           same as chkconfig -t
+        chkconfig name state...    same as chkconfig -s name state
+EOF
+}
+
+Getopt::Long::Configure('no_ignore_case');
+
+if (!GetOptions('list|l'   =&gt; \&amp;addmode,
+                'terse|t'  =&gt; \&amp;addmode,
+                'add|a'    =&gt; \&amp;addmode,
+                'del|d'    =&gt; \&amp;addmode,
+                'edit|e'   =&gt; \&amp;addmode,
+                'help|h'   =&gt; \&amp;addmode,
+                'set|s'    =&gt; \&amp;addmode,
+                'check|c'  =&gt; \&amp;addmode,
+                'level=s'  =&gt; \$level,
+                'force|f'  =&gt; \$force,
+                'allservices|A'  =&gt; \$allservices,
+                'deps'     =&gt; \$printdeps
+   )) {
+  usage();
+  exit 1;
+}
+</code></pre>
+
+<p>As user4124 already mentioned, chkconfig is not a default command from Ubuntu, but originated from Redhat. Ubuntu uses init scripts (<a href="http://manpages.ubuntu.com/manpages/maverick/en/man5/init.5.html" rel="nofollow"><code>man 5 init</code></a>). <a href="http://manpages.ubuntu.com/manpages/maverick/en/man8/chkconfig.8.html" rel="nofollow">Ubuntu's chkconfig manpage</a> is written by someone from SUSE (see the Author section). The <a href="http://linux.die.net/man/8/chkconfig" rel="nofollow">Redhat version of the manpage</a> is written by a Redhat developer.</p>
+
+<p>Again note that manpages are written by humans. The Internet often contains more extensive guides on commands.</p>

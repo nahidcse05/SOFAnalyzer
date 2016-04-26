@@ -1,0 +1,8 @@
+<p>An already encrypted home? Then you can use the regular "run at login" methods but using <code>sudo</code>, like:</p>
+
+<ul>
+<li>Just put the commands in <code>~/.profile</code><br>
+See <a href="http://askubuntu.com/questions/270049/how-to-run-a-command-at-login">How to run a command at login?</a></li>
+<li>Use a .desktop file in <code>~/.config/autostart</code><br>
+See <a href="http://askubuntu.com/questions/48321/how-do-i-start-applications-automatically-on-login">How do I start applications automatically on login?</a></li>
+</ul>

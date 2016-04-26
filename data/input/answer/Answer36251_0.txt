@@ -1,0 +1,3 @@
+<p>Simply pressing the return key will select the first result once a search has been entered, but selecting the second result onwards has to be done by pressing the down arrow twice and then moving across to the correct choice.</p>
+
+<p>Hope this helps.</p>

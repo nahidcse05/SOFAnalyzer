@@ -1,0 +1,9 @@
+<p>I have the same problem with my Thinkpad running the same AMD A8-4500m on Ubuntu 13.10.
+I found this today, but my english isn't that good,so I didn't understand it.</p>
+
+<p><a href="https://www.kernel.org/doc/Documentation/cpu-freq/boost.txt" rel="nofollow">https://www.kernel.org/doc/Documentation/cpu-freq/boost.txt</a></p>
+
+<p>May it be helpful for you.</p>
+
+<p>The main commence I found is, that the Turbo Core isn't supported since 11.10.
+That's all I found. Please prove me that I'm wrong.</p>

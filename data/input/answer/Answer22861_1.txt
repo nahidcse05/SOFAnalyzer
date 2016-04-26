@@ -1,0 +1,3 @@
+<p>I agree with kyleN's answer regarding why typing a wrong command in terminal takes longer then starting an existing program.</p>
+
+<p>A pause after entering a wrong password, however, is a completely different matter - this delay is introduced intentionally to prevent brute-force password attacks (i.e. trying thousands of passwords a second until one matches). Adding a small delay when an incorrect password is entered doesn't affect usability for "real" users but makes such attacks completely impractical. So yes, in this case it's a security measure.</p>

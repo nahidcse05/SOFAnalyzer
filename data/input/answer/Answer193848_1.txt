@@ -1,0 +1,23 @@
+<p><strong>How can I install such a kernel?</strong></p>
+
+<p>If you supply the package version etc it should install that version</p>
+
+<pre><code>sudo apt-get install linux-image-3.13.0-24-generic
+</code></pre>
+
+<p>If for some reason you want to install loads of kernel, note that if you have a <code>/boot</code> partition, or a small root one you will likely run out of disk space, so the system won't boot.</p>
+
+<p><em>Also, if you want to use a particular driver which only works with a certain kernel version, please make a question relevant to this</em></p>
+
+<p><strong>What command should I give in the terminal to start a kernel?</strong></p>
+
+<p>Kernels are the base part of system, so generally you need to reboot to change what is running at the core <em>(probably not <a href="http://www.zdnet.com/article/no-reboot-patching-comes-to-linux-4-0/" rel="nofollow">with linux kernel 4+</a> on some OSs with some updates though)</em>.</p>
+
+<p>So change which kernel you are using you can reboot and <a href="http://askubuntu.com/q/16042/178596">show GRUB</a>, then you can select to use the kernel - (The nearest command is <code>sudo reboot</code> which will reboot the system). By default it will choose the latest one (usually recomended for security stuff)</p>
+
+<p><strong>See also:</strong></p>
+
+<ul>
+<li><a href="https://askubuntu.com/questions/216398/set-older-kernel-as-default-grub-entry">Set &quot;older&quot; kernel as default grub entry</a></li>
+<li><a href="https://askubuntu.com/questions/2793/how-do-i-remove-or-hide-old-kernel-versions-to-clean-up-the-boot-menu/100953#100953">How do I remove or hide old kernel versions to clean up the boot menu?</a></li>
+</ul>

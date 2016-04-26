@@ -1,0 +1,4 @@
+<p>I had a similar problem when i tried to <code>./configure</code> a source code and got the same error as posted. Finally resolved my issues by entering the code:</p>
+
+<pre><code>sudo apt-get install autotools-dev
+</code></pre>

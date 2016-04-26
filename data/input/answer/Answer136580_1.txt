@@ -1,0 +1,41 @@
+<p>I followed a <a href="http://ubuntuforums.org/showthread.php?t=2239916">thread on Ubuntu forums</a> to solve this problem. There seems to be a line missing from this maintenance script file:</p>
+
+<pre><code>/var/lib/dpkg/info/libreoffice-base.postrm
+</code></pre>
+
+<p>The missing line,</p>
+
+<pre><code>/usr/lib/libreoffice/share/basic/script.xlc
+</code></pre>
+
+<p>needs to be added to the end of the file's <strong>second if</strong> statement, just above the closing <strong>fi</strong>, like so:</p>
+
+<pre><code>--divert /usr/lib/libreoffice/share/basic/script.xlc.noaccess \
+/usr/lib/libreoffice/share/basic/script.xlc
+fi
+</code></pre>
+
+<p>After adding the line, using (for example):</p>
+
+<pre><code>sudo nano /var/lib/dpkg/info/libreoffice-base.postrm
+</code></pre>
+
+<p>restart your computer and remove <code>libreoffice-base</code> with the following command:</p>
+
+<pre><code>sudo apt-get purge libreoffice-base libreoffice-report-builder-bin libreoffice
+</code></pre>
+
+<p>Once this process completes, restart and execute the following to reinstall libreoffice:</p>
+
+<pre><code>sudo apt-get install libreoffice-base libreoffice
+</code></pre>
+
+<p>Once libreoffice had been successfully reinstalled, I ran:</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+
+<p>without error. </p>
+
+<p>This handful of steps and with additional reference to a <a href="https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1354557">bug report</a> solved my problem.</p>

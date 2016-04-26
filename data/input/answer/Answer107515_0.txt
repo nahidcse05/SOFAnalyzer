@@ -1,0 +1,10 @@
+<p>There appears to be something significantly wrong with Firefox on Ubuntu.
+I get perpetual crashing.</p>
+
+<p>The troubleshooting suggestions I've gotten from various forums are absurdly bad.  </p>
+
+<p>Question:  Have you ever used a tor-based secure internet browser on your machine?</p>
+
+<p>I'm going out on a limb here but I wanted to check for a correlation before saying anything.</p>
+
+<p>Cheers</p>

@@ -1,0 +1,20 @@
+<p>To complete Jakke answer, open crontab:</p>
+
+<pre><code>   crontab -e
+</code></pre>
+
+<p>and add this line:</p>
+
+<pre><code>   0 */6 * * * command &gt; /dev/null 2&gt;&amp;1
+</code></pre>
+
+<p>This will run <code>command</code> every six hours starting from 0, it is equivalent to:</p>
+
+<pre><code>   0 0,6,12,18 * * * command &gt; /dev/null 2&gt;&amp;1
+</code></pre>
+
+<p>First 0 means first-last minute, you can change it if you like to start command at ith minute.</p>
+
+<p>Both standard error and standard output are redirected to prevent cron sending mail.</p>
+
+<p>Here is <a href="http://manpages.ubuntu.com/manpages/trusty/man5/crontab.5.html" rel="nofollow">crontab manual</a> link.</p>

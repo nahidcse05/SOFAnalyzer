@@ -1,0 +1,1 @@
+<p>The solution is to press the following keys: <kbd>Host</kbd>+<kbd>C</kbd></p>

@@ -1,0 +1,11 @@
+<p>Given your configuration, rEFInd and the EFI shell should be showing you both the ESP and the Linux partition. (This assumes that the rEFInd USB drive is configured with the ext4fs driver, which the rEFInd USB images I distribute are.) Thus, my suspicion is that there's something wrong with your hard disk. Try <code>sudo sgdisk -v /dev/sda</code> (changing <code>/dev/sda</code> to your hard disk's identifier) in an Ubuntu emergency disk. This will test the partition table for errors. If you see any, report back or read my <a href="http://www.rodsbooks.com/gdisk/repairing.html" rel="nofollow">GPT fdisk documentation on repairing GPT disks.</a></p>
+
+<p>If there are no GPT problems, try <code>dmesg &gt; dmesg.txt</code> from an emergency disk and post the output to <a href="http://paste.ubuntu.com/" rel="nofollow">a pastebin site.</a> That output may provide a clue about why your disk is not visible to the firmware.</p>
+
+<hr>
+
+<p><strong>EDIT:</strong> It looks to me as if rEFInd can't find an initial RAM disk (initrd) to match your kernel. Just to be clear, are you launching those kernels from rEFInd or from an EFI shell? I ask because the two filenames you gave (<code>vmlinuz-3.16.0-43-generic</code> and <code>vmlinuz-3.16.0-43-generic.efi.signed</code>) are identical except for the <code>.efi.signed</code> extension, and rEFInd includes code to keep only <code>.efi.signed</code> kernels if both are present, so it's odd that both would show up in the rEFInd menu. (OTOH, if you've mis-typed and the kernels vary in their version numbers, then it's perfectly understandable that there'd be two, one with and one without that extension.)</p>
+
+<p>You could look for an initrd file using a live Ubuntu disk, and check what (if any) <code>initrd=</code> option rEFInd is passing to the kernel by hitting F2 or Insert twice when you launch the kernel. This procedure will open a text editor that shows the options the kernel is passed, and also enable you to edit those options.</p>
+
+<p>At this point, though, it might be easier to re-install Ubuntu. Unless I misunderstand, this is a fresh installation, so you've got no valuable user data on the system. With the active 0xEE protective partition now inactive, a fresh installation is likely to correct whatever additional problem you've been having.</p>

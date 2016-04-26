@@ -1,0 +1,5 @@
+<p>Check the nginx.conf file and look for the listen address.
+It might be set to only listen on 127.0.0.1, check the documentation for available options, but usually changing the listen address (or adding) 0.0.0.0 will make it listen on all interfaces and you'll be able to access the webserver on your guest's ip address at the appropriate port.
+Don't forget to restart nginx after editing its .conf file to activate changes.</p>
+
+<p>Alternatively you could create a port forwarding over SSH using PuTTY, and you could access your guest's webserver via localhost on your host, but it's the more complicated option here I think.</p>

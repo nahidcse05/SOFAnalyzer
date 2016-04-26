@@ -1,0 +1,8 @@
+<p>Here is what I think you should do:</p>
+
+<pre><code>sudo apt-get --configure -a 
+sudo apt-get update 
+sudo apt-get upgrade 
+</code></pre>
+
+<p>I'm not sure but I think this might help...</p>

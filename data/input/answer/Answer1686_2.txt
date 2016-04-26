@@ -1,0 +1,7 @@
+<p>I seem to remember I had a similar issue, and it had something to do with the MTU (maximum transmission unit) of my network interface. You should try setting the MTU of your connection to 1500 or something lower.</p>
+
+<p>You can change the MTU temporarily using ifconfig.</p>
+
+<p>sudo /sbin/ifconfig  mtu 1500</p>
+
+<p>If this works and you want to make the change permanent, you should set it in /etc/network/interfaces</p>

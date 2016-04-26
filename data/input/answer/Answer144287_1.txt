@@ -1,0 +1,3 @@
+<p>The Application list for Gnomes Overlay is the same as for it's menu You can find the shortcuts in <code>/usr/share/applications/</code></p>
+
+<p>Just copy one file. Python3.3 for example and fit it to your needs. Save it with a new name and sudo rights and your application will be back.</p>

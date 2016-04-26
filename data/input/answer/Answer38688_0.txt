@@ -1,0 +1,13 @@
+<p>I assume that you refer to the repositories when you refer to 'site'<br>
+(The thing you select from 'software sources')  </p>
+
+<p>The differences may be:</p>
+
+<ul>
+<li>Speed. Mirrors close to your physical location usually serve updates at slightly greater speed.</li>
+<li>Time: At times, there is a delay between synchronizations, so you may get updates a little later, depending on the mirror you choose.</li>
+</ul>
+
+<p>That said, All repositories are periodically synchronized to have <strong>Exactly the same content.</strong> So It really doesn't matter what repo you choose.  </p>
+
+<p>As a side note, <a href="http://askubuntu.com/questions/37753/how-can-i-get-apt-to-use-a-mirror-close-to-me-or-choose-a-faster-mirror">This QA thread has information on how to choose a mirror to maximise download speed.</a></p>

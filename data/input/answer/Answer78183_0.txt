@@ -1,0 +1,3 @@
+<p>You should also be able to remove it from Synaptics Package Manager.
+Type "adobe reader" in the search; then right click "Mark for removal" then "Apply". Otherwise it should be easily located with Origin -> Local.<br>
+Best,</p>

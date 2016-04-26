@@ -1,0 +1,25 @@
+<p>The reason is simple, you don't have permissions to write into the <code>/home</code> directory since it owned by root.</p>
+
+<pre><code>/home$ ls -la .
+total 36
+drwxr-xr-x.  6 root          root           4096 Apr 19 05:03 .
+drwxr-xr-x. 22 root          root           4096 Sep 24 09:49 ..
+</code></pre>
+
+<p>You should use the same command but in "your home" directory. Your home directory is the user directory under <code>/home</code>:</p>
+
+<pre><code>/home$ ls -la .
+total 36
+drwxr-xr-x.  6 root          root           4096 Apr 19 05:03 .
+drwxr-xr-x. 22 root          root           4096 Sep 24 09:49 ..
+drwxr-xr-x. 70 braiam        braiam         4096 Sep 29 10:06 braiam
+</code></pre>
+
+<p>You have several ways to go to your home directory:</p>
+
+<ul>
+<li>Run <code>cd</code> without any parameter.</li>
+<li>Run <code>cd ~</code> or <code>cd $HOME</code></li>
+<li>Open another new terminal</li>
+<li>Use <code>cd /home/yourusername</code> to go to your personal directory.</li>
+</ul>

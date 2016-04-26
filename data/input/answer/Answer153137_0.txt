@@ -1,0 +1,12 @@
+<p>Probably jsut need to do a  </p>
+
+<pre><code>sudo apt-get update
+</code></pre>
+
+<p>first, and if testdisk's still not available you may need to use the universe, restricted, multiverse "sections" of the repos, see the possible dup. question <a href="http://askubuntu.com/questions/378558/unable-to-locate-package-while-trying-to-install-packages-by-apt">&quot;Unable to locate package&quot; while trying to install packages by apt</a> or <a href="https://help.ubuntu.com/community/Repositories/Ubuntu" rel="nofollow">Ubuntu's Repositories help</a>.</p>
+
+<p>But are you positive your partitions were all deleted? Maybe the bootloader was just changed... If you're still running Ubuntu, or running a live dvd/usb, the command<br>
+<code>sudo parted -l</code><br>
+(and maybe <code>sudo fdisk -l</code> if you're using MBR only) should list all your local disk partitions &amp; current device names, maybe they're still there.</p>
+
+<p>If they were all deleted, then further writing to the disk could overwrite more data, and doing as Takkat suggests would be the best idea. I don't think you can repair a hard disk with <code>testdisk</code> while it's mounted anyway, and having a backup copy to "play/fix" with would be the safest option.</p>

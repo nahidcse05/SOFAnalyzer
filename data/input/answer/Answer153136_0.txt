@@ -1,0 +1,9 @@
+<p>The Ubuntu ISO is not a windows program and can't run inside windows. Mounting it there probably wouldn't help either. You have to write it to a dvd/usb and boot your computer from it.</p>
+
+<p>See these instructions, complete with pictures, from <a href="http://www.ubuntu.com" rel="nofollow">http://www.ubuntu.com</a></p>
+
+<ul>
+<li><a href="http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows" rel="nofollow">How to create a bootable USB stick on Windows</a></li>
+<li><a href="https://help.ubuntu.com/community/BurningIsoHowto" rel="nofollow">Burning ISO How-to</a></li>
+<li><a href="http://www.ubuntu.com/download/desktop/try-ubuntu-before-you-install" rel="nofollow">Try Ubuntu before you install it</a></li>
+</ul>

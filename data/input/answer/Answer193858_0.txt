@@ -1,0 +1,3 @@
+<p>So, I did something similar, while I can't tell you exactly how to do it I'll tell you the basic way. And this may be complicated and far from ideal. Don't hate me for it, but worst case, this will definitely work, it's just very long winded.</p>
+
+<p>So first get the windows 8.1 iso of mircosofts website (it's free), look up a generic key for it. And install it onto virtual box. You'll have to install virtual box extentions and allow usb access into the guest system. And put the SD card in an SD to USB converter. From then pull out your windows 10 ioT installer in windows and set it to install onto your SD card. Sit back and wait.</p>

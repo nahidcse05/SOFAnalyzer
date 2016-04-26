@@ -1,0 +1,12 @@
+<p>Fixed it!</p>
+
+<p>Start Terminal and load your file browser (I use Dolphin) with the following command</p>
+
+<pre><code>sudo dolphin /usr/sbin/
+</code></pre>
+
+<p>Navigate to the file grub-bios-setup, right click on the file name and select permissions. Make sure that the file has the correct permissions:</p>
+
+<p><img src="http://i.stack.imgur.com/7Ce8M.png" alt="enter image description here"></p>
+
+<p>All done</p>

@@ -1,0 +1,1 @@
+<p>If you have disabled all repositories then this is the problem for the application which you are trying to install is from one of those repositories. So you would either need to activate them all, or find the specific one which this software uses and activate that one.</p>

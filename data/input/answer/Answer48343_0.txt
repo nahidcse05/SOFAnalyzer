@@ -1,0 +1,21 @@
+<p>I don't have a system which I can test this out on, but I believe this section from the Arch Linux PulseAudio website should help you:</p>
+
+<p><a href="https://wiki.archlinux.org/index.php/PulseAudio/Examples#Splitting_front.2Frear" rel="nofollow">https://wiki.archlinux.org/index.php/PulseAudio/Examples#Splitting_front.2Frear</a></p>
+
+<p>To sum up what you should do:</p>
+
+<p><ol>
+<li>Open a terminal and make a back up of <code>/etc/pulse/default.pa</code> like this: <code>cp /etc/pulse/default.pa ~/default.pa.bak</code></li>
+<li>Open the sound settings menu and change "analog output"'s mode to "Analog Surround 4.0 Output"</li>
+<li>In the terminal run <code>pacmd list-sinks</code> and copy the outputted sink's name. Mine looks like "name: ", and we're interested in the bit in &lt;>, yours should now end in "analog-surround-40".</li>
+<li>Open default.pa as administrator using <code>sudo gedit /etc/pulse/default.pa</code> and add the lines:</p>
+
+<blockquote>
+  <p>load-module module-remap-sink sink_name=speakers remix=no master=alsa_output.pci-0000_05_00.0.analog-surround-40 channels=2 master_channel_map=front-left,front-right channel_map=front-left,front-right</p>
+  
+  <p>load-module module-remap-sink sink_name=headphones remix=no master=alsa_output.pci-0000_05_00.0.analog-surround-40 channels=2 master_channel_map=rear-left,rear-right   channel_map=front-left,front-right</li>
+  </ol>
+  Replace "master=alsa_output.pci-0000_05_00.0.analog-surround-40" with the device name you found in step 3.</p>
+</blockquote>
+
+<p>Now you should be able to select from "Headphones" and "Speakers" in the Sound Settings menu when you want to switch between headphones and speakers.</p>

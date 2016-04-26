@@ -1,0 +1,1 @@
+<p>Paid applications will get updates IF the submitter updates the application. The submitter will need to submit the update, Canonical reviewers will package the update and make it available.</p>

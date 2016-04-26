@@ -1,0 +1,3 @@
+<p>Go to the Places menu and click "Connect to Server". Select the right type of FTP server (public or private) and click Connect. From there it's drag and drop.</p>
+
+<p>If you need the command line, do the above and then in your terminal look in <code>~/.gvfs/</code>. The FTP server gets mounted as a subdirectory in there.</p>

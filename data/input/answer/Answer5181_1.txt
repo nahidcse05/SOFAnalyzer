@@ -1,0 +1,38 @@
+<p>I realize I am late on this, but hopefully it will help those who come here by a generic search.</p>
+
+<p>As an alternative you can use the <strong>PulseAudio</strong> suspend command which is a little more convenient once you get it going but takes a little bit of set-up.</p>
+
+<ol>
+<li><p>Install <strong>alsa-oss</strong> if you have not already done so.</p></li>
+<li><p>Then in the <strong>ETQW</strong> configuration file called <code>etqwconfig.cfg</code> (<code>~/.etqwcl/base/etqwconfig.cfg</code>) you need to make small changes. </p>
+
+<p>Note that it is inside a hidden directory, as indicated by the dot in front of the name. You need to show hidden files in your file browser in order to find it. <code>.etqwcl</code> should be inside your home directory. The file contains a note not to modify it directly, but I think that may be a Windows only thing.</p></li>
+<li><p>Find the lines that begin with:</p>
+
+<pre><code>seta s_alsa_lib
+seta s_alsa_pcm
+</code></pre>
+
+<p>Change them to:</p>
+
+<pre><code>seta s_alsa_lib "libasound.so.2"
+seta s_alsa_pcm "hw:0,0"
+</code></pre>
+
+<p><code>"hw:0,0"</code> refers to my sound card and the fact that the system calls it card 0, device 0. On a command line, type <code>aplay -l</code> to see your sound devices and to find out the number of your card. If you only have one sound device (such as on board sound), it will probably be 0,0.</p>
+
+<p>My config also has the following line, but I believe it to only be related to using my USB boom microphone.</p>
+
+<pre><code>seta s_alsa_mic "plughw:1"
+</code></pre>
+
+<p>So you installed <strong>alsa-oss</strong> and changed the two lines in <code>etqwconfig.cfg</code>, now you can set the launcher to not use PulseAudio. </p></li>
+<li><p>Edit your launcher menu entry for Quake Wars so it has <code>pasuspender</code> in front of it. As an example, here is the command on my menu:</p>
+
+<pre><code>pasuspender /usr/local/games/etqw/etqw +set r_useThreadedRenderer "4"
+</code></pre>
+
+<p>The <code>+set r_useThreadedRenderer "4"</code> part is not necessary, it just tells the game to use 4 CPU cores, which my system has. </p></li>
+</ol>
+
+<p>With this setup, you will not need to type extra PulseAudio related commands each time you want to play the game, and it should automatically turn PulseAudio back on when you quit the game.</p>

@@ -1,0 +1,8 @@
+<p>cd to the directory where the downloaded file is then:</p>
+
+<pre><code>sudo sh NVIDIA-Linux-x86-310.44.run
+</code></pre>
+
+<p>You may want to read up on the full process here:</p>
+
+<p><a href="http://us.download.nvidia.com/XFree86/Linux-x86/310.44/README/installdriver.html#BeforeYouBegin89f39" rel="nofollow">http://us.download.nvidia.com/XFree86/Linux-x86/310.44/README/installdriver.html#BeforeYouBegin89f39</a></p>

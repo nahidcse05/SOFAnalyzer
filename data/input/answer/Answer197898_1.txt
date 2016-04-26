@@ -1,0 +1,5 @@
+<p>If you do not install ubuntu on a fs than natively supported by Windows (ntfs, vfat, ...) there is no way for Windows to directly access the data on the partition linux. </p>
+
+<p>So if you install on ext4 and xfs there are no problems. </p>
+
+<p>This however does not guarantee that in case of infection of other parts of the disk, such as the malware affecting the MBR</p>

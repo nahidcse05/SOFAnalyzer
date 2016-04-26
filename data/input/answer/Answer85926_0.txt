@@ -1,0 +1,5 @@
+<p>You might want to try <code>troff</code> (or <code>groff</code> which is the GNU version), the standard UNIX text processing tool. Although its main application area is UNIX man pages, it is more than capable of formatting books. </p>
+
+<p>In my opinion it is far easier to master than <code>LaTeX</code> (especially if you don't need any fancy formatting) and will produce professional output. </p>
+
+<p>It comes pre-installed on any Linux or BSD based OS (to the best of my knowledge anyway). </p>

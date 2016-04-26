@@ -1,0 +1,3 @@
+<p>I have consistently used this post as a starting point to get a new sharding rig up and running. It includes a section on configuring upstart that I've also used.</p>
+
+<p><a href="http://joslynesser.com/blog/archives/2010/09/28/mongodb-sharding-guide-server-setup-on-ubuntu-ec2/" rel="nofollow">http://joslynesser.com/blog/archives/2010/09/28/mongodb-sharding-guide-server-setup-on-ubuntu-ec2/</a></p>

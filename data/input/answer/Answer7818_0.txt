@@ -1,0 +1,11 @@
+<p>Well, I tried sebastian_k's answer and it didn't work for me (<code>./configure</code> crashed midway through with an extremely weird error).</p>
+
+<p>What did, however work for me was copying the instructions used in this <a href="https://launchpadlibrarian.net/61040100/buildlog_ubuntu-lucid-amd64.exmpp_0.9.6-0ubuntu1ppa7_BUILDING.txt.gz">build log I found</a></p>
+
+<p>The short version(so you don't have to wade through it yourself is):</p>
+
+<pre><code>$ autoreconf -vif
+$ ./configure --prefix=/usr/lib/erlang/lib
+$ make
+$ sudo make install
+</code></pre>

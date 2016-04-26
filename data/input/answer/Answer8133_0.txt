@@ -1,0 +1,5 @@
+<p>I finally was able to solve this. Visit this page for a detailed walkthrough:</p>
+
+<p><a href="http://ubuntuforums.org/showthread.php?t=1699453&amp;page=2" rel="nofollow">http://ubuntuforums.org/showthread.php?t=1699453&amp;page=2</a></p>
+
+<p>It turned out that the problem was because of a flow of permissions. I also had the same problem on another setup I did later on :) It's basically that the user lacks read permissions to the parent folder that holds the share. When setting up shares it's easiest if you set full permissions to everyone, from the directory holding the shares and onwards, and then afterwards start limiting permissions so that you don't bang your head against a silly problem like I've done several times ;)</p>

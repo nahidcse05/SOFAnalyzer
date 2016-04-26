@@ -1,0 +1,13 @@
+<h3>Global menu</h3>
+
+<p>This is the expected behaviour in a default Ubuntu/Unity installation where all application menus are integrated as a globalmenu in the top panel:</p>
+
+<p><img src="http://i.stack.imgur.com/TIFym.png" alt="enter image description here"></p>
+
+<p>It is <a href="http://askubuntu.com/a/311783/3940">possible to disable this feature</a> but I would not recommend you do it at the time now. You will likely get used to this behaviour soon and you will enjoy to have all application's menus always in the same place, and often out of the way of your application's main window.</p>
+
+<h3>Why not for Root?</h3>
+
+<p>It is the super user Root who runs applications when you call them with <code>sudo</code> or <code>gksu</code>. Since Root does not run your desktop (in fact Root does not have a desktop at all) the application's menu can not be integrated to the top panel and are shown as usual.</p>
+
+<p>However it is not recommended to run graphical applications as root because you will then have enough power accidentally harm your otherwise very stable OS.</p>

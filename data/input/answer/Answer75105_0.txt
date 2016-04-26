@@ -1,0 +1,3 @@
+<p>Yes! I had the same problem, and solved it by switching graphics drivers.</p>
+
+<p>Go to System Settings -> Software Sources -> Additional Drivers, and select a different driver.</p>

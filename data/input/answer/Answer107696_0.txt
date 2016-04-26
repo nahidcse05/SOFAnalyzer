@@ -1,0 +1,5 @@
+<p>Si. Una partición de swap de 4GB (8GB no es necesario) hará que su sistema sea mucho más estable y es muy recomendable. Cuando el sistema se queda sin memoria libre, se canjeará a la partición de intercambio, y si no hay una partición de intercambio, el sistema se arrastra a un alto. La función de hibernación también necesita de intercambio para trabajar.  </p>
+
+<p>--</p>
+
+<p>A swap partition of 4GB (8GB is not required) will make your system much more stable and is highly recommended. When the system runs out of free memory, memory contents will be exchanged into the swap partition, and if there is no swap partition, the system crawls to a halt. Hibernation also needs swap to function.</p>

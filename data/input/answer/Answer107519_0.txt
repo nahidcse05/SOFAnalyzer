@@ -1,0 +1,15 @@
+<p>First off, you're missing the shebang line; the first line should read <code>#!/usr/bin/env bash</code> or <code>#!/bin/bash</code></p>
+
+<p>Second, you're making assumptions on what the current working directory will be when the hook is run, so if it manages to run the script even though it's missing the important shebang line, it likely works, but writes <code>datefile</code> in a different directory than you assumed. Provide an absolute path to the file you want to write to.</p>
+
+<p>Lastly, <code>${filename}</code> is bad practice, you should always quote variable expansions to avoid word splitting and pathname expansion: <code>"$filename"</code>. Also, instead of doing <code>date | cut ...</code>, just tell date to only output the bits you're after. E.g.</p>
+
+<pre><code>printf 'Commit happened at %s\n' "$(date "+%Y-%m-%d %H:%M:%S")" &gt; "$filename"
+</code></pre>
+
+<p>On a side note, bash's printf (since 4.0) can output date strings too.</p>
+
+<pre><code>printf 'Commit happened at %(%Y-%m-%d %H:%M:%S)T\n' -1 &gt; "$filename"
+</code></pre>
+
+<p><code>man bash | less +/printf</code> to read more about printf.</p>

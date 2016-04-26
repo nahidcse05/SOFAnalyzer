@@ -1,0 +1,25 @@
+<p>The following might help you :</p>
+
+<p>edit/create /etc/dpkg/dpkg.cfg.d/force-confnew</p>
+
+<pre><code>sudo vim /etc/dpkg/dpkg.cfg.d/force-confnew
+</code></pre>
+
+<p>and add the following :</p>
+
+<pre><code>force-confnew
+</code></pre>
+
+<p>It'll say to dpkg to always put the package maintainer version of the file.</p>
+
+<p>Delete the file when your upgrade is finished.</p>
+
+<p>update-manager will still ask you the basic questions but it'll not ask you about if you agree to change this or that file.</p>
+
+<p>Dpkg may still have questions but it is better for you to not disable it. If you still want dpkg to be quiet replace force-confnew by force-all</p>
+
+<p>WARNING 1 : This is a dangerous option. It'll delete any modifications you made on the files that are changed. And with this option you'll not be aware witch file is changed.</p>
+
+<p>WARNING 2 : As 12.04 is still in development the packages that are installed can have bugs. This include trouble in the installation/upgrade process. It may break your system. </p>
+
+<p>Best regards,</p>

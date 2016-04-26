@@ -1,0 +1,8 @@
+<ol>
+<li><p>The ISP had given the login id in lower case and the actual login was in upper case. This was the reason for the failure to connect to net. </p></li>
+<li><p>The modem was also reset due which it could not be setup properly.</p></li>
+</ol>
+
+<p>These led to the problem.</p>
+
+<p>The problem was solved by resetting the modem with proper parameters.</p>

@@ -1,0 +1,1 @@
+<p>Do not enable 'noexec' on /tmp or you will face problem with certain 3D drivers which require executing from /tmp.   NVIDIA drivers for modern hardware have this requirement, any application you have will segfault (like xscreensaver glmatrix) if you have 'noexec' enabled.</p>

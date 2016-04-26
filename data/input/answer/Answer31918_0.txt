@@ -1,0 +1,15 @@
+<p>Try re-downloading the file, and using <a href="http://www.pendrivelinux.com/" rel="nofollow">PenDriveLinux</a> to install it from a flash drive. But first make sure your computer can boot from a USB device in the BIOS. Google instructions for your specific motherboard on how to do that. I always install from a flash drive and have never hadma problem. You can also use Ubuntu's Startup Disk Creator* (search in dash) to make a bootable flash drive in Ubuntu.</p>
+
+<p>*
+Ubuntu</p>
+
+<p>Insert a USB stick with at least 2GB of free space
+Open the dash and search for Startup Disk Creator
+Select the Startup Disk Creator to launch the app</p>
+
+<p>Click 'Other' to choose the downloaded ISO file</p>
+
+<p>Select the file and click 'Open'</p>
+
+<p>Select the USB stick in the bottom box and click 'Make Startup Disk'
+That's it! When the process completes, you'll be ready to restart your computer and begin installing Ubuntu.</p>

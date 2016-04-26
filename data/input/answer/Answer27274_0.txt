@@ -1,0 +1,8 @@
+<p><a href="http://askubuntu.com/questions/63211/ubuntu-one-not-syncing">ubuntu one not syncing</a> helped (i.e. do </p>
+
+<pre><code>u1sdtool --quit
+u1sdtool --connect
+u1sdtool --refresh-shares
+</code></pre>
+
+<p>and then I had to disconnect and connect through Ubuntu control center (the thing that will get launched via messaging menu) and now files are uploading, I hope all get uploaded:-).</p>

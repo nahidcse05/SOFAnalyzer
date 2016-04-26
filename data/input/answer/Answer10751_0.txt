@@ -1,0 +1,1 @@
+<p>You can install Tracker 0.9.26 from their <a href="https://launchpad.net/~tracker-team/+archive/tracker-unstable" rel="nofollow">PPA</a>. There is also a stable PPA, but there's nothing for 11.04 there yet.</p>

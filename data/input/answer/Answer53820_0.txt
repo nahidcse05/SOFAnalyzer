@@ -1,0 +1,25 @@
+<p>Yeah, Nvidia has been a nightmare for some of us this time around.  I had no luck whatsoever with the 295 drivers on my GeForce 6150. You could try updating to the latest drivers though...</p>
+
+<pre><code>sudo apt-get install nvidia-current
+</code></pre>
+
+<p>If that doesn't work, try the updated drivers:</p>
+
+<pre><code>sudo apt-get install nvidia-current-updates
+</code></pre>
+
+<p>If it still doesn't work, remove both the nvidia driver modules and update the generic nouveau driver:</p>
+
+<pre><code>sudo apt-get remove nvidia-current nvidia-current-updates
+sudo apt-get install xserver-xorg-video-nouveau
+</code></pre>
+
+<p>I've found the nouveau driver pretty good, and certainly a lot more solid and reliable than the nvidia drivers on this card, as well as reasonably fast. I haven't been game to try the latest nvidia driver available now - 305 or something I think - Why fix it when it's not broken?.  Maybe when I have some spare time...</p>
+
+<p>If you manage to get the Nividia drivers working, you might be able to set the resolutions you want using the Nvidia settings tool:</p>
+
+<p>sudo apt-get install nvidia-settings</p>
+
+<p>This tool takes over from the generic display settings in Ubuntu, and knows more about the card capabilities.</p>
+
+<p>I note that some of the older drivers have been put back into the repository.  They were missing when 12.04 was first released.  I'm not sure that they will help you but if you want to try the older stable drivers they are nvidia-96 and nvidia-173</p>

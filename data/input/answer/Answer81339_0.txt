@@ -1,0 +1,12 @@
+<p>Of course.</p>
+
+<p>Please check <a href="http://unetbootin.sourceforge.net/" rel="nofollow">this link</a>. In my opinion it lets you do this in the most easy way:</p>
+
+<ol>
+<li><p>Download Ubuntu distro (Lubuntu would be the lightest)</p></li>
+<li><p>Download and run Unetbootin</p></li>
+<li><p>Choose system *.iso image</p></li>
+<li><p>Chose USB on which you wish to have Ubuntu, and remember to set option that uses some part of USB as system HDD.</p></li>
+</ol>
+
+<p>And done.</p>

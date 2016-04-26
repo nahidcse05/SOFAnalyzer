@@ -1,0 +1,8 @@
+<p>I created an Autostart with the command</p>
+
+<pre><code>setxkbmap -option caps:none
+</code></pre>
+
+<p><em>Startup Applications</em> > <em>Add</em> > <em>Name</em>: Disable Capslock > <em>Command</em>: setxkbmap -option caps:none > <em>Add</em>.</p>
+
+<p>Restart and capslock is disabled. Works also in Ubuntu 14.04</p>

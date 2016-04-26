@@ -1,0 +1,1 @@
+<p>Activate the address field if necessary with a click, Select the url with Alt-A, clear the url with Del, and paste the new url with middle mouse button click.</p>

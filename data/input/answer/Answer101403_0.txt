@@ -1,0 +1,5 @@
+<p>Ping uses the ICMP protocol, not TCP, so port forwarding is not at all relevant with ping replies. Ping is just a first diagnostic tool, sometimes you don't get a reply but still everything seems to work fine... The webserver is up, you can connect through ftp and ssh, so no problem.<br></p>
+
+<p>You could use NAT but i am guessing it is a home network and 139.228.159.132 is your only public IP address, so it's not a good idea. </p>
+
+<p>Check whether your router has any settings for ICMP requests. If not that's as much as you can do about it. You can live without ping replies :-)</p>

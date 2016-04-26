@@ -1,0 +1,8 @@
+<p>A restoration method suggestion from an inexperienced user:</p>
+
+<p>I installed 11.04 using the Ubuntu windows installer "wubi" so that I could use "Acronis True Image" to restore 11.04 in the event a Ubuntu update or upgrade failure trashed my system.  My system was rendered usless about 15 minutes ago after I attempted to install the 11.10 upgrade. I shut down, booted XP ran Windows Explorer and deleted the C:\wubildr, C:\wubildr.mbr files and the C:\Ubuntu folder.  Then I used Acronis to restore those files and the Ubuntu folder.  Then rebooted.  Ubuntu 11.04 was restored and running in about 6 minutes.  So I don't feel so bad about the attempted upgrade failing.  I will try upgrading again after a couple of weeks and perhaps the bugs will be sorted out by them</p>
+
+<p>I have done this several times after a failed update or upgrade.  It is much less time consuming and less frustrating than trying to rebuild the system from scratch or fix a blown Linux OS.  Perhaps this method might be worth consideration but please remember to  backup your Windows system prior to doing a Ubuntu update or upgrade.</p>
+
+<p>Jim, 
+Corvallis, OR   </p>

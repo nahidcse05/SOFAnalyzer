@@ -1,0 +1,262 @@
+<p>Using <code>shutter</code> and <code>wmctrl</code>, an edited version of <a href="http://askubuntu.com/a/578787/72216">this script</a> does pretty much exactly what you describe: it takes a screenshot of <em>the area</em>, a specific window covers on your screen, no matter if and how the window is (partially) below other windows. </p>
+
+<p>The <em>marge</em> around the window, to be included in the screenshot, is arbitrary; set it to zero if you like.</p>
+
+<h3>In practice</h3>
+
+<ul>
+<li>I have an <code>Inkscape</code> window on my screen, with id <code>0x0520000e</code>, partially covered by a few <code>gedit</code> windows. </li>
+<li><p>I run the script with the window id and the marge (in <code>px</code>) around the window as arguments:</p>
+
+<pre><code>python3 &lt;script&gt; 0x0520000e 10 10 10 10 
+</code></pre>
+
+<p>(where <code>10 10 10 10</code> is the marge in <code>px</code> around the window on the left/right/top/bottom. Set to <code>0</code> to have no marge in the image)</p>
+
+<p>The result:</p>
+
+<p><a href="http://i.stack.imgur.com/UvizG.png" rel="nofollow"><img src="http://i.stack.imgur.com/UvizG.png" alt="enter image description here"></a></p></li>
+</ul>
+
+<h3>The script</h3>
+
+<pre class="lang-py prettyprint-override"><code>#!/usr/bin/env python3
+import subprocess
+import time
+import sys
+
+"""
+On different window managers, the window geometry as output of wmctrl differs slightly.
+The "deviation" should compensate these differences. Most likely appropriate (tested) settings:
+Unity: 0, Gnome: -36, Xfce (Xubuntu): -26, KDE (Kubuntu): 0
+"""
+#---
+deviation = 0
+#---
+
+get = lambda cmd: subprocess.check_output(["/bin/bash", "-c", cmd]).decode("utf-8")
+time.sleep(0.5)
+# targeted window
+target = sys.argv[1]; arg = sys.argv[2:]
+f_data = [l.split() for l in get("wmctrl -lG").splitlines() if target in l][0][2:6]
+xt_data = get("xprop -id "+target).split()
+xt_i = xt_data.index("_NET_FRAME_EXTENTS(CARDINAL)")
+xt = [int(n.replace(",", "")) for n in xt_data[xt_i+2:xt_i+6]]
+# set data for screenshot command
+x = str(int(f_data[0])-int(arg[0])-xt[0])
+y = str(int(f_data[1])-int(arg[2])-xt[2]+deviation)
+w = str(int(f_data[2])+int(arg[0])+int(arg[1])+xt[0]+xt[1])
+h = str(int(f_data[3])+int(arg[3])+int(arg[2])+xt[2]+xt[3])
+
+command = "shutter -s="+(",").join([x,y,w,h])+" -e"
+subprocess.call(["/bin/bash", "-c", command])
+</code></pre>
+
+<h3>How to use</h3>
+
+<ul>
+<li><p>The script uses <code>Shutter</code> and <code>wmctrl</code>:</p>
+
+<pre><code>sudo apt-get install wmctrl shutter
+</code></pre></li>
+<li><p>Copy the script below into an empty file, save it as <code>custom_screenshot.py</code>.</p></li>
+<li><p>Run it by the command:</p>
+
+<pre><code>python3 /path/to/custom_screenshot.py &lt;window_id&gt; &lt;left&gt; &lt;right&gt; &lt;top&gt; &lt;bottom&gt;
+</code></pre>
+
+<p>where , <code>&lt;left&gt; &lt;right&gt; &lt;top&gt; &lt;bottom&gt;</code> are the marges you'd like to keep in the image around the window, like in <a href="http://askubuntu.com/questions/578728/how-can-i-take-a-screenshot-from-a-window-with-customizable-margins/578787#578787">this answer.</a></p>
+
+<p>Example command:</p>
+
+<pre><code>python3 /path/to/custom_screenshot.py 0x0520000e 20 20 20 20
+</code></pre></li>
+</ul>
+
+<h3>Explanation</h3>
+
+<ul>
+<li><p>In <code>Shutter</code>, it is possible to take a screenshot of a defined area of the desktop. </p></li>
+<li><p>With the window id as an argument, the script looks up the window's exact position with the help of <code>wmctrl</code> (<code>wmctrl -lG</code> to be precise), and the output of <code>xprop -id &lt;window_id&gt;</code> (in the line <code>_NET_FRAME_EXTENTS(CARDINAL) = 0, 0, 28, 0</code> for example).</p></li>
+<li><p>Subsequently, a screenshot is taken from the found area, with an arbitrary marge.</p></li>
+</ul>
+
+<h3>Note</h3>
+
+<p>The script <em>does not</em> overwrite existing screenshots. New screenshots are named:</p>
+
+<pre><code>outputfile_1.png
+outputfile_2.png
+outputfile_3.png
+</code></pre>
+
+<p>and so on...</p>
+
+<hr>
+
+<h1>EDIT</h1>
+
+<h3>Since you mentioned in a comment that speed is an issue:</h3>
+
+<p>Based on <a href="http://askubuntu.com/a/585698/72216">this script</a>, if we do exactly the same trick, but use <code>Scrot</code> instead of <code>Shutter</code>, we can skip the <code>sleep 0.5</code> and make it <em>a lot</em> faster:</p>
+
+<h3>The script</h3>
+
+<pre class="lang-py prettyprint-override"><code>#!/usr/bin/env python3
+import subprocess
+import sys
+import os
+
+"""
+On different window managers, the window geometry as output of wmctrl differs slightly.
+The "deviation" should compensate these differences. Most likely appropriate (tested) settings:
+Unity: 0, Gnome: -36, Xfce (Xubuntu): -26, KDE (Kubuntu): 0
+"""
+#---
+deviation = 0
+#---
+
+get = lambda cmd: subprocess.check_output(["/bin/bash", "-c", cmd]).decode("utf-8")
+# targeted window
+target = sys.argv[1]; arg = sys.argv[2:]
+f_data = [l.split() for l in get("wmctrl -lG").splitlines() if target in l][0][2:6]
+xt_data = get("xprop -id "+target).split()
+xt_i = xt_data.index("_NET_FRAME_EXTENTS(CARDINAL)")
+xt = [int(n.replace(",", "")) for n in xt_data[xt_i+2:xt_i+6]]
+# set data for screenshot command
+x = str(int(f_data[0])-int(arg[0])-xt[0])
+y = str(int(f_data[1])-int(arg[2])-xt[2]+deviation)
+w = str(int(f_data[2])+int(arg[0])+int(arg[1])+xt[0]+xt[1])
+h = str(int(f_data[3])+int(arg[3])+int(arg[2])+xt[2]+xt[3])
+
+# setting default directories / filenames
+home = os.environ["HOME"]
+temp = home+"/"+".scrot_images"
+img_in = temp+"/in.png"
+# if you prefer, you can change the two line below:
+output_directory = home+"/"+"scrot_images" # output directory
+filename = "outputfile"                    # filename
+# creating needed directories
+for dr in [temp, output_directory]:
+    if not os.path.exists(dr):
+        os.mkdir(dr)
+# creating filename (-number) to prevent overwriting previous shots
+n = 1
+while True:
+    img_out = output_directory+"/"+filename+"_"+str(n)+".png"
+    if os.path.exists(img_out):
+        n = n+1
+    else:
+        break
+# Take screnshot, crop image
+subprocess.call(["scrot", img_in])
+subprocess.Popen(["convert", img_in, "-crop", w+"x"+h+"+"+x+"+"+y, "+repage", img_out])
+</code></pre>
+
+<h3>To use</h3>
+
+<p>Use it exactly like the first script, only:</p>
+
+<ul>
+<li><p>This script needs <code>scrot</code>, <code>imagemagick</code> and <code>wmctrl</code></p>
+
+<pre><code>sudo apt-get install imagemagick wmctrl scrot
+</code></pre></li>
+<li><p>images will be stored in <code>~/scrot_images</code></p></li>
+</ul>
+
+<h3>Explanation</h3>
+
+<p>While the first script uses the command line option of <code>Shutter</code> to shoot a defined section of the desktop, <code>Scrot</code> does not support that. It only takes a screenshot of <em>the whole screen</em>. </p>
+
+<p>We can combine however <code>imagemagick</code>'s option to make an out-take of an image, with the method to find the exact window's coordinates we used in the first script, and crop the image accordingly. <br>
+Since <code>Scrot</code> is extremely light weight and quick, even combined with <code>imagemagick</code>'s crop action, we have a pretty fast way of making screen shots of a window's area.</p>
+
+<p><strong><em>Still not fast enough?</em></strong></p>
+
+<p>Not sure if it is needed, but with a bit of rewriting (see script below), it would be possible to make a series of shots even faster by first shoot the whole series, <em>then</em> (afterwards) do the cropping. Assuming the window would stay in its position, this would save a considearble amount of the time:</p>
+
+<ul>
+<li><p>Shooting only with <code>Scrot</code> (no cropping):</p>
+
+<pre><code>real    0m0.263s
+user    0m0.205s
+sys     0m0.037s
+</code></pre></li>
+<li><p>Shooting, including cropping:</p>
+
+<pre><code>real    0m0.363s
+user    0m0.293s
+sys     0m0.040s
+</code></pre></li>
+</ul>
+
+<h3>Serial shooting</h3>
+
+<p>Finally, as an example to make a series of screenshots, the script below, as suggested in the EDIT.<br>
+This one <em>first</em> shoots all images in a row, <em>then</em> does the cropping on all created images at once.</p>
+
+<p>Use the script like the second one, but with <em>one additional argument</em>: the number of shoots in a row, for example:</p>
+
+<pre><code>python3 /path/to/custom_screenshot.py 0x0520000e 0 0 0 0 20
+</code></pre>
+
+<p>to make 20 screenshots of window <code>0x0520000e</code> at a row (could be hundreds), no marge around the window.</p>
+
+<h3>The script</h3>
+
+<pre class="lang-py prettyprint-override"><code>#!/usr/bin/env python3
+import subprocess
+import sys
+import os
+
+"""
+On different window managers, the window geometry as output of wmctrl differs slightly.
+The "deviation" should compensate these differences. Most likely appropriate (tested) settings:
+Unity: 0, Gnome: -36, Xfce (Xubuntu): -26, KDE (Kubuntu): 0
+"""
+#---
+deviation = 0
+#---
+
+get = lambda cmd: subprocess.check_output(["/bin/bash", "-c", cmd]).decode("utf-8")
+# targeted window
+target = sys.argv[1]; arg = sys.argv[2:]
+f_data = [l.split() for l in get("wmctrl -lG").splitlines() if target in l][0][2:6]
+xt_data = get("xprop -id "+target).split()
+xt_i = xt_data.index("_NET_FRAME_EXTENTS(CARDINAL)")
+xt = [int(n.replace(",", "")) for n in xt_data[xt_i+2:xt_i+6]]
+# set data for screenshot command
+x = str(int(f_data[0])-int(arg[0])-xt[0])
+y = str(int(f_data[1])-int(arg[2])-xt[2]+deviation)
+w = str(int(f_data[2])+int(arg[0])+int(arg[1])+xt[0]+xt[1])
+h = str(int(f_data[3])+int(arg[3])+int(arg[2])+xt[2]+xt[3])
+# setting default directories / filenames
+home = os.environ["HOME"]
+temp = home+"/"+".scrot_images"
+# if you prefer, you can change the two line below:
+output_directory = home+"/"+"scrot_images" # output directory
+filename = "outputfile"                    # filename
+# creating needed directories
+for dr in [temp, output_directory]:
+    if not os.path.exists(dr):
+        os.mkdir(dr)
+# do the shooting
+t = 0; l = []; shots = int(sys.argv[6])
+while t &lt; shots:
+    img_temp = temp+"/"+str(t)+"in.png"
+    l.append(img_temp)
+    # reading arguments,arranging commands to perform
+    subprocess.call(["scrot", img_temp])
+    t += 1
+# do the cropping on all images in a row
+for img in l:
+    n = 1
+    while True:
+        img_out = output_directory+"/"+filename+"_"+str(n)+".png"
+        if os.path.exists(img_out):
+            n = n+1
+        else:
+            break
+    subprocess.call(["convert", img , "-crop", w+"x"+h+"+"+x+"+"+y, "+repage", img_out])
+</code></pre>

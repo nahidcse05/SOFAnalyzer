@@ -1,0 +1,12 @@
+<p>For the most part sluggishness in a netbook (even with an SSD) comes down to one of the following.</p>
+
+<ul>
+<li>An older SATA controller (v1 or v2), since a SSD can usually flood this channel, you'll generally only get about 2x the i/o over an HDD.</li>
+<li>A <em>really</em> slow or otherwise limited CPU, usually the memory controllers, on-chip cache and other features are reduced compared to full featured counterparts.</li>
+<li>A bloated OS install</li>
+<li>Limited RAM</li>
+</ul>
+
+<p>Given that you're running a light OS (Xubuntu) and you do have a SATA 3 controller, and have plenty of RAM I would suggest testing the drive in another system to be certain.</p>
+
+<p><em>Edited in response to comments</em></p>

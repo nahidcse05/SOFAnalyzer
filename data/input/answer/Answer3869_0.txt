@@ -1,0 +1,33 @@
+<h2>Landscape</h2>
+
+<p><a href="http://www.canonical.com/enterprise-services/ubuntu-advantage/landscape/systems-management" rel="nofollow">Canonical's Landscape</a> makes it very easy to manage many machines at once.</p>
+
+<p>You could just have a centralised key store and, on demand, push out changes to every machine's known_hosts file. </p>
+
+<h2>Rsync</h2>
+
+<p>Alternatively, if you don't want to use Landscape, how about simply <a href="http://ubuntuforums.org/showthread.php?t=15082" rel="nofollow">synchronising the known_hosts via rsync</a>? I'm not all that familiar with all this enterprisy business, but it should work very well. </p>
+
+<p>Assuming the company's computers get shut down every night, i would do this:</p>
+
+<ul>
+<li>Have on some server a centralised known_hosts file that you manage manually.</li>
+<li>write a very simple program that, at boot time, tries to fetch that file and replace the current one</li>
+<li>on the administrative side, test all changed to the master-file before pushing it out, which you do by just replacing the one all the clients try to access. </li>
+</ul>
+
+<p>you could use <a href="http://en.wikipedia.org/wiki/Revision_Control_System" rel="nofollow">RCS</a>, an old sysadmin's favourite, to manage different versions of your master-file. </p>
+
+<p>Note that many sysadmins will tell you that <em>centralising things</em> is a security risk, and generally not a great idea.</p>
+
+<h2>LDAP</h2>
+
+<p>Now, I'm not a sysadmin (and therefore not to be trusted on this matter). You really should ask this question on <a href="http://serverfault.com/"><img src="http://sstatic.net/serverfault/img/favicon.ico"><strong>serverfault</strong></a></p>
+
+<p>LDAP seems to come up there quite a lot. Here's a bit information about fetching <a href="http://blog.fupps.com/2006/03/02/ssh-public-keys-from-ldap/" rel="nofollow">SSH Public Keys from LDAP</a>, and here's <a href="http://www.meta.net.nz/~daniel/blog/2006/04/07/ssh-ldap-public-key-lpk/" rel="nofollow">some more</a>.</p>
+
+<p><a href="http://serverfault.com/questions/180998/how-to-automatically-create-user-accounts-ssh-ldap">This question</a> might also be of interest to you.</p>
+
+<p><br></p>
+
+<p>I hope this is helpful. As you've discovered yourself, managing ssh access in large setups really is quite complicated. </p>

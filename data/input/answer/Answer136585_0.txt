@@ -1,0 +1,19 @@
+<p>They broke it for modern versions of ruby in <a href="https://github.com/rapid7/metasploit-framework/commit/149c3ecc63bfe8bb261b47ccc783cd9f728692e5#diff-3a1a8688af4e7a3b333ebf1ca027af3d" rel="nofollow">commit 149c3ecc63bfe8bb261b47ccc783cd9f728692e5</a>. My understanding is it has to do with changes to how ruby handles its path and loading requires. </p>
+
+<p>A quick and dirty hack until they fix it upstream:</p>
+
+<pre><code>diff --git a/msfconsole b/msfconsole
+index 9dee479..c3769bb 100755
+--- a/msfconsole
++++ b/msfconsole
+@@ -20,7 +20,8 @@ require 'pathname'
+ #
+
+ # @see https://github.com/rails/rails/blob/v3.2.17/railties/lib/rails/generators/rails/app/templates/script/rails#L3-L5
+-require Pathname.new(__FILE__).expand_path.parent.join('config', 'boot')
++#require Pathname.new(__FILE__).expand_path.parent.join('config', 'boot')
++require_relative 'config/boot'
+ require 'metasploit/framework/command/console'
+
+ Metasploit::Framework::Command::Console.start
+</code></pre>

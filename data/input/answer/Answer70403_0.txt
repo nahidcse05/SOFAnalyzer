@@ -1,0 +1,23 @@
+<p>The issue seems to be with Unity and forcing to 3D.</p>
+
+<p>I solved this problem following the following document:
+<a href="http://blogs.operationaldynamics.com/paul/opensource/not-unifed-in-12-10-the-quickening" rel="nofollow">http://blogs.operationaldynamics.com/paul/opensource/not-unifed-in-12-10-the-quickening</a></p>
+
+<p>I did not do the last part of the document.  All I did is as follows:</p>
+
+<ol>
+<li><p>After you login, you get an empty screen with the Ubuntu wallpaper, at this point do a <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>t</kbd>.  This will launch the terminal window.</p></li>
+<li><p>Issue the following commands:  </p>
+
+<pre><code>sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo apt-get -f update
+sudo apt-get -f install gdm gnome-shell gnome-tweak-tool gnome-session-fallback
+</code></pre></li>
+<li><p>You will be asked what Window Manager to use, make sure you select GDM.</p></li>
+<li><p>Reboot, while still in the terminal window, issue the following command:  </p>
+
+<pre><code>sudo shutdown -r now
+</code></pre></li>
+</ol>
+
+<p>That should do it.  If you still have issues, make sure your read the web link listed above.</p>

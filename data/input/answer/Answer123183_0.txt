@@ -1,0 +1,3 @@
+<p>Solution: Install  AMD Catalyst Control Center - (Catalyst Control Center for the AMD graphics accelerators) fglrx-amdcccle </p>
+
+<p>Worked with my Radeon HD 6480G</p>

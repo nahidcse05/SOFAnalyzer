@@ -1,0 +1,5 @@
+<p>According to your notebook's <a href="http://dlcdnet.asus.com/pub/ASUS/nb/K55VM/E7187_eManual_K55VM_K55VS_Z104.pdf" rel="nofollow">manual</a> you do have UEFI but no Secure Boot (which was <a href="http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_boot" rel="nofollow">added</a> in UEFI 2.2).</p>
+
+<p>Try to install Ubuntu without disabling Secure Boot.</p>
+
+<p>If you have any problems booting or installing Ubuntu, please update your question with more information about your problem (for example the errors you're getting).</p>

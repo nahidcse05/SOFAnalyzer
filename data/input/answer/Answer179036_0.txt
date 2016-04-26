@@ -1,0 +1,1 @@
+<p>Removed "Precise" from /etc/maas/bootresources.yaml and it's now working</p>

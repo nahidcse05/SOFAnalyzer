@@ -1,0 +1,5 @@
+<p>Those are terribly slow speeds. Assuming you have a broadband connection, you should try changing the download server. Try a few close to you.  </p>
+
+<p>Open Update Manager and click on the 'Settings' button at the bottom left. Click the 'Ubuntu Software' tab and change servers. I don't know what kind of connection you have but I typically see downloads max out my connection within a few seconds. </p>
+
+<p><img src="http://i.stack.imgur.com/5GxhM.png" alt="download server change"></p>

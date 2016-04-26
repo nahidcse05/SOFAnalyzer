@@ -1,0 +1,37 @@
+<p>Books Writing for Linux</p>
+
+<p>Folks wanting to write a Book using Linux have a good many choices to make.</p>
+
+<p>1st> Is the book literary, like a novel, or is it more visual, like a textbook, or is it extremely visual, like a picture book?</p>
+
+<p>2nd> Who is publishing the book and do they accept a final format version or a pre format version.  Createspace and Lulu for instance require a final format version.  A publishing house usually requires a pre format version.</p>
+
+<p>The answers to those two questions help to decide which Linux software you'd want to use for your book project.</p>
+
+<p>Scribus: The more visual it is, the more likely you'd want to use a program like Scribus.  With it you tediously layout everything page by page exactly the way you want it printed out.  </p>
+
+<p>LibreOffice:  This option if for mostly text based books, but can still handle plenty of pictures.  It's the option most Linux folks will use since it handles a broad range of book types and writing styles well.  </p>
+
+<p>Calligra is an alternative suite that might be catching up with LibreOffice in development.  Keep an eye on it for now.   There is an application within the suite called Author that's under development designed especially for book projects.  It might be another year or two before its robust enough to benefit from.</p>
+
+<p>The above programs are great in the sense that you can use them to complete your entire book project, both Content Creations and Format Creation.  Those are the TWO primary steps in creating a book.  If you consciously make an effort to break them down into steps, you might have better productivity, AND better content and format at the very end.</p>
+
+<p>So consider using two Linux programs, one designed for each step, for a superior outcome and performance.  </p>
+
+<p>A> Content Creation:</p>
+
+<p>Literary text--
+FOCUSWRITER -- The best Linux choice for Content creation of literary text, for a book, is Focuswriter.  With FocusWriter you create text files, one for each Chapter for instance.  It's a LOT better than a text editor because you can layout the dimensions of a writing box, and a fullscreen wallpaper that goes behind it.  You decide the font to suit your eyes for Content Creation, not the published print.  It features spellcheck, wordcounts, wordcount goals per day, hour goals per day, popout menus from the botttom (text files for each chapter, for instance), popout menus from the left side (this breaks a single text file into sections or scenes for instance) and popout menu from the top (settings, file options, etc).  and popout scrolling from the right.</p>
+
+<p>graphics--
+GiMP, InkScape.  For book covers and graphics.</p>
+
+<p>B> FORMAT for publication.</p>
+
+<p>Once you have the text files created (front matter, the main matter or chapters, the back matter) you need to format them for publishing.  To do that, you can use LibreOffice.  A a publishing house is accepting your project, it may require a doc file, so you'd it, or an alternative program like Calligra.  There are other's as well including AbiWord.</p>
+
+<p>LaTeX, LyX:  But there's another alternative for folks who self-publish or are have a publisher that accepts Fully Formatted pdf files.  This option is especially good for Linux folks who like to script.  is to use LaTeX with LyX.  But, before you do, you need to know who is publishing the book, and the format they require.  A publishing company will typically require a preformatted version rather than the final formatted version, in a doc file.  Again, LibreOffice will be what you need.  Scribus might be a solution for others.  If you decide to self publish on Createspace or Lulu then a pdf option exists and you need a final format version.  In that case, LyX with LaTeX is a good choice, but requires a heavy learning curve that most aren't going to tolerate struggling through.  </p>
+
+<p>The benefit of LaTeX, LyX is that, if you have a book series, and it's primarily text based, but can include pictures that are of secondary importance to the look and feel of your book, then you can script templates that will automatically format the text files of you chapters into a book literally a click of the button, with page numbering, hyphenation, justification, headers, tables of contents, all generated nicely to your templates specs.  </p>
+
+<p>LaTeX is especially well known in the academic world for handling mathematical formula and equations with spectacular results.  So, if your book is a novel, or something academic with a lot of equations and text and bibliography, that's the way to go, if you can script a template, and if your publisher accepts a final format version pdf such as Createspace and Lulu accept.</p>

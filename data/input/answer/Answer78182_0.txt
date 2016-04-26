@@ -1,0 +1,7 @@
+<p>You can use the recovery option.</p>
+
+<p>Turn on your laptop, and press <kbd>F12</kbd> to get the Boot Menu.  Highlight <code>Recovery and Utility</code>, then press <kbd>Enter</kbd>. </p>
+
+<p>OR</p>
+
+<p>Click the <code>MyRecovery</code> icon on your windows desktop.   </p>

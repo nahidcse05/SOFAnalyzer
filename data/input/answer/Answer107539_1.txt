@@ -1,0 +1,1 @@
+<p>For execution of a script during logon, add it as a call from within the /etc/profile script.  This is executed for every logon, not only for ssh logons.  </p>

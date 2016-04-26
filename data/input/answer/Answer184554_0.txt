@@ -1,0 +1,8 @@
+<h1>The solution by OP</h1>
+
+<ol>
+<li><p>Install Wine &amp; configure it to relevant Windows version for game</p></li>
+<li><p>Open Gedit (notepad of Ubuntu)>Edit>Preferences>Plugins>select 'External tools execute external commands shell scripts'>Close</p></li>
+<li><p>Go to your .bat file>right click>Properties>Permissions>select 'allow executing file as program'>Close </p></li>
+<li><p>Double-click the .bat file, it will open in gedit>Tools>External Tools>Run command>in the popped up box type 'wineconsole cmd' (without inverted commas)>OK. 5. A Wine console terminal will pop up, in it type 'start yourfilename.bat' and hit enter. That'll run it.</p></li>
+</ol>

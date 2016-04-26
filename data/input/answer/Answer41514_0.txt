@@ -1,0 +1,6 @@
+<p>I have fixed this problem for several people, and the solution seems to be: </p>
+
+<pre><code>sudo apt-get install libpulse0:i386
+</code></pre>
+
+<p>I hope this is useful.</p>

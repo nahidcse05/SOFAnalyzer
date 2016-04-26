@@ -1,0 +1,8 @@
+<p>They are two very different operating systems and have quite different architectures. Mac OS X has many softwares installed by default.That takes up most of the space of the installation disc.   </p>
+
+<p>Now, coming to Ubuntu we have a 700MB CD because of the lower size of bundled softwares and the kernel/GNU utils.
+There are lots of DVD variants of Ubuntu which are upto 4 gb in size and they comes preloaded with Softwares.</p>
+
+<p>Another important thing is that, It is the Linux kernel that gives support for wide range of hardware, not the size of the CD/DVD. You can't equate the installation disc size with variety in  hardware support.</p>
+
+<p>Hope that helps.</p>

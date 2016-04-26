@@ -1,0 +1,8 @@
+<p>Since I am searching on a similar issue, I am going to ask the basic question...  Did you start Nautilus as root?</p>
+
+<p>From a Terminal Window:</p>
+
+<pre><code>gksudo nautilus &amp;
+</code></pre>
+
+<p>I am running 12.10 and the options are all grey'd out unless you have permission to change them.  Wondering if that might be a difference.  Most likely not, but it was worth a shot :)</p>

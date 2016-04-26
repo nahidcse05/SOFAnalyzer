@@ -1,0 +1,5 @@
+<p>Unless you've done something inside Ubuntu to somehow limit it to 10Mbps, you can't. By default it will connect as fast as the card and the network will allow.</p>
+
+<p>So either the card is only rated for 10Mbps (unlikely) or the network (be that the hub, switch, router, or whatever you're plugged into) is limiting you.</p>
+
+<p>If you think I'm wrong (and I am occasionally), edit your question to let us know what hardware we're talking about.</p>

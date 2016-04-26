@@ -1,0 +1,1 @@
+<p>You can view some options (none specifically KDE AFAICT) at this question: <a href="http://askubuntu.com/questions/177921/whats-a-screenshot-application-which-will-auto-upload-to-imgur">What&#39;s a screenshot application which will auto-upload to imgur?</a></p>

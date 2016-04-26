@@ -1,0 +1,4 @@
+<p>You are running fstrim  at boot time, so add  that time to your normal boot.  Run it manually to see how long it takes:
+sudo  fstrim -v /
+You might be better off putting  the weekly cron job back, or just running fstrim manually.
+Also,  you don't want the "discard"  option in fstab, that will impact perfomance.</p>

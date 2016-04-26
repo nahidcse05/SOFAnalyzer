@@ -1,0 +1,13 @@
+<p>The correct syntax must be:</p>
+
+<pre><code>PS1="\[\033[0;33m\]\h:\W\u\$\[\033[m\]"
+</code></pre>
+
+<p>Or if you prefer to use <code>\e</code> instead of <code>\033</code>:</p>
+
+<pre><code>PS1="\[\e[0;33m\]\h:\W\u\$\[\e[m\]"
+</code></pre>
+
+<p>Your problem in missing <code>\[</code> with the <code>\e</code>  ASCII escape character <code>(033)</code></p>
+
+<p><img src="http://i.stack.imgur.com/bw4Nq.png" alt="enter image description here"></p>

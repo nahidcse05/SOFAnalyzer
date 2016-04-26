@@ -1,0 +1,5 @@
+<p>If your laptop can hold two drives, I recommend you try to buy an SDD or a second HDD to install Ubuntu on. First remove the Windows drive and install Ubuntu with only the new HDD/SDD installed.  You can dual-boot by pressing the F-10 key and choosing an OS.  You'll see "Windows" or "ubuntu" as options.  Very easy and works well.  Updates from one doesn't affect the other.</p>
+
+<p>If you can only have one drive and do not want to dual-boot, I recommend you put in the new drive and keep the original safe in the original box until you decide to get rid of the laptop or decide you never want to return to Windows.</p>
+
+<p>I don't believe buying a DVD will help you.  I <em>highly</em> recommend that you buy a 4 or 8 GB USB flash drive (preferably 3.0 if you have that on the laptop) and configure it for UEFI Ubuntu Live.  You can install from that drive in about 20 minutes verses about 1.5 hours with the DVD.</p>

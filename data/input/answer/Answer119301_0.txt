@@ -1,0 +1,25 @@
+<p>Salam o alikum =)</p>
+
+<p>this may help you :</p>
+
+<p>How to install or fix your flash installation in Linux Mint</p>
+
+<ol>
+<li>Open Synaptic ; under administration menu</li>
+<li>Search 'Adobe'</li>
+<li>find, scroll down to, Adobe Flash Player plugin installer, which is titled 'flashplugin-installer'</li>
+<li>right click and click 'mark for installation', or double click</li>
+<li>click 'apply' in the toolbar</li>
+</ol>
+
+<p>if it is already installed, then right click and click re-install</p>
+
+<p>if that doesn't fix it, then check to see what other 'flash' files are installed; scroll down</p>
+
+<p>only 'mint-flashplugin-11' should be installed, uninstall everything else
+THEN
+re-install 'flashplugin-installer'</p>
+
+<p>does this work for you? y/n</p>
+
+<p>good luck</p>

@@ -1,0 +1,7 @@
+<p>Along with the rest of answers - have you checked your <code>.bashrc</code> file to make sure that JAVA_HOME environment is not there?  Removing that line should do the trick in freeing your Ubuntu from openjdk.  Like an example:</p>
+
+<pre><code> JAVA_HOME=/usr/local/java/jdk1.7.0_45
+ export PATH=$JAVA_HOME:$PATH
+</code></pre>
+
+<p>If you see anything like that, then delete these two lines and reboot.</p>

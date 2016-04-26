@@ -1,0 +1,6 @@
+<p>On older Apple laptop hardware, this is accomplished by a configuration setting of <a href="http://pbbuttons.berlios.de/projects/pbbuttonsd/index.html" rel="nofollow">PBButtonsd</a>.  You would need to add this line to <a href="http://pbbuttons.berlios.de/projects/pbbuttonsd/man-pbbuttonsd.cnf.html" rel="nofollow">the config file /etc/pbbuttonsd.conf</a>:</p>
+
+<pre><code>KBDMode = fkeysfirst  
+</code></pre>
+
+<p>PBButtonsd works on iBooks and PowerBooks (PowerPC-based) and MacBooks (Intel-based); the native Ubuntu package seems to have disappeared after Dapper Drake</p>

@@ -1,0 +1,10 @@
+<p>You will need to </p>
+
+<ul>
+<li>backup the $HOME directory and everything beneath it to an external  device </li>
+<li>verify the backup is good, install Win7, completely erasing Ubuntu in the process </li>
+<li>Once Win7 is installed, then reinstall Ubuntu</li>
+<li>Import your data from the external backup and change the ownership so you can use it</li>
+</ul>
+
+<p>Why? Because Windows will stomp all over Ubuntu when you install it.</p>

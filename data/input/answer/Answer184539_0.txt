@@ -1,0 +1,155 @@
+<h3>Script to copy the path of a file, opened in <code>gedit</code></h3>
+
+<p>With the gedit window in front, the small script below derives the path from the (<code>gedit</code>) window's name, and copies it to the clipboard.</p>
+
+<p>The script has two options:</p>
+
+<ol>
+<li><p>Only copy the <em>path</em> to the file's directory, running the script with the option</p>
+
+<pre><code>-path
+</code></pre>
+
+<p>or</p></li>
+<li><p>Copy the path <em>including</em> the file name, running the script with the option</p>
+
+<pre><code>-file
+</code></pre></li>
+</ol>
+
+<h3>The script</h3>
+
+<pre class="lang-py prettyprint-override"><code>#!/usr/bin/env python3
+import subprocess
+import sys
+
+name = subprocess.check_output(["xdotool", "getactivewindow", "getwindowname"]).decode("utf-8").strip()
+if all(["(" in name, ")" in name]):
+    path = name[name.find("(")+1:name.find(")")]
+    if sys.argv[1] == "-file":
+        fname = name[:name.find("(")]
+    elif sys.argv[1] == "-path":
+        fname = ""
+    command = "echo "+'"'+path+"/"+fname+'"'+" | xclip -selection clipboard"
+    subprocess.Popen(["/bin/bash", "-c", command])
+</code></pre>
+
+<h3>How to use</h3>
+
+<ol>
+<li><p>Install both <code>xdotool</code> and <code>xclip</code>:</p>
+
+<pre><code>sudo apt-get install xdotool xclip
+</code></pre></li>
+<li><p>Copy the script into an empty file, save it as <code>get_path.py</code></p></li>
+<li><p>Test run the script:</p>
+
+<ul>
+<li>open an existing <code>gedit</code> file</li>
+<li><p>open a terminal window, run the command:</p>
+
+<pre><code>sleep 5 &amp;&amp; python3 /path/to/get_path.py -file
+</code></pre>
+
+<p>immediately switch to the <code>gedit</code> window, to make the last part of tyhe command run with the <code>gedit</code> window in front.</p></li>
+<li>Press <kbd>Ctrl</kbd>+<kbd>V</kbd> somewhere to paste the just copied path.</li>
+</ul></li>
+<li><p>If all works fine, you can make the options available in two ways:</p>
+
+<ol>
+<li>Create two shortcut keys for both options: choose: System Settings > "Keyboard" > "Shortcuts" > "Custom Shortcuts". Click the "+" and add both commands to two different shortcuts.</li>
+<li><p>Make both options available in the <code>gedit</code> launcher:</p>
+
+<p><a href="http://i.stack.imgur.com/jfrHh.png" rel="nofollow"><img src="http://i.stack.imgur.com/jfrHh.png" alt="enter image description here"></a></p>
+
+<p>Copy the content below into an empty file, save it as <code>gedit.desktop</code> in <code>~/.local/share/applications</code></p>
+
+<pre class="lang-none prettyprint-override"><code>[Desktop Entry]
+Name=gedit
+GenericName=Text Editor
+Comment=Edit text files
+Exec=gedit %U
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+Icon=accessories-text-editor
+Categories=GNOME;GTK;Utility;TextEditor;
+X-GNOME-DocPath=gedit/gedit.xml
+X-GNOME-FullName=Text Editor
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gedit
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=3.10.4
+X-GNOME-Bugzilla-ExtraInfoScript=/usr/share/gedit/gedit-bugreport
+Actions=Window;Document;divider1;Copy current file's directory;Copy path+file name;
+
+Keywords=Text;Editor;Plaintext;Write;
+X-Ubuntu-Gettext-Domain=gedit
+
+[Desktop Action Window]
+Name=Open a New Window
+Exec=gedit --new-window
+OnlyShowIn=Unity;
+
+[Desktop Action Document]
+Name=Open a New Document
+Exec=gedit --new-document
+OnlyShowIn=Unity;
+
+[Desktop Action Copy current file's directory]
+Name=Copy current directory
+Exec=python3 /path/to/get_path.py -path
+OnlyShowIn=Unity;
+
+[Desktop Action divider1]
+Name=.....................................
+OnlyShowIn=Unity;
+
+[Desktop Action Copy path+file name]
+Name=Copy current directory, include file name
+Exec=python3 /path/to/get_path.py -file
+OnlyShowIn=Unity;
+</code></pre></li>
+</ol>
+
+<p>In both lines:</p>
+
+<pre><code>Exec=python3 /path/to/get_path.py -path
+</code></pre>
+
+<p>and</p>
+
+<pre><code>Exec=python3 /path/to/get_path.py -file
+</code></pre>
+
+<p>replace <code>/path/to/get_path.py</code> by the real path to the script.</p>
+
+<p>Log out and back in to make Unity "switch" to the new, local <code>.desktop</code> file.</p></li>
+</ol>
+
+<h3>Explanation</h3>
+
+<p>In the gedit window name, the path is displayed between <code>(</code> and <code>)</code>. The script simply sees the frontmost window with the help of <code>xdotool</code>, then reads the path between those two characters.</p>
+
+<h3>Notes</h3>
+
+<p>Since the path is read in a textual way, the script will fail if the file's name includes other <code>()</code> characters.</p>
+
+<h3>Examples</h3>
+
+<p>With the following window in front:</p>
+
+<p><a href="http://i.stack.imgur.com/rOWYB.png" rel="nofollow"><img src="http://i.stack.imgur.com/rOWYB.png" alt="enter image description here"></a></p>
+
+<p>the first option will copy to the clipboard the path to the file:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>~/Bureaublad
+</code></pre>
+
+<p>while the second option includes the file itself:</p>
+
+<pre class="lang-bsh prettyprint-override"><code>~/Bureaublad/some test file.txt
+</code></pre>
+
+<p>As you can see, spaces are taken care of :).</p>

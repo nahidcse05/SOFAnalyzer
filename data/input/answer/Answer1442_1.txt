@@ -1,0 +1,20 @@
+<p>Create the new partition and write the changes to disk. Note the device that is associated with the partition: it will be something like /dev/sda5.</p>
+
+<p>Fire up a terminal, then execute:</p>
+
+<pre><code>ls -l /dev/disk/by-uuid/
+</code></pre>
+
+<p>Locate the device that you created. The output will look like this:</p>
+
+<pre><code>lrwxrwxrwx 1 root root 10 2010-10-10 12:00 35746711-2b3a-44bd-b75e-e9782243dbce -&gt; ../../sda5
+</code></pre>
+
+<p>You need the device's UUID - in my case, that is 35746711-2b3a-44bd-b75e-e9782243dbce. Take note of this value.</p>
+
+<p>Then, mount the root partition (using normal Gnome/KDE/similar interface) and edit the file named /etc/fstab inside that partition. The command is:</p>
+
+<pre><code>sudo gedit /media/YOUR_PARTITION/etc/fstab
+</code></pre>
+
+<p>To edit that file and copy your old files, follow the instructions <a href="http://askubuntu.com/questions/5484/how-can-i-move-my-home-directory-to-another-partition-if-its-already-part-of-th/5488#5488">here</a>. You will need to change the UUID and the filesystem type, of course, from what is in that post.</p>

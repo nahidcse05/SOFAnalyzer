@@ -1,0 +1,1 @@
+<p>Yes, all programs that work on Unity will work in Lubuntu, except for programs which for some weird reason require Unity to be running (read: almost none).</p>

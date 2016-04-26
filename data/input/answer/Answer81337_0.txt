@@ -1,0 +1,13 @@
+<h1>Solution 1</h1>
+
+<p>The error is caused because Ubuntu does not allow the user to run many of the system commands as you do not have the correct privileges. To overcome these, type</p>
+
+<pre><code>sudo apt-get
+</code></pre>
+
+<p>The sudo command gives you full privileges for that command. </p>
+
+<h1>Solution 2</h1>
+
+<p>To receive updates, Click on the System Settings Icon and then on Software and Updates. 
+When this window opens, click on the updates tab and select the appropriate areas you would like to update then select how often and when &amp; what to do with any updates from the drop down lists.</p>

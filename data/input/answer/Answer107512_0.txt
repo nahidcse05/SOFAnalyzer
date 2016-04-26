@@ -1,0 +1,3 @@
+<p>The device files for sound devices are located at <code>/dev/snd/</code></p>
+
+<p>Btw.: It seems you're mixing up the expressions <em>mountpoint</em> and <em>device file</em>. That's a great difference</p>

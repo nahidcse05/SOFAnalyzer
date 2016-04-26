@@ -1,0 +1,5 @@
+<p>I had this problem on the latest 12.04 upgrade (I was already on 12.04, but an innocent-looking system update killed it).</p>
+
+<p>Do you have settings for your interface in <code>/etc/network/interfaces</code> ? I have. This link may help: <a href="http://wiki.debian.org/NetworkManager#Wired_Networks_are_Unmanaged" rel="nofollow">http://wiki.debian.org/NetworkManager#Wired_Networks_are_Unmanaged</a></p>
+
+<p>In the end I un-installed Network Manager and it allows the standard <code>/etc/network/interfaces</code> stuff to work properly.</p>

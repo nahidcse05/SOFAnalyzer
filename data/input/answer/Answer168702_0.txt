@@ -1,0 +1,16 @@
+<p>This was fairly simple. First you'll need <code>ffmpeg</code> installed.</p>
+
+<p>Then there's this simple terminal command you can use to convert all the audio files to MP3:</p>
+
+<pre><code>for f in *.flac , *.m4a , *.ogg ; do ffmpeg -i "$f" -ab 320k "${f%.m4a}.mp3"; done
+</code></pre>
+
+<p>Breakdown:</p>
+
+<ul>
+<li><code>for f in *.flac , *.m4a , *.ogg ;</code>: For every audio file of these types,  </li>
+<li><code>do ffmpeg -i "$f" -ab 320k "${f%.flac}.mp3";</code>: Convert that file to MP3, get the next file.  </li>
+<li>If you want to change the bitrate, simply change the <code>320k</code> in kbps.  </li>
+<li>You can change the filetypes it looks for simply with that comma-separated list of <code>*.flac , *.m4a , *.ogg</code> to whatever files ffmpeg can decode.  </li>
+<li>You can change the output name to whatever you want, <code>"${f%.m4a}.mp3"</code> could be <code>"${f%}.mp3"</code> or "${f%.audio}.mp3", f% represents the original filename.  </li>
+</ul>

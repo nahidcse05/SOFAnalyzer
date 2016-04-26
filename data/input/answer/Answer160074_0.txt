@@ -1,0 +1,1 @@
+<p>delete the directory <code>pycharm-community.x.x.x</code> also the hidden directory .<code>PyCharm</code> from the <code>home</code> directory</p>

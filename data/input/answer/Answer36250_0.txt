@@ -1,0 +1,7 @@
+<p>If you wish to have a backup copy of your data, burn it into a CD/DVD using Brasero Disc Burner. </p>
+
+<p>But if you want to use deja-dup (The default backup tool) with DVDs, I do not know of a way yet. In the first place, deja-dup is designed to periodically backup to a storage location, and I'm not sure if DVDs are an option here.</p>
+
+<p>If you wanted a DVD backup of OS just because you had one in Windows (some prefer to call them Recovery disks), That wont be necessary. You can freshly install the OS right from the scratch, as many times as u want.</p>
+
+<p>If you are looking for a way to backup your OS with all its programs, I advise not to do so. A good number of packages are updated frequently, and the backup will be out-of date in this respect in no time. A better way is to do a fresh-install of the programs following a clean install. The personalized settings are usually stored in your home folder, and can be backed-up by deja-dup.</p>

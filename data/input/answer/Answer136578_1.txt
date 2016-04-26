@@ -1,0 +1,1 @@
+<p>Right click on workspaces in the bottom right corner of the screen and select Preferences. There you can set "Show all workspaces in 2 rows" and you will get 2x2 layout.</p>

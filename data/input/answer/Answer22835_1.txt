@@ -1,0 +1,14 @@
+<p>Here's a simple variation using a bash script that inserts an empty line at the beginning of every file in a directory passed as an argument that must exist.</p>
+
+<pre><code>#!/bin/bash
+# requires one argument that is path to a directory whose files you want
+# to add an initial line to
+
+for f in $(ls $1)
+do
+    mv $1/$f $1/$f.orig
+    echo -e "\t" &gt; $1/$f
+    cat $1/$f.orig &gt;&gt; $1/$f
+    rm $1/$f.orig
+done
+</code></pre>

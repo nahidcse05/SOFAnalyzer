@@ -1,0 +1,8 @@
+<p>Another way you can install the vlc via ppa</p>
+
+<p>Open a terminal and run following commands:</p>
+
+<pre><code>sudo add-apt-repository ppa:videolan/stable-daily
+sudo apt-get update
+sudo apt-get install vlc
+</code></pre>

@@ -1,0 +1,14 @@
+<p>Try to remove Software Center, and re-installing it.  to do that just press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> on your keyboard to open Terminal. When it opens, run the command below.</p></p>
+
+<pre><code>sudo apt-get purge software-center
+</code></pre>
+
+<p>and when that's done, do </p>
+
+<pre><code>sudo apt-get install software-center
+</code></pre>
+
+<p>Then do </p>
+
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</code></pre>

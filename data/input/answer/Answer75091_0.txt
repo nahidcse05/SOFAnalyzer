@@ -1,0 +1,28 @@
+<p>His code, and your code, should share a common origin.</p>
+
+<p>What you need is a git repository with this common origin as a revision.</p>
+
+<p>His code state should use this common origin as a parent, so should yours.</p>
+
+<p>That copy he gave you should do - if you still have an archive of it.</p>
+
+<ol>
+<li>Create a new git repo</li>
+<li>Copy the origin code into it</li>
+<li>Add and commit</li>
+<li>Now create and check out a new branch for his code (<code>git checkout -b his-code</code>)</li>
+<li>Delete all the origin code, put his new code in</li>
+<li>Add and commit</li>
+<li>Check out the origin code again (<code>git checkout master</code>)</li>
+<li>Make a new branch for YOUR code (<code>git checkout -b my-code</code>)</li>
+<li>Delete the origin code, put in your code</li>
+<li>Add and commit</li>
+</ol>
+
+<p>Now you have a repository with the history of both your changes from a common origin. Merging these two branches should produce the desired result.</p>
+
+<pre>
+git checkout master
+git merge his-code
+git merge my-code
+</pre>

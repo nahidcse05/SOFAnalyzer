@@ -1,0 +1,11 @@
+<p>Chrome is crashing because it cannot open additional files.</p>
+
+<p>You can fix this by increasing the number of possible open files.</p>
+
+<p>Update /etc/security/limits.conf</p>
+
+<pre><code>* hard nofile 65535
+* soft nofile 65535
+</code></pre>
+
+<p>And rebooting.</p>

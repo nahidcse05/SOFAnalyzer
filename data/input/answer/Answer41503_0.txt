@@ -1,0 +1,37 @@
+<blockquote>
+  <p>You’ll need to get your Windows 7 or Windows Vista retail disc or
+  download the free recovery media from NeoSmart.net</p>
+  
+  <p>Note: If you don’t have a retail disc with your computer, and instead
+  you had to make a recovery media with your PC, don’t worry – you can
+  download a Windows 7/Vista recovery disc that allows you to do the
+  same thing with a retail disc – except reinstall Windows of course:
+  see <a href="http://neosmart.net/blog/2009/windows-7-system-repair-discs/" rel="nofollow">http://neosmart.net/blog/2009/windows-7-system-repair-discs/</a> for
+  Windows 7 and
+  <a href="http://neosmart.net/blog/2008/windows-vista-recovery-disc-download/" rel="nofollow">http://neosmart.net/blog/2008/windows-vista-recovery-disc-download/</a>
+  for Windows Vista. It’s in ISO format that you can easily burn to a
+  disc.</p>
+  
+  <p>Put the disc in, then as it comes up to the installation section (for
+  retail discs), click “Repair my computer” then go and select your
+  Windows installation, and from there select Command Prompt. For the
+  recovery media discs you downloaded from NeoSmart – we’re not sure
+  what the steps are, but it’s probably similar.</p>
+  
+  <p>Then you need to type:</p>
+  
+  <p>Note: execute one command at a time</p>
+  
+  <p>bootrec.exe /FixBoot</p>
+  
+  <p>bootrec.exe /FixMbr</p>
+  
+  <p>It takes less than a second. Reboot and it’ll boot into Windows
+  automatically. Then go to Start menu, right click Computer and select
+  Manage. Go to Disk Management from here, and delete the partitions
+  related to Ubuntu. Once you’ve done this, extend the volume size of
+  your Windows partition to take the remaining free space. To
+  delete/extend volume size of a partition, you right click.</p>
+</blockquote>
+
+<p>Source: <a href="http://blog.eukhost.com/webhosting/howto-remove-grub-loader-and-restore-windows-7-and-vista-bootloader/" rel="nofollow">http://blog.eukhost.com/webhosting/howto-remove-grub-loader-and-restore-windows-7-and-vista-bootloader/</a></p>

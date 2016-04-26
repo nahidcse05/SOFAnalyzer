@@ -1,0 +1,16 @@
+<p>Found the answer here - <a href="http://urukrama.wordpress.com/2011/11/01/reverting-to-the-old-alt-tab-dialog-in-openbox-3-5/" rel="nofollow">http://urukrama.wordpress.com/2011/11/01/reverting-to-the-old-alt-tab-dialog-in-openbox-3-5/</a></p>
+
+<p>You need to edit <code>~/.config/openbox/lxde-rc.xml</code> (or <code>~/.config/openbox/lubuntu-rc.xml</code> if you're on Lubuntu), and add <code>&lt;dialog&gt;icons&lt;/dialog&gt;</code> to the Alt+Tab and Alt+Shift+Tab key-bindings, so they look like this:</p>
+
+<pre><code>&lt;!-- Keybindings for window switching --&gt;
+&lt;keybind key="A-Tab"&gt;
+  &lt;action name="NextWindow"&gt;
+    &lt;dialog&gt;icons&lt;/dialog&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+&lt;keybind key="A-S-Tab"&gt;
+  &lt;action name="PreviousWindow"&gt;
+    &lt;dialog&gt;icons&lt;/dialog&gt;
+  &lt;/action&gt;
+&lt;/keybind&gt;
+</code></pre>

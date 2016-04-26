@@ -1,0 +1,9 @@
+<pre><code>apt-get install libcurl4-gnutls-dev
+</code></pre>
+
+<p>or</p>
+
+<pre><code>apt-get install libcurl4-openssl-dev
+</code></pre>
+
+<p>depending on whether you want to use gnutls or openssl for SSL.</p>

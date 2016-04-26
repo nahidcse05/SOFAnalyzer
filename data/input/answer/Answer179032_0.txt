@@ -1,0 +1,15 @@
+<p>You need to change setting called <code>rgba</code> from <code>rgb</code> to <code>bgr</code>.</p>
+
+<pre><code>&lt;fontconfig&gt;
+  &lt;match target="font"&gt;
+    &lt;edit name="rgba" mode="assign"&gt;
+      &lt;const&gt;bgr&lt;/const&gt; &lt;!-- here --&gt;
+    &lt;/edit&gt;
+  &lt;/match&gt;
+&lt;/fontconfig&gt;
+</code></pre>
+
+<p>I'm on Arch, and for me it was in <code>/usr/share/fontconfig/conf.avail.infinality/10-base-rendering.conf</code>. On your system it might be different, just grep for <code>rgba</code> in all <code>*.conf</code> files. A reboot/X restart might also be required.</p>
+
+<p>EDIT
+I just realized that a package upgrade might revert this back to the default. So the <em>right</em> location for this is <code>etc/fonts/local.conf</code>, you can create it if it doesn't exist.</p>

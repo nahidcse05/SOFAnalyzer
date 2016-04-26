@@ -1,0 +1,42 @@
+<p><strong>[Update 2015]</strong></p>
+
+<p>Starting with Linux 3.16:</p>
+
+<ul>
+<li><p>The value for <code>bapm</code> can be provided as a module parameter (see <a href="https://bugzilla.kernel.org/attachment.cgi?id=145411&amp;action=diff" rel="nofollow">here</a>).</p></li>
+<li><p>The value of <code>bapm</code> is set to 1 by default for Kaveri, Kabini and desktop Trinity, Richland systems (see <a href="http://lists.freedesktop.org/archives/dri-devel/2014-July/062841.html" rel="nofollow">here</a>), resulting in Turbo Core being enabled.</p></li>
+</ul>
+
+<p>Which means that with Kernel 3.16 or later, Turbo Core <em>should</em> work right out of the box with <code>radeon</code> in many cases.</p>
+
+<p>If you run Debian, or if you run Ubuntu and the above is not true for you, please refer to <a href="http://unix.stackexchange.com/q/241825/79761">How to set up a Debian system (focus on 2D or console/server) with an AMD Turbo Core APU for maximum energy and computing efficiency?</a></p>
+
+<p><strong>[Update 2014-Aug-07]</strong></p>
+
+<p>I published a <a href="http://unix.stackexchange.com/a/148918/79761">detailed analysis over at <code>unix-stackexchange.com</code></a> which contains (at least for me) a few surprises. Such as the <code>ondemand</code> governor potentially being worse than <code>performance</code> (at least with the Richland A10-6700) and <code>fglrx</code> apparently using some questionable tricks to improve short-term boosts, abruptly having to compensate for that in the long run. I'm glad I had a closer look at this.</p>
+
+<p><strong>[Original Answer]</strong></p>
+
+<p>I am in the process of configuring a system with an A10-6700 using Ubuntu 14.04 Server.</p>
+
+<ul>
+<li>The output of <code>cat /proc/cpuinfo</code> does not, and will not, reflect any processor boost. The boost is an autonomous decision on the chip based on potentially complex criteria. <a href="https://www.kernel.org/doc/Documentation/cpu-freq/boost.txt" rel="nofollow">Read about it here</a>.</li>
+<li>The output of <code>cpufreq-info</code> will not show available boost frequencies, but the output of <code>cpupower frequency-info</code> will. For the A10-6700, it should show 4300 MHz (Pb0), 4200 MHz (Pb1) and 3900 MHz (Pb2) in addition to the regular 3700, 3400, 2700, 2300 and 1800 MHz.</li>
+<li>The output of <code>cpufreq-aperf</code> (after <code>modprobe msr</code>) is comparable to the output of <code>cpupower monitor</code>. The frequencies shown by these tools are supposed to reflect boosts. </li>
+<li>With the standard video driver or even the <code>radeon</code> module in the kernel, I did not succeed to get the A10-6700 to use a boost frequency (using <code>stress --cpu 2</code>).</li>
+<li>Withe the ATI/AMD <code>fglrx</code> module loaded into the kernel, the processor will boost two cores permanently (and apparently also the remaining cores temporarily). This was tested without X being used or even configured.</li>
+</ul>
+
+<p>Remember, the decision for or against the boost is made by the APU autonomously. My guess at this point in time is that the APU cannot decide whether its current power dissipation leaves room for a boost unless the integrated graphics unit is adequately initialised.</p>
+
+<p>The video output with the standard module differs from the output when fglrx is loaded. Therefore, we can only guess whether the kernel can put the APU into the presumably required "smart" (power loss aware) mode by itself, while still using the VGA module.</p>
+
+<p>Until this gets sorted out, I will simply load <code>fglrx</code>. The downside is that <a href="https://help.ubuntu.com/community/BinaryDriverHowto/AMD" rel="nofollow">building it it requires a lot of stuff</a> which you don't want on a server and which needs to be deleted after compilation.</p>
+
+<p>Also, <code>fglrx</code> is almost 9 MB in size. It's not a problem but knowing that it's mostly dead freight in this case doesn't make me too happy.</p>
+
+<p>[Edit 2014-Jul-24]</p>
+
+<p>I now <a href="https://bugzilla.kernel.org/show_bug.cgi?id=81021" rel="nofollow">reported this bug</a>.</p>
+
+<p>I noticed another bug has also been reported: If in fact you <a href="https://bugzilla.kernel.org/show_bug.cgi?id=78111" rel="nofollow">use <code>fglrx</code> and try to use the Dynamic Power Management</a> mode.</p>

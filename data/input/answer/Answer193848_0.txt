@@ -1,0 +1,10 @@
+<p><strong>Install by selecting</strong> your choice from the list by using select/copy.  Then past your choice (using the copy/paste method to get it spelled correctly) into the apt-get install command:</p>
+
+<p>Example:</p>
+
+<pre><code>$ sudo apt-get install linux-image-3.19.0-30-generic 3.19.0-30.34
+</code></pre>
+
+<p><strong>You can choose the kernel</strong> by clicking on <code>Advinced Options for Ubuntu</code> then move your arrow up or down for the kernel of your choice.</p>
+
+<p>When you have a kernel that you are comfortable with you can edit your /boot/grub/grub.cfg (copying and pasting to ensure you have it spelled correctly) to use your preferred kernel.</p>

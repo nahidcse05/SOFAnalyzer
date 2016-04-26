@@ -1,0 +1,41 @@
+<p>There is no way to undo the partition changes to Windows. You will have to reinstall or recover Windows, then reinstall Ubuntu.</p>
+
+<p>First, try running Boot-Repair(<a href="https://help.ubuntu.com/community/Boot-Repair" rel="nofollow">info</a>) and see if this helps. To run this:</p>
+
+<ol>
+<li><p>Boot from a Ubuntu live CD or USB.</p></li>
+<li><p>Type these lines in the terminal one line at a time.</p>
+
+<pre><code>sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install boot-repair
+</code></pre></li>
+<li><p>Search for Boot-Repair in the Dash and launch it.</p></li>
+</ol>
+
+<p><img src="http://i.stack.imgur.com/xTulJ.png" alt="enter image description here"></p>
+
+<p>To fix your computer with Boot-repair, simply click the "Recommended Repair" button. If it worked, you are done.</p>
+
+<hr>
+
+<p>If Boot Repair didn't work, run a repair with a Windows Recovery CD (ask for one from your PC manufacturer).</p>
+
+<ol>
+<li><p>Boot from a recovery CD.  You should see this.
+<img src="http://i.stack.imgur.com/7nLd3.png" alt="enter image description here"></p></li>
+<li><p>Open the Command Prompt and type <code>bootrec /fixmbr</code>.
+<img src="http://i.stack.imgur.com/4umwg.png" alt="enter image description here">
+(Images from <a href="http://howtogeek.com" rel="nofollow">HowtoGeek</a>)</p></li>
+<li><p>Close the Window and choose "Startup Repair" this time.  Wait until the process is completed.  It usually takes about 30 minutes-2 hours.</p></li>
+</ol>
+
+<p>If Windows is successfully repaired, you are done.  If it is not, you will have to reinstall Windows with a Windows Installation CD.</p>
+
+<hr>
+
+<p>Next, after Windows is installed or recovered, you will have to delete the Ubuntu partitions.  Identify them and delete it with the Disk management Utility in Windows.</p>
+
+<p><img src="http://i.stack.imgur.com/FlFGV.png" alt="enter image description here"></p>
+
+<p>After that, reinstall Ubuntu the same way.</p>

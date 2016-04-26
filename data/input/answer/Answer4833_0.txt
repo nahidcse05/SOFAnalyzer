@@ -1,0 +1,24 @@
+<p>The easiest way (in my opinion) to share files across a local network with Windows machines is to use a program I've written called <a href="http://nitroshare.net/downloads" rel="nofollow">NitroShare</a>. All you need to do is install the application on each of the machines. Then you can simply drag-and-drop files.</p>
+
+<p><strong>Installing on Ubuntu</strong></p>
+
+<p>Simply open a terminal and run the following commands:</p>
+
+<pre><code>sudo apt-add-repository ppa:george-edison55/nitroshare
+sudo apt-get update ; sudo apt-get install nitroshare
+</code></pre>
+
+<p><strong>Installing on Windows</strong></p>
+
+<p>Simply download and run the installer below:</p>
+
+<p><a href="https://launchpad.net/nitroshare/0.2/0.2/+download/nitroshare_0.2_win32.exe" rel="nofollow">https://launchpad.net/nitroshare/0.2/0.2/+download/nitroshare_0.2_win32.exe</a></p>
+
+<p><strong>Transferring files</strong></p>
+
+<p>Once you have the application installed on each machine, you should see a small box on each desktop:</p>
+
+<p><img src="https://lh5.googleusercontent.com/-vOW3l0zR_SI/T-aaVAWSpnI/AAAAAAAAAU8/uGHIhikOxDc/w248-h248/2.png" alt="">
+<img src="https://lh3.googleusercontent.com/-DG6TWf6W8Ww/T-aaVNyg4jI/AAAAAAAAAU4/BuGo9JxR1rw/w248-h248/1.png" alt=""></p>
+
+<p>Simply drag a file on to the box to send it to another machine. That's it.</p>

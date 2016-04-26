@@ -1,0 +1,5 @@
+<p>A proprietary driver is not installed.</p>
+
+<p>You can install it by selecting it in Additional Drivers.</p>
+
+<p>What is "AMD graphics driver(2GB)" is unclear.</p>

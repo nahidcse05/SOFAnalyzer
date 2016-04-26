@@ -1,0 +1,11 @@
+<p>Following Web-E answer, after a reboot</p>
+
+<pre><code>   sudo apt-get update 
+</code></pre>
+
+<p>stopped working. I managed to get it going by following the solution <a href="http://askubuntu.com/questions/135932/apt-get-update-failure-to-fetch-cant-connect-to-any-sources">here</a>, in other words by using </p>
+
+<pre><code>   cd /etc/apt/sources.list.d/
+   sudo rm xorg-edgers-ppa-trusty.list
+   sudo reboot
+</code></pre>

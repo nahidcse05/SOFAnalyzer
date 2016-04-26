@@ -1,0 +1,37 @@
+<p><strong>On how to write this alias:</strong></p>
+
+<p>The alias does not need to open the files separately - <code>gedit</code> can take multiple files.</p>
+
+<p><code>alias a="gedit ~/Desktop/abc/test1.c ~/Desktop/xyz/test2.c"</code></p>
+
+<p>This also replaces the path of your home directory by <code>~</code>. If it should work for other users, use <code>~konstantinosubuntu</code> instead of the <code>~</code>.</p>
+
+<p>To make the command independent of the terminal, so that it keeps running if you close the terminal, you can add <code>&amp;</code> to run it in the background, and <code>nohup</code> to make it not exit when the terminal closes:</p>
+
+<p><code>alias a="nohup gedit ~/Desktop/abc/test1.c ~/Desktop/xyz/test2.c &amp;"</code></p>
+
+<p><br>
+<strong>On the syntax of your example:</strong>  </p>
+
+<p>The problem with the <code>&amp;&amp;</code> is that the <code>&amp;&amp;</code> needs to be put at the end of the previous line. Otherwise the end of the line is just the end of the command - no problem so far - and the start of the next line has a "&amp;&amp;" that makes no sense in this place.  </p>
+
+<pre><code>alias a="
+         cd /home/konstantinosubuntu/Desktop/abc &amp;&amp; gedit test1.c &amp;&amp;
+         cd /home/konstantinosubuntu/Desktop/xyz &amp;&amp; gedit test2.c"
+</code></pre>
+
+<p>As alternative, the whole alias could be put in one line. Or, very similar, a line continuation with \ at the end of the line could be used. That would be writing it as two lines, but executing it as one line, logically. </p>
+
+<p>You note in your comments that the first <code>gedit</code> needs to be closed before the second file is opended, and that you do not want this. The command <code>gedit file.txt</code> runs <code>gedit</code> in foreground if it's the first instance. If <code>gedit</code> is already running, it opens a new tab in that instance, and exits. To make the alias open both files in gedit at the same time, run the first instance in background with <code>&amp;</code>. That does not work together with <code>&amp;&amp;</code>, that needs to be removed:</p>
+
+<pre><code>alias a="
+         cd /home/konstantinosubuntu/Desktop/abc &amp;&amp; gedit test1.c &amp;
+         cd /home/konstantinosubuntu/Desktop/xyz &amp;&amp; gedit test2.c"
+</code></pre>
+
+<p>(Interesting how it is only different by one character, but very different in meaning.)</p>
+
+<p>In case you intended to have multiple current working directories in some way associated with the running <code>gedit</code> by using the <code>cd</code> commands, that can not work. A process has exactly one current working directory. It will be the one of the first <code>gedit</code> instance here.</p>
+
+<p><br>
+Just to be clear after discussing these examples, I think you should better use something like in the first section, opening one <code>gedit</code> with multiple files at once.</p>

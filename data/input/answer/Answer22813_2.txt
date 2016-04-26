@@ -1,0 +1,30 @@
+<p>It's actually very easy to recompile a DEB package. You can search the Ubuntu repos at <a href="http://packages.ubuntu.com" rel="nofollow">http://packages.ubuntu.com</a> or the Debian repo at <a href="http://packages.debian.org" rel="nofollow">http://packages.debian.org</a> to see if there's a later version available in a newer release.</p>
+
+<p>In the experimental repo of Debian, there's version 2.4.0 of the <code>redis-server</code> package, so this is how you can recompile the DEB package for Ubuntu 10.04:</p>
+
+<ol>
+<li><p>Go to the webpage for the package in the repo: <a href="http://packages.debian.org/experimental/redis-server" rel="nofollow">http://packages.debian.org/experimental/redis-server</a></p></li>
+<li><p>In the right sidebar, you should see a heading <em>Download Source Package redis:</em>. Copy the link for the <code>.dsc</code> file and run:</p>
+
+<p><code>mkdir ~/sources/redis</code> #Create a working directory for compiling</p>
+
+<p><code>dget http://ftp.de.debian.org/debian/pool/main/r/redis/redis_2.4.0~rc5-1.dsc</code></p>
+
+<p>The <code>dget</code> command will download all three source package files from the repo, so you don't have to download them manually.</p></li>
+<li><p>Extract all the sources:</p>
+
+<p><code>dpkg-source -x redis_2.4.0~rc5-1.dsc</code> #Using dpkg-source will extract both tarballs automatically and apply the patches from Debian or Ubuntu.</p></li>
+<li><p>Enter the directory of the sources:</p>
+
+<p><code>cd redis-2.4.0~rc5</code></p></li>
+<li><p>Now compile the package:</p>
+
+<p><code>dpkg-buildpackage -us -uc -b</code></p>
+
+<p><code>-us</code> and <code>-uc</code> means that it won't try to sign the packages using a GPG key (which is unnecessary unless you are creating your own repo). <code>-b</code> means don't create the <code>.dsc</code> files and the source tarballs (since they already exist).</p></li>
+<li><p>You few have you shiny new DEB files in the parent directory :)</p>
+
+<p><code>cd ..</code></p>
+
+<p><code>ls *.deb</code></p></li>
+</ol>

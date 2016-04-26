@@ -1,0 +1,13 @@
+<p>This is on the TeamViewer site.</p>
+
+<p>Notes to Multiarch:
+On newer 64-bit DEB-systems with Multiarch-support (Debian 7) teamviewer_linux_x64.deb cannot be installed because the package ia32-libs is not available anymore on these systems. In this case you can use teamviewer_linux.deb instead.</p>
+
+<p>In case you get the error “<strong>wrong architecture i386</strong>” you have to execute the following command lines:</p>
+
+<pre><code>dpkg --add-architecture i386
+
+apt-get update
+</code></pre>
+
+<p>For further information: <a href="http://wiki.debian.org/Multiarch/HOWTO" rel="nofollow">http://wiki.debian.org/Multiarch/HOWTO</a></p>

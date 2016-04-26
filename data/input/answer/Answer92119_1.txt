@@ -1,0 +1,6 @@
+<p>There is a Linux driver available for your wifi router . </p>
+
+<pre><code>wget http://www.tp-link.com/Resources/software/TL-WR841N_WR841ND_v7_120201.zip
+</code></pre>
+
+<p>that command can download that. As I have seen in the TL official page in the notes area they have mentioned that it is suitable for both For <code>TL-WR841N &amp; TL-WR841ND</code>. For more information : <a href="http://www.tp-link.com/en/support/download/?model=TL-WR841N&amp;version=V7" rel="nofollow">TPLINK</a></p>

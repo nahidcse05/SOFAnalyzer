@@ -1,0 +1,20 @@
+<p>I'm not a lawyer and this shouldn't be conceived as legal advice but there are two issues: copyright and trademark.</p>
+
+<p>First the GPL. This is the most restrictive set of licenses used in Ubuntu. Your redistribution is likely going to be classified as an <a href="http://www.gnu.org/licenses/gpl-faq.html#MereAggregation"><em>aggregate</em> distribution</a> (you're just distributing a closed source application alongside open source software). On this GNU says:</p>
+
+<blockquote>
+  <p>The GPL permits you to create and distribute an aggregate, even when the licenses of the other software are non-free or GPL-incompatible.</p>
+</blockquote>
+
+<p>However, if your software depends or links to GPL software, it's not aggregate and then you have bigger issues. If you aren't sure, talk to a lawyer, talk to GNU and talk to the FSF. They'll probably be able to explain exactly where you fall and where you need to be in order to comply.</p>
+
+<p>You may also have separate requirements to make the source to the Ubuntu packages available but given Canonical also has this requirement, you <em>should</em> be fine indefinitely. But read the whole GPL FAQ thing before you assume anything... And again, talk to a real lawyer —not just some weird green guy on the Internet— if you want indemnification from your actions.</p>
+
+<p>The <a href="http://www.ubuntu.com/legal/terms-and-policies/intellectual-property-policy">Ubuntu trademark</a> is the next major consideration. Canonical is protective of its IP but they allow various things.</p>
+
+<ul>
+<li>Shipping it installed on something with your application on top <em>might</em> not be an issue. It might. It depends how you interpret "associate it with the Trademarks". Urgh, I hate IP law.</li>
+<li>Shipping a custom Ubuntu with your application likely <em>is</em> an issue.</li>
+</ul>
+
+<p>Either way if you just assume that anything you do is going to annoy Canonical, you'll be safest. Talk to them and either get permission in writing or debrand it. Again, the ear of a paid lawyer will probably help you out here a lot.</p>

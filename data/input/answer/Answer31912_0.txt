@@ -1,0 +1,8 @@
+<p>I used</p>
+
+<pre><code>dpkg --remove --force-remove sun-java6-bin
+</code></pre>
+
+<p>The problem was caused by an incomplete installation of JDK6</p>
+
+<p>For anyone having this problem, I recommend installing Synaptic Package Manager after fixing this to avoid any problems like this in the future.</p>

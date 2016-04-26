@@ -1,0 +1,6 @@
+<p>Boot into Ubuntu. Terminal.</p>
+
+<pre><code>sudo update-grub
+</code></pre>
+
+<p>Then reboot.  This should auto detect all boots and rebuild Grub.</p>

@@ -1,0 +1,10 @@
+<p>I've run into the same problem.  Looking at your error output it looks like Wine can't find the gnome-keyring-pkcs11.so file which should be located in /usr/lib/i386-linux-gnu/pkcs11.</p>
+
+<p>In the terminal try typing</p>
+
+<pre><code>sudo find / -name gnome-keyring-pkcs11.so
+</code></pre>
+
+<p>The sudo will allow you to look inside folders that you may not normally have access to.  If it can't find gnome-keyring-pkcs11.so then the problem is just that the file doesn't exist and as a Linux noob I'm not sure where to go from there.  If it DOES exist but isn't in that folder then you will need to either copy the file to that location or create a link to it and put the link in /usr/lib/i386-linux-gnu/pkcs11.</p>
+
+<p>I haven't tried this out yet but I will as soon as I get a chance.</p>

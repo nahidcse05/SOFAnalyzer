@@ -1,0 +1,9 @@
+<p>You can install the flash player package as part of Ubuntu restricted extras:</p>
+
+<pre><code>sudo apt-get install ubuntu-restricted-extras
+</code></pre>
+
+<p>This will install Flash player, along with proprietary video codecs, fonts, etc.</p>
+
+<p>Make sure these reposotories are enabled in 'Software &amp; Updates': <br>
+<img src="http://i.stack.imgur.com/ECNKW.png" alt="In 'Software &amp; Updates', enable all software under 'Ubuntu Software' &amp; 'Downloadable form the internet'"></p>

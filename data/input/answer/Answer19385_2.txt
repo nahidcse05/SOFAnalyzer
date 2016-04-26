@@ -1,0 +1,16 @@
+<p>I had the same issue and reinstalling nvidia-173 worked for me also.</p>
+
+<p>More details for new users:</p>
+
+<p>When booting, the symptoms are: you see a list of events with [OK] or [fail], and then nothing further happens.  I had several [fail], apparently unrelated.  Linux has tried to start X windows (the graphics display) and failed, quietly.  Now if you enter Ctrl-Alt-F1, Linux starts a terminal (a non-graphical command line.)  Linux is running, just without graphics.  You can examine the file /var/log/Xorg.0.log to find the error: <code>(EE) NVIDIA(0): Failed to load the NIVIDIA kernel module!</code></p>
+
+<p>Then, enter as described earlier:</p>
+
+<pre><code>$ sudo apt-get install --reinstall nvidia-173
+</code></pre>
+
+<p>Note it is not just install, but a --reinstall.  Linux downloads it from the net, compiles it and installs it. Then reboot.</p>
+
+<p>Then Ubuntu should start.  I got an alert that new proprietary drivers were available.  I started System Settings>Harware>Additional Drivers.  It showed that a "version current" was the recommended version but that "version 173" was installed.  I don't think it matters (both seem to fully use the graphics card) but I chose "version current" and the "Activate" button.  Then restarted.  That version (whatever it is?) also seems to work.  </p>
+
+<p>Possibly you can forestall the alert that new drivers are available by installing "nvidia-current" the first time?</p>

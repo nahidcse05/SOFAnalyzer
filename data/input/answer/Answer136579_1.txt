@@ -1,0 +1,17 @@
+<p>You can build from source. Download the tarball from the <a href="https://www.python.org/downloads/release/python-341/" rel="nofollow">Python-site</a>.</p>
+
+<pre><code>$tar xvf Python-4.3.1.tgz
+$cd Python-4.3.1
+$less README
+</code></pre>
+
+<p>And follow the instructions. You will then have two different installations of python so by just entering <code>$python -v</code> you will invoke the old python version. This could be fixed by linking the new to your <code>/etc/bin/python</code> or whatever it links to. First you need to remove the old link and create a new.</p>
+
+<pre><code>$rm /etc/bin/openssl
+$ln -s [PATH TO NEW PYTHON] /etc/bin/openssl
+</code></pre>
+
+<p>Now the new Python should be invoked, check with:</p>
+
+<pre><code>$python -v
+</code></pre>

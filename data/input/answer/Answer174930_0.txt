@@ -1,0 +1,3 @@
+<p>I have installed Zorin 9.1 and I press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>PRINT</kbd> keys and take a beautiful screenshot. I have shortcuts into <strong>start // control panel // keyboard // shortcuts</strong>. </p>
+
+<p>If you can not then: You must have installed <code>gnome-screenshot</code> that you can search in the software center of Ubuntu, i take always screenshots with this program because it have a time (waiting in seconds) for take a screenshot.</p>

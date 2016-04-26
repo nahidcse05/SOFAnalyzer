@@ -1,0 +1,12 @@
+<p>I don't use Mono because </p>
+
+<ol>
+<li>Microsoft alleges IP infringement without specifying what is being infringed and they have refused to clarify on Mono, only saying that Novell users are protected. I do not believe Microsoft's community promise until they back it up with actions.</li>
+<li>Mono licensing is complicated. It is hard for a legal expert let alone an ordinary user to understand as parts are licensed differently. Nothing in open source is so complicated to undestand.</li>
+<li>Miguel de Icaza promised but has failed to deliver on his promise to release ECMA compliant source code in a timely fashion</li>
+<li>the landscape is littered with companies that followed Microsoft's standards because for them standards exist to be broken and keep others at a disadvantage</li>
+<li>there is no need or demonstrable benefit to having .NET on Linux, little has been ported over from other platforms and anything native to Linux could be written other languages</li>
+<li>Mono is a needlessly divisive issue; it distracts us and plays into Microsoft's hands by keeping from more important issues</li>
+</ol>
+
+<p>I think that anybody can and should use Mono if they want, but users who don't want it should not have it put on by default.</p>

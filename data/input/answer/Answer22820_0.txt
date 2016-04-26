@@ -1,0 +1,2 @@
+<p>you moved files probably from <code>/root</code> to <code>/root/.local/share/Trash</code> 
+That should be on the same partition. You want to move them to a different partition like e.g. <code>/home</code> </p>

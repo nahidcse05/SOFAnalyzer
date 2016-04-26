@@ -1,0 +1,9 @@
+<p>Try running the following commands after turning on the machine,</p>
+
+<pre><code>sudo pkill -9 -x ccpd
+sudo pkill -9 -x captmoncnabc
+sudo /etc/init.d/ccpd start
+/etc/init.d/ccpd status
+</code></pre>
+
+<p>If it still does not print, try turning off and on the printer once.</p>

@@ -1,0 +1,9 @@
+<p>Firstly make sure your printer is turned on! And both the USB and power cables are securely connected.</p>
+
+<p>As you are having problems I'd suggest you install the <a href="http://apt.ubuntu.com/p/hplip-gui" rel="nofollow">HPLIP Toolbox</a> <a href="http://apt.ubuntu.com/p/hplip-gui" rel="nofollow"><img src="http://bit.ly/software-small" alt="Install HPLIP Toolbox"></a> - this software is created by Hewlett-Packard themselves. </p>
+
+<p>Once installed launch it from System->Preferences->HPLIP Toolkit. From here you should click on the green add button, and follow the instructions.</p>
+
+<p>If all this still does not work then you should file a bug report. Press <kbd>Alt</kbd>+<kbd>F2</kbd> and enter <code>ubuntu-bug hplip</code>. In the bug description make sure you link to this question (and link from this question to the bug).</p>
+
+<p><img src="http://i.stack.imgur.com/MabeV.png" alt="Screenshot"></p>

@@ -1,0 +1,20 @@
+<p>The manpage of <code>regex</code> in section 3 in not present on your system. </p>
+
+<p>To find out which package this file contains type use <code>apt-file</code>. You need to install it first and then update the local cache:</p>
+
+<pre><code>user@host:~# apt-get install apt-file
+user@host:~# apt-file update
+</code></pre>
+
+<p>Then search the cache with:</p>
+
+<pre><code>user@host:~# apt-file search /usr/share/man/man3/regex.3.gz
+manpages-dev: /usr/share/man/man3/regex.3.gz
+</code></pre>
+
+<p>So you see which packages you can install: <code>manpages-dev</code>:</p>
+
+<pre><code>user@host:~# apt-get install manpages-dev
+</code></pre>
+
+<p>After installation <code>man 3 regex</code> should work.</p>

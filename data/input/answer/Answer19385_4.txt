@@ -1,0 +1,1 @@
+<p>You should find there is another package called something like nvidia-current-upgrades visible to "restricted drivers" GUI or the jockey command line interface. Try installing/activating this. Worked for me.</p>

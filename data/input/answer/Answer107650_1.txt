@@ -1,0 +1,5 @@
+<p>I dont think you have this file <code>/var/www/svn/repos/db/txn-current-lock</code> on your machine. Have you checked whether it <code>exists on your system or not</code>. How can you give permission on files which does not belong to your system.</p>
+
+<p>It might be issue which <code>server admin should take care of</code>.He should give proper permission to files.Ask them.</p>
+
+<p>Check this <a href="http://www.jamison.org/2011/09/13/fixing-the-svn-txn-current-lock-permission-denied-error-in-subversion/" rel="nofollow">http://www.jamison.org/2011/09/13/fixing-the-svn-txn-current-lock-permission-denied-error-in-subversion/</a></p>

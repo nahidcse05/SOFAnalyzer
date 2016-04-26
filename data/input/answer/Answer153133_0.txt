@@ -1,0 +1,11 @@
+<p>You need to remove the battery and flip a little switch behind the battery and then it would be in CD-ROM Discovery mode.</p>
+
+<p>You can then access the root and reset the password after you pass the cd-rom stuff. (Pass through with NO, NO and then CONTINUE.</p>
+
+<p>If i recall correctly, you then select the second last item on the menu and you would be able to mount 'mmcblk0p3' from there.</p>
+
+<p>Good Luck, hope this helps...</p>
+
+<p>Yusuf Ginnah
+JHB 
+SA</p>

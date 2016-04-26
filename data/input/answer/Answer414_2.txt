@@ -1,0 +1,8 @@
+<p>Which keychain do you mean?</p>
+
+<ul>
+<li>There's the apt keyring, that is used for verifying downloaded packages. This helps to prevent malicious software from being installed via apt.</li>
+<li>There's your user keyring where good apps store passwords (such as mail passwords, wifi passwords)</li>
+</ul>
+
+<p>And then there's <a href="http://shop.canonical.com/product_info.php?products_id=644">this</a>. Guess what that is good for :)</p>

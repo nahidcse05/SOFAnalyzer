@@ -1,0 +1,1 @@
+<p>Resolved by upgrading to Ubuntu 14.10. It will recognize this driver properly. However, it seems Ubuntu 14.04 and 12.04, the LTS ones, unfortunately still don't work no matter what I tried. If anyone has an answer for the LTS OS versions, please post it for others to know!</p>

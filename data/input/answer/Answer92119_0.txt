@@ -1,0 +1,5 @@
+<p>You don't install a router, you just plug it in to your LAN, and configure it.  Before installing the Router, make sure your PC is connected to the Internet through the broadband service successfully.</p>
+
+<p>The default domain name of the TL-WR841ND 300Mbps Wireless N Router is <a href="http://tplinklogin.net" rel="nofollow">http://tplinklogin.net</a>, the default IP address is 192.168.0.1, and the default Subnet Mask is 255.255.255.0. These values can be changed as you desire.</p>
+
+<p>To access the configuration utility, open a web-browser and type in the default domain name <a href="http://tplinklogin.net" rel="nofollow">http://tplinklogin.net</a> in the address field of the browser, or 192.168.0.1.  When the login window comes up, enter admin fro the username and password, and once in set it up according to what you want.</p>

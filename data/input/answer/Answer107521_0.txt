@@ -1,0 +1,1 @@
+<p>Your kernel is not completely up to date - the newest version should be available if you upgrade to 13.10 from 13.04 which is possible with do-release-upgrade or software updater. Then your kernel can automatically be updated.</p>

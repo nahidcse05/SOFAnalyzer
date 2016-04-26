@@ -1,0 +1,29 @@
+<p>Have a look at the contents of mimeapps.list with:</p>
+
+<pre><code>more ~/.local/share/applications/mimeapps.list
+</code></pre>
+
+<p>Somewhere in there you will have a settings that says it should open folders or specific files with gedit.</p>
+
+<p>The heading with [default application] can be used to create a new/default mimeapps.list:</p>
+
+<pre>
+[Default Applications]
+text/html=chromium-browser.desktop
+x-scheme-handler/http=chromium-browser.desktop
+x-scheme-handler/https=chromium-browser.desktop
+x-scheme-handler/about=chromium-browser.desktop
+x-scheme-handler/unknown=chromium-browser.desktop
+video/x-matroska=smplayer.desktop
+video/x-ogm+ogg=smplayer.desktop
+audio/x-vorbis+ogg=smplayer.desktop
+video/mp4=smplayer.desktop
+video/x-msvideo=smplayer.desktop
+
+[Added Associations]
+video/x-matroska=smplayer.desktop;
+video/x-ogm+ogg=smplayer.desktop;
+audio/x-vorbis+ogg=smplayer.desktop;
+video/mp4=smplayer.desktop;
+video/x-msvideo=smplayer.desktop;
+</pre>

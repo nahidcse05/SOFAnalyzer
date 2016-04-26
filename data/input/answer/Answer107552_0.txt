@@ -1,0 +1,23 @@
+<p>You're problem is that you are using Unity's theme. Gnome uses Adiwaita by default. To change your theme, follow these instructions:</p>
+
+<ol>
+<li>Open Terminal using <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd></li>
+<li>Run the command <code>sudo apt-get install gnome-tweak-tool</code></li>
+<li>Enter your password, then press <kbd>Y</kbd> followed by <kbd>Enter</kbd> if asked whether you would like to install the software.</li>
+<li>Open up the Tweak Tool you just installed.</li>
+<li>Click Theme.</li>
+<li>Change all the settings to the default ones.</li>
+</ol>
+
+<p>To get the Gnome login screen, perform the following steps.</p>
+
+<ol>
+<li>Open Terminal.</li>
+<li>Run the command <code>sudo dpkg-reconfigure gdm</code></li>
+<li>Run the command <code>sudo service lightdm stop</code></li>
+<li>Run the command <code>sudo service gdm start</code></li>
+</ol>
+
+<p>This will set <code>gdm</code> as your default display manager and stop <code>lightdm</code>.</p>
+
+<p>Now, you should have the full Gnome-3 experience.</p>

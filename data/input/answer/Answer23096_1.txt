@@ -1,0 +1,37 @@
+<p>For specific times repeated - like shutting down computers are a specific time each day. use cron.</p>
+
+<blockquote>
+  <p>crontab -e</p>
+</blockquote>
+
+<p>add the following:</p>
+
+<blockquote>
+  <p>15 14 1 * * pmi action suspend</p>
+</blockquote>
+
+<p>If you want to customize it.</p>
+
+<pre><code>* * * * * command to be executed
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)
+</code></pre>
+
+<p>For a one time job us the at command</p>
+
+<p>For example, if you want to hibernate in 30 minutes:</p>
+
+<blockquote>
+  <p>echo 'pmi action hibernate' | at now + 30 min</p>
+</blockquote>
+
+<p>Or if you want to suspend at 11:00 pm:</p>
+
+<blockquote>
+  <p>echo 'pmi action suspend' | at 11pm</p>
+</blockquote>

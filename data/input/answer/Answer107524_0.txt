@@ -1,0 +1,45 @@
+<p>To play a DVD use this script I put together for my daughter (it prevents multiple launches).</p>
+
+<pre class="lang-sh prettyprint-override"><code># RunOneVLC.sh
+
+# NOTE: to skip the Run in Terminal | Display | Cancel | Run dialog box:
+#     In Nautilus, choose Edit - Preferences - Behavior - Execute Text Files : Run executable text files when they are opened.
+
+LOCKFILE=/tmp/vlclock.txt
+# see if the lockfile already exists / the process is already running
+if [ -e ${LOCKFILE} ] &amp;&amp; kill -0 `cat ${LOCKFILE}`; then
+    echo "already running"
+    exit
+fi
+
+# make sure the lockfile is removed when we exit and then claim it
+trap "rm -f ${LOCKFILE}; exit" INT TERM EXIT
+# echo the pid into the lockfile (creating it)
+echo $$ &gt; ${LOCKFILE}
+
+# do stuff
+vlc dvdsimple://dev/dvd -f
+
+# remove the lockfile
+rm -f ${LOCKFILE}
+</code></pre>
+
+<h1>wireless</h1>
+
+<p>I'm not positive on the wireless driver, and the wrapping got funny in your pasted text, but here's the significant part.</p>
+
+<p><i>udf Universal Disk Format Filesystem zram Compressed RAM Block Device arc4 ARC4 Cipher Algorithm w35und</i> <b>IS89C35 802.11bg WLAN USB Driver</b> <i>nouveau nVidia Riva/TNT/GeForce/Quadro/Tesla mac80211 IEEE 802.11 subsystem snd_via82xx VIA VT82xx audio</i></p>
+
+<p>Ignore the italics (they show surrounding text), the bold is important.
+I'm not sure if the w35und is attached to the wifi or surrounding.
+IS89C35 is the wifi chip you'll want to search for, such as "IS89C35 wireless lubuntu 13.10".</p>
+
+<p>See if this command shows you anything.  It helped on an old Dell.  A Hard Block is like when you have a wifi disable switch on a laptop.  Soft Block is some software blocking or configuration issue.</p>
+
+<pre><code>rfkill list all
+</code></pre>
+
+<p>If I remember right this tries to clear Soft Blocks.</p>
+
+<pre><code>rfkill unblock all
+</code></pre>

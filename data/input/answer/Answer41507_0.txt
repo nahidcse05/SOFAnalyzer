@@ -1,0 +1,3 @@
+<p>I cannot answer your question due to a lack of details. However, have you using mod_python instead of calling through php?</p>
+
+<p><a href="http://www.modpython.org/" rel="nofollow">http://www.modpython.org/</a></p>

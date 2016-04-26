@@ -1,0 +1,1 @@
+<p>I had the same problem ever since i installed Kubuntu. I fixed it by simply updating all of my packages. If that doesn't work, I'd suggest disabling all of your desktop effects in settings and re-enabling them until the boxes reappear.</p>

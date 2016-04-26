@@ -1,0 +1,30 @@
+<p>Here's how to do it with VNC, if you don't want to use RDP:</p>
+
+<ol>
+<li>Install X11VNC  server : <code>sudo apt-get x11vnc</code> (Or through Ubuntu
+Software Center -> X11VNC Server)</li>
+<li><code>sudo mkdir /etc/x11vnc</code></li>
+<li><code>sudo x11vnc -storepasswd in /etc/x11vnc/passwd</code></li>
+<li><code>sudo x11vnc -storepasswd /etc/x11vnc/passwd</code></li>
+<li>enter the password you want to set for VNC access</li>
+<li>choose y to save pass</li>
+<li><code>sudo nautilus</code></li>
+<li>from within root nautilus, create an empty file in <code>/etc/init</code> called <code>x11vnc.conf</code></li>
+<li>Paste this into the file:</li>
+</ol>
+
+<blockquote>
+  <p>start on login-session-start</p>
+  
+  <p>script</p>
+  
+  <p>sudo x11vnc -xkb -forever -auth /var/run/lightdm/root/:0 -display :0 -rfbauth /etc/x11vnc/passwd -rfbport 5900 -bg -o /var/log/x11vnc.log</p>
+  
+  <p>end script</p>
+</blockquote>
+
+<ol start="10">
+<li>Save and close</li>
+<li>Restart Ubuntu</li>
+<li>That's it! You should now be able to connect with any VNC client even before login.</li>
+</ol>

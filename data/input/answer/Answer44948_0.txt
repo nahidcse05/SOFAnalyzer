@@ -1,0 +1,3 @@
+<p>An alternative download image  from </p>
+
+<p><a href="http://cdimage.ubuntu.com/daily-live/current/" rel="nofollow">http://cdimage.ubuntu.com/daily-live/current/</a> </p>

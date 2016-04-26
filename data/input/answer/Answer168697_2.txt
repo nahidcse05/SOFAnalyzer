@@ -1,0 +1,7 @@
+<p>Maybe You removed it by mistake reinstall it </p>
+
+<p>open terminal </p>
+
+<p><code>sudo apt-get update</code></p>
+
+<p><code>sudo apt-get install software-center</code></p>

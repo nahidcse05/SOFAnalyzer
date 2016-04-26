@@ -1,0 +1,9 @@
+<p>Install <a href="http://qtsixa.sourceforge.net/manual.pdf" rel="nofollow">sixad</a> : <code>sudo apt-get install sixad</code> (Note that this only works via bluetooth. Well, you <em>can</em> use it via USB but then rumble and the LEDs won't work so I'd recommend sticking with bluetooth. You can still plug it into the USB port while you're using it as long as bluetooth is enabled).</p>
+
+<p>Start sixad with : <code>sixad -start</code> </p>
+
+<p>To restore regular bluetooth, stop sixad : <code>sixad --stop</code> and restore bluetooth : <code>sixad --restore</code></p>
+
+<p>I just tried this out a couple days ago, and I can confirm that it does work on the very latest kernel and Ubuntu 14.04.1.</p>
+
+<p>You might need to adjust your bluetooth settings to get it to detect your controller.</p>

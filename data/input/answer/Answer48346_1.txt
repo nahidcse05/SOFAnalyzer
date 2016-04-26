@@ -1,0 +1,14 @@
+<p>The same thing has happened to me because I piped both stdout <strong>and</strong> stderr through a channel that doesn't separate stderr and stdout (an android adb terminal session).  </p>
+
+<p>That way some error messages ended up in the stream. This was the faulty command:</p>
+
+<ul>
+<li><p>Faulty command, adb shell just merges stderr and stdout locally => garbage! :<br>
+<code>adb shell tar -cf - /some/dir \| uuencode bla | uudecode  -o - &gt; backup.tar</code></p></li>
+<li><p>Fixed command:<br>
+<code>adb shell tar -cf - /some/dir 2&gt;/dev/null\| uuencode bla | uudecode  -o - &gt; backup.tar</code></p></li>
+</ul>
+
+<p>The same will happen if you do a similar command over SSH like this quick tar streaming over ssh if you forget to redirect stderr to /dev/null:</p>
+
+<p><code>ssh user@host tar -czf /some/remote/path 2\&gt;/dev/null &gt; /local/path/to/file.tar.gz</code></p>

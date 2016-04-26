@@ -1,0 +1,8 @@
+<p>1)In /etc/ there should be some rc files or an rc.d, search around in them and try to figure out which services (Daemons) are starting up on boot. </p>
+
+<p>2)Try the following:
+I deleted all pid file in /var/run and all subfolders especially /var/run/dbus
+I moved all data from /var/run to /run then deleted /var/run folder.
+I made a symlink /run to /var/run.</p>
+
+<p>3) Follow this article <a href="https://bugs.launchpad.net/ubuntu/+source/dbus/+bug/811441" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/dbus/+bug/811441</a> and look at #24. Although the version they are talking of is different from yours, the suggestion might help.</p>

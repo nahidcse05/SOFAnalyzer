@@ -1,0 +1,7 @@
+<p>This appears to be because you copy-pasted the command to echo the alias to your ~/.bashrc file direct from the website, which unfortunately contains HTML/Unicode quotes (<code>&amp;#8220;</code> and <code>&amp;#8221;</code>) in place of regular ASCII double quotes - the webpage has this warning:</p>
+
+<blockquote>
+  <p>re-type the quotes in each command after you’ve copied, otherwise the command won’t work</p>
+</blockquote>
+
+<p>as you have found. You will need to edit your ~/.bashrc and correct the quote marks, after that the errors should go away.</p>

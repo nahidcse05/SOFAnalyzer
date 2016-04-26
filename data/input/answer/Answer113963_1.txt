@@ -1,0 +1,11 @@
+<blockquote>
+  <p>I want to upgrade from ubuntu 12.10 to 13.10 </p>
+</blockquote>
+
+<p>Direct distribution upgade from Ubuntu 12.10 to 13.10 is not possible.But you can upgrade Ubuntu 12.10 to Ubuntu 13.10 through Ubuntu 13.10 live disk.</p>
+
+<blockquote>
+  <p>does the data get removed or should we make backup of it</p>
+</blockquote>
+
+<p>Yes your data's will be  lost if you don't have a seperate <code>/home</code> partition.</p>

@@ -1,0 +1,7 @@
+<p>The following worked for me.</p>
+
+<p>There's an option in <code>/etc/bluetooth/audio.conf</code> 
+called <code>AutoConnect=true</code>. Make sure this is <strong>not</strong> commented (i.e. no hashes)
+(change <code>#AutoConnect=true</code> to <code>AutoConnect=true</code>)</p>
+
+<p>This will make pulseaudio recognize the device.</p>

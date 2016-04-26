@@ -1,0 +1,3 @@
+<p>A test suite <em>should</em> put the system under significant load and if temperature (or other) related failures result under that scenario, <em>then</em> it might be grounds for the system to fail certification. Otherwise, if temp, even though a bit higher, is manageable by the system, all is probably well, as long as the system functions normally.</p>
+
+<p>Maybe this just means that Linux is way hotter than Windows :P</p>

@@ -1,0 +1,8 @@
+<p>When it tells you this, click on the options or open System Settings and Click on Software and Updates. Then Select the Other Software tab. Finally un-tick the entries starting with </p>
+
+<pre><code>http://ppa 
+</code></pre>
+
+<p>This should cure the problem.</p>
+
+<p>I believe that the failure is caused by software files not being where the link is pointing to. Try Updating again, then you can go back in to the settings and re-enable each one in turn. Some may work, whilst others may cause the failure again.</p>

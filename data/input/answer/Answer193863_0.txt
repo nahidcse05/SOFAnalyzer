@@ -1,0 +1,1 @@
+<p>This seems to mostly have been related to NFS protocol taking up a ton of CPU. Moving to local downloads, then transfering the complete file to the NFS share has fixed most of my issues</p>

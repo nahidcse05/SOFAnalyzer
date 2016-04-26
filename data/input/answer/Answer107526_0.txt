@@ -1,0 +1,5 @@
+<p>The specific version you require is not available in the PPA to be used with <code>apt</code>, but it has been built and is available for download as separate files on the <a href="https://launchpad.net/~chris-lea/+archive/node.js/+builds?build_state=built" rel="nofollow"><code>repository's builds list</code></a>.</p>
+
+<p>Just download the version+release+arch desired file and install it with <code>dpkg -i nodejs.deb</code>.</p>
+
+<p>Don't forget that if after installing the desired version of nodejs an <code>apt-get upgrade</code> will update the current version to the latest version, so you will need to <a href="http://askubuntu.com/questions/18654/how-to-prevent-updating-of-a-specific-package">pin the package so that it is not updated</a>.</p>

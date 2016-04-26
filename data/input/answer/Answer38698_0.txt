@@ -1,0 +1,10 @@
+<p>Run the below command in terminal </p>
+
+<pre><code>nautilus ~/.local/share/applications
+</code></pre>
+
+<p>Look for wine related files like wine-extension-chm.desktop, wine-extension-txt.desktop, wine-extension-xml.desktop .... and delete them.</p>
+
+<p><img src="http://i.stack.imgur.com/hXTqX.png" alt="How to get rid of wine programs in the right click context menu?"></p>
+
+<p>Once thats done you should not be seeing any of the wine related programs on the right click context menu.</p>

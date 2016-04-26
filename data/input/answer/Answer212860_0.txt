@@ -1,0 +1,18 @@
+<p>Once you are in Windows - Click Shift plus shutdown and choose the option to boot to Ubuntu. Once you are in Ubuntu then try this.
+First let's try to get into Ubuntu and then do this:</p>
+
+<pre><code>sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install -y boot-repair &amp;&amp; boot-repair
+</code></pre>
+
+<p>for more information, please refer this <a href="https://help.ubuntu.com/community/Boot-Repair" rel="nofollow">link</a></p>
+
+<p>This will fix your dual booting. Please follow every instructions in this exercise.</p>
+
+<ul>
+<li>Make sure if Windows 10 is installed in EFI mode - Ubuntu should also
+be in EFI mode only.</li>
+<li>Disable secure boot in your device.</li>
+<li>Try to install /boot properly</li>
+</ul>

@@ -1,0 +1,10 @@
+<p>The <a href="https://help.ubuntu.com/community/Boot-Repair" rel="nofollow">Boot-Repair</a> utility should be your best best to fix this issue.</p>
+
+<p>To use it, you can either:</p>
+
+<ul>
+<li>download and boot on a <a href="http://sourceforge.net/p/boot-repair-cd/home/Home/" rel="nofollow">Boot-Repair-Disk</a>-<strong>64bit</strong></li>
+<li>or boot on a Ubuntu-64bit disk, then install Boot-Repair in it</li>
+</ul>
+
+<p><img src="http://i.stack.imgur.com/sanbF.png" alt="enter image description here"></p>

@@ -1,0 +1,3 @@
+<p>I'm using Eclipse Indigo and have no problem writing PHP code using the PDT plugin. It might be the Java version you're using. I'm using OpenJDK 64-bit 1.6.0_22.</p>
+
+<p>When programming PHP, you could take a look at <a href="http://netbeans.org/" rel="nofollow">netbeans</a>. It supports features like refactoring in PHP (Eclipse PDT doesn't).</p>

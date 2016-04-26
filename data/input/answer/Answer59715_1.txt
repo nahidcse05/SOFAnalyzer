@@ -1,0 +1,24 @@
+<p>I had similar requirements and I found <a href="https://code.google.com/p/autokey/" rel="nofollow">Autokey</a> to be very helpful in being able to search any selected text by activating a python script (below) everytime I pressed a set of keyboard buttons (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> for example). </p>
+
+<pre><code>import webbrowser
+base="http://www.google.com/search?q="
+phrase=clipboard.get_selection()
+
+#Remove trailing or leading white space and find if there are multiple 
+#words. 
+phrase=phrase.strip()
+singleWord=False
+if phrase.find(' ')&lt;0:
+    singleWord=True
+
+#Generate search URL. 
+if singleWord:
+    search_url=base+phrase
+if (not singleWord):
+    phrase='+'.join(phrase.split())
+    search_url=base+phrase
+
+webbrowser.open_new_tab(search_url)
+</code></pre>
+
+<p>A tutorial on how to use Autokey can be found here: <a href="https://saravananthirumuruganathan.wordpress.com/2010/04/14/autokey-linux-utility-for-text-substitution-hotkeys-and-desktop-automation/" rel="nofollow">Tutorial</a></p>

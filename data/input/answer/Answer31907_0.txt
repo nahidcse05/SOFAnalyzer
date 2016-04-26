@@ -1,0 +1,23 @@
+<p>What I did was create the folder <code>~/.config/indicators/messages/applications-blacklist</code>.  Then inside it, I created a text file called <code>gwibber.indicator</code> with only one line: </p>
+
+<pre><code>/usr/share/applications/gwibber.desktop
+</code></pre>
+
+<p>Now log out and back in (or kill and restart the panel) and you should see the broadcast item is gone.</p>
+
+<p>The authoritative source for this is <a href="https://wiki.ubuntu.com/MessagingMenu#API" rel="nofollow">here</a>.  It explains how to blacklist items on the messaging menu by using the above procedure.  One thing that is perhaps not explained is how to find the right name to use for the text file (why gwibber.indicator instead of just gwibber for example) and how to find the path to the desktop file.</p>
+
+<p>To find the name, you can simply <code>ls /usr/share/indicators/messages/applications</code>.  The desktop path should be like the one for the gwibber example above, but you can <code>ls /usr/share/applications/</code> to check it's there.  </p>
+
+<p>To <em>add</em> your own application to the messaging menu, you need to create a folder: </p>
+
+<pre><code>mkdir ~/.config/indicators/messages/applications
+</code></pre>
+
+<p>Then put a text file with the a path to the application's desktop file; I think you can pick any name here.</p>
+
+<p>References:</p>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/7850/remove-set-up-mail-from-message-indicator">Remove &quot;Set Up Mail&quot; and other entries from the message indicator?</a></li>
+</ul>

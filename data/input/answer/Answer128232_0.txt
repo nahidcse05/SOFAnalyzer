@@ -1,0 +1,19 @@
+<p>For starters there are a few things.</p>
+
+<ol>
+<li><p>Your system needs to fill a hole in the current accepted derivatives.</p>
+
+<p>If you create a system and base it on KDE it will not be accepted since that would be a second kUbuntu. The same goes for systems based on XFCE, LXDE, Gnome or Unity. </p></li>
+<li><p>You need to have a solid user base.</p>
+
+<p>There are so so so so many derivatives of all of the official versions supported your system needs to show it has interest. 10000+ users would attract attention.</p></li>
+<li><p>You need to show you are serious player.</p>
+
+<p>Linux based operating systems come and go. Your system needs to be up to date. Needs to show it takes care of security problems. And you probably need your own repositories at some point (letting your users leech of the Ubuntu servers is not really nice) so all your users pick their software from your repository.</p></li>
+</ol>
+
+<p>And now for the kicker: there is absolutely no information on the Ubuntu sites on how to get an official status. So to get official status Canonical probably needs to ask you and not the other way around and they will only ask you if it is something special. </p>
+
+<p>Look at the biggest not supported spin-off of Ubuntu: Mint. </p>
+
+<p>It got a lot of traction. On <a href="http://distrowatch.com/">distrowatch</a> it is even above Ubuntu but it seems it is not unique enough to get official support. Ubuntu + MATE desktop is not already an official version, they have a lot of users apparently (or a lot that visit distrowatch ;) ). I do not know how many people are working on Mint but if they have an amount roughly equal to kUbuntu I myself would not mind an official "mUbuntu" version. </p>

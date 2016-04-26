@@ -1,0 +1,5 @@
+<p>The <code>-ffmpeg</code> package allows playback of mp3s, but not seeking.  It's possible that if you have both <code>-plugins-ugly</code> and <code>-ffmpeg</code> installed, Rhythmbox (or any other gstreamer-based media player) will choose to use <code>-ffmpeg</code> istead of the <code>ugly</code> plugin, and you will not be able to seek.</p>
+
+<p><code>gstreamer0.1-plugin-ugly</code> should cover all of your mp3 needs, so you can safely uninstall the <code>gstreamer0.1-ffmpeg</code> package.</p>
+
+<p>For more background on the issue, see <a href="https://bugzilla.gnome.org/show_bug.cgi?id=609434" rel="nofollow">a similar bug</a> reported against Banshee, and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=162833" rel="nofollow">the much older gstreamer bug</a> it was eventually closed as a duplicate of.  Also note that an mp3 parser is now included in the <code>-good</code> gstreamer plugin, so this issue should not affect newer versions of Ubuntu.</p>

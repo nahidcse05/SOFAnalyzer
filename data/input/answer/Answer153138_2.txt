@@ -1,0 +1,2 @@
+<p>You could try and run <code>sudo apt-get dist-upgrade</code> which does update more packages as the normal "upgrade" package would do.<br>
+Also a call to <code>sudo apt-get check</code> and <code>sudo apt-get -f</code> can't hurt.</p>

@@ -1,0 +1,1 @@
+<p>You should probably try updating your version of MPICH. MPD hasn't be used for years at this point and the newer versions don't require it.</p>

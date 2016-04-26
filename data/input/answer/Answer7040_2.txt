@@ -1,0 +1,5 @@
+<p>I went out and bought an Atheros card when I heard they released their drivers as GPL.</p>
+
+<p>The FSF also has a listing of free software supported cards, which includes the atheros: <a href="http://www.fsf.org/resources/hw/net/wireless/index_html/cards.html" rel="nofollow">http://www.fsf.org/resources/hw/net/wireless/index_html/cards.html</a></p>
+
+<p>If the FSF, with their strict freedom requirements, can get behind a card, then you can bet the card will be free-as-in-speech and decently supported.  Free driver supported hardware is easier to get support in linux.</p>

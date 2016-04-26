@@ -1,0 +1,10 @@
+<p>If you <em>really</em> need to save these files, you will have to move (i.e copy, and delete originals) them to a different media. Thy appear too large to save on a DVD, so either a tape drive or a large memory stick.
+OTOH the files look by their names like installation file, including sources. Why save them? Rather delete them and find a way to backup your currens working system (my personal choice is Remastersys)</p>
+
+<p>Also look for a program call Bleachbit, which help clear away unused file: temporary downloads, old logs etc.</p>
+
+<p>Try sudo apt-get clean to delete old update kits (not the updates themselves, just the downloded kits)</p>
+
+<p>If you run Thunderbird, compact your folders, or whatever works on your email/nntp reader</p>
+
+<p>And the easy &amp; dumb solution: Buy disk space...</p>

@@ -1,0 +1,3 @@
+<p>The configuration file of openssh are corrupted, you have to remove it and reinstall. 
+Use <code>sudo apt-get purge</code> instead of <code>sudo apt-get remove</code>.
+you can find more information about here <a href="http://askubuntu.com/questions/231562/what-is-the-difference-between-apt-get-purge-and-apt-get-remove">What is the Difference Between <code>apt-get purge</code> and <code>apt-get remove</code>?</a></p>

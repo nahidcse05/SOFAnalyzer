@@ -1,0 +1,11 @@
+<p>Well this isn't strictly true anymore, see <a href="http://www.omgubuntu.co.uk/2012/09/its-official-the-ubuntu-livecd-is-dead" rel="nofollow">OMG Ubuntu</a></p>
+
+<blockquote>
+  <p>Ubuntu 12.10 will increase the maximum size of its disc image from 700MB to 800MB, thereby making it too big to fit onto traditional CD-R media.</p>
+</blockquote>
+
+<p>As for why OSX and Windows don't support it, the reason is that they never really had that as a goal as it wasn't in their interest as they were going to sell it commercially in retail stores on DVD media anyway.</p>
+
+<p>It is only recently that OS like Mountain Lion became downloadable content.  Until then, there was no need for OSX or Windows to worry about being smaller as they were always going to come on DVD media anyway so they basically made the most of the space available to them on that media since it was their target media.</p>
+
+<p>It might become a bigger concern for Apple now they sell OS updates through the App Store too.</p>

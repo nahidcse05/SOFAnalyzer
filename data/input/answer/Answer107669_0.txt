@@ -1,0 +1,10 @@
+<p>Did you install it alongside with Windows?</p>
+
+<p>My recommendation:</p>
+
+<ol>
+<li>Please install it again. (with or without Windows. It's your decision)</li>
+<li>Install only using bootable CD/DVD (no flash drive)</li>
+</ol>
+
+<p>Try &amp; report. Thanks!</p>

@@ -1,0 +1,5 @@
+<p>Yes it is very possible and I would do it except my computer is too old. <br />
+I think you might be able to just download the ISO and put it on a USB via UNetBootin/Startup Disk Creator (the unpacked image is now too large for most CDs) and then boot the ISO from the USB drive. <br />
+I believe the startup disk will recognize you have a lower version installed and give you the option of upgrading from the disk.</p>
+
+<p>Best of luck!</p>

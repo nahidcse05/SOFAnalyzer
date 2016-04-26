@@ -1,0 +1,1 @@
+<p>go to network manager and delete both the wired and wifi connections.  reboot.  it will find both the wifi and wired connections the next time it starts up.  make one of the the connections the "prefered connection".  you can't "flip" back and forth between wifi/wired with ubuntu.  it won't "fallback".  why you ask are you having network compatibily issues?</p>

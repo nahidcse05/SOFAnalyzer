@@ -1,0 +1,3 @@
+<p>I would suggest going with a bash script instead of playing with bash.conf.</p>
+
+<p>If you're getting into Unix systems you'll need to learn shell scripting at some point.</p>

@@ -1,0 +1,13 @@
+<p>From <a href="http://ugetdm.com/documentation/tutorials/21-changing-the-default-download-locationfolder" rel="nofollow">the official documentation</a>:</p>
+
+<ul>
+<li><strong>Open property by right-click on Home</strong></li>
+</ul>
+
+<p><img src="http://i.stack.imgur.com/q8igV.png" alt="screen1"></p>
+
+<ul>
+<li><strong>Change Folder location on Default for New Download</strong></li>
+</ul>
+
+<p><img src="http://i.stack.imgur.com/ZVxUI.png" alt="screen2"></p>

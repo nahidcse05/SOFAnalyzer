@@ -1,0 +1,11 @@
+<blockquote>
+  <p>Remote ubuntu (Mint) becomes unreachable</p>
+</blockquote>
+
+<p>Linux Mint is actually a derivative of Ubuntu; I don't think <a href="http://community.linuxmint.com/tutorial/view/2" rel="nofollow">it allows you to do a <code>do-release-upgrade</code> the way Ubuntu does</a>. So it's quite possible the upgrade to "Ubuntu" from "Mint" messed something up which.... (see below)</p>
+
+<blockquote>
+  <p>ssh: connect to host xxx.xxx.xxxx port 22: Network is unreachable</p>
+</blockquote>
+
+<p>...left the remote computer unable to connect to the internet (which is exactly what this error means). Since it's not connected, the only way to troubleshoot this is if you (or someone else) can somehow access the Mint computer locally. Is there a way to do so?</p>

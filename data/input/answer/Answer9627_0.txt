@@ -1,0 +1,4 @@
+<p>You can use <a href="http://apt.ubuntu.com/p/xsel" rel="nofollow">XSel</a> to insert the text into the X selection buffer:</p>
+
+<pre><code>echo "paste your buffer from byobu/screen here" | xsel
+</code></pre>

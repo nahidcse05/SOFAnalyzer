@@ -1,0 +1,3 @@
+<p>Ubuntu 9.04 a.k.a. "Jaunty" has been end-of-life <a href="https://lists.ubuntu.com/archives/ubuntu-announce/2010-September/000137.html" rel="nofollow">since last month</a>.  I suspect the error you see is related to that...</p>
+
+<p>You should upgrade your system to a newer release to ensure you keep getting security updates.</p>

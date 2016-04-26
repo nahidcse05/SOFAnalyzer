@@ -1,0 +1,3 @@
+<p>on the server try to telnet to port 143, if it doesnt work then you email service isnt listening on that port/or started. If you can telnet check for firewalls that could be blocking it.</p>
+
+<p>/var/log/mail.log is a good source of errors too :)</p>

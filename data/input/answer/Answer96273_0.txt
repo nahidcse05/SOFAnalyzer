@@ -1,0 +1,5 @@
+<p>What is output when you try to access any hadoop web gui hostname:50070 etc</p>
+
+<p>Also have you read this</p>
+
+<p><a href="http://stackoverflow.com/questions/11738070/hadoop-cannot-use-jps-command">http://stackoverflow.com/questions/11738070/hadoop-cannot-use-jps-command</a></p>

@@ -1,0 +1,29 @@
+<p>Cheese seems having some bugs.</p>
+
+<p>Try <strong>Guvcview</strong></p>
+
+<p><a href="http://www.iasptk.com/ubuntu-ppa-repositories/18693-install-guvcview-gtk-uvc-viewer-to-ubuntu-1204-via-ppa-" rel="nofollow">http://www.iasptk.com/ubuntu-ppa-repositories/18693-install-guvcview-gtk-uvc-viewer-to-ubuntu-1204-via-ppa-</a></p>
+
+<p>Guvcview aims at providing a simple GTK interface for capturing and viewing video from devices supported by the linux UVC driver, although it should also work with any v4l2 compatible device.</p>
+
+<p>Install <strong>Guvcview</strong> to Ubuntu via ppa</p>
+
+<pre><code>sudo add-apt-repository ppa:pj-assis/ppa
+
+sudo apt-get update
+
+sudo apt-get install guvcview
+</code></pre>
+
+<hr>
+
+<p>For <strong>skype</strong> try this ppa</p>
+
+<p><a href="http://www.iasptk.com/ubuntu-ppa-repositories/17253-ubuntu-1204-skype-40-ppa" rel="nofollow">http://www.iasptk.com/ubuntu-ppa-repositories/17253-ubuntu-1204-skype-40-ppa</a></p>
+
+<pre><code>sudo add-apt-repository ppa:upubuntu-com/chat
+
+sudo apt-get update
+
+sudo apt-get install skype
+</code></pre>

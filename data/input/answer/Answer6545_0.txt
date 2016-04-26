@@ -1,0 +1,24 @@
+<blockquote>
+  <p>Delete a contact</p>
+  
+  <ul>
+  <li><p>Click on the letter of the contact's last name that you want to edit and
+  then click on the contact's link .</p></li>
+  <li><p>Click on the trash icon .</p></li>
+  </ul>
+  
+  <p><img src="http://i.stack.imgur.com/kNcfS.png" alt="enter image description here"></p>
+  
+  <ul>
+  <li>Click on the Delete button when asked to confirm the deletion of the
+  contact </li>
+  </ul>
+  
+  <p><img src="http://i.stack.imgur.com/S2rXK.png" alt="enter image description here"></p>
+  
+  <ul>
+  <li>Screen refreshes and the deleted contact is no longer there .</li>
+  </ul>
+</blockquote>
+
+<p><a href="https://wiki.ubuntu.com/UbuntuOne/Tutorials/Contacts#Delete%20a%20contact" rel="nofollow">Source</a></p>

@@ -1,0 +1,8 @@
+<p>Install the <code>x-swat</code> repository to install the current nvidia driver 304.43 and that will solve the problem.</p>
+
+<pre><code>sudo apt-add-repository ppa:ubuntu-x-swat/x-updates
+sudo apt-get update
+sudo apt-get install nvidia-current
+</code></pre>
+
+<p>I found these instructions somewhere in this forum but I can't find it. I'm very happy with the person that posted them.</p>

@@ -1,0 +1,1 @@
+<p>also at this time you have program make bootable usb with windows 7 8 8.1 &amp; linux. like rufus program. create a bootable usb with GRT partition. them when you have both installed go to windows download easyBCD program &amp; add a entry for dual boot windows &amp; linux for ex. of course i forgot to say with UEFI enable &amp; secure boot enable.</p>

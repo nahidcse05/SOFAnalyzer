@@ -1,0 +1,1 @@
+<p>You need to export your playlist from Rhythmbox to a file (in .m3u or .pls format) before you can import this file in Banshee.</p>

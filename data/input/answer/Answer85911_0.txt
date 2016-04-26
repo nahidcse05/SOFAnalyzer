@@ -1,0 +1,23 @@
+<p>It's possible you're seeing a GPU lockup.</p>
+
+<p>I've experienced this on my Intel based Thinkpad X220 laptop, and there's a few bugs filed for various flavours of GPU lockup.</p>
+
+<p>Such as this one:- <a href="https://bugs.launchpad.net/ubuntu/+source/xserver-xorg-video-intel/+bug/1029443" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/xserver-xorg-video-intel/+bug/1029443</a></p>
+
+<p>May also be one of these upstream bugs:- <a href="https://bugs.freedesktop.org/show_bug.cgi?id=53379" rel="nofollow">https://bugs.freedesktop.org/show_bug.cgi?id=53379</a>
+<a href="https://bugs.freedesktop.org/show_bug.cgi?id=53385" rel="nofollow">https://bugs.freedesktop.org/show_bug.cgi?id=53385</a></p>
+
+<p>Comment 4 &amp; 5 on this bug give a suggestion which works for one user:- <a href="https://bugs.launchpad.net/ubuntu/+source/xserver-xorg-video-intel/+bug/1043562" rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/xserver-xorg-video-intel/+bug/1043562</a></p>
+
+<p>"Tim: please test with sna turned on, put this in /etc/X11/xorg.conf:</p>
+
+<pre><code>Section "Device"
+ Identifier "intel"
+ driver "intel"
+ Option "Accelmethod" "sna"
+EndSection
+</code></pre>
+
+<p>"</p>
+
+<p>Might be worth a punt?</p>

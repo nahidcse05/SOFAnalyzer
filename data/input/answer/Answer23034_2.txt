@@ -1,0 +1,1 @@
+<p>Format partition 5 as NFTS (The filesystem Windows uses). I recommend you name it /storage to avoid confusion, but this is not necessary. Once you boot your computer, both Windows and Ubuntu will recognize the partition and you will be able to mount it.</p>

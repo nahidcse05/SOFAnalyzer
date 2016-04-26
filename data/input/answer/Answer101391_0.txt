@@ -1,0 +1,9 @@
+<p>This happens to me from time to time and it's because my secondary monitor is bigger than the main one. Rhythmbox seems to preffer wide spaces...
+My solution:</p>
+
+<ol>
+<li>Unmaximize rhythmbox.</li>
+<li>Move it to the primary monitor.</li>
+<li>Resize the window until it's smaller than the monitor size.</li>
+<li>Pres the maximize button (or drag rhythmbox to the top bar so it maximizes.</li>
+</ol>

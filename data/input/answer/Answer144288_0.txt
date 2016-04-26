@@ -1,0 +1,74 @@
+<p>Open a terminal and type the following commands:</p>
+
+<p>Start off by doing a reset:</p>
+
+<pre><code>sudo ufw reset
+</code></pre>
+
+<p>Next,</p>
+
+<pre><code>sudo ufw app list
+</code></pre>
+
+<p>This will list the available application profiles, such as, OpenSSH and others. To get info on an app, type the following command like in this example:</p>
+
+<pre><code>sudo ufw app info OpenSSH
+</code></pre>
+
+<p>Here's the output:</p>
+
+<pre><code>Profile: OpenSSH
+Title: Secure shell server, an rshd replacement
+Description: OpenSSH is a free implementation of the Secure Shell protocol.
+
+Port:
+  22/tcp
+</code></pre>
+
+<p>To allow OpenSSH access, you can use the following rule:</p>
+
+<pre><code>sudo ufw allow 22/tcp
+</code></pre>
+
+<p>Unlike Debian, www and https are not usually included as app profiles, however, we know these operate on ports 80 and 443 so use the following commands: </p>
+
+<pre><code>sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+</code></pre>
+
+<p>If you want to add UDP just do this as well.</p>
+
+<pre><code>sudo ufw allow 80/udp
+sudo ufw allow 443/udp
+</code></pre>
+
+<p>Disable and enable ufw to apply the changes:</p>
+
+<pre><code>sudo ufw disable
+sudo ufw enable
+</code></pre>
+
+<p>To show your rules:</p>
+
+<pre><code>sudo ufw status
+</code></pre>
+
+<p>Finally, one of the less friendly aspects of ufw is how the deny rules usually trump allow rules. For example, you cannot set everything to deny and then set ports to allow. All ports will still be blocked. <a href="http://ubuntuforums.org/showthread.php?t=1893751">See here for more info</a>.</p>
+
+<hr>
+
+<p>You can add these rules to globally block all ports except 22, 53, 80, and 443. I've added port 53 to allow DNS requests. If you don't need to make DNS queries, just modify the rules accordingly. </p>
+
+<p>To set these block rules for incoming only, you would use <code>sudo ufw deny in 1:22/tcp</code> for example. Alternatively, set for outgoing <code>sudo ufw deny out 1:22/tcp</code> and so on.</p>
+
+<pre><code>sudo ufw deny 1:21/tcp
+sudo ufw deny 1:21/udp
+sudo ufw deny 23:52/tcp
+sudo ufw deny 23:52/udp
+sudo ufw deny 54:79/tcp
+sudo ufw deny 54:79/udp
+sudo ufw deny 81:442/tcp
+sudo ufw deny 81:442/udp
+sudo ufw deny 444:65535/tcp
+sudo ufw deny 444:65535/udp
+</code></pre>

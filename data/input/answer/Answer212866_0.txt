@@ -1,0 +1,5 @@
+<p>If you're on Ubuntu you could use the pre-installed Startup Disk Creator</p>
+
+<p><a href="http://i.stack.imgur.com/Ph8VG.png" rel="nofollow"><img src="http://i.stack.imgur.com/Ph8VG.png" alt="startup disk presistent"></a></p>
+
+<p>On Windows you could simply use <a href="http://www.pendrivelinux.com/yumi-multiboot-usb-creator/" rel="nofollow">YUMI</a> (Your Universal Multiboot Integrator).</p>

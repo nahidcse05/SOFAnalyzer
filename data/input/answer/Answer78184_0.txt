@@ -1,0 +1,9 @@
+<ul>
+<li>Open a terminal (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>)</li>
+<li><p>Run the following commands:</p>
+
+<pre>
+sudo apt-get install kdm
+sudo dpkg-reconfigure kdm
+</pre></li>
+</ul>

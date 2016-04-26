@@ -1,0 +1,7 @@
+<p>I have a similar system at home, used as a multi-purpose media center, server, cloud, whatever.</p>
+
+<p>Ubuntu 12.04 LTS, Core i7 CPU, 8GB RAM, 1TB HDD.  Whenever not in my office, the computer gets locked with ctrl + alt + L, using the same black screen you describe.</p>
+
+<p>Hard drive crashed, upgraded to a 120GB SSD and got a 4TB HDD in return for the under-warranty 1TB drive, and ordered another 8GB of RAM with the SSD while waiting on the replacement drive.  Installed Ubuntu 14.04 fresh, same deal: locked when gone, no problems.</p>
+
+<p>I'm using Gnome 3 as my display manager, not sure about what you're using.  The only discernible difference between us is your application, "Wally."  I would recommend that you completely disable it, restart the machine, and give it about a week, or at least a couple days, then let us know whether it's still going on.</p>

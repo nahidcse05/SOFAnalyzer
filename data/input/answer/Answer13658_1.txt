@@ -1,0 +1,9 @@
+<p>Connect each computer to the internet and install the 'ssh' package. Then plug the computers directly into each other. </p>
+
+<p>On computer A, do this:
+<code>sudo ip addr add 192.168.18.1/24 dev eth0</code></p>
+
+<p>On computer B, do this:
+<code>sudo ip addr add 192.168.18.2/24 dev eth0</code></p>
+
+<p>Then you can mount the filesystem over sftp in nautilus and copy that way just like you would between drives. On the computer you want to run the copy from, open nautilus and Click Go -> Location...   In the address bar put <code>sftp://&lt;username you want to access files as&gt;@&lt;other computer's ip address</code> . So, for example, if you are on computer A and computer B has the user 'james' you could do something like this: <code>sftp://james@192.168.18.2</code> and press enter. It should ask for your password for the james user on computer B and then it should show the files on computer B. Copy and Paste the files to where you want them.</p>

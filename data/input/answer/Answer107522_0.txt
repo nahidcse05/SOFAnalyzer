@@ -1,0 +1,1 @@
+<p>I have also had this problem. I have discovered that if you check the "Enable Networking" box, put it to sleep, and then wake it up again, it works. Eventually after doing it for a while the problem seemed to stop.</p>

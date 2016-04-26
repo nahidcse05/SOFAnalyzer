@@ -1,0 +1,11 @@
+<p>Yes, it should be possible, but Skype must run in background and use two bridges:</p>
+
+<ul>
+<li>Empathy &lt;-> libpurple  &lt;-> Skype.</li>
+</ul>
+
+<p>I personally use only the second one.</p>
+
+<p>The Empathy/libpurple bridge is provided by <a href="http://packages.ubuntu.com/telepathy-haze">telepathy-haze</a> <a href="http://apt.ubuntu.com/p/telepathy-haze"><img src="http://bit.ly/software-small" alt="Install telepathy-haze"></a></p>
+
+<p>The libpurple/Skype bridge is provided by the <a href="http://packages.ubuntu.com/pidgin-skype">pidgin-skype</a> <a href="http://apt.ubuntu.com/p/pidgin-skype"><img src="http://bit.ly/software-small" alt="Install pidgin-skype"></a></p>

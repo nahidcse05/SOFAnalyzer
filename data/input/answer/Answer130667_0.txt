@@ -1,0 +1,6 @@
+<p><code>copy-package</code> is good for this, but the correct modern invocation would be:</p>
+
+<pre><code>./copy-package --from=~myname/ubuntu/myppa --from-suite=trusty --to=~myname/ubuntu/myppa --to-suite=utopic -b -y packagename
+</code></pre>
+
+<p>(As saiarcot895 correctly noted, you needed to separate <code>--ppa</code> and <code>--ppa-name</code>, but this was always very confusing which was among the reasons we added the unified <code>--from</code> and <code>--to</code> options for specifying archives.  Also, you neglected to include the package name, which was probably why you got no output; more recent versions of <code>copy-package</code> check for this.)</p>

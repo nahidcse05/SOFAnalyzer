@@ -1,0 +1,46 @@
+<p>Hope this will help for someone,
+I had a issue with rt5370 wifi dongle, it did not work properly, but somehow I managed to fixed it.</p>
+
+<p>Open the terminal:</p>
+
+<pre><code>apt-get install linux-headers-generic build-essential
+gksu gedit /etc/udev/rules.d/95-RT5370.rules
+</code></pre>
+
+<p>A new empty document will open. Copy and paste the text as follows:</p>
+
+<pre><code>SUBSYSTEM=="usb", ATTR{idVendor}=="148f", ATTR{idProduct}=="5370", RUN="/etc/RT5370.sh"
+</code></pre>
+
+<p>Save and close gedit Create another file:</p>
+
+<pre><code>gksu gedit /etc/RT5370.sh
+</code></pre>
+
+<p>A new empty document will open. Copy and paste the text as follows:</p>
+
+<pre><code>#!/bin/sh
+modprobe rt2800usb
+echo 148F 5370 &gt; /sys/bus/usb/drivers/rt2800usb/new_id
+</code></pre>
+
+<p>Save and close <code>gedit</code></p>
+
+<p>make the file executable:</p>
+
+<pre><code>sudo chmod +x /etc/RT5370.sh
+</code></pre>
+
+<p>Go to super user mode:</p>
+
+<pre><code>apt-get install linux-headers-generic build-essential git
+git clone https://github.com/xiangzhai/rt5370.git
+cd rt5370/
+make
+make install
+echo rt5370sta &gt;&gt; /etc/modules
+</code></pre>
+
+<p>Unplug the wifi usb dongle</p>
+
+<p>Reboot the machine and plug the wifi usb dongle</p>

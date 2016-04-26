@@ -1,0 +1,54 @@
+<blockquote>
+  <p>how does a server actually work? </p>
+</blockquote>
+
+<p>Workflow for a webserver as an example: </p>
+
+<ul>
+<li><p>Desktop (Ubuntu desktop installation)</p>
+
+<ul>
+<li>Browser
+
+<ul>
+<li>URL contains a domain and parameters</li>
+<li>Waits till results arrives and shows them</li>
+</ul></li>
+</ul></li>
+<li><p>Computer that has this domain (Ubuntu server installation)</p>
+
+<ul>
+<li>Webserver (Apache)
+
+<ul>
+<li>Program that gets parameters and executes it. Does what it needs to do (create website, content, show a form etc). Could be in combination with a database (MySQL), a coding language (Python, Perl, Javascript).</li>
+<li>Send results to desktop</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<blockquote>
+  <p>Is it basically an operating system? </p>
+</blockquote>
+
+<p>Ehm. No. Ubuntu is the operating system. What makes it a server is the fact you install server software onto it and set it up. Like hosting a website you do with Apache (= webserver). In combination you can also add or have a database (MySQL; databaseserver) or a mailsystem (=mailserver).</p>
+
+<blockquote>
+  <p>What's the difference between running a server with Ubuntu Desktop and Ubuntu Server?</p>
+</blockquote>
+
+<p>None whatsoever. You can remove the "desktop" component and have a "server". You can use a "desktop" to install server software like a webserver, printserver, databaseserver, mailserver, template server and so on and call it a server. </p>
+
+<blockquote>
+  <p>How would I go about doing that with server set up</p>
+</blockquote>
+
+<ul>
+<li>Ubuntu has a setup that installs it all and creates a basic setup for you using your desktop machine. <code>sudo apt-get install lampserver^</code> will install the Linux version for Apache, Mysql, Perl and set it up for you such that you can point your browser to <code>http://localhost</code> and it will show a website with "ItWorks!" on it.  </li>
+</ul>
+
+<p><a href="http://i.stack.imgur.com/9Q9du.png" rel="nofollow"><img src="http://i.stack.imgur.com/9Q9du.png" alt="enter image description here"></a></p>
+
+<ul>
+<li>If you want this to work remotely you need to purchase a domain, receive an IP adress (and a name for that IP) and then you can use that IP or that name instead of localhost. </li>
+</ul>

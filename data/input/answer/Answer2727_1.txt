@@ -1,0 +1,24 @@
+<p>In my test vm I added bob (1001) and alice (1002). I deleted bob and added joe (1001). Sorry I was wrong. You'll just have to reassign each user's home folder owner and group to each user.</p>
+
+<p><em>This might seem tedious, but It's just a detailed explanation of the 3 steps.</em></p>
+
+<p>You need super user privileges to do these maintenance tasks, so we prefix each command with <code>sudo</code>, which gives us those privileges.</p>
+
+<p>On our new Ubuntu install:</p>
+
+<ul>
+<li>#1 create the user account: <code>sudo adduser alice</code></li>
+<li>#2 untar the backed up files into her new home directory</li>
+<li>#3 make alice the owner of the files: <code>sudo chown -R alice\:alice /home/alice</code></li>
+</ul>
+
+<p>To explain the commands:</p>
+
+<ul>
+<li>#1 adduser creates the /home/alice directory for us (among other things)</li>
+<li>#3 the option <code>-R</code> means apply ownership recursively, alice\:alice is how we specify the new <code>owner\:group</code> for the files, and we tell chown to do this task on <code>/home/alice</code>.</li>
+</ul>
+
+<p>Now all files under /home/alice will belong to her, and she should have no issue accessing her files. Hope that makes more sense.</p>
+
+<p><strike>Create the new user account with the same name, then it will have the same UID as the old user account. I remember reading about it on a mailing list somewhere, but I can't find the source where I read it.</strike></p>

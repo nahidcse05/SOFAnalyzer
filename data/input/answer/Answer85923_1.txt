@@ -1,0 +1,5 @@
+<p>You don't need to learn C++ to write apps for Ubuntu.</p>
+
+<p>Ubuntu apps are based on the Ubuntu SDK, with which you'll be programming in QML and JavaScript for some of the logic. There is the possibility to use C++ if your application does any operations that require maximum performance (e.g. advanced image processing), but for most apps QML should be enough.</p>
+
+<p>The Get Started page on developer.ubuntu.com should give you all the information you need. <a href="http://developer.ubuntu.com/get-started/" rel="nofollow">Check it out</a>.</p>

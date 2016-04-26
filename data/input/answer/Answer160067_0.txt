@@ -1,0 +1,1 @@
+<p>Ok, I feel silly. I tried a less janky micro usb cable and that did the trick. Upgrading to kernel 3.17 or later was important of course and I believe using modprobe to add xpad to the loaded module helped but the final step was just using a usb cable that isn't falling apart. Sorry about that.</p>

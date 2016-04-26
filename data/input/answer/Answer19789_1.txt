@@ -1,0 +1,10 @@
+<p>I just installed Calender indicator.
+It's integrated in the top bar of ubuntu and it just shows as a small calender indicator with the date in it. If you click it you can see your google calender which you add on first startup of the program.</p>
+
+<p>I would suggest to try it, it is very small and very handy.</p>
+
+<pre><code>sudo add-apt-repository ppa:atareao/atareao
+sudo apt-get update &amp;&amp; apt-get install calender-indicator
+</code></pre>
+
+<p>Next just run it from the Dash. Enjoy!</p>

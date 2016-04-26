@@ -1,0 +1,9 @@
+<p>For smaller projects, you should be fine with Libreoffice Writer. </p>
+
+<p>If you are looking for a professional typesetting tool, the most well known and most widely used open source program is called <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>. On Ubuntu, the <a href="https://en.wikipedia.org/wiki/Texlive">texlive</a> LaTeX distribution is available in the software repository.</p>
+
+<p>Beware, that LaTeX is not a WYSIWYG (What You See Is What You Get) editor, but a WYGIWYW (What You Get Is What You Want) typesetting language, and can in some respects be compared to HTML. </p>
+
+<p>LaTeX files are plain text, which are compiled by the LaTeX program into DVI or PDF files. There exist numerous style templates, and with some knowledge of the LaTeX language one can write them oneself.</p>
+
+<p>Using a style template and only writing plain text spares the user the tedious work with layout, and lets the writer concentrate on what is being written instead on how it might look in the end.</p>

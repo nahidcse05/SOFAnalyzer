@@ -1,0 +1,16 @@
+<p>You can install a VPN server on your office machine and have the laptop to connect as a client <a href="http://openvpn.net/index.php/open-source.html" rel="nofollow">suggestion: openvpn</a> or you can use <a href="http://www.teamviewer.com/en/index.aspx" rel="nofollow">teamviewer</a> under wine on your ubuntu machine. For frequent remote connections, I would prefer the VPN solution. It is also more powerful as with the VPN, your laptop will behave as if it was connected in your LAN (use internal resources easily as shared directories, internal webpages, printers, central authentication possibly, etc...) and not only share its desktop as with teamviewer.</p>
+
+<p>Update:
+openvpn will show the log of the last connection with <code>cat /etc/openvpn/openvpn-status.log</code></p>
+
+<p>To fix the ip assigned to the client, you can use in server config file:</p>
+
+<p><code>ifconfig-pool-persist ipp.txt 0</code></p>
+
+<p><code>ipp.txt</code> is used with <code>ifconfig-pool-persist</code> (without 0) to persist the ip when reconnecting after connection is down. Using 0 the server will never update the file so the IP will always be the same.</p>
+
+<p>In ipp.txt you enter host,ip pairs like:
+<code>mylaptop,192.168.2.6</code>
+to assign 192.168.2.6 to host mylaptop.</p>
+
+<p>Obs: Don't forget to change ipp.txt file if you change the ip pool assignment for the clients.</p>

@@ -1,0 +1,32 @@
+<p>I would suggest using Qt as it is easy to use, has an enormous amount of developer documentation, and also will allow you to reuse your backend once the Ubuntu SDK becomes the default toolkit on the desktop as well.</p>
+
+<p>You can find documentation for Qt at <a href="http://qt-project.org">http://qt-project.org</a>. Here is a short list of more specific resources you'll find useful:</p>
+
+<ul>
+<li><p><a href="http://qt-project.org/doc/qtcreator-2.8/">Qt Creator</a></p></li>
+<li><p><a href="http://qt-project.org/doc/qtcreator-2.8/creator-using-qt-designer.html">Creating user interfaces with Qt Creator</a></p></li>
+<li><p><a href="http://qt-project.org/doc/qt-5.0/qtdoc/index.html">Qt 5</a></p></li>
+<li><p><a href="http://qt-project.org/doc/qt-5.0/qtwidgets/qtwidgets-index.html">QWidgets</a></p></li>
+</ul>
+
+<p>If you want to use Python, you could look into one of these Python bindings:</p>
+
+<ul>
+<li><p><a href="http://qt-project.org/wiki/Category%3aLanguageBindings%3a%3aPySide">PySide</a></p></li>
+<li><p><a href="http://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a></p></li>
+</ul>
+
+<p>Other Qt language bindings can be found <a href="http://qt-project.org/wiki/Category%3aLanguageBindings">here</a>.</p>
+
+<p>There are also other languages and frameworks you can use, including:</p>
+
+<ul>
+<li><a href="http://www.gtk.org/">Gtk</a></li>
+<li><a href="https://python-gtk-3-tutorial.readthedocs.org/en/latest/index.html">PyGtk</a></li>
+<li><a href="http://docs.oracle.com/javase/tutorial/uiswing/index.html">Java and Swing</a></li>
+<li><a href="http://www.mono-project.com/Main_Page">Mono</a></li>
+</ul>
+
+<p>However, I recommend using Qt because it has very comprehensive resources, is very powerful, and is being used in the Ubuntu SDK.</p>
+
+<p>Once you've written your application, you'll need to package it. Unfortunately, the new Click packages only work for Ubuntu Touch, so you'll need to use Debian packaging. You can find in-depth guide to packaging <a href="http://developer.ubuntu.com/packaging/html/">here</a>.</p>

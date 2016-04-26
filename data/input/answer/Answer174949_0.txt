@@ -1,0 +1,22 @@
+<p>Start the recovery mode.</p>
+
+<ol>
+<li><p>Boot into the GRUB menu</p>
+
+<p>Press and hold the <em>left</em> <kbd>Shift</kbd> key during boot.</p></li>
+<li><p>Start the recovery mode</p>
+
+<p>Select the entries <em>Advanced</em> and <em>recovery mode</em></p></li>
+<li><p>Open the root console</p>
+
+<p>Select the entry <em>root</em></p></li>
+<li><p>Remount the root partition</p>
+
+<pre><code>mount -o rw,remount /
+</code></pre></li>
+<li><p>Mount your home partition, if your <code>/home</code> is on a separate partition</p></li>
+<li><p>Change the permissions</p>
+
+<pre><code>chown -R &lt;your_user_name&gt;:&lt;your_user_name&gt; /home/&lt;your_user_name&gt;
+</code></pre></li>
+</ol>

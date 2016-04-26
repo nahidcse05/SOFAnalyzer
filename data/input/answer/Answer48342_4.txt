@@ -1,0 +1,9 @@
+<p>I tried a bunch of stuff but don't know what actually solved it for Ubunutu 12.04.
+I copied the dll from a windows machine and pasted it into 
+~/.cache/winetricks/irfanview</p>
+
+<p>which I think winetricks had created for me.</p>
+
+<p>Also - the winetrick scripts I think was looking for the wrong version of Irfanview (meaning not the one I had) so I changed the name of mine to match what was being sought.</p>
+
+<p>After that, I manually  ran the setup program for irfanview in wine  and this created a desktop Icon and now all is working!</p>

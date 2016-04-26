@@ -1,0 +1,8 @@
+<p>You could try installing a version of BlueJ onto your home directory (see this <a href="http://askubuntu.com/questions/339/how-can-i-install-a-package-without-root-access">question</a> or try the jar) and using this instead of the one supplied by your college. Or use an alternative IDE like eclipse - again installed on your home dir.</p>
+
+<p>However, to actually answer the question if the file you need to edit </p>
+
+<pre><code>&lt;bluej_dir&gt;/lib/bluej.defs
+</code></pre>
+
+<p>Has specific permissions that your user account does not have access to then there isn't much you can do. Can you <code>ls -l</code> the file? This will tell you what permissions the file has and who is allowed to edit it. I'd be surprised if the preferences file was only editable by the <code>root</code> user. </p>

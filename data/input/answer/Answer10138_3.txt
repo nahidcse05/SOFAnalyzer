@@ -1,0 +1,1 @@
+<p>To enable GDM login over a VNC ssh remote connection try with X11vnc. See also <a href="http://askubuntu.com/questions/25189/remote-gdm-login/25192#25192">this answer</a>.</p>

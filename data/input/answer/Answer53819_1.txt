@@ -1,0 +1,9 @@
+<p>The question has been answered here:
+<a href="http://askubuntu.com/questions/62249/how-do-you-change-brightness-color-and-sharpness-from-command-line">How do you change brightness, color and sharpness from command line?</a></p>
+
+<p>On my Dell laptop:</p>
+
+<pre><code>xrandr --output LVDS1 --brightness 0.8
+</code></pre>
+
+<p>You can run the <code>xrandr</code> command to see the name of your screens.</p>

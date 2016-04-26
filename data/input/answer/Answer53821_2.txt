@@ -1,0 +1,91 @@
+<p>In order to make the script running you will need to setup a cron job with it: <a href="http://askubuntu.com/questions/2368/how-do-i-setup-cron-job">How do I setup a cronjob ?</a></p>
+
+<p>Now, inside your script, you will need to do something like this:</p>
+
+<pre><code>#!/bin/bash
+#script that simply saves the output of df -h to an output file
+#which is sent as an attachment to an e-mail
+
+#a) save the output of the command:
+temp_file=$(mktemp)
+
+df -h &gt; $temp_file 2&gt; /dev/null
+
+/root/email.py recipient@gmail.com "Title here" "Body here. The current date and time is $(date)" "$temp_file"
+
+sleep 3
+rm -rf $temp_file
+</code></pre>
+
+<p>As you can see, I'm calling a python script from within your root path (not readable but nobody else but root himself) which takes the following arguments:</p>
+
+<p>"recipient-email" "title-of-email" "body-of-email" "attachment"</p>
+
+<p>This python script is this:</p>
+
+<pre><code>#!/usr/bin/python
+import os, re
+import sys
+import smtplib
+
+from email import encoders
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.MIMEText import MIMEText
+
+
+SMTP_SERVER = 'smtp.gmail.com'
+SMTP_PORT = 587
+
+
+sender = 'youremailhere@gmail.com'
+password = "yourpasswordhere"
+recipient = sys.argv[1]
+subject = ''
+message = sys.argv[3]
+
+def main():
+    msg = MIMEMultipart()
+    msg['Subject'] = sys.argv[2]
+    msg['To'] = recipient
+    msg['From'] = sender
+
+    part = MIMEText('text', "plain")
+    part.set_payload(message)
+    msg.attach(part)
+
+    session = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+
+    session.ehlo()
+    session.starttls()
+    session.ehlo
+
+    session.login(sender, password)
+
+    fp = open(sys.argv[4], 'rb')
+    msgq = MIMEBase('audio', 'audio')
+    msgq.set_payload(fp.read())
+    fp.close()
+    # Encode the payload using Base64
+    filename=sys.argv[4]
+    msgq.add_header('Content-Disposition', 'attachment', filename=filename)
+    msg.attach(msgq)
+    # Now send or store the message
+    qwertyuiop = msg.as_string()
+
+
+
+    session.sendmail(sender, recipient, qwertyuiop)
+
+    session.quit()
+    os.system('notify-send "Your disk space related email has been sent."')
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+
+<p>Of course you will need to provide it with your <strong>gmail</strong> email and password at the top of the script (<code>sender</code> and <code>password</code> variables). If you install the <code>libnotify-bin</code> package, then, if the email was successfully sent, you will be notified with a desktop notification.</p>
+
+<p>So, summing up, you will need to setup a cron job with the above <strong>bash</strong> script. This <strong>bash</strong> script will save the output of <code>df -h</code> inside a temporary file, which will be sent via a <strong>python</strong> script to a recipient email of your choice (as far as I remember, the sender email <strong>must</strong> be gmail).</p>
+
+<p>PS: The above solution will show the free and total disk space only of your mounted filesystems. If this is a problem please inform me so as to extend my answer about how to automatically mount all the available filesystems and then run <code>df -h</code>.</p>

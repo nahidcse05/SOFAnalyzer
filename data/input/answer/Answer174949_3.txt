@@ -1,0 +1,17 @@
+<p>Once you booted normally to the login screen, hit <code>ctrl + alt + F1</code> to access terminal. Login there and use command</p>
+
+<pre><code>sudo chown -R &lt;user&gt;:&lt;usergroup&gt; /home/randy
+</code></pre>
+
+<p>For example</p>
+
+<pre><code>sudo chown -R randy:randy /home/randy
+</code></pre>
+
+<p>If you have set a custom group for yourself, you can see it with <code>groups &lt;username&gt;</code>. Your group is the first one after <code>:</code>.</p>
+
+<p><code>-R</code> makes sure all the subfolders and files inside the /home/randy will get the same permissions.</p>
+
+<p><code>ctrl + alt + F7</code> to get back to graphical and login normally.</p>
+
+<p>If you can't boot to login screen, use A.B's guide for recovery mode.</p>

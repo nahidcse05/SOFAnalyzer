@@ -1,0 +1,3 @@
+<h1>Solved</h1>
+
+<p>I found the answer to this in the Ubuntu Software Centre! Make a search for Synapstiks and download the 'Synapstiks Touchpad management' tool, it works a treat.</p>

@@ -1,0 +1,19 @@
+<p>You can try a similar command (but it actually has a <em>flaw</em>):</p>
+
+<p><code>$ find . \( -name "*.jpg" -o -name "*.bmp" \) -and \( -size +6k -and -size -46k \) -and \( \( -newermt "2011-06-11" -and ! -newermt "2011-06-19" \) -or \( -newermt "2011-07-24" -and ! -newermt "2011-08-02" \) \) -print0 | xargs -0 tar cjf out.tar.bz2 --files-from=-</code></p>
+
+<p>Not sure about the dates, though. It works for me as <code>YYYY-MM-DD</code> but it might change with the language settings.</p>
+
+<p><strong>Update:</strong></p>
+
+<p>There is a major conceptual mistake in the previous example.</p>
+
+<p>Basically the <code>xargs</code> command works in „passes” (eg. takes as much filenames as possible to cram into a command line and calls the <code>tar</code> command). So <code>out.tar.bz2</code> <strong>gets rewritten at every pass</strong>.</p>
+
+<p>It may not be noticed with a few dozen test files, but a few hundred will trigger the bug for sure. So the command needs to be rewritten as follows:</p>
+
+<p><code>$ find . \( -name "*.jpg" -o -name "*.bmp" \) -and \( -size +6k -and -size -46k \) -and \( \( -newermt "2011-06-11" -and ! -newermt "2011-06-20" \) -or \( -newermt "2011-07-24" -and ! -newermt "2011-08-03" \) \) -print0 | tar cjf out.tar.bz2 --null --files-from=-</code></p>
+
+<p>The main difference is the absence of <code>xargs</code> and using the <code>--null</code> option for <code>tar</code>. This option will tell <code>tar</code> to read <em>null terminated</em> filenames (as produced by the <code>find</code> commands <code>-print0</code> option). The whole reason behind these null terminated filenames are to avoid filenames containing special characters (eg. whitespace), that would otherwise break the <code>tar</code> command.</p>
+
+<p>Another possible bug to point out is the <strong>date range specification</strong>. The upper end of date range should be increased by 1 day (otherwise files modified on that day will be omitted).</p>

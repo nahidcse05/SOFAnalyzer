@@ -1,0 +1,48 @@
+<ol>
+<li>Create the user account, optionally with the same UID and GID as before and with the home directory in the same location (eg <code>/home/</code><em><code>sid</code></em>)</li>
+<li>Set the password</li>
+<li>Untar the file into the user's home directory</li>
+<li>Change ownership if you didn't use the same UID and GID as before</li>
+<li>Add the user to any other groups required</li>
+</ol>
+
+<hr>
+
+<p>If you want to simplify the process you'll need to do a couple of things.  In the following I'll assume the user is called <code>mark</code>. </p>
+
+<ol>
+<li>Record the group membership of the user: <code>cd ~mark &amp;&amp; id mark &gt; mark.identity</code></li>
+<li>Backup up the home directory from it's parent - for example if it's <code>/home/mark</code> then you'll want to to <code>cd /home &amp;&amp; tar jcpf mark.tar.bz2 mark</code></li>
+<li>On the new host restore it to /home (<code>cd /home &amp;&amp; tar xjpf mark.tar.bz2</code>)</li>
+<li>Identify the group and username and group memberships and then restore them.  This should be pretty scriptable, something vaguely like:</li>
+</ol>
+
+<pre>
+#!/bin/bash
+USER="${1}"
+if [ ! -e "${USER}".identity ]; then
+  echo "No identity file"
+  exit
+fi
+
+GD=`awk '{ print $2 "${USER}".identity }' | sed -e "s/.*(//g" -e "s/).*//g"`
+GLIST=`awk '{ print $NF "{USER}".identity }' | sed -e "s/[a-z]*=//g" -e "s/[0-9]*(//g" -e "s/)//g"`
+
+for GROUP in ${GD} ${GLIST}; do
+  getent group ${GROUP} >/dev/null
+  STATUS=${?}
+  if [ ${STATUS} -ne 0 ]; then
+    groupadd ${GROUP}
+  fi
+done
+
+useradd -g "${GD}" -G "${GLIST}" "${USER}"
+</pre>
+
+<p>Note that I've just written that here, I've not tested it.</p>
+
+<hr>
+
+<p>Yes, it assumes that all the groups exist.  It wouldn't be hard to extend the script to check to see if each group existed and create it if not.  The above changes should take care of that.</p>
+
+<p>Note too that this won't take care of privileges gained through sudo.  It also won't help if you've got local email or anything else.  All it'll do is set the user up with the same groups as before.  Also, if a directory already exists it'll over-write it so some attention is required.</p>

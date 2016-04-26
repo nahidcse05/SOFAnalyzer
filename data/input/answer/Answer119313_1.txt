@@ -1,0 +1,6 @@
+<p>what usually works for me (with similar problem) is </p>
+
+<pre><code>killall `pidof Xorg`
+</code></pre>
+
+<p>although this completely stops the X server and restarts it</p>

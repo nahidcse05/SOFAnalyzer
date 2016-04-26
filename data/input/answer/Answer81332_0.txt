@@ -1,0 +1,2 @@
+<p>Got it back.....!
+I removed the fglrx driver, installed fglrx-update and created a new user account. </p>

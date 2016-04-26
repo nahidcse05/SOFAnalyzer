@@ -1,0 +1,1 @@
+<p>You do not need unity for this feature which is actually implemented in the compiz grid plugin, which should also be there in older versions of Ubuntu or can be installed. Go to the comipz-config-settings-manager (<code>ccsm</code>) to enable the plugin, which lets you position windows on a grid kind of corresponding your numeric keypad layout.</p>

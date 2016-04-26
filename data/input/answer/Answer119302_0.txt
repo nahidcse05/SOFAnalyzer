@@ -1,0 +1,12 @@
+<p><del>There is a skip option if you don't want to donate.</del>  </p>
+
+<p>Apparently the skip button is not showing on the Wubi download page, possibly a bug as other download pages have the skip option.</p>
+
+<p>You can download it from <a href="http://releases.ubuntu.com/12.04/" rel="nofollow">the 12.04 page</a></p>
+
+<p>However, please remember: </p>
+
+<ul>
+<li>WUBI was dropped after 12.10, so no support will be available.</li>
+<li>WUBI doesn't support UEFI / win 8.</li>
+</ul>

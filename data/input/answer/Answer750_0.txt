@@ -1,0 +1,1 @@
+<p>Have you tried the open source drivers? I have a slightly newer card (I think) and the proprietary drivers were slow, buggy, and leaked memory. The open drivers work perfectly. Have a look for the xserver-xorg-video-radeonhd packages.</p>

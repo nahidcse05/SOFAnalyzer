@@ -1,0 +1,9 @@
+<p>You don't extract <code>.jar</code> files, because they are <a href="http://en.wikipedia.org/wiki/JAR_%28file_format%29" rel="nofollow">Java Archives</a> and should therefore be executed using Java (or in case of a library included in your project). Ubuntu opens <code>.jar</code> using the Archive Manager by default because it is actually a ZIP file.</p>
+
+<p>So you should install Java first. If you haven't already, you can execute the following commands to install OpenJDK (an open source version of Java):</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install openjdk-7-jre
+</code></pre>
+
+<p>Now you can open the <code>.jar</code> file using <code>java -jar file.jar</code> in the terminal or by double clicking it in your file manager.</p>

@@ -1,0 +1,1 @@
+<p>Do you now what OS type (32 or 64 bit) you are using? If you are using a more modern computer (Windows 7 is a good example) you are most likely using 64 bit Windows. If you are in doubt, and have only 4 GB ram MAX, then get the 32 bit version.</p>

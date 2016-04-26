@@ -1,0 +1,12 @@
+<p>No, you can safely delete the folders. However, folders with a lock on them can't be deleted by moving to trash.</p>
+
+<p>Fire up a terminal, and enter the following to become root:</p>
+
+<pre><code>sudo nautilus
+</code></pre>
+
+<p>and then repeat your search and delete the thunderbird files.</p>
+
+<p><strong>UPDATE</strong></p>
+
+<p>Prior to 13.04 , try <code>gksu</code> instead of <code>sudo</code>.</p>

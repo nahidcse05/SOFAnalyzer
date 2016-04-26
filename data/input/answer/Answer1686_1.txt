@@ -1,0 +1,16 @@
+<p>on a terminal prompt type :</p>
+
+<p>cat /etc/resolv.conf</p>
+
+<p>Output would be like :
+nameserver 192.168.2.1</p>
+
+<p>copy paste the output here or add to your question, if you have anyother machine you can check whether you can actually get to browse web pages, if you are able to do apt-get update and apt-get upgrade then it is connected to the internet, but DNS isn't working for some reason.</p>
+
+<p>Check with another machine by connecting it to the same router and see if you are able to browse websites, also on the terminal :</p>
+
+<p>you can type :</p>
+
+<p>ping 4.2.2.2 (you will see responses / reply received) you can break the operation by CTRL + C</p>
+
+<p>then type : ping www.google.com (if you receive reply on that too, it means name resolution is working as well).</p>

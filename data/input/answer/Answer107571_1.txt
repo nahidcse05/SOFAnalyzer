@@ -1,0 +1,15 @@
+<p>Try boot-repair by booting ubuntu from live USB.</p>
+
+<p>Install boot repair --></p>
+
+<p>sudo add-apt-repository ppa:yannubuntu/boot-repair</p>
+
+<p>sudo apt-get update</p>
+
+<p>sudo apt-get install -y boot-repair</p>
+
+<p>Run boot-repair --></p>
+
+<p>sudo boot-repair</p>
+
+<p>Click on "Recommended repair" </p>

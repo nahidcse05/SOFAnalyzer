@@ -1,0 +1,21 @@
+<p>The default local folder implementation (for folders under "On This Computer") uses mbox(5) format, in which all the messages at the top level of each folder are kept contiguously in a single file, supplemented by some summary and index files. This structure lives under ~/.evolution/mail/local/. For every mail folder foo, some or all of the following files exist:</p>
+
+<pre><code>foo
+foo.cmeta
+foo.ev-summary
+foo.ev-summary-meta
+foo.ibex.index
+foo.ibex.index.data    
+foo.sbd
+</code></pre>
+
+<p>The file foo is just plain old mbox(5) format and you may access it (carefully, and preferably read-only) with a MUA which understands mbox format, i.e. nearly all of them. For example with 'mutt':</p>
+
+<pre><code>$ mutt -R -f ~/.evolution/mail/local/foo
+</code></pre>
+
+<p>You should only do this when Evolution itself is not running. Note that any of the supplementary files can be removed and Evolution will reconstruct them next time it runs. You can also grep the file for text strings or addresses for use in the normal UNIX world.</p>
+
+<p>The foo file contains only messages. If the foo folder contains other folders the contents of the foo.sbd directory recursively look like the above list. </p>
+
+<p>I can honestly say with out any hesitation that I have got this answer from think <a href="https://live.gnome.org/Evolution/FAQ" rel="nofollow">FAQ-Evolution</a> web-page. you can review that for more information.</p>

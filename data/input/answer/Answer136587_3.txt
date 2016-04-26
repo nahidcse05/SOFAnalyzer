@@ -1,0 +1,5 @@
+<p>You can <em>technically</em> stay in <em>any</em> release forever. However, eventually, every release becomes EOL (End of Life) which means they will no longer receive official updates. This will put your system at increased risk, as they will no longer have security updates, and all of your software will become out of date.</p>
+
+<p>You can stay with 12.04 for 5 years from the release, as all LTS releases have a life-cycle of 5 years as opposed to the new 9-month life-cycle of the non-LTS releases, and still receive updates. Read <a href="https://wiki.ubuntu.com/Releases" rel="nofollow">here</a> for more info.</p>
+
+<p>This puts you at being able to use 12.04 securely and in an up-to-date manner until around April 2017.</p>

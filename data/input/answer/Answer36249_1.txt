@@ -1,0 +1,1 @@
+<p>You cannot change the size of the launcher in Unity 2D as yet, but you might want to give Unity 3D a try again because it has had various improvements and might work for you where it wasn't working before.</p>

@@ -1,0 +1,20 @@
+<p>If you are using Tor-Browser, you need to install <code>proxychains</code> and config it by editing the last line of <code>/etc/proxychains.conf</code>, this way:</p>
+
+<pre><code>socks5  127.0.0.1 9150
+</code></pre>
+
+<p>If you are using tor, so follow @OrangeTux answer.</p>
+
+<hr>
+
+<blockquote>
+  <p>Please let me know any other way to solve this.</p>
+</blockquote>
+
+<p><strong>apt-get</strong> can resume previous downloads. so you can run it frequently. <code>corn</code> can repeat the update command for you</p>
+
+<p><code>sudo crontabe -e</code></p>
+
+<pre><code>0 */8 * * * /usr/bin/apt-get update; 
+*/5 * * * *  /usr/bin/apt-get -y --force-yes dist-upgrade
+</code></pre>

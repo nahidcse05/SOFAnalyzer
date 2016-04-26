@@ -1,0 +1,8 @@
+<p>There is no need to install from source because FreeTTS <em>is available in the repositories.</em></p>
+
+<ul>
+<li><p>Click below to install FreeTTS via the Software Centre:</p>
+
+<p><a href="https://apps.ubuntu.com/cat/applications/freetts" rel="nofollow"><img src="http://hostmar.co/software-banner" alt="Install via the software center"></a></p></li>
+<li><p>Or, open a terminal, and run <code>sudo apt-get install freetts</code></p></li>
+</ul>

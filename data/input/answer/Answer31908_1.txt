@@ -1,0 +1,2 @@
+<p>Open any LibreOffice application. In the Tool-bar under "Tools" use the drop-down and open "options" look for "memory". This setting as well as others will help limit CPU cycles and decrease lag time.
+<img src="http://i.stack.imgur.com/p6mCf.png" alt="enter image description here"> </p>

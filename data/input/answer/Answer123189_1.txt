@@ -1,0 +1,13 @@
+<p>There is no way to enforce the ordering of two upstart jobs that both start on the same event, the <code>filesystem</code> event in this case, according to the <a href="http://upstart.ubuntu.com/cookbook/#order-in-which-jobs-which-start-on-the-same-event-are-run" rel="nofollow">upstart cookbook</a>. However, you can modify your <code>firstboot</code> upstart job to run before the <code>filesystem</code> event is emitted instead.</p>
+
+<p>For example, if your script only requires a particular filesystem to be mounted, you can make it depend on just the <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/mounted.7.html" rel="nofollow">mounted</a> event for that one filesystem:</p>
+
+<pre><code>start on mounted MOUNTPOINT=/usr
+</code></pre>
+
+<p>This should cause your <code>firstboot</code> script to run after the filesystem you need is ready but before the <code>filesystem</code> event is emitted. Modify the <code>MOUNTPOINT</code> variable to be the filesystem mountpoint from <code>/etc/fstab</code> that your script will need to do its function.</p>
+
+<p>You can also make your <code>firstboot</code> script execute before lightdm, if that's the dependency you want to express instead, by using the <code>starting</code> event, and make your script use</p>
+
+<pre><code>start on starting lightdm
+</code></pre>

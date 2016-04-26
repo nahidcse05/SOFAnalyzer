@@ -1,0 +1,6 @@
+<p>I suggest to:</p>
+
+<ol>
+<li>Check if the Oracle mysqld was compiled with debugging information and try to strip it, e.g. run <code>strip mysqld</code> on resulting binary.  Debian/Ubuntu packages are automatically stripped.</li>
+<li>Compare the <code>./configure</code> flags – there might be more engines or other features compiled-in in the Oracle build.  You can check the flags used to compiled Ubuntu package by downloading the source (<code>apt-get source mysql-5.5</code>) and checking the contents of <code>./debian/rules</code> inside unpacked source package.</li>
+</ol>

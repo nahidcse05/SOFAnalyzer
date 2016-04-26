@@ -1,0 +1,6 @@
+<p>One way to find out if a <a href="http://askubuntu.com/q/4983/3940">ppa</a> exists is performing a <a href="https://launchpad.net/ubuntu/+ppas?name_filter=redis" rel="nofollow">search on launchpad</a>:</p>
+
+<pre><code>https://launchpad.net/ubuntu/+ppas?
+</code></pre>
+
+<p>This will show you quite a lot of sources from where you may be able to install the version you need. Simply choose an archive you trust (e.g <strong>ppa:rwky/redis</strong>).</p>

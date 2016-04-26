@@ -1,0 +1,3 @@
+<p>Ubuntu can easily be upgraded without losing data. Because Ubuntu knows where each application resides (thanks to <code>apt</code>), there is no need for a separate directory for applications.</p>
+
+<p>You'll mostly be fine with a separate <code>/home</code> directory, in case you want to wipe your root partition or clone your home directory. All user settings and documents are stored in <code>/home</code>.</p>

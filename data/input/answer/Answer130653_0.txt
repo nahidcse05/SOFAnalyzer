@@ -1,0 +1,5 @@
+<p><code>find . -type d -size -200M</code> will return every directory smaller than 200MB, you can also give the <code>-maxdepth</code> parameter to avoid going recursively into those smaller directories.</p>
+
+<p>To automatically remove them, pipe to xargs, e.g. <code>find . -type d -size -200M -maxdepth 1|xargs rm -rf</code></p>
+
+<p>Be sure to test this thoroughly before you actually pass the command to <code>rm</code>. There is no "undelete" or "trash" you can pull stuff back from!!!</p>

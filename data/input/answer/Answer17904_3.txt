@@ -1,0 +1,25 @@
+<p>If you install MongoDB using the Advanced Packaging Tool (apt) then it'll configure your startup scripts to automatically run Mongo when the system boots.</p>
+
+<p>The steps are as follows, first configure <em>apt</em> to be able to download the Mongo package:</p>
+
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+sudo nano /etc/apt/sources.list
+</code></pre>
+
+<p>Add this line to <em>sources.list</em> then save:</p>
+
+<pre><code>deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
+</code></pre>
+
+<p>Then download and install Mongo with the <a href="https://help.ubuntu.com/community/AptGet/Howto">apt-get</a> utility:</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install mongodb-10gen
+</code></pre>
+
+<p>If you want to make any changes to config, edit your <em>mongodb.conf</em> and restart:</p>
+
+<pre><code>sudo nano /etc/mongodb.conf
+sudo service mongodb restart
+</code></pre>

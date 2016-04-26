@@ -1,0 +1,5 @@
+<p>Have you tried <code>sudo apt-get -f install banshee</code>? The <code>-f</code> argument should install all dependencies required, along with the actual program (that's important). It's weird that the dependencies in a .deb didn't install.</p>
+
+<p>If that does not work, you should probably check and see what repositories you have (open up software center, go to edit, then go to software sources). You should have a few in there, and make sure the correct fields are checked.</p>
+
+<p>It is important that Canonical is selected.</p>

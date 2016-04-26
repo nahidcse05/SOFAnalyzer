@@ -1,0 +1,8 @@
+<p>For the moment, use this as your <code>sources.list</code>:</p>
+
+<pre><code>deb http://[cc].archive.ubuntu.com/ubuntu/ trusty main multiverse universe restricted
+deb http://[cc].archive.ubuntu.com/ubuntu/ trusty-updates main multiverse universe restricted
+deb http://[cc].archive.ubuntu.com/ubuntu/ trusty-security main multiverse universe restricted
+</code></pre>
+
+<p>Replace <code>[cc]</code> with your country code (such as <code>us</code> for the US, <code>fr</code> for France, <code>in</code> for India). And remove the channels you don't need (one or more of <code>multiverse</code>, <code>universe</code>, <code>restricted</code>).</p>

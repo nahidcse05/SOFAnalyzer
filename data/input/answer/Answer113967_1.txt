@@ -1,0 +1,9 @@
+<p>Try running</p>
+
+<pre><code>sudo apt-get update
+</code></pre>
+
+<p>after enabling the restricted repository but before running</p>
+
+<pre><code>sudo apt-get install ubuntu-restricted-extras
+</code></pre>

@@ -1,0 +1,17 @@
+<p>yes you can install ADB and Fastboot.</p>
+
+<p>First update Repository </p>
+
+<pre><code>sudo add-apt-repository ppa:phablet-team/tools &amp;&amp; sudo apt-get update
+</code></pre>
+
+<p>then install ADB and Fastboot </p>
+
+<pre><code>sudo apt-get install android-tools-adb android-tools-fastboot
+</code></pre>
+
+<p>After installation check the ADB connection by</p>
+
+<p>connect device via USB cable </p>
+
+<p>Tpye adb devices and hit enter you will get an id of device connected to system. </p>

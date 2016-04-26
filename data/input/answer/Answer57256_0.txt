@@ -1,0 +1,18 @@
+<p>To see the content of a ppa you can use Y PPA Manager. Install it by running the following in a terminal:</p>
+
+<pre><code>sudo add-apt-repository ppa:webupd8team/y-ppa-manager
+sudo apt-get update
+sudo apt-get install y-ppa-manager
+</code></pre>
+
+<p>When the application is started, click on Manage PPA's:</p>
+
+<p><img src="http://i.stack.imgur.com/xdfMF.png" alt="enter image description here"></p>
+
+<p>Select the PPA you want to see the content of:</p>
+
+<p><img src="http://i.stack.imgur.com/s4B7C.png" alt="enter image description here"></p>
+
+<p>And finally click on "list packages" to see all packages provided by the given PPA.</p>
+
+<p>Hopefully this will help.</p>

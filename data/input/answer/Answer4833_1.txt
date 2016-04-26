@@ -1,0 +1,5 @@
+<p>The username and password it asks for should be <strong>your</strong> username and password on the local machine.  It's as simple as that.</p>
+
+<p>For instance, if your username in Ubuntu is <code>john</code> and your password is <code>iloveubuntu</code>, then you should enter those two to access your files from any computer.</p>
+
+<p>If you want others to be able to access a shared directory, just create a user for them on the local machine, and they should be able to access it using their own username and password too. You probably need to set the <strong>Allow others to create and delete files in this folder</strong> to let them edit the files, but this is not necessary for just sharing your files with them.</p>

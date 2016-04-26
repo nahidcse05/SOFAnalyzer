@@ -1,0 +1,1 @@
+<p>Use <code>ultraiso</code> to burn the image. Open the iso file in ultraiso. Then choose the option to write to disc from bootable menu.</p>

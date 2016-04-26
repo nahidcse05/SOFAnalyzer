@@ -1,0 +1,5 @@
+<p>This is a temporary fix and is a bit of a nuisance but...it works!</p>
+
+<p>Before you run etqw open Terminal. (Can be found in Applications>Accessories) Run <code>sudo killall pulseaudio</code> then run etqw and the audio will be perfect!</p>
+
+<p>Afterward you will need to start pulseaudio again if you need it.</p>

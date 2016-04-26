@@ -1,0 +1,17 @@
+<p>I don't recognize that user name offhand, but that doesn't necessarily mean anything (since it is not my system).</p>
+
+<p>What is the uid of the user?  Normally, any uid between 100 and 999 are dynamically created by packages installed on the system.  You can search through package postinst scripts to find packages which may have created it:  <code>$ fgrep backup1 /var/lib/dpkg/info/*.postinst</code>.  Does the user have a password in /etc/shadow?  Is the account locked?  What is the user's default shell?</p>
+
+<p><hr />
+<em>Followup to additional information:</em></p>
+
+<p>A uid of 1006 is a "normal" login account, not a system account.  Additionally, since the user has a home directory in /home, has a login shell, and has a password this all indicates that the account was created by someone running <code>adduser</code> as root.  The account is not locked.  A locked account will have an '!' before the password hash.  You can lock the account by running <code>passwd -l backup1</code>.</p>
+
+<p>Potential sources for the creation of this account include:</p>
+
+<ul>
+<li>other system administrators</li>
+<li>third-party software installers or packages that are not from the official Ubuntu repositories</li>
+</ul>
+
+<p>You can also use the <a href="http://linux.die.net/man/8/lastlog" rel="nofollow"><code>lastlog</code></a> command to see when that account last logged in.</p>

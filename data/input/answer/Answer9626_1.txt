@@ -1,0 +1,6 @@
+<p>Two solutions:</p>
+
+<ol>
+<li>I am particularly partial to the <a href="https://help.ubuntu.com/community/gFTP" rel="nofollow">gFTP</a> client.  It provides a nice GUI interface and supports multiple protocols beyond just straight FTP. You can install it from synaptic or from a command line doing <code>sudo apt-get install gftp</code>.</li>
+<li>The Firefox plug-in "FireFTP" is a great package.  It runs inside Firefox and like gFTP provides multiple protocols beyond just FTP.</li>
+</ol>

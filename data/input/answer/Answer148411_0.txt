@@ -1,0 +1,24 @@
+<p>If they are on the same LAN, it should be possible to connect using IPs.</p>
+
+<p>The syntax for <code>ssh</code> is pretty simple. The minimum you need to specify is the target IP <em>or</em> hostname. The following are effectively the same for me:</p>
+
+<pre><code>ssh github.com
+ssh 192.30.252.130
+</code></pre>
+
+<p>If you don't specify a username, your client's user is applied. So, for me, the above commands are the same as:</p>
+
+<pre><code>ssh muru@192.30.252.130
+ssh -l muru 192.30.252.130
+</code></pre>
+
+<p>If you don't specify a port, 22 is assumed. So the first two commands are the same as:</p>
+
+<pre><code>ssh 192.30.252.130 -p 22
+</code></pre>
+
+<p>Unlike other programs, the <code>IP:port</code> syntax is not applicable here.</p>
+
+<p>For everything else, there's the <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/ssh.1.html" rel="nofollow">manpage</a>.</p>
+
+<p>This is all assuming that your client is similar to the OpenSSH client. For anything else, consult its manpage.</p>

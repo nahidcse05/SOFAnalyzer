@@ -1,0 +1,8 @@
+<p><code>rsync</code> is pretty easy to use. You will need to know the ip address or name of the machine. So if your new machine is called <code>shiny</code> and the old machine is called <code>abandoned</code>, and you have the same user on both machine then to copy to the data over you would type this on <code>shiny</code>:</p>
+
+<pre><code>rsync avz username@abandoned:/home/user /home/user
+</code></pre>
+
+<p>Substitute the IP addresses if you don't know the names. You should be able to <code>ping</code> the other machine if they are on the same network. You can get the IP address by typing <code>ifconfig</code>.</p>
+
+<p>Alternatively, you could take the old hdd and mount it either on the machine physically if its a desktop in the spare slot and just copy the files over. Or use a sata/usb lead to mount it, or one of these <a href="http://www.reghardware.com/2009/01/09/voyager_q/" rel="nofollow">toasters</a>: </p>

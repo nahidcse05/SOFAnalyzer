@@ -1,0 +1,10 @@
+<p>This is due to multiarch, unless it will break some stuff , just try this once multiarch set :</p>
+
+<pre><code>apt-file search gnome-keyring-pkcs11.so
+#| gnome-keyring: /usr/lib/x86_64-linux-gnu/pkcs11/gnome-keyring-pkcs11.so
+sudo aptitude install  gnome-keyring:i386
+</code></pre>
+
+<p>-- </p>
+
+<p><a href="http://rzr.online.fr/q/64" rel="nofollow">http://rzr.online.fr/q/64</a></p>

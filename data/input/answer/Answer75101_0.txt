@@ -1,0 +1,15 @@
+<p><strong>Main</strong> provides free software (as in freedom) that is supported by Canonical.</p>
+
+<p><strong>Universe</strong> provides free software (as in freedom) that is supported by the community.</p>
+
+<p><strong>Restricted</strong> provides non-free software that is supported by Canonical. (This consists mostly of proprietary drivers for officially supported devices.)</p>
+
+<p><strong>Multiverse</strong> provides non-free software that is supported by the community.</p>
+
+<p>The <strong>Partner</strong> repository, practically speaking, provides non-free software. The <strong>Extras</strong> repository provides some free software but mostly provides non-free software.</p>
+
+<p>Many repositories provide both binaries and source code. These are enabled separately in your APT configuration, however. Both binaries and source code from <strong>Main</strong> are free (as in freedom), for example.</p>
+
+<p>There are no repositories in Ubuntu that are actually called <em>Source code</em> or <em>Independent</em>. Perhaps some other OS has repositories called that. Or perhaps those terms appear in <em>descriptions</em> somewhere for some of Ubuntu's repositories.</p>
+
+<p>See <a href="https://help.ubuntu.com/community/Repositories/Ubuntu" rel="nofollow">Repositories/Ubuntu</a> for more information.</p>

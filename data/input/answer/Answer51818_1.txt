@@ -1,0 +1,5 @@
+<p>You've got a newsreader, but now you need a newsgroup server.  In the "old" days, lots of ISPs included access to newsgroup servers for free, but those days appear to be over.  You'll need to buy access to such a server, unfotunately.  I can't tell you which is best, but this link (<a href="http://www.slyck.com/Newsgroups_Guide_NewsServers" rel="nofollow">newsgroups</a>) will explain how it works and give you links to lots of servers.</p>
+
+<p>Most are not very expensive, but there are different levels of service for different rates so you'll have to evaluate your needs and decide what you need.</p>
+
+<p>It's much like getting a web browser for free, but you still have to pay for Internet access.  The browser doesn't really give you access to the web, just the ability to "read" the web once you've obtained access.</p>

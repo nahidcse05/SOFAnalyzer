@@ -1,0 +1,3 @@
+<p>I have the same problem with Xubuntu 14.04 in a netbook.</p>
+
+<p>Could it be the <a href="http://forum.crucial.com/t5/Solid-State-Drives-SSD/Why-do-i-need-AHCI-with-a-SSD-Drive-Guide-Here-Crucial-AHCI-vs/td-p/57078" rel="nofollow">AHCI</a>? My netbook (LG x110) hasn't that option in its BIOS :(</p>

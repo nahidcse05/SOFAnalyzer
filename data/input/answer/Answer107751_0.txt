@@ -1,0 +1,13 @@
+<p>Turn off NoScript, or allow the javascripts which should be allowed. Or just allow the fonts for that site.</p>
+
+<p>Or under Firefox->Preferences, under the Content tab click Advanced and check <strong>Allow pages to choose their own font...</strong></p>
+
+<p><img src="http://i.stack.imgur.com/Z6Dp4.png" alt="here"></p>
+
+<h2><em>Before</em></h2>
+
+<p><img src="http://i.stack.imgur.com/Gfv0R.png" alt="before"></p>
+
+<h2><em>After</em></h2>
+
+<p><img src="http://i.stack.imgur.com/t9dOA.png" alt="after"></p>

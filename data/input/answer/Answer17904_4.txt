@@ -1,0 +1,8 @@
+<p>Controlling all the init.d service links should be done with the update-rc.d tool</p>
+
+<p>i.e. to turn on the mongod daemon in the default runlevels (i.e. turn it on at boot):</p>
+
+<pre><code>update-rc.d mongodb defaults
+</code></pre>
+
+<p>See <a href="https://help.ubuntu.com/community/UbuntuBootupHowto" rel="nofollow">https://help.ubuntu.com/community/UbuntuBootupHowto</a> for more information. This link tells you everything you want to know about how to set programs at boot.</p>

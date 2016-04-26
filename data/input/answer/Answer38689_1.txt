@@ -1,0 +1,14 @@
+<p>You might need to look in your nautilus and tell it on what to do to an executable file.</p>
+
+<blockquote>
+  <p>Open Nautilus -> Edit -> Preferences -> Behaviour -> Executable Text
+  Files.</p>
+</blockquote>
+
+<p>Files might not have default application when opening it.</p>
+
+<blockquote>
+  <p>Right Click on the file -> Properties -> Open with.</p>
+</blockquote>
+
+<p>Set a default application of that file. If gedit is already selected and you want to change it just go over with your desired application.</p>

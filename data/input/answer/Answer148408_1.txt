@@ -1,0 +1,1 @@
+<p>I didn't mean updating packages on the system, or the kernel, but upgrading the OS, like moving from 14.04 to 14.10, for example.</p>

@@ -1,0 +1,6 @@
+<p>You are using the wrong version for building the dkms. Try this:</p>
+
+<pre><code>sudo dkms install virtualbox/4.1.12
+</code></pre>
+
+<p>It appears to have worked for me. This is after you install the virtualbox-dkms package of course.</p>

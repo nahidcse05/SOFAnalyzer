@@ -1,0 +1,18 @@
+<p>Okay, I digged some further into the issue. I already suspected the programmability of the G300 might have something to do with it. And when you enter </p>
+
+<p><code>xinput list</code>, it shows the G300 as both a mouse and a keyboard. In my case the G300 keyboard entry has id 12.</p>
+
+<p><code>xinput list-props 12</code> gives all properties of the G300 keyboard. It includes this line: </p>
+
+<blockquote>
+  <p>Device Enabled (146): 1  </p>
+</blockquote>
+
+<p>which means that if we set the property with id 146 to a value of 0 for device id 12, the G300 keyboard is disabled.</p>
+
+<p>Using </p>
+
+<pre><code>xinput set-prop 12 146 0
+</code></pre>
+
+<p><a href="http://ubuntuforums.org/showthread.php?t=1849041&amp;highlight=g300" rel="nofollow">http://ubuntuforums.org/showthread.php?t=1849041&amp;highlight=g300</a></p>

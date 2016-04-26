@@ -1,0 +1,8 @@
+<p>Try reinstalling the nvidia-173 module:</p>
+
+<pre><code>sudo apt-get install --reinstall nvidia-173
+</code></pre>
+
+<p>and reboot</p>
+
+<p>That worked for me!!</p>

@@ -1,0 +1,7 @@
+<p>Everything you need to write fiction - Writer's Café is a set of power tools for all fiction writers, whether experienced or just starting out. The heart of Writer's Café is StoryLines, a powerful but simple to use story development tool that dramatically accelerates the creation and structuring of your novel or screenplay.</p>
+
+<p>Find it here: <a href="http://www.writerscafe.co.uk/" rel="nofollow">http://www.writerscafe.co.uk/</a></p>
+
+<p>*.deb packages available.</p>
+
+<p>It is highly recommended and really powerful.</p>

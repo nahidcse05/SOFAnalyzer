@@ -1,0 +1,17 @@
+<p>Bug reporting is something Ubuntu is seriously good at. When you see that dialog, Ubuntu has already collected all the relevant information for you, so all you need to do, is to click "Show Details". </p>
+
+<p><strong>You'll first see a dialog like this:</strong></p>
+
+<p><img src="http://i.stack.imgur.com/Hnbqy.png" alt="enter image description here"></p>
+
+<p><strong>Or like this:</strong></p>
+
+<p><img src="http://i.stack.imgur.com/WSbkC.png" alt="enter image description here"></p>
+
+<p><strong>Then clicking 'Show Details' will display more details.</strong> </p>
+
+<p><img src="http://i.stack.imgur.com/hhzlp.png" alt="enter image description here"></p>
+
+<p><strong>That will collect data from all the relevant files</strong> and if you click "Continue" while the checkbox is checked, you'll automatically upload it to Launchpad.net, which will scan for similar reports, allow you to add to an existing report or to create a new one. </p>
+
+<p>Particularly during development, you might be told that you can't report bugs because you have software that is out of date.</p>

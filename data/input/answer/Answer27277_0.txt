@@ -1,0 +1,1 @@
+<p>I made a disc version of ubuntu and booted from the CD drive and it worked.  Maybe the files I got for USB were corrupt or incomplete somehow, I'm not sure.  Anyway, I got it working.</p>

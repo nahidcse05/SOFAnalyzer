@@ -1,0 +1,5 @@
+<p>I used in past Draftsight to convert dwg to PDF</p>
+
+<p><a href="http://www.3ds.com/products-services/draftsight/overview/" rel="nofollow">Drafsight</a> its a complete free CAD program that has a export to PDF function. Cross platform but not foss and free with on-line activation for Linux. I didn't used it for a time now but back in time was an amazing piece of software. Consider to read  this <a href="http://linuxaideddesign.blogspot.com/2012/03/draftsight-and-ubuntu-1204-lts-64bit.html" rel="nofollow">guide</a> how to install it.</p>
+
+<p>More dwg viewers and software recommendations you can find here on Ask Ubuntu by following <a href="http://askubuntu.com/questions/48700/is-there-software-that-can-view-dwg-files">software that can view dwg files</a> link</p>

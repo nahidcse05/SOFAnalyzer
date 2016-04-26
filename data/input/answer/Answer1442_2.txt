@@ -1,0 +1,1 @@
+<p>The term you are looking for is "mount point". Set one mount point to / and one to /home and you're set. Find more about partitioning on the <a href="https://help.ubuntu.com/community/Partitioning%20issues?action=show&amp;redirect=Partitioning" rel="nofollow">Ubuntu help pages</a>.</p>

@@ -1,0 +1,8 @@
+<p>Your graphics card seems to have nvidia optimus technology which is not implemented for Linux.<br></p>
+
+<p>First of all you should delete Xorg.conf by using <code># rm /etc/X11/Xorg.conf</code> then install <code>Bumbleebee</code> (assuming that you had installed <code>nvidia-current</code>) to switch from your onboard graphics card.<br></p>
+
+<p>If you want to make use of your <code>nvidia card</code> use the following command to start an application<br></p>
+
+<pre><code>  $ optirun &lt;command&gt;  
+</code></pre>

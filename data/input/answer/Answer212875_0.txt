@@ -1,0 +1,21 @@
+<p>Changing the MAC address on Ubuntu is simple. <a href="http://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/" rel="nofollow">On this site</a> is a nice explanation how to do it.</p>
+
+<p>You can change your MAC address using Network Manager and typing the new MAC address into <strong>Cloned MAC address</strong> field.</p>
+
+<p><a href="http://i.stack.imgur.com/LbqfN.png" rel="nofollow"><img src="http://i.stack.imgur.com/LbqfN.png" alt="screenshot"></a></p>
+
+<p>Alternatively you can do it directly in terminal. So first open the terminal and run <code>ifconfig</code> (this is like <code>ipconfig</code> on Windows). It will display all your network interfaces. Then decide which interface should be changed (let's assume its <code>eth0</code>) and type:</p>
+
+<pre><code>sudo ifconfig eth0 down
+sudo ifconfig eth0 hw ether xx:xx:xx:xx:xx:xx
+sudo ifconfig eth0 up
+</code></pre>
+
+<p>And again using <code>ifconfig</code> you can check you new address:</p>
+
+<pre><code>ifconfig eth0 | grep HWaddr
+</code></pre>
+
+<p>Also using Network Manager you can easily create you PPPoE connection. Depending on the version of the Network Manager you can ether <a href="https://www.youtube.com/watch?v=Dx-G-Sn6IhY" rel="nofollow">go to the DSL tab and click on Add</a>, or like shown in the screenshot below, first click on Add and then choose the connection type DSL. After this a dialog will appear, type you username and password, give the name to your connection and have fun. </p>
+
+<p><a href="http://i.stack.imgur.com/OmVDE.png" rel="nofollow"><img src="http://i.stack.imgur.com/OmVDE.png" alt="enter image description here"></a></p>

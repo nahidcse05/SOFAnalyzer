@@ -1,0 +1,1 @@
+<p>If you're using the default Ubuntu installation (with "Unity"), there should be a gear-like icon in the extreme top-right of your screen... Click this, followed by "Shut down...", then just follow the bouncing ball.</p>

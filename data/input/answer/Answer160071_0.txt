@@ -1,0 +1,11 @@
+<p>sudo rm -<strong>-rercursive</strong> --force /opt/utorrent-server-alpha-v3_3/  -> no good</p>
+
+<pre><code>       sudo rm --recursive --force /opt/utorrent-server-alpha-v3_3/
+
+
+         or   
+
+        sudo rm --recursive --force /opt/utorrent-server-v3_3/
+
+                regards
+</code></pre>

@@ -1,0 +1,29 @@
+<p>I got it working by following the instructions at <a href="https://help.ubuntu.com/community/MacBookPro8-2#Wireless" rel="nofollow">https://help.ubuntu.com/community/MacBookPro8-2#Wireless</a>, namely: </p>
+
+<blockquote>
+  <p>There is no official support yet in Ubuntu 12.04, but you can get it
+  working with the following repository.</p>
+
+<pre><code>sudo add-apt-repository ppa:mpodroid/mactel
+sudo apt-get update
+sudo apt-get install b43-fwcutter firmware-b43-installer
+</code></pre>
+  
+  <p>For Precise, the Compat module should also be installed</p>
+
+<pre><code>sudo apt-get install linux-backports-modules-cw-3.3-precise-generic
+</code></pre>
+  
+  <p>Edit the /etc/modprobe.d/blacklist.conf and add the line:</p>
+
+<pre><code>blacklist ndiswrapper
+</code></pre>
+  
+  <p>Create or edit the file /etc/pm/config.d/modules and make sure the
+  wireless modules (b43 and bcma) are blacklisted:</p>
+
+<pre><code>SUSPEND_MODULES="b43 bcma"
+</code></pre>
+  
+  <p>Reboot and the wireless should work.</p>
+</blockquote>

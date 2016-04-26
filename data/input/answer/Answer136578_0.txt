@@ -1,0 +1,1 @@
+<p>The setting to enable workspaces should be in System Settings>Appearance>Behavior</p>

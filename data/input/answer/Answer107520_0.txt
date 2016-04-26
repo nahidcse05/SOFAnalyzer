@@ -1,0 +1,3 @@
+<p>FileMaker will run under <a href="http://www.winehq.org/" rel="nofollow">Wine</a>.  See the <a href="http://appdb.winehq.org/objectManager.php?sClass=application&amp;iId=337" rel="nofollow">Wine App Database</a> for complete detail.</p>
+
+<p>There are other option that you can use in place of FileMaker Pro.  Some of your options are: <a href="http://www.libreoffice.org/features/base/" rel="nofollow">LibreOffice</a> or <a href="https://www.openoffice.org/product/base.html" rel="nofollow">OpenOffice</a> Base, <a href="http://www.kexi-project.org/" rel="nofollow">Kexi</a>, <a href="http://www.glom.org/wiki/index.php?title=Main_Page" rel="nofollow">Glom</a>, and <a href="http://www.python-camelot.com/get-it.html" rel="nofollow">camelot</a>.</p>

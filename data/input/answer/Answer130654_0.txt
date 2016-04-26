@@ -1,0 +1,5 @@
+<p>Set the environment variable <code>$PYTHON</code> to the path of the binary you want to use, for example</p>
+
+<pre><code>export PYTHON=/usr/bin/python3
+./waf configure
+</code></pre>

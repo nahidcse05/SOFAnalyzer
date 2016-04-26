@@ -1,0 +1,5 @@
+<p>remove some photos, videos or music, then make a live cd (or live usb) and install 11.04 via that. </p>
+
+<p>If you go into system monitor and looks at the "system" tab how much free disk space do you have?</p>
+
+<p>I would suggest you download your version 32/64 bit and upgrade your current version to 11.04 via a live cd, <a href="http://www.ubuntu.com/download/ubuntu/download" rel="nofollow">here</a> is the download.</p>

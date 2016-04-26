@@ -1,0 +1,8 @@
+<p>Follow these steps carefully.</p>
+
+<ol>
+<li><code>sudo gedit /var/lib/dpkg/info/crossplatformui.postrm</code>. This will open that file in gedit text editor with super-user privileges.</li>
+<li>press <kbd>Ctrl</kbd>+<kbd>F</kbd> in gedit to search. Write in the search-box <code>ztemtvcdromd</code> and comment out those lines which contains the search string by placing <code>#</code> at the start of the line(s). <br/>If this process seems complicated then simply put <code>exit 0</code> after the first line (which should contain <code>#!/sbin/sh</code>).</li>
+<li>save the file <code>/var/lib/dpkg/info/crossplatformui.postrm</code>.</li>
+<li>then try <code>dpkg -r --force-remove-reinstreq  crossplatformui</code> to uninstall the package.</li>
+</ol>

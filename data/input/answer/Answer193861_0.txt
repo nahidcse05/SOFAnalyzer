@@ -1,0 +1,3 @@
+<p>Open Nautilus and press <code>ctrl + H</code> to show hidden files. Then start typing <code>.mine</code>... to quickly select the folder <code>.Minecraft</code> and enter it. There is a folder called <code>bin</code>. Enter it, toot, and paste whatever you want to paste there. If these folders don't exist, you probably have to create them.</p>
+
+<p>Since you're new to this page: Please press the tick on the left it this solves your problem.</p>

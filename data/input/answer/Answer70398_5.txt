@@ -1,0 +1,4 @@
+<p>I believe you should sudo open <code>/etc/default/grub</code>, find the line that starts with <code>GRUB_CMDLINE_LINUX_DEFAULT</code> and make it look like this:</p>
+
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash pcie_aspm=force acpi_osi=Linux i915.i915_enable_rc6=1″
+</code></pre>

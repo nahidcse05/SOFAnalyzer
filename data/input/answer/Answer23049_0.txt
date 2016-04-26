@@ -1,0 +1,24 @@
+<p><em>I have found <a href="http://askubuntu.com/questions/67660/is-it-possible-to-customise-the-search-engine-buttons-in-gnome-shell/72548#72548">fossfreedom's answer to create a DuckDuckGo search button in gnome-shell</a> to be useful and I have used it as a base to answer this question.</em></p>
+
+<p>To create a new search provider, copy the <em>google.xml</em> file as a template. </p>
+
+<p><strong>11.10</strong></p>
+
+<pre><code>sudo cp /usr/share/gnome-shell/search_providers/google.xml /usr/share/gnome-shell/search_providers/askubuntu.xml
+</code></pre>
+
+<p><strong>12.04</strong></p>
+
+<pre><code>sudo cp /usr/share/gnome-shell/open-search-providers/google.xml /usr/share/gnome-shell/open-search-providers/askubuntu.xml
+</code></pre>
+
+<p>Change the following XML tags in the <em>askubuntu.xml</em> file:</p>
+
+<pre><code>&lt;ShortName&gt;Ask Ubuntu&lt;/ShortName&gt;
+&lt;Description&gt;Ask Ubuntu Search&lt;/Description&gt;
+&lt;Url type="text/html" method="GET" template="http://askubuntu.com/?q={searchTerms}"/&gt;
+</code></pre>
+
+<p>If you have done everything right, you should be seeing the Ask Ubuntu search button in the overview.</p>
+
+<p><img src="http://i.stack.imgur.com/bYtzL.jpg" alt="enter image description here"></p>

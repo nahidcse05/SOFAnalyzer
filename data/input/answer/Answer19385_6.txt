@@ -1,0 +1,3 @@
+<p>I have a pretty good solution for you.
+press
+<code>Ctrl+Alt+F1</code>. After that login with your username and password. After that type <code>wget http://us.download.nvidia.com/XFree86/Linux-x86/285.05.09/NVIDIA-Linux-x86-285.05.09.run</code>. Wait for the download to complete, after that type <code>chmod 777 NVIDIA-Linux-x86-285.05.09.run</code>. After that type <code>service lightdm stop</code> and then <code>sh NVIDIA-Linux-x86-285.05.09.run</code>. Follow the instructions, restart if needed, and after restarting your PC you will have latest NVIDIA driver and a good-working graphic card.</p>

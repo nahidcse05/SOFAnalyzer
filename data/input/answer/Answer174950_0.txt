@@ -1,0 +1,7 @@
+<p><code>sudo apt-get install linux-source</code> installs linux source. It could not help to solve any problems with anything. This package is needed to build custom kernels.</p>
+
+<p><code>sudo apt-get install linux-headers-generic</code> this package is installed in all Ubuntu releases except 12.10, where it was not present due to a bug. This package installs linux headers. They are needed to build kernel modules, like nvidia driver.</p>
+
+<p><code>sudo apt-get install nvidia-current-updates</code> installed nvidia driver.</p>
+
+<p>It looks like you could run only last command, if you are not on Ubuntu 12.10.</p>

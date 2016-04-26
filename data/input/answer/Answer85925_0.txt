@@ -1,0 +1,4 @@
+<ul>
+<li>$ java -version
+will tell you which version of java is being used. Since the java icon is still there , it might be still present on your system.</li>
+</ul>

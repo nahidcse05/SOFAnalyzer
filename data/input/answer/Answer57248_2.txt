@@ -1,0 +1,25 @@
+<p>From the line saying "replacing" it looks as if TeamViewer is already installed. </p>
+
+<p>If it isn't, run (in a terminal):</p>
+
+<pre><code>sudo apt-get -f install
+</code></pre>
+
+<p>and then</p>
+
+<pre><code>sudo apt-get install libc6-i386 lib32asound2 lib32z1 ia32-libs
+</code></pre>
+
+<p>and try installing the .deb with </p>
+
+<pre><code>sudo dpkg -i teamviewer_linux_x64.deb
+</code></pre>
+
+<hr>
+
+<p>If nothing works, and only if nothing works, you can force installation, but you will most probably <strong><em>BREAK APT</em></strong>:</p>
+
+<pre><code>sudo dpkg --force-depends -i teamviewer_linux_x64.deb
+</code></pre>
+
+<p>Note that this is <strong><em>far from ideal</em></strong>.</p>

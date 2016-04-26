@@ -1,0 +1,12 @@
+<p>Add following mapping to your <code>vimrc</code>:</p>
+
+<pre><code>" Editing a protected file as 'sudo'
+cmap W w !sudo tee % &gt;/dev/null&lt;CR&gt;
+</code></pre>
+
+<p>Now edit the protected files as you normally do:</p>
+
+<pre><code>vim /etc/www/main.wsgi
+</code></pre>
+
+<p>but when you want to save the changes use <code>:W</code> instead of <code>:w</code>, <code>vim</code> will prompt for a <code>sudo</code> password, enter your <code>sudo</code> password and hit <kbd>Enter</kbd>. That's it!</p>

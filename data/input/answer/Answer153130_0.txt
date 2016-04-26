@@ -1,0 +1,35 @@
+<p>Per your comment this actually looks like it could be basic syntax issues. In future, I would strong suggest running <code>nginx -t</code> (without <code>sudo</code>) to display configuration errors.</p>
+
+<hr>
+
+<p>I think a try-files is preferred over a rewrite but either way, here's what I use for a Moodle site. </p>
+
+<pre><code>    location / {
+            try_files $uri $uri/ /index.php/$request_uri;
+    }
+
+    location ~ .php($|/) {
+            set $script $uri;
+            if ($uri ~ "^(.+.php)(/.+)") {
+                    set $script $1;
+            }
+            fastcgi_split_path_info ^(.+.php)(/.+)$;
+            fastcgi_index index.php;
+
+            include fastcgi.conf;
+
+            fastcgi_param SCRIPT_FILENAME $document_root$script;
+            fastcgi_temp_file_write_size 10m;
+            fastcgi_busy_buffers_size 512k;
+            fastcgi_buffer_size 512k;
+            fastcgi_buffers 16 512k;
+            fastcgi_connect_timeout 300;
+            fastcgi_send_timeout 300;
+            fastcgi_read_timeout 300;
+            fastcgi_intercept_errors on;
+            fastcgi_next_upstream error invalid_header timeout http_500;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+    }
+</code></pre>
+
+<p>Unfortunately the exact rewriting rules requires seems to change subtly for each engine, but nginx is popular enough that Googling <code>nginx url &lt;&lt;engine, eg wordpress&gt;&gt;</code> will get you some suggestions.</p>

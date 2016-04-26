@@ -1,0 +1,8 @@
+<p>Using <em>Disk Utility</em> or <em>Gparted</em>, delete the partition and create a new one, format it to your choice of filesystem.  Disk Utility may have a problem deleting partitions it doesn't understand which may include an encrypted partition.  If Gparted also has this problem, open a terminal window and use the following command:</p>
+
+<pre><code>sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1
+</code></pre>
+
+<p>Where /dev/sdX is the device name of the USB drive.  Make sure you have the right device because there will be <strong>nothing</strong> left on the target device after you press enter. It deletes the partition table entirely.</p>
+
+<p>You can then re-commission the USB device by using Gparted to create a new partition table then create the primary partition and format it as before.</p>

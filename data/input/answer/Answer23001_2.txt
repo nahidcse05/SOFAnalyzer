@@ -1,0 +1,16 @@
+<p>Universe is enabled by default so you usually don't need to do this. You could edit the sources file from the terminal:</p>
+
+<pre><code>sudoedit /etc/apt/sources.list
+</code></pre>
+
+<p>And then uncomment the universe sections of the following lines: </p>
+
+<pre><code>#deb http://us.archive.ubuntu.com/ubuntu/ precise universe
+#deb http://us.archive.ubuntu.com/ubuntu/ precise-updates universe
+</code></pre>
+
+<p>The <a href="https://help.ubuntu.com/community/Repositories/CommandLine" rel="nofollow">Ubuntu help page</a> may be of use. And if you want to enable it via the GUI:</p>
+
+<ul>
+<li><a href="http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository">How do I enable the &quot;Universe&quot; repository?</a></li>
+</ul>

@@ -1,0 +1,3 @@
+<p>Try reducing the Mic Boost on alsamixer to 0, doing so lowered the background noise so my voice was audible. It's not perfect but it seem usable on GoogleTalk/Skype, I tested it on the sound recorder.</p>
+
+<p>Hope this helps.</p>

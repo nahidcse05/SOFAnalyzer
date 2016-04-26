@@ -1,0 +1,3 @@
+<p>Sometimes you can find more help with <code>chkconfig --help</code>, <code>info chkconfig</code>, or <code>apropos chkconfig</code>.</p>
+
+<p>On this, if you compare the man page for chkconfig on Ubuntu with any other, you'll see that the --level switch seems to have been replaced with the --set switch. While chkconfig on Ubuntu may still use the --level switch, it is not given in the man page, or it is an alias to the --set switch. (The Ubuntu-native equivalent is the <code>update-rc.d</code> command.) </p>

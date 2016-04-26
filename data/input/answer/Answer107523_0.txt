@@ -1,0 +1,1 @@
+<p>When you boot up the Ubuntu disc, you will see in the top right corner that it lists you as connected to the internet, disconnect then begin the installation, you can install any updates you want after the installation is complete.</p>

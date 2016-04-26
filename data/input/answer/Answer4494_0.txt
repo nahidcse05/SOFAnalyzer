@@ -1,0 +1,9 @@
+<p>From the Ubuntu One <a href="https://wiki.ubuntu.com/UbuntuOne/FAQ/CanISyncAFolderOutsideMyHomeFolder" rel="nofollow">FAQ</a>:</p>
+
+<blockquote>
+  <h2>Can I synchronize a folder outside my home folder?</h2>
+  
+  <p>No, currently you can only select to synchronize folders inside your home directory.</p>
+</blockquote>
+
+<p>Since your usb drive is mounted outside of your home folder (usually <code>/media</code>) you <strong>can not</strong> currently synchronize it using Ubuntu One.</p>

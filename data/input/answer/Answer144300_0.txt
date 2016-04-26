@@ -1,0 +1,5 @@
+<p>All maintenance software in the Live CD can be installed into your existing Ubuntu installation too. Take GParted partition manager for example, you can install it by executing this in terminal: <code>sudo apt-get install gparted</code>. You can perform operation such as resizing or deleting partitions from Ubuntu itself using GParted: right click on target partition (except the current Ubuntu partition itself) and unmount it, then you can modify the partition. Do be careful when working with partitions.</p>
+
+<p>If it is the Ubuntu partition itself you want to modify, then you will either have to use a Live CD or Live USB. Or being fancy, you can have multiple Ubuntu installation in the same hard disk on a different partition from the first Ubuntu installation. By default Ubuntu doesn't mount any partition automatically anyway.</p>
+
+<p>Even more fancy (and safer), would be to boot the Live CD disc image from <a href="https://www.virtualbox.org/" rel="nofollow">virtualbox</a>, then do an install for messing around with all Linux goodness safely. Have fun!</p>

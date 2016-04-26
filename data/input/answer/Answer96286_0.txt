@@ -1,0 +1,9 @@
+<p>In case you don't get the answer that exactly matches your question, here's an alternative solution I can suggest to meet your requirement.</p>
+
+<p>You can <strong>Clonezilla</strong> your Ubuntu partition, i.e. save it using Clonezilla, and than <strong>Restore</strong> it to another computer. Ubuntu will automatically adjust itself to the new hardware configuration.</p>
+
+<p>You only need to take care of the source and target partition number as well as the size (and also any other partition ids registered in your fstab file), which is quite easy if you read the documentantion on Clonezilla website: <a href="http://clonezilla.org/" rel="nofollow">http://clonezilla.org/</a></p>
+
+<p><strong>One more important point:</strong></p>
+
+<p>Before starting this <strong>cloning</strong> operation you should better uninstall or at least disable any proprietary hardware (e.g. like video card) drivers and install/enable/use open source alternatives if the target computer does not have that same hardware in order to avoid problems.</p>

@@ -1,0 +1,9 @@
+<p>I was able to get this working by doing the following:</p>
+
+<ul>
+<li>Uninstall from the terminal <code>sudo apt-get remove swordandsworcery-bin</code></li>
+<li>Download the deb from the link in the email "Your Humble Bundle order" (received after purchasing the humble bundle)</li>
+<li>Install the deb from the terminal (it failed from the software centre) with <code>sudo dpkg -i swordandsworcery_1.00-1_amd64.deb</code></li>
+</ul>
+
+<p>Note, I replaced v1.56 with v1.00 - that may be why it now works.</p>

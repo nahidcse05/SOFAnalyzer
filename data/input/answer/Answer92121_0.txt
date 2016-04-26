@@ -1,0 +1,1 @@
+<p>Try <strong><a href="http://www.ghostscript.com/" rel="nofollow">http://www.ghostscript.com/</a></strong>. Install and configure then try and run the installer again.</p>

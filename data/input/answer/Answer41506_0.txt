@@ -1,0 +1,1 @@
+<p>This method should help you save your data: Use a bootable CD from any Linux distribution (Debian, Ubuntu, Arch, Knoppix, etc) and use it to boot from the CD/DVD drive. You should be able to find a "try" operating system option that does not disturb data on the hard disk. After booting attach a portable external drive and backup your data.</p>

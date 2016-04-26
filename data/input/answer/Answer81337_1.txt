@@ -1,0 +1,13 @@
+<p>You need to use sudo for all apt-get commands, but I'll assume that you're doing that...  </p>
+
+<p>You can find out what's locking those with <code>lsof|grep /var/lib/dpkg</code> and <code>lsof|grep /var/lib/apt</code>.  That will show you anything that's accessing those files + directories.  You can then kill those processes (and use lsof as needed to see if anything stays open).  If killing them doesn't work, try a <code>kill -KILL &lt;pid&gt;</code> to send a SIGKILL, which should do the trick.</p>
+
+<p>If you post what processes are locking those files, we can shut them off.  For my personal system, I prefer to update my system with <code>sudo apt-get update &amp;&amp; sudo apt-get upgrade</code> on my own on a daily basis.</p>
+
+<p>edit, also try fuser - this may be an easier way for most, but keep lsof in your pocket as a must-know Linux command.  Always use sudo for process-related commands, because you might miss out on something that you don't own.</p>
+
+<pre><code>me@me:/tmp$  sudo fuser /var/cache/debconf/config.dat
+/var/cache/debconf/config.dat:  8112
+me@me:/tmp$ ps aux|grep 8112
+root      8112  0.0  0.0  71276 15984 pts/5    SN+  May13   0:00 /usr/bin/perl -w    /usr/sbin/dpkg-preconfigure --apt
+</code></pre>

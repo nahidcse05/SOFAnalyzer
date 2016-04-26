@@ -1,0 +1,8 @@
+<p>To find out the current firmware, just press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> on your keyboard to open Terminal. When it opens, run the command(s) below:</p>
+
+<pre><code>sudo lshw -c network
+</code></pre>
+
+<p>once the command runs look for the firmware version, under the Wireless interface.  See image below.</p>
+
+<p><img src="http://i.stack.imgur.com/f7RXB.png" alt="enter image description here"></p>

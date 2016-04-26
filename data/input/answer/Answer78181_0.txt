@@ -1,0 +1,1 @@
+<p>Make a shortcut in the shortcut section of the keyboard-settings. You can make a chortcut for zoom in, zoom out, text size etcetera.</p>

@@ -1,0 +1,19 @@
+<p>To change your mirror there are 2 methods:</p>
+
+<ol>
+<li><p>Using System Settings > Software and Updates. On the main tab there is a drop down labeled "Download from:" and choose a mirror from that drop down.</p></li>
+<li><p>Edit the file /etc/apt/sources.list with root access e.g. from terminal:</p>
+
+<p>sudo nano /etc/apt/sources.list </p>
+
+<p>Once in there replace "<a href="http://mirror.informatik.uni-mannheim.de" rel="nofollow">http://mirror.informatik.uni-mannheim.de</a>" with "<a href="http://archive.ubuntu.com/ubuntu" rel="nofollow">http://archive.ubuntu.com/ubuntu</a>" (to get the main Ubuntu repo), or you could pick one from the long list: <a href="https://launchpad.net/ubuntu/+archivemirrors" rel="nofollow">https://launchpad.net/ubuntu/+archivemirrors</a></p></li>
+</ol>
+
+<p>Then once done repeat the steps you listed in your question:</p>
+
+<pre><code>apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get install update-manager-core
+do-release-upgrade
+</code></pre>

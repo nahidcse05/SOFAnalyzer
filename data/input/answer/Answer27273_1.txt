@@ -1,0 +1,13 @@
+<p>Use apt-fast. </p>
+
+<pre><code>sudo add-apt-repository ppa:apt-fast/stable
+sudo apt-get update
+sudo apt-get install apt-fast
+</code></pre>
+
+<p>Then run: </p>
+
+<pre><code>sudo apt-fast upgrade
+</code></pre>
+
+<p>To install the latest updates available. You'll feel the speed difference. </p>

@@ -1,0 +1,10 @@
+<p>Ahh, no one replies, so I ll answer my own questions, in case someone meet the same problem like me.</p>
+
+<p>Problem Reason: 
+May because 1,sys upgrade 2,restore ur older sys,</p>
+
+<p>U can install menu-editor by "sudo apt-get install menulibre", and u can edit the duplicated menu icon 
+Or
+U can just type "sudo nautilus -w /usr/share/applications", then u can see all the menu icon there, then, do whatever u want,
+BTW,
+U ve better backup the applications folder.</p>

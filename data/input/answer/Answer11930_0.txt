@@ -1,0 +1,1 @@
+<p>If you installed the plug in from the Ubuntu software center then go into Rhythmbox's preferences and the plugins and see if the Ubuntu one music store is enabled there.</p>

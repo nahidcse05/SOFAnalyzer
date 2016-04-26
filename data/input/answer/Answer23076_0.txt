@@ -1,0 +1,19 @@
+<p>The Ubuntu documentation makes this seem impossible.  BUT, there is an answer.</p>
+
+<p><strong>ANSWER</strong>: Create persistent, system wide environment variables in <code>/etc/.bashrc</code>  </p>
+
+<pre><code>JAVA_HOME="/tools/java"
+...
+PATH="$JAVA_HOME:$PATH"  
+</code></pre>
+
+<p><strong>Details:</strong><br>
+Here are some more details from the <a href="https://help.ubuntu.com/community/EnvironmentVariables" rel="nofollow">Environment Variables documentation</a>.<br>
+The official recommendation is to use <code>/etc/environment</code>, as you have tried.  The problem is this file is not a script file.  In other words, you cannot use variables in variable declarations.  </p>
+
+<p>The documentation continues with 2 other "Not Recommended" files<br>
+<code>/etc/profile</code> and <code>/etc/bash.bashrc</code>.  </p>
+
+<p><code>/etc/profile</code> "does little more than invoke the /etc/bash.bashrc file".  So instead choose  </p>
+
+<p><code>/etc/bash.bashrc</code> because "Ubuntu is configured by default to execute this file whenever a user enters a shell or the desktop environment."</p>

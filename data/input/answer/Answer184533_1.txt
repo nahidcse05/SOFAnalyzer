@@ -1,0 +1,1 @@
+<p>Ubuntu has never been so difficult to install. Refer <a href="http://askubuntu.com/questions/1366/how-can-i-install-ubuntu-without-removing-windows">this URL</a> to install ubuntu along side with Windows. The Answer is well explained with all the steps with screenshot. Also You can select the option Replace Windows for removing Windows and keep only Ubuntu.</p>

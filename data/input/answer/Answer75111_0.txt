@@ -1,0 +1,3 @@
+<p>go into your package manager. I use the muon package manager and sometimes have had to select packages &amp; to purge couple times or more to work, should be an option instead of uninstall.</p>
+
+<p>Also try apt-get autoremove</p>

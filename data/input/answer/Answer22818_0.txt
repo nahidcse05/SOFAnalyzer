@@ -1,0 +1,3 @@
+<p>Start the <strong>System Settings</strong> (e.g. via the button in the top right corner -> System Settings) and the go to <strong>Mouse and Touchpad</strong>. There select Touchpad. This tab offers you to enable two-finger scrolling and also horizontal scrolling.</p>
+
+<p><img src="http://i.stack.imgur.com/VNEOr.png" alt="enter image description here"></p>

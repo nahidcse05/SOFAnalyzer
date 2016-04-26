@@ -1,0 +1,5 @@
+<p>I've used Mega directly via duplicity successfully.  I remember I had to grab a git checkout of the mega python module and even then had to fix a couple bugs with it.  But I don't remember that particular error.  So maybe the mega python module is just a little janky.</p>
+
+<p>As for the Deja Dup "custom location" box, that is for GNOME urls like you would put in the File Browser location bar, not for duplicity urls.</p>
+
+<p>Right now, Deja Dup does not support Mega as a destination.  Sorry.  :(</p>

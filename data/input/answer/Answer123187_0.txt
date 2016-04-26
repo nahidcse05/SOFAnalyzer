@@ -1,0 +1,10 @@
+<p>Do you mean how do you return to a "prompt" after opening a GUI from command line? If so then:</p>
+
+<p>Usually when you close the GUI window you'll return to a prompt, if not you can force it to close by pressing ctrl + c from the command line window.</p>
+
+<p>If you want to run the GUI application but continue to use the command prompt you can run the command to launch the GUI application with an '&amp;' after it, for example:</p>
+
+<pre><code>gedit test.txt &amp;
+</code></pre>
+
+<p>Which will run it in the background.</p>

@@ -1,0 +1,3 @@
+<p>1) Try installing proprietary fglrx drivers in place of xorg. Biggest cause of heat/noise.
+2) Try removing TLP and using laptop-mode tools instead.
+3) You can use psensor to monitor temperatures and powertop to check power management stats and settings.</p>

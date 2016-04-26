@@ -1,0 +1,1 @@
+<p>Your best bet is to install <a href="http://xrdp.sourceforge.net">xrdp</a> <a href="http://apt.ubuntu.com/p/xrdp"><img src="http://bit.ly/software-large" alt="Install xrdp"></a>. After installation, you can use an RDP client to connect to the machine - you will then be prompted for your credentials as you would be on the login screen.</p>

@@ -1,0 +1,15 @@
+<p>I notice you said you wanted to use Oracle's JDK. If you want to install Oracle's JDK instead, you can download that and extract it in the location of your choice.</p>
+
+<p>Then you just use update-alternatives to tell your system where Java is installed. If you're not sure about the syntax of update-alternatives, you can use the front-end for it, galternatives.</p>
+
+<p>For example... I use Oracle's JDK quite extensively here.</p>
+
+<p>I extract it to /opt/java/.</p>
+
+<p>Then, so all of Oracle Java's binaries are the primary utilities for Java-related stuff, I do the following with update-alternatives:</p>
+
+<pre><code>for j in `ls /opt/java/bin` ; do update-alternatives --install /usr/bin/"$j" "$j" /opt/java/bin/"$j" 1 ; done
+</code></pre>
+
+<p>This takes all of the Oracle Java utilities that you've previously extracted, and 
+gives them the first priority, in case you have other versions of Java installed. (since Ubuntu allows you to have multiple versions of the same utility installed)</p>

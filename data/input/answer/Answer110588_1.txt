@@ -1,0 +1,8 @@
+<p>You can use <a href="http://www.qcad.org/">QCAD</a>, an open source AutoCAD replacement or the community fork <a href="http://librecad.org/cms/home.html">LibreCAD</a> made to work using the newer Qt4 framework. You can <a href="https://apps.ubuntu.com/cat/applications/librecad/">install LibreCAD</a> from the Ubuntu Software Center. Using one of these two programs you <a href="http://libregraphicsworld.org/blog/entry/librecad-gets-native-dwg-importer">import DWG files</a>, edit the drawing and export it to PDF.</p>
+
+<p><img src="http://i.stack.imgur.com/GbbZs.png" alt="LibreCAD screenshot"></p>
+
+<p>QCad offered a <a href="http://www.qcad.org/en/qcad-documentation/qcad-command-line-tools">command line tool</a> to convert DWG to PDF directly - I'm guessing it's also available in LibreCAD.</p>
+
+<pre><code>./dwg2pdf.sh drawing.dwg
+</code></pre>

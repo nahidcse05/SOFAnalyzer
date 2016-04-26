@@ -1,0 +1,14 @@
+<p>To view all available partitions you can try and use the lsblk command. </p>
+
+<p>Open your terminal with <kbd>Ctrl</kbd> + <kbd> Alt</kbd> + <kbd> T</kbd> then type:</p>
+
+<pre><code>sudo lsblk 
+</code></pre>
+
+<p>this will give you a list of all the drives / partitions available on the system.
+Once you know the device you can mount it using the:</p>
+
+<pre><code>sudo mount 
+</code></pre>
+
+<p>command.</p>

@@ -1,0 +1,8 @@
+<p>Install <em>dconf Editor</em>.</p>
+
+<p>Select <em>com -> canonical -> indicator -> datetime</em></p>
+
+<p>The field <strong>show-auto-detected-location</strong> was set.
+After untagging this field, both timezones were no longer displayed</p>
+
+<p><img src="http://i.stack.imgur.com/vAxt9.jpg" alt="enter image description here"></p>

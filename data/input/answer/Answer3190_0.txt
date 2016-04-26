@@ -1,0 +1,1 @@
+<p>far as I know, I have to say no, ubuntu only supports active official distributions, ubuntu security updates off when these distributions finish their period of activity, and not found anywhere else, it is recommended that you migrate your system to a new version when you have time for security reasons .......</p>

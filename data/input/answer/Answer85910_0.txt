@@ -1,0 +1,4 @@
+<p>Here is an hidden hint about openjdk-6-jre working without problem with minecraft
+(see comments) :</p>
+
+<p><a href="http://askubuntu.com/questions/100751/minecraft-in-jdk-1-7-0-u2-x64">Minecraft in jdk 1.7.0_u2 x64</a></p>

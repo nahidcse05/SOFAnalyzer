@@ -1,0 +1,6 @@
+<p>Usually when <code>make</code> failed to build from sources, you have to install a <code>-dev</code> package, in your case it's <code>php5-dev</code>.</p>
+
+<p>I'm not sure if it's the only one that you'll need to install but try first to install <code>php5-dev</code>:</p>
+
+<pre><code>sudo apt-get install php5-dev
+</code></pre>

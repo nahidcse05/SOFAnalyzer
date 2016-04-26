@@ -1,0 +1,1 @@
+<p>Ubuntu One 2.0.3 (the current version for Windows) does not support proxies. The 3.0 release does support proxies, and we should have a 3.0.1 release available on Windows within the next week. It will use the system proxy configuration, so no additional configuration will be needed, other than upgrading once the new release is out.</p>

@@ -1,0 +1,11 @@
+<p>I got it to create the configure script using the following tools:</p>
+
+<pre><code>$ libtoolize --force
+$ aclocal
+$ autoheader
+$ automake --force-missing --add-missing
+$ autoconf
+$ ./configure
+</code></pre>
+
+<p>I don't have all the dependencies so I can't test it right now, but this is generally how you would create a configure script from an ac file.</p>

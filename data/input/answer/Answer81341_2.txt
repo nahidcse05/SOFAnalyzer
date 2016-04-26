@@ -1,0 +1,7 @@
+<p>It is a matter of goals.</p>
+
+<p>Both Ubuntu and OS X was originally designed to ship on cdrom media (e.g. OS X 10.4 came on four cd or one dvd), but OS X is dvd or network only today.</p>
+
+<p>Ubuntu has a different target audience than OS X, so they have stayed with the cdrom distribution method for a lot longer than OS X.  Going for the cdrom media allows the largest possible audience to download and burn the installation ISO.  If they only shipped a Bluray image, only those with Bluray drives would be able to download and install Ubuntu.</p>
+
+<p>Personally I think that breaking the 700 MB limit should be equivalent to "we now create dvd images only".  They download a lot of software anyway to keep up to date.</p>

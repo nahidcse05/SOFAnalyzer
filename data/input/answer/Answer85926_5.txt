@@ -1,0 +1,7 @@
+<p>Try Scribus.  Scribus is an Open Source program that brings professional page layout to Linux, it supports professional publishing features, such as color separations, CMYK and spot colors, ICC color management, and versatile PDF creation. </p>
+
+<p>For other ways to install, and <a href="http://wiki.scribus.net/canvas/Debian">Instructions for Debian/Ubuntu</a></p>
+
+<p>Or <a href="https://apps.ubuntu.com/cat/applications/scribus/"><strong>Click to install Scribus</strong> <img src="http://hostmar.co/software-small" alt="Install comixcursors-lefthanded"></a></p>
+
+<p><sup>Source:Scribus</sup></p>

@@ -1,0 +1,5 @@
+<p>I ended up uninstalling and reinstalling virtualbox using apt-get. It saw that there were kernel parts missing and installed them.</p>
+
+<pre><code>sudo apt-get remove virtualbox
+sudo apt-get install virtualbox
+</code></pre>
