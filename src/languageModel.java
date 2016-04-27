@@ -5,16 +5,19 @@ import java.util.Map;
 
 public class languageModel {
 	private HashMap<String, Double> featureNameIndex;
+	private HashMap<String, Double> smoothedFeatureNameIndex;
 	private HashMap<String, Double> biFeatureNameIndex;
-	
 	private HashMap<String, Double> biFeatureNameIndexProb;
+	
 	private double uniSum = 0.0;
 	private double lambda = 0.9;
+	private double miu = 1000;
 	
 	public languageModel(String[] tokens) {
 		featureNameIndex = new HashMap<String, Double>();
 		biFeatureNameIndex = new HashMap<String, Double>();
 		biFeatureNameIndexProb = new HashMap<String, Double>();
+		smoothedFeatureNameIndex = new HashMap<String, Double>();
 		
 		int inword=1;
 		String prevToken="";
@@ -67,6 +70,23 @@ public class languageModel {
 	    }*/
 	}
 	
+	public void smoothedUnigarmModel(HashMap<String, Double> vocabulary, int vocabularyCount){
+		Iterator it = vocabulary.entrySet().iterator();
+		while (it.hasNext()) {
+			Map.Entry pair = (Map.Entry)it.next();
+			String key = pair.getKey().toString();
+			System.out.println("Key"+key);
+			double value = (double)pair.getValue() / vocabularyCount; // p(w|REF) 
+			double prob;
+			if(featureNameIndex.containsKey(key))
+				prob = (featureNameIndex.get(key)+miu*value) / (uniSum+miu);
+			
+			else
+				prob = (miu*value) / (uniSum+miu);
+			smoothedFeatureNameIndex.put(key, prob);
+		}
+	}
+	
 	public void bigramModel(){
 		
 		/*Iterator it = biFeatureNameIndex.entrySet().iterator();
@@ -99,6 +119,25 @@ public class languageModel {
 	    
 		System.out.println("Bi Sum:"+ biSum);
 	}
+	
+	
+public double estimateUniGram(String[] tokens){
+
+	double likelihood = 1.0;
+
+	for (String token : tokens) {
+		if(token=="" || token==null)
+			continue;
+		if(smoothedFeatureNameIndex.containsKey(token))
+			likelihood*=smoothedFeatureNameIndex.get(token);
+
+	}
+	if(likelihood==1.0)
+		return Double.MIN_VALUE;
+	return likelihood;
+
+}
+
 	
 	public double estimateBiGram(String[] tokens){
 		

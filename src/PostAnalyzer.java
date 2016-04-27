@@ -41,12 +41,15 @@ public class PostAnalyzer {
 	HashMap<String, String> posts;
 	//HashMap<String, String [] > postsArray;
 	
+	HashMap<String, Double> vocabulary;
+	int totalVocabularyCount = 0;
 	HashMap<String, languageModel> languagModelList;
 	
 	
 	PostAnalyzer(){
 		posts = new HashMap<String, String>();
 		//postsArray = new HashMap<String, String[]>();
+		vocabulary = new HashMap<String, Double>();
 		languagModelList = new HashMap <String, languageModel>();
 		
 		m_Ngram = 1;
@@ -272,17 +275,42 @@ public class PostAnalyzer {
 		      
 	        	if(pair.getValue().toString().split("#####").length<=1)
 	        		continue;
-	        	if(TokenizerNormalizeStemmer(pair.getValue().toString()).length<20)
+	        	String[] tokens = TokenizerNormalizeStemmer(pair.getValue().toString());
+	        	if(tokens.length<20)
 	        		continue;
-		        languageModel langModel = new languageModel(TokenizerNormalizeStemmer(pair.getValue().toString()));
+	        	
+	        	for (String token : tokens) {
+	        		if(token=="" || token==null)
+	        			continue;
+	        		double value = 1.0;
+	        		if (vocabulary.containsKey(token)) {
+	        			value = vocabulary.get(token) + 1.0;
+	        		}
+
+	        		vocabulary.put(token, value);
+	        		totalVocabularyCount++;
+	        	}
+		        languageModel langModel = new languageModel(tokens);
 		        langModel.unigramModel();
-		        langModel.bigramModel();
+		        
+		        //langModel.bigramModel();
 		        
 		        languagModelList.put(pair.getKey().toString(), langModel);
 		        
 		    }
 	        fileIndex++;
 	    }
+	    
+	    //smoothing starts
+	    Iterator langModelit = languagModelList.entrySet().iterator();
+        while (langModelit.hasNext()) {
+        	 Map.Entry langpair = (Map.Entry)langModelit.next();
+        	 languageModel langModel = (languageModel) langpair.getValue();
+        	 langModel.smoothedUnigarmModel(vocabulary, totalVocabularyCount);
+        }
+        System.out.println("\n\n Ranked Results\n\n");
+        
+	    
 	}
 	
 	public void test(){
@@ -307,7 +335,7 @@ public class PostAnalyzer {
 		        while (langModelit.hasNext()) {
 		        	 Map.Entry langpair = (Map.Entry)langModelit.next();
 		        	 languageModel langModel = (languageModel) langpair.getValue();
-		        	 double likelihood = langModel.estimateBiGram(testSentence);
+		        	 double likelihood = langModel.estimateUniGram(testSentence);
 		        	 fVector.add(new _RankItem(langpair.getKey().toString(), likelihood));
 				}
 		        System.out.println("\n\n Ranked Results\n\n");
